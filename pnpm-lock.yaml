@@ -17,6 +17,9 @@ importers:
 
   dev:
     dependencies:
+      '@solid-primitives/mouse':
+        specifier: ^2.0.20
+        version: 2.0.20(solid-js@1.9.2)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -87,7 +90,7 @@ importers:
         version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
       esbuild-plugin-solid:
         specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.23.1)(solid-js@1.9.2)
+        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
       eslint:
         specifier: ^9.12.0
         version: 9.12.0(jiti@1.21.6)
@@ -604,7 +607,7 @@ importers:
         version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
       esbuild-plugin-solid:
         specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
+        version: 0.6.0(esbuild@0.23.1)(solid-js@1.9.2)
       eslint:
         specifier: ^9.12.0
         version: 9.12.0(jiti@1.21.6)
@@ -892,18 +895,6 @@ importers:
 
   web:
     dependencies:
-      '@astrojs/mdx':
-        specifier: 4.0.0-beta.2
-        version: 4.0.0-beta.2(astro@5.0.0-beta.5(rollup@4.24.0)(typescript@5.6.3))
-      '@astrojs/sitemap':
-        specifier: ^3.2.1
-        version: 3.2.1
-      '@astrojs/solid-js':
-        specifier: ^4.4.2
-        version: 4.4.2(solid-js@1.9.2)(vite@6.0.0-beta.2)
-      '@astrojs/tailwind':
-        specifier: 6.0.0-alpha.0
-        version: 6.0.0-alpha.0(astro@5.0.0-beta.5(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
       '@arara/accordion':
         specifier: workspace:*
         version: link:../packages/accordion
@@ -931,6 +922,18 @@ importers:
       '@arara/tooltip':
         specifier: workspace:*
         version: link:../packages/tooltip
+      '@astrojs/mdx':
+        specifier: 4.0.0-beta.2
+        version: 4.0.0-beta.2(astro@5.0.0-beta.5(rollup@4.24.0)(typescript@5.6.3))
+      '@astrojs/sitemap':
+        specifier: ^3.2.1
+        version: 3.2.1
+      '@astrojs/solid-js':
+        specifier: ^4.4.2
+        version: 4.4.2(solid-js@1.9.2)(vite@6.0.0-beta.2)
+      '@astrojs/tailwind':
+        specifier: 6.0.0-alpha.0
+        version: 6.0.0-alpha.0(astro@5.0.0-beta.5(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
       '@fontsource-variable/rubik':
         specifier: ^5.1.0
         version: 5.1.0
@@ -2033,13 +2036,33 @@ packages:
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
+  '@solid-primitives/event-listener@2.3.3':
+    resolution: {integrity: sha512-DAJbl+F0wrFW2xmcV8dKMBhk9QLVLuBSW+TR4JmIfTaObxd13PuL7nqaXnaYKDWOYa6otB00qcCUIGbuIhSUgQ==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
   '@solid-primitives/memo@1.3.9':
     resolution: {integrity: sha512-OIlGcsEPXr6U23fDaSEm8iqezWDT4SNSjLTekWQVOu4qHostnMPlqU8xo1Jf0I7OgRuqA0wTMQ5cu0bYjeR/ZQ==}
     peerDependencies:
       solid-js: ^1.6.12
 
+  '@solid-primitives/mouse@2.0.20':
+    resolution: {integrity: sha512-U+oQId1T6IyTaEfEWMYLS8RHqhB0izG9D9suMvKLypmDA6ygiQezYON1HddZxdeapY89LKeAKsBMpJBw/89Rvg==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  '@solid-primitives/rootless@1.4.5':
+    resolution: {integrity: sha512-GFJE9GC3ojx0aUKqAUZmQPyU8fOVMtnVNrkdk2yS4kd17WqVSpXpoTmo9CnOwA+PG7FTzdIkogvfLQSLs4lrww==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
   '@solid-primitives/scheduled@1.4.3':
     resolution: {integrity: sha512-HfWN5w7b7FEc6VPLBKnnE302h90jsLMuR28Fcf7neRGGf8jBj6wm6/UFQ00VlKexHFMR6KQ2u4VBh5a1ZcqM8g==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  '@solid-primitives/static-store@0.0.8':
+    resolution: {integrity: sha512-ZecE4BqY0oBk0YG00nzaAWO5Mjcny8Fc06CdbXadH9T9lzq/9GefqcSe/5AtdXqjvY/DtJ5C6CkcjPZO0o/eqg==}
     peerDependencies:
       solid-js: ^1.6.12
 
@@ -5579,14 +5602,37 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
+  '@solid-primitives/event-listener@2.3.3(solid-js@1.9.2)':
+    dependencies:
+      '@solid-primitives/utils': 6.2.3(solid-js@1.9.2)
+      solid-js: 1.9.2
+
   '@solid-primitives/memo@1.3.9(solid-js@1.9.2)':
     dependencies:
       '@solid-primitives/scheduled': 1.4.3(solid-js@1.9.2)
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.2)
       solid-js: 1.9.2
 
+  '@solid-primitives/mouse@2.0.20(solid-js@1.9.2)':
+    dependencies:
+      '@solid-primitives/event-listener': 2.3.3(solid-js@1.9.2)
+      '@solid-primitives/rootless': 1.4.5(solid-js@1.9.2)
+      '@solid-primitives/static-store': 0.0.8(solid-js@1.9.2)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.9.2)
+      solid-js: 1.9.2
+
+  '@solid-primitives/rootless@1.4.5(solid-js@1.9.2)':
+    dependencies:
+      '@solid-primitives/utils': 6.2.3(solid-js@1.9.2)
+      solid-js: 1.9.2
+
   '@solid-primitives/scheduled@1.4.3(solid-js@1.9.2)':
     dependencies:
+      solid-js: 1.9.2
+
+  '@solid-primitives/static-store@0.0.8(solid-js@1.9.2)':
+    dependencies:
+      '@solid-primitives/utils': 6.2.3(solid-js@1.9.2)
       solid-js: 1.9.2
 
   '@solid-primitives/storage@4.2.1(solid-js@1.9.2)':
