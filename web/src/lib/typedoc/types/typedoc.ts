@@ -161,7 +161,7 @@ export type ReferenceType = {
     | '@floating-ui/utils'
     | '@floating-ui/dom'
     | '@floating-ui/core'
-    | 'corvu'
+    | 'arara'
 }
 
 export type LiteralType = {

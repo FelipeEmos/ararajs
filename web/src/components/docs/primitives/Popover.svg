@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1866 1244">
-  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-corvu-400"/>
+  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-arara-400"/>
   <mask id="popover-b" width="1866" height="1244" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <path fill="url(#popover-a)" d="M0 0h1866v1244H0z"/>
   </mask>
   <g mask="url(#popover-b)">
     <path fill="#7250AE" fill-opacity=".2" d="M0 0h1866v1244H0z"/>
   </g>
-  <path fill="currentColor" d="M983.947 573.355a5.095 5.095 0 0 1-4.706 3.145h-91.687a5.088 5.088 0 0 1-4.71-3.144 5.09 5.09 0 0 1 1.106-5.553l45.844-45.844a5.085 5.085 0 0 1 3.604-1.494 5.097 5.097 0 0 1 3.603 1.494l45.844 45.844a5.089 5.089 0 0 1 1.102 5.552Z" class="text-corvu-100"/>
-  <rect width="965" height="395" x="1415" y="963" fill="currentColor" rx="25" transform="rotate(180 1415 963)" class="text-corvu-100"/>
-  <rect width="515" height="89" x="864" y="803" fill="currentColor" rx="20" class="text-corvu-200"/>
-  <rect width="200" height="20" x="882" y="837" fill="currentColor" rx="10" class="text-corvu-text"/>
-  <rect width="515" height="89" x="864" y="682" fill="currentColor" rx="20" class="text-corvu-200"/>
-  <rect width="200" height="20" x="882" y="716" fill="currentColor" rx="10" class="text-corvu-text"/>
-  <rect width="205" height="31" x="690" y="863" fill="currentColor" rx="15.5" transform="rotate(180 690 863)" class="text-corvu-text"/>
-  <rect width="205" height="31" x="690" y="742" fill="currentColor" rx="15.5" transform="rotate(180 690 742)" class="text-corvu-text"/>
-  <rect width="429" height="40" x="485" y="608" fill="currentColor" rx="20" class="text-corvu-400"/>
-  <rect width="200" height="200" x="833" y="287" fill="currentColor" rx="100" class="text-corvu-200"/>
-  <path fill="currentColor" d="M979.062 388.13a40.58 40.58 0 0 0 0-2.261l7.81-9.757a4.182 4.182 0 0 0 .774-3.695 56.327 56.327 0 0 0-5.694-13.741 4.198 4.198 0 0 0-3.141-2.057l-12.416-1.382a43.041 43.041 0 0 0-1.57-1.57l-1.466-12.447a4.183 4.183 0 0 0-2.062-3.141 56.164 56.164 0 0 0-13.741-5.684 4.187 4.187 0 0 0-3.695.774l-9.731 7.768h-2.261l-9.757-7.794a4.182 4.182 0 0 0-3.695-.775 56.369 56.369 0 0 0-13.741 5.695 4.198 4.198 0 0 0-2.057 3.141l-1.382 12.437a48.418 48.418 0 0 0-1.57 1.57l-12.447 1.429a4.196 4.196 0 0 0-3.141 2.063 56.387 56.387 0 0 0-5.69 13.74 4.199 4.199 0 0 0 .78 3.695l7.768 9.731v2.261l-7.794 9.757a4.186 4.186 0 0 0-.775 3.696 56.362 56.362 0 0 0 5.695 13.74 4.198 4.198 0 0 0 3.141 2.057l12.416 1.382a47.43 47.43 0 0 0 1.57 1.57l1.45 12.447a4.196 4.196 0 0 0 2.063 3.141 56.387 56.387 0 0 0 13.74 5.69 4.185 4.185 0 0 0 3.695-.78l9.731-7.768a40.58 40.58 0 0 0 2.261 0l9.757 7.81a4.186 4.186 0 0 0 3.696.774 56.131 56.131 0 0 0 13.74-5.694 4.198 4.198 0 0 0 2.057-3.141l1.382-12.416a42.259 42.259 0 0 0 1.57-1.57l12.447-1.466a4.183 4.183 0 0 0 3.141-2.062 56.394 56.394 0 0 0 5.69-13.741 4.185 4.185 0 0 0-.78-3.695l-7.768-9.731ZM933 407.937a20.947 20.947 0 0 1-11.633-3.528 20.942 20.942 0 0 1-8.903-21.494 20.93 20.93 0 0 1 5.731-10.72 20.93 20.93 0 0 1 22.817-4.539 20.942 20.942 0 0 1 9.397 7.711A20.94 20.94 0 0 1 933 407.937Z" class="text-corvu-text"/>
+  <path fill="currentColor" d="M983.947 573.355a5.095 5.095 0 0 1-4.706 3.145h-91.687a5.088 5.088 0 0 1-4.71-3.144 5.09 5.09 0 0 1 1.106-5.553l45.844-45.844a5.085 5.085 0 0 1 3.604-1.494 5.097 5.097 0 0 1 3.603 1.494l45.844 45.844a5.089 5.089 0 0 1 1.102 5.552Z" class="text-arara-100"/>
+  <rect width="965" height="395" x="1415" y="963" fill="currentColor" rx="25" transform="rotate(180 1415 963)" class="text-arara-100"/>
+  <rect width="515" height="89" x="864" y="803" fill="currentColor" rx="20" class="text-arara-200"/>
+  <rect width="200" height="20" x="882" y="837" fill="currentColor" rx="10" class="text-arara-text"/>
+  <rect width="515" height="89" x="864" y="682" fill="currentColor" rx="20" class="text-arara-200"/>
+  <rect width="200" height="20" x="882" y="716" fill="currentColor" rx="10" class="text-arara-text"/>
+  <rect width="205" height="31" x="690" y="863" fill="currentColor" rx="15.5" transform="rotate(180 690 863)" class="text-arara-text"/>
+  <rect width="205" height="31" x="690" y="742" fill="currentColor" rx="15.5" transform="rotate(180 690 742)" class="text-arara-text"/>
+  <rect width="429" height="40" x="485" y="608" fill="currentColor" rx="20" class="text-arara-400"/>
+  <rect width="200" height="200" x="833" y="287" fill="currentColor" rx="100" class="text-arara-200"/>
+  <path fill="currentColor" d="M979.062 388.13a40.58 40.58 0 0 0 0-2.261l7.81-9.757a4.182 4.182 0 0 0 .774-3.695 56.327 56.327 0 0 0-5.694-13.741 4.198 4.198 0 0 0-3.141-2.057l-12.416-1.382a43.041 43.041 0 0 0-1.57-1.57l-1.466-12.447a4.183 4.183 0 0 0-2.062-3.141 56.164 56.164 0 0 0-13.741-5.684 4.187 4.187 0 0 0-3.695.774l-9.731 7.768h-2.261l-9.757-7.794a4.182 4.182 0 0 0-3.695-.775 56.369 56.369 0 0 0-13.741 5.695 4.198 4.198 0 0 0-2.057 3.141l-1.382 12.437a48.418 48.418 0 0 0-1.57 1.57l-12.447 1.429a4.196 4.196 0 0 0-3.141 2.063 56.387 56.387 0 0 0-5.69 13.74 4.199 4.199 0 0 0 .78 3.695l7.768 9.731v2.261l-7.794 9.757a4.186 4.186 0 0 0-.775 3.696 56.362 56.362 0 0 0 5.695 13.74 4.198 4.198 0 0 0 3.141 2.057l12.416 1.382a47.43 47.43 0 0 0 1.57 1.57l1.45 12.447a4.196 4.196 0 0 0 2.063 3.141 56.387 56.387 0 0 0 13.74 5.69 4.185 4.185 0 0 0 3.695-.78l9.731-7.768a40.58 40.58 0 0 0 2.261 0l9.757 7.81a4.186 4.186 0 0 0 3.696.774 56.131 56.131 0 0 0 13.74-5.694 4.198 4.198 0 0 0 2.057-3.141l1.382-12.416a42.259 42.259 0 0 0 1.57-1.57l12.447-1.466a4.183 4.183 0 0 0 3.141-2.062 56.394 56.394 0 0 0 5.69-13.741 4.185 4.185 0 0 0-.78-3.695l-7.768-9.731ZM933 407.937a20.947 20.947 0 0 1-11.633-3.528 20.942 20.942 0 0 1-8.903-21.494 20.93 20.93 0 0 1 5.731-10.72 20.93 20.93 0 0 1 22.817-4.539 20.942 20.942 0 0 1 9.397 7.711A20.94 20.94 0 0 1 933 407.937Z" class="text-arara-text"/>
   <defs>
     <pattern id="popover-a" width=".056" height=".083" patternContentUnits="objectBoundingBox">
       <use xlink:href="#popover-c" transform="scale(.00022 .00033)"/>

@@ -14,16 +14,16 @@ import type {
   RootChildrenProps as DisclosureRootChildrenProps,
   RootProps as DisclosureRootProps,
   DynamicProps,
-} from '@corvu/disclosure'
-import createOnce from '@corvu/utils/create/once'
-import createRegister from '@corvu/utils/create/register'
-import Disclosure from '@corvu/disclosure'
-import { Dynamic } from '@corvu/utils/dynamic'
-import Fragment from '@corvu/utils/components/Fragment'
-import { isFunction } from '@corvu/utils'
+} from '@arara/disclosure'
+import createOnce from '@arara/utils/create/once'
+import createRegister from '@arara/utils/create/register'
+import Disclosure from '@arara/disclosure'
+import { Dynamic } from '@arara/utils/dynamic'
+import Fragment from '@arara/utils/components/Fragment'
+import { isFunction } from '@arara/utils'
 import { useInternalAccordionContext } from '@src/context'
 
-export type AccordionItemCorvuProps = {
+export type AccordionItemAraraProps = {
   /**
    * Value of the accordion item.
    * @defaultValue `createUniqueId()`
@@ -55,11 +55,11 @@ export type AccordionItemSharedElementProps<
 }
 
 export type AccordionItemElementProps = AccordionItemSharedElementProps & {
-  'data-corvu-accordion-item': ''
+  'data-arara-accordion-item': ''
 }
 
 export type AccordionItemProps<T extends ValidComponent = typeof Fragment> =
-  AccordionItemCorvuProps & Partial<AccordionItemSharedElementProps<T>>
+  AccordionItemAraraProps & Partial<AccordionItemSharedElementProps<T>>
 
 /** Props that are passed to the Item component children callback. */
 export type AccordionItemChildrenProps = {
@@ -73,7 +73,7 @@ export type AccordionItemChildrenProps = {
 
 /** Context wrapper for the accordion item. Is required for every accordion item you create.
  *
- * @data `data-corvu-accordion-item` - Present if the item isn't rendered as a Fragment.
+ * @data `data-arara-accordion-item` - Present if the item isn't rendered as a Fragment.
  */
 const AccordionItem = <T extends ValidComponent = typeof Fragment>(
   props: DynamicProps<T, AccordionItemProps<T>>,
@@ -167,7 +167,7 @@ const AccordionItem = <T extends ValidComponent = typeof Fragment>(
           <Dynamic<AccordionItemElementProps>
             as={Fragment}
             // === ElementProps ===
-            data-corvu-accordion-item=""
+            data-arara-accordion-item=""
             {...otherProps}
           >
             <Disclosure

@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1866 1244">
-  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-corvu-400"/>
+  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-arara-400"/>
   <mask id="accordion-b" width="1866" height="1244" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <path fill="url(#accordion-a)" d="M0 0h1866v1244H0z"/>
   </mask>
   <g mask="url(#accordion-b)">
     <path fill="#7250AE" fill-opacity=".2" d="M0 0h1866v1244H0z"/>
   </g>
-  <rect width="1174" height="137" x="292" y="801" fill="currentColor" rx="20" class="text-corvu-100"/>
-  <rect width="148.077" height="137.405" x="1425.92" y="800.924" fill="currentColor" rx="20" class="text-corvu-200"/>
-  <path fill="currentColor" d="m1500.67 897.711-11.32-11.319 37.73-37.732c3.13-3.126 8.2-3.126 11.32 0a7.996 7.996 0 0 1 0 11.319l-37.73 37.732Z" class="text-corvu-text"/>
-  <path fill="currentColor" d="m1510.71 886.392-11.32 11.319-37.73-37.732a7.996 7.996 0 0 1 0-11.319 8.004 8.004 0 0 1 11.32 0l37.73 37.732Z" class="text-corvu-text"/>
-  <rect width="1174" height="137" x="292" y="631" fill="currentColor" rx="20" class="text-corvu-100"/>
-  <rect width="148.077" height="137.405" x="1425.92" y="630.168" fill="currentColor" rx="20" class="text-corvu-200"/>
-  <path fill="currentColor" d="m1500.67 726.71-11.32-11.319 37.73-37.732c3.13-3.126 8.2-3.126 11.32 0a7.996 7.996 0 0 1 0 11.319l-37.73 37.732Z" class="text-corvu-text"/>
-  <path fill="currentColor" d="m1510.71 715.391-11.32 11.319-37.73-37.732a7.996 7.996 0 0 1 0-11.319 8.004 8.004 0 0 1 11.32 0l37.73 37.732Z" class="text-corvu-text"/>
-  <path fill="currentColor" d="M292 442h1282v130c0 13.807-11.19 25-25 25H317c-13.807 0-25-11.193-25-25V442Z" class="text-corvu-200"/>
-  <rect width="958" height="30" x="325" y="505" fill="currentColor" rx="15" class="text-corvu-text"/>
-  <path fill="currentColor" d="M292 326c0-11.046 8.954-20 20-20h1154v137H292V326Z" class="text-corvu-100"/>
-  <path fill="currentColor" d="M1574 443.404h-148.08V326c0-11.046 8.96-20 20-20H1554c11.05 0 20 8.954 20 20v117.404Z" class="text-corvu-200"/>
-  <path fill="currentColor" d="M1493.73 353.661c3.13-3.126 8.2-3.126 11.32 0a7.996 7.996 0 0 1 0 11.319l-32.07 32.073a8.006 8.006 0 0 1-11.32 0 7.997 7.997 0 0 1 0-11.32l32.07-32.072Z" class="text-corvu-text"/>
-  <path fill="currentColor" d="M1495.01 364.98a7.996 7.996 0 0 1 0-11.319 8.004 8.004 0 0 1 11.32 0l32.07 32.072a7.997 7.997 0 0 1 0 11.32c-3.12 3.125-8.19 3.125-11.32 0l-32.07-32.073Z" class="text-corvu-text"/>
+  <rect width="1174" height="137" x="292" y="801" fill="currentColor" rx="20" class="text-arara-100"/>
+  <rect width="148.077" height="137.405" x="1425.92" y="800.924" fill="currentColor" rx="20" class="text-arara-200"/>
+  <path fill="currentColor" d="m1500.67 897.711-11.32-11.319 37.73-37.732c3.13-3.126 8.2-3.126 11.32 0a7.996 7.996 0 0 1 0 11.319l-37.73 37.732Z" class="text-arara-text"/>
+  <path fill="currentColor" d="m1510.71 886.392-11.32 11.319-37.73-37.732a7.996 7.996 0 0 1 0-11.319 8.004 8.004 0 0 1 11.32 0l37.73 37.732Z" class="text-arara-text"/>
+  <rect width="1174" height="137" x="292" y="631" fill="currentColor" rx="20" class="text-arara-100"/>
+  <rect width="148.077" height="137.405" x="1425.92" y="630.168" fill="currentColor" rx="20" class="text-arara-200"/>
+  <path fill="currentColor" d="m1500.67 726.71-11.32-11.319 37.73-37.732c3.13-3.126 8.2-3.126 11.32 0a7.996 7.996 0 0 1 0 11.319l-37.73 37.732Z" class="text-arara-text"/>
+  <path fill="currentColor" d="m1510.71 715.391-11.32 11.319-37.73-37.732a7.996 7.996 0 0 1 0-11.319 8.004 8.004 0 0 1 11.32 0l37.73 37.732Z" class="text-arara-text"/>
+  <path fill="currentColor" d="M292 442h1282v130c0 13.807-11.19 25-25 25H317c-13.807 0-25-11.193-25-25V442Z" class="text-arara-200"/>
+  <rect width="958" height="30" x="325" y="505" fill="currentColor" rx="15" class="text-arara-text"/>
+  <path fill="currentColor" d="M292 326c0-11.046 8.954-20 20-20h1154v137H292V326Z" class="text-arara-100"/>
+  <path fill="currentColor" d="M1574 443.404h-148.08V326c0-11.046 8.96-20 20-20H1554c11.05 0 20 8.954 20 20v117.404Z" class="text-arara-200"/>
+  <path fill="currentColor" d="M1493.73 353.661c3.13-3.126 8.2-3.126 11.32 0a7.996 7.996 0 0 1 0 11.319l-32.07 32.073a8.006 8.006 0 0 1-11.32 0 7.997 7.997 0 0 1 0-11.32l32.07-32.072Z" class="text-arara-text"/>
+  <path fill="currentColor" d="M1495.01 364.98a7.996 7.996 0 0 1 0-11.319 8.004 8.004 0 0 1 11.32 0l32.07 32.072a7.997 7.997 0 0 1 0 11.32c-3.12 3.125-8.19 3.125-11.32 0l-32.07-32.073Z" class="text-arara-text"/>
   <defs>
     <pattern id="accordion-a" width=".056" height=".083" patternContentUnits="objectBoundingBox">
       <use xlink:href="#accordion-c" transform="scale(.00022 .00033)"/>

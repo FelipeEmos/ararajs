@@ -1,11 +1,11 @@
 import Close, {
-  type DialogCloseCorvuProps as CloseCorvuProps,
+  type DialogCloseAraraProps as CloseAraraProps,
   type DialogCloseElementProps as CloseElementProps,
   type DialogCloseProps as CloseProps,
   type DialogCloseSharedElementProps as CloseSharedElementProps,
 } from '@src/Close'
 import Content, {
-  type DialogContentCorvuProps as ContentCorvuProps,
+  type DialogContentAraraProps as ContentAraraProps,
   type DialogContentElementProps as ContentElementProps,
   type DialogContentProps as ContentProps,
   type DialogContentSharedElementProps as ContentSharedElementProps,
@@ -15,19 +15,19 @@ import {
   useDialogContext as useContext,
 } from '@src/context'
 import Description, {
-  type DialogDescriptionCorvuProps as DescriptionCorvuProps,
+  type DialogDescriptionAraraProps as DescriptionAraraProps,
   type DialogDescriptionElementProps as DescriptionElementProps,
   type DialogDescriptionProps as DescriptionProps,
   type DialogDescriptionSharedElementProps as DescriptionSharedElementProps,
 } from '@src/Description'
 import Label, {
-  type DialogLabelCorvuProps as LabelCorvuProps,
+  type DialogLabelAraraProps as LabelAraraProps,
   type DialogLabelElementProps as LabelElementProps,
   type DialogLabelProps as LabelProps,
   type DialogLabelSharedElementProps as LabelSharedElementProps,
 } from '@src/Label'
 import Overlay, {
-  type DialogOverlayCorvuProps as OverlayCorvuProps,
+  type DialogOverlayAraraProps as OverlayAraraProps,
   type DialogOverlayElementProps as OverlayElementProps,
   type DialogOverlayProps as OverlayProps,
   type DialogOverlaySharedElementProps as OverlaySharedElementProps,
@@ -38,38 +38,38 @@ import Root, {
   type DialogRootProps as RootProps,
 } from '@src/Root'
 import Trigger, {
-  type DialogTriggerCorvuProps as TriggerCorvuProps,
+  type DialogTriggerAraraProps as TriggerAraraProps,
   type DialogTriggerElementProps as TriggerElementProps,
   type DialogTriggerProps as TriggerProps,
   type DialogTriggerSharedElementProps as TriggerSharedElementProps,
 } from '@src/Trigger'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
 export type {
   RootProps,
   RootChildrenProps,
-  TriggerCorvuProps,
+  TriggerAraraProps,
   TriggerSharedElementProps,
   TriggerElementProps,
   TriggerProps,
   DialogPortalProps as PortalProps,
-  OverlayCorvuProps,
+  OverlayAraraProps,
   OverlaySharedElementProps,
   OverlayElementProps,
   OverlayProps,
-  ContentCorvuProps,
+  ContentAraraProps,
   ContentSharedElementProps,
   ContentElementProps,
   ContentProps,
-  LabelCorvuProps,
+  LabelAraraProps,
   LabelSharedElementProps,
   LabelElementProps,
   LabelProps,
-  DescriptionCorvuProps,
+  DescriptionAraraProps,
   DescriptionSharedElementProps,
   DescriptionElementProps,
   DescriptionProps,
-  CloseCorvuProps,
+  CloseAraraProps,
   CloseSharedElementProps,
   CloseElementProps,
   CloseProps,

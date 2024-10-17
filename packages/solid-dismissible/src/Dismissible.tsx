@@ -13,10 +13,10 @@ import {
   untrack,
   useContext,
 } from 'solid-js'
-import { access } from '@corvu/utils/reactivity'
+import { access } from '@arara/utils/reactivity'
 import createDismissible from '@src/create/dismissible'
 import type { CreateDismissibleProps } from '@src/create/dismissible'
-import { isFunction } from '@corvu/utils'
+import { isFunction } from '@arara/utils'
 
 type DismissibleContextValue = {
   layers: Accessor<string[]>

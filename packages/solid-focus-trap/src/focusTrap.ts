@@ -1,4 +1,4 @@
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import {
   createEffect,
   createMemo,
@@ -7,7 +7,7 @@ import {
   onCleanup,
   untrack,
 } from 'solid-js'
-import { afterPaint } from '@corvu/utils/dom'
+import { afterPaint } from '@arara/utils/dom'
 
 const focusableElementSelector =
   'a[href]:not([tabindex="-1"]), button:not([tabindex="-1"]), input:not([tabindex="-1"]), textarea:not([tabindex="-1"]), select:not([tabindex="-1"]), details:not([tabindex="-1"]), [tabindex]:not([tabindex="-1"])'

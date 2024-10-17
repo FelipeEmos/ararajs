@@ -9,14 +9,14 @@ import {
   untrack,
 } from 'solid-js'
 import { createDialogContext, createInternalDialogContext } from '@src/context'
-import { access } from '@corvu/utils/reactivity'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
+import { access } from '@arara/utils/reactivity'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
 import createFocusTrap from 'solid-focus-trap'
-import createOnce from '@corvu/utils/create/once'
+import createOnce from '@arara/utils/create/once'
 import createPresence from 'solid-presence'
 import createPreventScroll from 'solid-prevent-scroll'
-import createRegister from '@corvu/utils/create/register'
-import { isFunction } from '@corvu/utils'
+import createRegister from '@arara/utils/create/register'
+import { isFunction } from '@arara/utils'
 
 export type DialogRootProps = {
   /**

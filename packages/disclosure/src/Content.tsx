@@ -1,4 +1,4 @@
-import { combineStyle, type ElementOf, type Ref } from '@corvu/utils/dom'
+import { combineStyle, type ElementOf, type Ref } from '@arara/utils/dom'
 import {
   createMemo,
   type JSX,
@@ -6,12 +6,12 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import { mergeRefs, some } from '@corvu/utils/reactivity'
-import { dataIf } from '@corvu/utils'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import { mergeRefs, some } from '@arara/utils/reactivity'
+import { dataIf } from '@arara/utils'
 import { useInternalDisclosureContext } from '@src/context'
 
-export type DisclosureContentCorvuProps = {
+export type DisclosureContentAraraProps = {
   /**
    * Whether the disclosure content should be forced to render. Useful when using third-party animation libraries.
    * @defaultValue `false`
@@ -35,19 +35,19 @@ export type DisclosureContentElementProps =
     id: string
     'data-collapsed': '' | undefined
     'data-expanded': '' | undefined
-    'data-corvu-disclosure-content': '' | null
+    'data-arara-disclosure-content': '' | null
   }
 
 export type DisclosureContentProps<T extends ValidComponent = 'div'> =
-  DisclosureContentCorvuProps & Partial<DisclosureContentSharedElementProps<T>>
+  DisclosureContentAraraProps & Partial<DisclosureContentSharedElementProps<T>>
 
 /** Content of a disclosure. Can be animated.
  *
- * @data `data-corvu-disclosure-content` - Present on every disclosure content element.
+ * @data `data-arara-disclosure-content` - Present on every disclosure content element.
  * @data `data-expanded` - Present when the disclosure is expanded.
  * @data `data-collapsed` - Present when the disclosure is collapsed.
- * @css `--corvu-disclosure-content-width` - The width of the disclosure content. Useful if you want to animate its width.
- * @css `--corvu-disclosure-content-height` - The height of the disclosure content. Useful if you want to animate its height.
+ * @css `--arara-disclosure-content-width` - The width of the disclosure content. Useful if you want to animate its width.
+ * @css `--arara-disclosure-content-height` - The height of the disclosure content. Useful if you want to animate its height.
  */
 const DisclosureContent = <T extends ValidComponent = 'div'>(
   props: DynamicProps<T, DisclosureContentProps<T>>,
@@ -93,8 +93,8 @@ const DisclosureContent = <T extends ValidComponent = 'div'>(
             style={combineStyle(
               {
                 display: !show() ? 'none' : undefined,
-                '--corvu-disclosure-content-width': `${contentWidth()}px`,
-                '--corvu-disclosure-content-height': `${contentHeight()}px`,
+                '--arara-disclosure-content-width': `${contentWidth()}px`,
+                '--arara-disclosure-content-height': `${contentHeight()}px`,
               },
               localProps.style,
             )}
@@ -102,7 +102,7 @@ const DisclosureContent = <T extends ValidComponent = 'div'>(
             id={context().disclosureId()}
             data-collapsed={dataIf(!context().expanded())}
             data-expanded={dataIf(context().expanded())}
-            data-corvu-disclosure-content=""
+            data-arara-disclosure-content=""
             {...otherProps}
           />
         )
@@ -116,8 +116,8 @@ const DisclosureContent = <T extends ValidComponent = 'div'>(
               style={combineStyle(
                 {
                   display: !show() ? 'none' : undefined,
-                  '--corvu-disclosure-content-width': `${contentWidth()}px`,
-                  '--corvu-disclosure-content-height': `${contentHeight()}px`,
+                  '--arara-disclosure-content-width': `${contentWidth()}px`,
+                  '--arara-disclosure-content-height': `${contentHeight()}px`,
                 },
                 localProps.style,
               )}
@@ -125,7 +125,7 @@ const DisclosureContent = <T extends ValidComponent = 'div'>(
               id={context().disclosureId()}
               data-expanded={dataIf(context().expanded())}
               data-collapsed={dataIf(!context().expanded())}
-              data-corvu-disclosure-content=""
+              data-arara-disclosure-content=""
               {...otherProps}
             />
           </Show>

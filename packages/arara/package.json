@@ -1,5 +1,5 @@
 {
-  "name": "corvu",
+  "name": "arara",
   "version": "0.7.1",
   "private": false,
   "description": "Unstyled, accessible and customizable UI primitives for SolidJS",
@@ -11,14 +11,14 @@
     "customizable",
     "primitives"
   ],
-  "homepage": "https://corvu.dev",
+  "homepage": "https://arara.dev",
   "bugs": {
-    "url": "https://github.com/corvudev/corvu/issues",
+    "url": "https://github.com/araradev/arara/issues",
     "email": "code@jasi.dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/corvudev/corvu.git"
+    "url": "git+https://github.com/araradev/arara.git"
   },
   "license": "MIT",
   "author": {
@@ -52,14 +52,14 @@
     "lint": "eslint --max-warnings=0 ."
   },
   "dependencies": {
-    "@corvu/accordion": "workspace:~",
-    "@corvu/dialog": "workspace:~",
-    "@corvu/disclosure": "workspace:~",
-    "@corvu/drawer": "workspace:~",
-    "@corvu/otp-field": "workspace:~",
-    "@corvu/popover": "workspace:~",
-    "@corvu/resizable": "workspace:~",
-    "@corvu/tooltip": "workspace:~"
+    "@arara/accordion": "workspace:~",
+    "@arara/dialog": "workspace:~",
+    "@arara/disclosure": "workspace:~",
+    "@arara/drawer": "workspace:~",
+    "@arara/otp-field": "workspace:~",
+    "@arara/popover": "workspace:~",
+    "@arara/resizable": "workspace:~",
+    "@arara/tooltip": "workspace:~"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.9.0",

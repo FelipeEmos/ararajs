@@ -1,4 +1,4 @@
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import createEscapeKeyDown from '@src/create/escapeKeyDown'
 import createNoPointerEvents from '@src/create/noPointerEvents'
 import createOutsideFocus from '@src/create/outsideFocus'

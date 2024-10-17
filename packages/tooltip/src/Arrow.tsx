@@ -4,16 +4,16 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import type { ElementOf, Ref } from '@corvu/utils/dom'
+import type { ElementOf, Ref } from '@arara/utils/dom'
 import FloatingArrow, {
   type FloatingArrowElementProps,
   type FloatingArrowSharedElementProps,
-} from '@corvu/utils/components/FloatingArrow'
-import type { DynamicProps } from '@corvu/utils/dynamic'
-import { mergeRefs } from '@corvu/utils/reactivity'
+} from '@arara/utils/components/FloatingArrow'
+import type { DynamicProps } from '@arara/utils/dynamic'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalTooltipContext } from '@src/context'
 
-export type TooltipArrowCorvuProps = {
+export type TooltipArrowAraraProps = {
   /**
    * Size of the arrow in px.
    * @defaultValue 16
@@ -30,15 +30,15 @@ export type TooltipArrowSharedElementProps<T extends ValidComponent = 'div'> = {
 } & FloatingArrowSharedElementProps<T>
 
 export type TooltipArrowElementProps = TooltipArrowSharedElementProps & {
-  'data-corvu-tooltip-arrow': ''
+  'data-arara-tooltip-arrow': ''
 } & FloatingArrowElementProps
 
 export type TooltipArrowProps<T extends ValidComponent = 'div'> =
-  TooltipArrowCorvuProps & Partial<TooltipArrowSharedElementProps<T>>
+  TooltipArrowAraraProps & Partial<TooltipArrowSharedElementProps<T>>
 
 /** Arrow element that automatically points towards the floating reference. Comes with a default arrow svg, but can be overridden by providing your own as the children.
  *
- * @data `data-corvu-tooltip-arrow` - Present on every tooltip arrow element.
+ * @data `data-arara-tooltip-arrow` - Present on every tooltip arrow element.
  */
 const TooltipArrow = <T extends ValidComponent = 'div'>(
   props: DynamicProps<T, TooltipArrowProps<T>>,
@@ -57,7 +57,7 @@ const TooltipArrow = <T extends ValidComponent = 'div'>(
       floatingState={context().floatingState()}
       // === SharedElementProps ===
       ref={mergeRefs(context().setArrowRef, localProps.ref)}
-      data-corvu-tooltip-arrow=""
+      data-arara-tooltip-arrow=""
       {...otherProps}
     />
   )

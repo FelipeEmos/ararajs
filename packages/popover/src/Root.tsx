@@ -15,15 +15,15 @@ import Dialog, {
   type ContextValue as DialogContextValue,
   type RootChildrenProps as DialogRootChildrenProps,
   type RootProps as DialogRootProps,
-} from '@corvu/dialog'
+} from '@arara/dialog'
 import type {
   FloatingOptions,
   FloatingState,
-} from '@corvu/utils/create/floating'
+} from '@arara/utils/create/floating'
 import type { Placement, Strategy } from '@floating-ui/dom'
-import createFloating from '@corvu/utils/create/floating'
-import createOnce from '@corvu/utils/create/once'
-import { isFunction } from '@corvu/utils'
+import createFloating from '@arara/utils/create/floating'
+import createOnce from '@arara/utils/create/once'
+import { isFunction } from '@arara/utils'
 
 export type PopoverRootProps = {
   /**

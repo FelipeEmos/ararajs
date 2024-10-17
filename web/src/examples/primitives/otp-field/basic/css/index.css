@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-[data-corvu-otp-field-root] {
+[data-arara-otp-field-root] {
   display: flex;
 }
 
@@ -72,4 +72,3 @@
     opacity: 0;
   }
 }
-

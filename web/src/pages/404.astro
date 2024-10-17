@@ -16,7 +16,7 @@ import Topbar from '@components/Topbar.astro'
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>corvu</title>
+    <title>arara</title>
     <link
       rel="preload"
       as="font"
@@ -33,7 +33,7 @@ import Topbar from '@components/Topbar.astro'
     />
     <ThemeScript />
   </head>
-  <body class="flex flex-col bg-corvu-bg text-corvu-text antialiased">
+  <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
     <Background type="home" client:media="(min-width: 768px)" />
     <Topbar />
     <main class="mx-auto w-full max-w-7xl px-4">
@@ -41,12 +41,12 @@ import Topbar from '@components/Topbar.astro'
         <div class="flex flex-col items-center">
           <img
             src={LogoDark.src}
-            alt="corvu logo dark"
+            alt="arara logo dark"
             class="h-40 dark:hidden"
           />
           <img
             src={LogoLight.src}
-            alt="corvu logo light"
+            alt="arara logo light"
             class="hidden h-40 dark:block"
           />
           <h1
@@ -57,7 +57,7 @@ import Topbar from '@components/Topbar.astro'
           </h1>
           <a
             href="/"
-            class="mt-6 rounded-lg bg-corvu-300 px-4 py-3 text-lg font-medium transition-all duration-100 hover:translate-y-0.5"
+            class="mt-6 rounded-lg bg-arara-300 px-4 py-3 text-lg font-medium transition-all duration-100 hover:translate-y-0.5"
             >Go back</a
           >
         </div>

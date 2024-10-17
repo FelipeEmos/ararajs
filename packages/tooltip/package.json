@@ -1,5 +1,5 @@
 {
-  "name": "@corvu/tooltip",
+  "name": "@arara/tooltip",
   "version": "0.2.1",
   "private": false,
   "description": "Unstyled, accessible and customizable UI primitives for SolidJS",
@@ -11,14 +11,14 @@
     "customizable",
     "primitives"
   ],
-  "homepage": "https://corvu.dev",
+  "homepage": "https://arara.dev",
   "bugs": {
-    "url": "https://github.com/corvudev/corvu/issues",
+    "url": "https://github.com/araradev/arara/issues",
     "email": "code@jasi.dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/corvudev/corvu.git"
+    "url": "git+https://github.com/araradev/arara.git"
   },
   "license": "MIT",
   "author": {
@@ -55,7 +55,7 @@
     "typedoc": "typedoc --json api.json --entryPoints ./src/index.ts"
   },
   "dependencies": {
-    "@corvu/utils": "workspace:~",
+    "@arara/utils": "workspace:~",
     "@floating-ui/dom": "^1.6.11",
     "solid-dismissible": "workspace:~",
     "solid-presence": "workspace:~"

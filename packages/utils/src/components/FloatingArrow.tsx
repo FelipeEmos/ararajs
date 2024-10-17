@@ -12,7 +12,7 @@ import { combineStyle } from '@src/dom'
 import type { FloatingState } from '@src/create/floating'
 import { PositionToDirection } from '@src/floating/lib'
 
-export type FloatingArrowCorvuProps = {
+export type FloatingArrowAraraProps = {
   floatingState: FloatingState
   /**
    * Size of the arrow in px.
@@ -31,7 +31,7 @@ export type FloatingArrowSharedElementProps<T extends ValidComponent = 'div'> =
 export type FloatingArrowElementProps = FloatingArrowSharedElementProps
 
 export type FloatingArrowProps<T extends ValidComponent = 'div'> =
-  FloatingArrowCorvuProps & Partial<FloatingArrowSharedElementProps<T>>
+  FloatingArrowAraraProps & Partial<FloatingArrowSharedElementProps<T>>
 
 type Position = 'top' | 'bottom' | 'left' | 'right'
 

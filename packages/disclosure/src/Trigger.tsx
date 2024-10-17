@@ -1,4 +1,4 @@
-import { callEventHandler, type ElementOf } from '@corvu/utils/dom'
+import { callEventHandler, type ElementOf } from '@arara/utils/dom'
 import {
   type Component,
   createMemo,
@@ -11,11 +11,11 @@ import {
   type DynamicButtonElementProps,
   type DynamicButtonSharedElementProps,
   type DynamicProps,
-} from '@corvu/utils/dynamic'
-import { dataIf } from '@corvu/utils'
+} from '@arara/utils/dynamic'
+import { dataIf } from '@arara/utils'
 import { useInternalDisclosureContext } from '@src/context'
 
-export type DisclosureTriggerCorvuProps = {
+export type DisclosureTriggerAraraProps = {
   /**
    * The `id` of the disclosure context to use.
    */
@@ -34,15 +34,15 @@ export type DisclosureTriggerElementProps =
     'aria-expanded': 'true' | 'false'
     'data-collapsed': '' | undefined
     'data-expanded': '' | undefined
-    'data-corvu-disclosure-trigger': '' | null
+    'data-arara-disclosure-trigger': '' | null
   } & DynamicButtonElementProps
 
 export type DisclosureTriggerProps<T extends ValidComponent = 'button'> =
-  DisclosureTriggerCorvuProps & Partial<DisclosureTriggerSharedElementProps<T>>
+  DisclosureTriggerAraraProps & Partial<DisclosureTriggerSharedElementProps<T>>
 
 /** Button that changes the open state of the disclosure when clicked.
  *
- * @data `data-corvu-disclosure-trigger` - Present on every disclosure trigger element.
+ * @data `data-arara-disclosure-trigger` - Present on every disclosure trigger element.
  * @data `data-expanded` - Present when the disclosure is expanded.
  * @data `data-collapsed` - Present when the disclosure is collapsed.
  */
@@ -76,7 +76,7 @@ const DisclosureTrigger = <T extends ValidComponent = 'button'>(
       aria-expanded={context().expanded() ? 'true' : 'false'}
       data-collapsed={dataIf(!context().expanded())}
       data-expanded={dataIf(context().expanded())}
-      data-corvu-disclosure-trigger=""
+      data-arara-disclosure-trigger=""
       {...otherProps}
     />
   )

@@ -1,5 +1,5 @@
 import Content, {
-  type DisclosureContentCorvuProps as ContentCorvuProps,
+  type DisclosureContentAraraProps as ContentAraraProps,
   type DisclosureContentElementProps as ContentElementProps,
   type DisclosureContentProps as ContentProps,
   type DisclosureContentSharedElementProps as ContentSharedElementProps,
@@ -13,21 +13,21 @@ import Root, {
   type DisclosureRootProps as RootProps,
 } from '@src/Root'
 import Trigger, {
-  type DisclosureTriggerCorvuProps as TriggerCorvuProps,
+  type DisclosureTriggerAraraProps as TriggerAraraProps,
   type DisclosureTriggerElementProps as TriggerElementProps,
   type DisclosureTriggerProps as TriggerProps,
   type DisclosureTriggerSharedElementProps as TriggerSharedElementProps,
 } from '@src/Trigger'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
 export type {
   RootProps,
   RootChildrenProps,
-  TriggerCorvuProps,
+  TriggerAraraProps,
   TriggerSharedElementProps,
   TriggerElementProps,
   TriggerProps,
-  ContentCorvuProps,
+  ContentAraraProps,
   ContentSharedElementProps,
   ContentElementProps,
   ContentProps,

@@ -10,7 +10,7 @@ export default defineConfig({
     mdx(),
     sitemap({
       serialize(item) {
-        if (item.url === 'https://corvu.dev/') {
+        if (item.url === 'https://arara.dev/') {
           item.priority = 1
         } else {
           item.priority = 0.9
@@ -51,6 +51,6 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: false,
   },
-  site: 'https://corvu.dev',
+  site: 'https://arara.dev',
   trailingSlash: 'always',
 })

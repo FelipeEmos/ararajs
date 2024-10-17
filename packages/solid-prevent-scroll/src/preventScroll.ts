@@ -5,7 +5,7 @@
  * https://github.com/theKashey/react-remove-scroll
  */
 
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import {
   createEffect,
   createSignal,
@@ -13,10 +13,10 @@ import {
   mergeProps,
   onCleanup,
 } from 'solid-js'
-import type { Axis } from '@corvu/utils'
-import { contains } from '@corvu/utils/dom'
-import createStyle from '@corvu/utils/create/style'
-import { getScrollAtLocation } from '@corvu/utils/scroll'
+import type { Axis } from '@arara/utils'
+import { contains } from '@arara/utils/dom'
+import createStyle from '@arara/utils/create/style'
+import { getScrollAtLocation } from '@arara/utils/scroll'
 
 const [preventScrollStack, setPreventScrollStack] = createSignal<string[]>([])
 const isActive = (id: string) =>

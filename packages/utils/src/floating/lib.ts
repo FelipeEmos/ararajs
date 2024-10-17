@@ -42,7 +42,7 @@ const getFloatingStyle = (props: {
         floatingState.maxHeight !== null
           ? `${floatingState.maxHeight}px`
           : undefined,
-      '--corvu-floating-transform-origin': transformOrigin,
+      '--arara-floating-transform-origin': transformOrigin,
     }
   })
 

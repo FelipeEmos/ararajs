@@ -13,7 +13,7 @@
   font-weight: 500;
 }
 
-[data-corvu-disclosure-trigger] {
+[data-arara-disclosure-trigger] {
   border-radius: 0.5rem;
   background-color: hsl(249, 87%, 94%);
   padding: 0.25rem;
@@ -22,11 +22,11 @@
   transition-duration: 100ms;
 }
 
-[data-corvu-disclosure-trigger]:active {
+[data-arara-disclosure-trigger]:active {
   transform: translate(0, 0.125rem);
 }
 
-[data-corvu-disclosure-trigger]:hover {
+[data-arara-disclosure-trigger]:hover {
   background-color: hsl(251, 86%, 89%);
 }
 
@@ -51,7 +51,7 @@
   padding-bottom: 0.5rem;
 }
 
-[data-corvu-disclosure-content] {
+[data-arara-disclosure-content] {
     margin-top: 0.25rem;
     overflow: hidden;
 }
@@ -60,11 +60,11 @@
   margin-top: 0.25rem;
 }
 
-[data-corvu-disclosure-content][data-collapsed] {
+[data-arara-disclosure-content][data-collapsed] {
   animation: collapse 200ms linear;
 }
 
-[data-corvu-disclosure-content][data-expanded] {
+[data-arara-disclosure-content][data-expanded] {
   animation: expand 200ms linear;
 }
 
@@ -73,14 +73,14 @@
     height: 0px;
   }
   100% {
-    height: var(--corvu-disclosure-content-height);
+    height: var(--arara-disclosure-content-height);
   }
 }
 
 
 @keyframes collapse {
   0% {
-    height: var(--corvu-disclosure-content-height);
+    height: var(--arara-disclosure-content-height);
   }
   100% {
     height: 0px;

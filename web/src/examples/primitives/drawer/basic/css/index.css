@@ -1,4 +1,4 @@
-[data-corvu-drawer-trigger] {
+[data-arara-drawer-trigger] {
   border-width: 0;
   cursor: pointer;
   margin-top: auto;
@@ -18,27 +18,27 @@
   animation-duration: 100ms;
 }
 
-[data-corvu-drawer-trigger]:hover {
+[data-arara-drawer-trigger]:hover {
   background-color: hsl(251, 86%, 89%);
 }
 
-[data-corvu-drawer-trigger]:active {
+[data-arara-drawer-trigger]:active {
   transform: translate(0px, 0.125rem);
 }
 
-[data-corvu-drawer-overlay] {
+[data-arara-drawer-overlay] {
   position: fixed;
   inset: 0px;
   z-index: 40;
 }
 
-[data-corvu-drawer-overlay][data-transitioning] {
+[data-arara-drawer-overlay][data-transitioning] {
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
   transition-duration: 500ms;
 }
 
-[data-corvu-drawer-content] {
+[data-arara-drawer-content] {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
@@ -59,7 +59,7 @@
   padding-top: 0.75rem;
 }
 
-[data-corvu-drawer-content]::after {
+[data-arara-drawer-content]::after {
   position: absolute;
   left: 0px;
   right: 0px;
@@ -69,14 +69,14 @@
   content: '';
 }
 
-[data-corvu-drawer-content][data-transitioning] {
+[data-arara-drawer-content][data-transitioning] {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
   transition-duration: 500ms;
 }
 
 @media (min-width: 768px) {
-  [data-corvu-drawer-content] {
+  [data-arara-drawer-content] {
     -webkit-user-select: none;
     user-select: none;
   }
@@ -90,7 +90,7 @@
   background-color: hsl(258, 79%, 74%);
 }
 
-[data-corvu-drawer-label] {
+[data-arara-drawer-label] {
   margin-top: 0.5rem;
   margin-bottom: 0px;
   text-align: center;
@@ -99,7 +99,7 @@
   font-weight: 700;
 }
 
-[data-corvu-drawer-description] {
+[data-arara-drawer-description] {
   margin-top: 0.25rem;
   text-align: center;
 }

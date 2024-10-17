@@ -1,8 +1,8 @@
 ---
 layout: '@layouts/Docs.astro'
 title: Installation
-description: corvu is a collection of unstyled, accessible and customizable UI primitives for SolidJS
-image: https://corvu.dev/banner.jpg
+description: arara is a collection of unstyled, accessible and customizable UI primitives for SolidJS
+image: https://arara.dev/banner.jpg
 ---
 import Code from '@components/docs/code/Code.astro'
 import H2 from '@components/docs/headings/H2.astro'
@@ -10,26 +10,26 @@ import H3 from '@components/docs/headings/H3.astro'
 export const components = { h2: H2, h3: H3 }
 
 # Installation
-corvu provides every UI primitive as a separate package. This allows you to only install the primitives you need, to use the semver of every package as a reference for breaking/feature changes and progressively update packages in case of new versions.
+arara provides every UI primitive as a separate package. This allows you to only install the primitives you need, to use the semver of every package as a reference for breaking/feature changes and progressively update packages in case of new versions.
 
-For example the drawer component is available as `@corvu/drawer`:
+For example the drawer component is available as `@arara/drawer`:
 <Code code={`
-npm install @corvu/drawer
+npm install @arara/drawer
 `} lang="bash" copyButton />
 
 If you want to install all primitives at once you can install the main package. Unused primitives will get tree-shaken by your bundler, so you don't have to worry about the bundle size.
 
 <Code code={`
-npm install corvu
+npm install arara
 `} lang="bash" copyButton />
 
-You're good to go! Head over to [Usage](/docs/state/) to learn how to use corvu.
+You're good to go! Head over to [Usage](/docs/state/) to learn how to use arara.
 
 ## TailwindCSS plugin
-If you want make use of the tailwind modifiers like `corvu-open:`, install the tailwind plugin:
+If you want make use of the tailwind modifiers like `arara-open:`, install the tailwind plugin:
 
 <Code code={`
-npm install @corvu/tailwind
+npm install @arara/tailwind
 `} lang="bash" copyButton />
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -38,10 +38,10 @@ Then add the plugin to your `tailwind.config.js` file:
 module.exports = {
   // ...
   plugins: [
-    // Use it with the default prefix 'corvu'
-    require('@corvu/tailwind'),
+    // Use it with the default prefix 'arara'
+    require('@arara/tailwind'),
     // or with a custom prefix
-    require('@corvu/tailwind')({ prefix: 'ui' }),
+    require('@arara/tailwind')({ prefix: 'ui' }),
     // ...
   ],
 }

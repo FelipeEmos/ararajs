@@ -1,4 +1,4 @@
-import { callEventHandler, type ElementOf } from '@corvu/utils/dom'
+import { callEventHandler, type ElementOf } from '@arara/utils/dom'
 import {
   type Component,
   createMemo,
@@ -11,12 +11,12 @@ import {
   type DynamicButtonElementProps,
   type DynamicButtonSharedElementProps,
   type DynamicProps,
-} from '@corvu/utils/dynamic'
-import { dataIf } from '@corvu/utils'
-import { mergeRefs } from '@corvu/utils/reactivity'
+} from '@arara/utils/dynamic'
+import { dataIf } from '@arara/utils'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalDialogContext } from '@src/context'
 
-export type DialogTriggerCorvuProps = {
+export type DialogTriggerAraraProps = {
   /**
    * The `id` of the dialog context to use.
    */
@@ -35,15 +35,15 @@ export type DialogTriggerElementProps = DialogTriggerSharedElementProps & {
   'aria-haspopup': 'dialog'
   'data-closed': '' | undefined
   'data-open': '' | undefined
-  'data-corvu-dialog-trigger': '' | null
+  'data-arara-dialog-trigger': '' | null
 } & DynamicButtonElementProps
 
 export type DialogTriggerProps<T extends ValidComponent = 'button'> =
-  DialogTriggerCorvuProps & Partial<DialogTriggerSharedElementProps<T>>
+  DialogTriggerAraraProps & Partial<DialogTriggerSharedElementProps<T>>
 
 /** Button that changes the open state of the dialog when clicked.
  *
- * @data `data-corvu-dialog-trigger` - Present on every dialog trigger element.
+ * @data `data-arara-dialog-trigger` - Present on every dialog trigger element.
  * @data `data-open` - Present when the dialog is open.
  * @data `data-closed` - Present when the dialog is closed.
  */
@@ -80,7 +80,7 @@ const DialogTrigger = <T extends ValidComponent = 'button'>(
       aria-haspopup="dialog"
       data-closed={dataIf(!context().open())}
       data-open={dataIf(context().open())}
-      data-corvu-dialog-trigger=""
+      data-arara-dialog-trigger=""
       {...otherProps}
     />
   )

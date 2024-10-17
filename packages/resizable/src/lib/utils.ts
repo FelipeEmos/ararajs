@@ -1,5 +1,5 @@
 import type { PanelInstance } from '@src/lib/types'
-import type { Size } from '@corvu/utils'
+import type { Size } from '@arara/utils'
 
 const resolveSize = (size: Size, rootSize: number) => {
   if (typeof size === 'number') {
@@ -7,7 +7,7 @@ const resolveSize = (size: Size, rootSize: number) => {
   }
   if (!size.endsWith('px')) {
     throw new Error(
-      `[corvu] Sizes must be a number or a string ending with 'px'. Got ${size}`,
+      `[arara] Sizes must be a number or a string ending with 'px'. Got ${size}`,
     )
   }
   return fixToPrecision(parseFloat(size) / rootSize)

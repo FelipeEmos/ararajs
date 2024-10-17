@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: SolidJS Drawer
 description: A customizable, unstyled and accessible drawer component for SolidJS
-image: https://corvu.dev/primitives/drawer.jpg
+image: https://arara.dev/primitives/drawer.jpg
 ---
 import RawCode from '@components/docs/code/RawCode.astro'
 import ExampleWrapper from '@examples/ExampleWrapper'
@@ -39,7 +39,7 @@ export const components = { h2: H2, h3: H3 }
 
 A drawer is a draggable dialog that is attached to any side of the viewport. It uses the [Dialog](/docs/primitives/dialog/) primitive under the hood and adds dragging logic on top of it.
 
-<PackageInfo packageName="@corvu/drawer" />
+<PackageInfo packageName="@arara/drawer" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -85,16 +85,16 @@ A drawer is a draggable dialog that is attached to any side of the viewport. It 
 ## Installation
 
 <Code code={`
-npm install @corvu/drawer
+npm install @arara/drawer
 `} lang="bash" copyButton />
 
-The drawer is also included in the main `corvu` package under `corvu/drawer`.
+The drawer is also included in the main `arara` package under `arara/drawer`.
 
 ## Usage
 <Code code={`
-import Drawer from '@corvu/drawer' // 'corvu/drawer'
+import Drawer from '@arara/drawer' // 'arara/drawer'
 // or
-// import { Root, Trigger, ... } from '@corvu/drawer'
+// import { Root, Trigger, ... } from '@arara/drawer'
 `} lang="tsx" copyButton />
 
 ### Anatomy
@@ -122,20 +122,20 @@ Animation is done by applying CSS transition properties when the drawer is in th
 A plain CSS example would look like this:
 
 <Code code={`
-[data-corvu-dialog-content][data-transitioning] {
+[data-arara-dialog-content][data-transitioning] {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
   transition-duration: 500ms;
 }
 `} lang="css" copyButton />
 
-corvu's tailwind plugin also provides a `corvu-transitioning` modifier that you can use:
+arara's tailwind plugin also provides a `arara-transitioning` modifier that you can use:
 
 <Code code={`
 <Drawer.Content
   class="
-    corvu-transitioning:transition-transform
-    corvu-transitioning:duration-500
+    arara-transitioning:transition-transform
+    arara-transitioning:duration-500
   "
 >
 </Drawer.Content>
@@ -155,7 +155,7 @@ You can also use the `openPercentage` property returned by the `Drawer.useContex
 <Drawer>
   {(props) => (
     <Drawer.Overlay
-      class="fixed inset-0 z-40 corvu-transitioning:transition-colors corvu-transitioning:duration-500 corvu-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]"
+      class="fixed inset-0 z-40 arara-transitioning:transition-colors arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]"
       style={{
         'background-color': \`rgb(0 0 0 / \${
           0.5 * props.openPercentage
@@ -245,7 +245,7 @@ Scrollable elements work out of the box. The drawer will check if the user is dr
 </ExampleWrapper>
 
 ### Transitioning the content height
-corvu's drawer can handle `height: auto` and transition between heights when the content changes. This is possible by using a `ResizeObserver` to detect height changes and apply a fixed height for the time of the transition.
+arara's drawer can handle `height: auto` and transition between heights when the content changes. This is possible by using a `ResizeObserver` to detect height changes and apply a fixed height for the time of the transition.
 
 This is disabled by default and you need to set the `transitionResize` property on the root component to enable it. Also, remember to set `transition-property: height` on the drawer content ;).
 
@@ -305,7 +305,7 @@ style={{
 The height will adjust to match the drawer's height until it's under 70%, which is the last snap point. Don't forget to apply the same transition function as you defined for your drawer transform and you're good to go!
 
 ### Disable dragging on certain elements
-You can disable drag on an element by giving it the `data-corvu-no-drag` attribute. corvu will ignore any drag events on elements with this attribute.
+You can disable drag on an element by giving it the `data-arara-no-drag` attribute. arara will ignore any drag events on elements with this attribute.
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -326,7 +326,7 @@ You can disable drag on an element by giving it the `data-corvu-no-drag` attribu
 </ExampleWrapper>
 
 ### Persistent content
-To persist the content of the drawer even when it's unmounted, you can use corvu's <Link href="/docs/utilities/persistent/">`createPersistent`</Link> utility. It will cache the content when the drawer is opened for the first time and preserve its state and HTML elements.
+To persist the content of the drawer even when it's unmounted, you can use arara's <Link href="/docs/utilities/persistent/">`createPersistent`</Link> utility. It will cache the content when the drawer is opened for the first time and preserve its state and HTML elements.
 
 <Code code={`
 const PersistedDrawerContent = () => {

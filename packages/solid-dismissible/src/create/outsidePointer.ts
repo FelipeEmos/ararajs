@@ -1,6 +1,6 @@
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import { createEffect, mergeProps, onCleanup } from 'solid-js'
-import { contains } from '@corvu/utils/dom'
+import { contains } from '@arara/utils/dom'
 
 /**
  * Calls the `onPointer` callback when a `pointerdown` or `pointerup` event occurs outside of the given element.

@@ -1,4 +1,4 @@
-import type { Size } from '@corvu/utils'
+import type { Size } from '@arara/utils'
 
 export type ResolvedSnapPoint = {
   value: Size
@@ -62,7 +62,7 @@ export const resolvePoint = (point: Size, drawerSize: number): number => {
   if (typeof point === 'number') return drawerSize - point * drawerSize
   if (!point.endsWith('px')) {
     throw new Error(
-      `[corvu] Snap and break points must be a number or a string ending with 'px'. Got ${point}`,
+      `[arara] Snap and break points must be a number or a string ending with 'px'. Got ${point}`,
     )
   }
   return drawerSize - parseInt(point, 10)
@@ -153,7 +153,7 @@ const findNearbySnapPoint = (
 /**
  * Returns true if the given location is draggable.
  * An element is draggable if:
- * - The target element and all of its parents don't have the `data-corvu-no-drag` attribute present.
+ * - The target element and all of its parents don't have the `data-arara-no-drag` attribute present.
  * - The target element is not an input of type range.
  * - If the pointerType is mouse, the target element is not a <select> element.
  *
@@ -173,7 +173,7 @@ export const locationIsDraggable = (
 
   do {
     if (
-      currentElement.hasAttribute('data-corvu-no-drag') ||
+      currentElement.hasAttribute('data-arara-no-drag') ||
       (currentElement as HTMLInputElement).type === 'range' ||
       (currentElement.tagName === 'SELECT' && pointerType === 'mouse')
     )

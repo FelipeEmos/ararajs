@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: Dynamic Components
 description: Modify the DOM element or component a primitive component should render as.
-image: https://corvu.dev/banner.jpg
+image: https://arara.dev/banner.jpg
 ---
 import Code from '@components/docs/code/Code.astro'
 import H2 from '@components/docs/headings/H2.astro'
@@ -15,10 +15,10 @@ All primitive components that render a DOM element are dynamic, which means that
 
 ## Native elements
 
-In most cases, you shouldn't need to change the DOM element that the primitive component renders. corvu has sensible defaults for all components. But there are cases where it makes sense to change them. An example would be the `Tooltip` trigger which renders as a `button` element. You may want to render a tooltip on a link (`a` tag) instead. To do this, you have to specify the `as` property on the trigger component:
+In most cases, you shouldn't need to change the DOM element that the primitive component renders. arara has sensible defaults for all components. But there are cases where it makes sense to change them. An example would be the `Tooltip` trigger which renders as a `button` element. You may want to render a tooltip on a link (`a` tag) instead. To do this, you have to specify the `as` property on the trigger component:
 <Code code={`
-<Tooltip.Trigger as="a" href="https://corvu.dev">
-  corvu.dev
+<Tooltip.Trigger as="a" href="https://arara.dev">
+  arara.dev
 </Tooltip.Trigger>
 `} lang="tsx" />
 
@@ -32,7 +32,7 @@ import {
   ComponentProps,
   splitProps,
 } from 'solid-js'
-import Dialog from '@corvu/dialog'
+import Dialog from '@arara/dialog'
 
 const CustomButton = (
   props: ComponentProps<'button'> & { variant: 'fill' | 'outline' },
@@ -51,37 +51,37 @@ const DialogTrigger = () => (
 
 Props not belonging to the primitive component will be passed through to your custom component. In this case, the `variant` prop is passed to the `CustomButton` component.
 
-> ❗ To ensure functionality and accessibility, your component needs to spread the received props onto your element. Otherwise, corvu can't define props on the element and things will break.
+> ❗ To ensure functionality and accessibility, your component needs to spread the received props onto your element. Otherwise, arara can't define props on the element and things will break.
 
 ## Component types
 
-corvu's dynamic components have a flexible type system. This allows library developers or users who want to create their own components based on corvu's primitives to have a great developer experience.
+arara's dynamic components have a flexible type system. This allows library developers or users who want to create their own components based on arara's primitives to have a great developer experience.
 
 Every dynamic component exposes 4 types.
 
-For example, the `<Dialog.Trigger>` component exports the types `DialogTriggerCorvuProps`, `DialogTriggerSharedElementProps<T>`, `DialogTriggerElementProps` and `DialogTriggerProps<T>`.
+For example, the `<Dialog.Trigger>` component exports the types `DialogTriggerAraraProps`, `DialogTriggerSharedElementProps<T>`, `DialogTriggerElementProps` and `DialogTriggerProps<T>`.
 
 Lets have a look at the types:
 
-### CorvuProps
+### AraraProps
 
-`CorvuProps` contains all props that are specific to the primitive component and are not passed through to the rendered element. They are consumed by corvu. For example, the [`<Resizable.Handle />`](/docs/primitives/resizable/#Panel) has props like `minSize` or `collapsible`.
+`AraraProps` contains all props that are specific to the primitive component and are not passed through to the rendered element. They are consumed by arara. For example, the [`<Resizable.Handle />`](/docs/primitives/resizable/#Panel) has props like `minSize` or `collapsible`.
 
 ### SharedElementProps&lt;T extends ValidComponent&gt;
 
-`SharedElementProps` includes all props that get defined by corvu on the rendered element **but** can be overridden by the user. This usually includes the `ref` or `style` properties. The generic is used to properly type `ref` and event listeners.
+`SharedElementProps` includes all props that get defined by arara on the rendered element **but** can be overridden by the user. This usually includes the `ref` or `style` properties. The generic is used to properly type `ref` and event listeners.
 
 ### ElementProps
 
-`ElementProps` element props inherits all `SharedElementProps` and additionally includes all props that are set by corvu and can't be overridden by the user. This includes for example accessibility props like `aria-*`, `role` and `data-*`.
+`ElementProps` element props inherits all `SharedElementProps` and additionally includes all props that are set by arara and can't be overridden by the user. This includes for example accessibility props like `aria-*`, `role` and `data-*`.
 
 ### Props&lt;T extends ValidComponent&gt;
 
-This is the type that defines what props that corvu expects from the user. It's equal to `CorvuProps & Partial<SharedElementProps>`.
+This is the type that defines what props that arara expects from the user. It's equal to `AraraProps & Partial<SharedElementProps>`.
 
 ### DynamicProps
 
-`DynamicProps` is a helper type that allows you to expose the dynamic aspect of corvu components from your custom component. Let's look at an example:
+`DynamicProps` is a helper type that allows you to expose the dynamic aspect of arara components from your custom component. Let's look at an example:
 
 <Code code={`
 import {
@@ -89,9 +89,9 @@ import {
   ComponentProps,
   splitProps,
 } from 'solid-js'
-import Dialog, { type TriggerProps, type DynamicProps } from '@corvu/dialog'
+import Dialog, { type TriggerProps, type DynamicProps } from '@arara/dialog'
 
-// Define your custom props, including \`TriggerProps\` from corvu
+// Define your custom props, including \`TriggerProps\` from arara
 export type CustomDisclosureTriggerProps<T extends ValidComponent = 'button'> = TriggerProps<T> & {
   variant: 'fill' | 'outline'
 }
@@ -110,7 +110,7 @@ const CustomDialogTrigger = <T extends ValidComponent = 'button'>(
 }
 `} lang="tsx" />
 
-If you don't want to expose the dynamic aspect of corvu's components, you can define the generic explicitly:
+If you don't want to expose the dynamic aspect of arara's components, you can define the generic explicitly:
 
 <Code code={`
 const CustomDialogTrigger = (

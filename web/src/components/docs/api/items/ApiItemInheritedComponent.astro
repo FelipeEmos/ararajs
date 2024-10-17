@@ -16,13 +16,13 @@ const { name, descriptionHtml, inherits, data, css } = Astro.props
     >
       &lt;{name} /&gt;
     </h3><p
-      class="rounded-md border-2 border-corvu-200 bg-corvu-100 px-1.5 py-0.5 text-sm font-bold"
+      class="rounded-md border-2 border-arara-200 bg-arara-100 px-1.5 py-0.5 text-sm font-bold"
     >
       Component
     </p>
     <a
       href={`#${encodeURIComponent(name)}`}
-      class="not-prose transition-opacity hover:text-corvu-400 group-hover:opacity-100 md:opacity-0"
+      class="not-prose transition-opacity hover:text-arara-400 group-hover:opacity-100 md:opacity-0"
       data-typesense-ignore
     >
       <svg
@@ -51,7 +51,7 @@ const { name, descriptionHtml, inherits, data, css } = Astro.props
   </div>
   <p class="mt-3" set:html={descriptionHtml} />
   <div class="mt-4">
-    <div class="mb-4 border-b border-corvu-100 pb-3">
+    <div class="mb-4 border-b border-arara-100 pb-3">
       <h4 class="not-prose text-lg font-bold">Props</h4>
       <p class="mt-3">
         Inherits <Link

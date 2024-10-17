@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: SolidJS Tooltip
 description: A customizable, unstyled and accessible tooltip component for SolidJS
-image: https://corvu.dev/primitives/tooltip.jpg
+image: https://arara.dev/primitives/tooltip.jpg
 ---
 import RawCode from '@components/docs/code/RawCode.astro'
 import ExampleWrapper from '@examples/ExampleWrapper'
@@ -26,7 +26,7 @@ export const components = { h2: H2, h3: H3 }
 
 A popup that displays information when its trigger receives keyboard focus or the mouse hovers over it. It uses the awesome <Link href="https://floating-ui.com/" newTab>Floating UI</Link> library in the background for positioning and allows you to fully customize its behavior.
 
-<PackageInfo packageName="@corvu/tooltip" />
+<PackageInfo packageName="@arara/tooltip" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -71,16 +71,16 @@ A popup that displays information when its trigger receives keyboard focus or th
 ## Installation
 
 <Code code={`
-npm install @corvu/tooltip
+npm install @arara/tooltip
 `} lang="bash" copyButton />
 
-The tooltip is also included in the main `corvu` package under `corvu/tooltip`.
+The tooltip is also included in the main `arara` package under `arara/tooltip`.
 
 ## Usage
 <Code code={`
-import Tooltip from '@corvu/tooltip' // 'corvu/tooltip'
+import Tooltip from '@arara/tooltip' // 'arara/tooltip'
 // or
-// import { Root, Trigger, ... } from '@corvu/tooltip'
+// import { Root, Trigger, ... } from '@arara/tooltip'
 `} lang="tsx" copyButton />
 
 ### Anatomy

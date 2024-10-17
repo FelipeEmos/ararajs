@@ -20,7 +20,7 @@ export type PluginOptions = {
 }
 
 export default plugin.withOptions<PluginOptions>(
-  ({ prefix = 'corvu' } = {}) => {
+  ({ prefix = 'arara' } = {}) => {
     return ({ addVariant }) => {
       for (const state of dataStates) {
         addVariant(`${prefix}-${state}`, [`&[data-${state}]`])

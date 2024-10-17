@@ -2,11 +2,11 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 import type {
   FloatingOptions,
   FloatingState,
-} from '@corvu/utils/create/floating'
+} from '@arara/utils/create/floating'
 import type { Placement, Strategy } from '@floating-ui/dom'
 
 export type PopoverContextValue = {
@@ -37,7 +37,7 @@ export const usePopoverContext = (contextId?: string) => {
     const context = useContext(PopoverContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Popover context not found. Make sure to wrap Popover components in <Popover.Root>',
+        '[arara]: Popover context not found. Make sure to wrap Popover components in <Popover.Root>',
       )
     }
     return context
@@ -46,7 +46,7 @@ export const usePopoverContext = (contextId?: string) => {
   const context = useKeyedContext<PopoverContextValue>(`popover-${contextId}`)
   if (!context) {
     throw new Error(
-      `[corvu]: Popover context with id "${contextId}" not found. Make sure to wrap Popover components in <Popover.Root contextId="${contextId}">`,
+      `[arara]: Popover context with id "${contextId}" not found. Make sure to wrap Popover components in <Popover.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -75,7 +75,7 @@ export const useInternalPopoverContext = (contextId?: string) => {
     const context = useContext(InternalPopoverContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Popover context not found. Make sure to wrap Popover components in <Popover.Root>',
+        '[arara]: Popover context not found. Make sure to wrap Popover components in <Popover.Root>',
       )
     }
     return context
@@ -86,7 +86,7 @@ export const useInternalPopoverContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Popover context with id "${contextId}" not found. Make sure to wrap Popover components in <Popover.Root contextId="${contextId}">`,
+      `[arara]: Popover context with id "${contextId}" not found. Make sure to wrap Popover components in <Popover.Root contextId="${contextId}">`,
     )
   }
   return context

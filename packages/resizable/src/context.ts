@@ -2,9 +2,9 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 import type { PanelData, PanelInstance, ResizeStrategy } from '@src/lib/types'
-import type { Size } from '@corvu/utils'
+import type { Size } from '@arara/utils'
 
 export type ResizableContextValue = {
   /** The orientation of the resizable. */
@@ -42,7 +42,7 @@ export const useResizableContext = (contextId?: string) => {
     const context = useContext(ResizableContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Resizable context not found. Make sure to wrap Resizable components in <Resizable.Root>',
+        '[arara]: Resizable context not found. Make sure to wrap Resizable components in <Resizable.Root>',
       )
     }
     return context
@@ -53,7 +53,7 @@ export const useResizableContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Resizable context with id "${contextId}" not found. Make sure to wrap Resizable components in <Resizable.Root contextId="${contextId}">`,
+      `[arara]: Resizable context with id "${contextId}" not found. Make sure to wrap Resizable components in <Resizable.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -89,7 +89,7 @@ export const useInternalResizableContext = (contextId?: string) => {
     const context = useContext(InternalResizableContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Resizable context not found. Make sure to wrap Resizable components in <Resizable.Root>',
+        '[arara]: Resizable context not found. Make sure to wrap Resizable components in <Resizable.Root>',
       )
     }
     return context
@@ -100,7 +100,7 @@ export const useInternalResizableContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Resizable context with id "${contextId}" not found. Make sure to wrap Resizable components in <Resizable.Root contextId="${contextId}">`,
+      `[arara]: Resizable context with id "${contextId}" not found. Make sure to wrap Resizable components in <Resizable.Root contextId="${contextId}">`,
     )
   }
   return context

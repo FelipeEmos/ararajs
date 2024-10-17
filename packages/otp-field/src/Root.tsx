@@ -12,17 +12,17 @@ import {
   createInternalOtpFieldContext,
   createOtpFieldContext,
 } from '@src/context'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import { combineStyle } from '@corvu/utils/dom'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
-import createOnce from '@corvu/utils/create/once'
-import createSize from '@corvu/utils/create/size'
-import type { ElementOf } from '@corvu/utils/dom'
-import { isFunction } from '@corvu/utils'
-import { mergeRefs } from '@corvu/utils/reactivity'
-import type { Ref } from '@corvu/utils/dom'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import { combineStyle } from '@arara/utils/dom'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
+import createOnce from '@arara/utils/create/once'
+import createSize from '@arara/utils/create/size'
+import type { ElementOf } from '@arara/utils/dom'
+import { isFunction } from '@arara/utils'
+import { mergeRefs } from '@arara/utils/reactivity'
+import type { Ref } from '@arara/utils/dom'
 
-export type OtpFieldRootCorvuProps = {
+export type OtpFieldRootAraraProps = {
   /** Max number of chars. Is required. */
   maxLength: number
   /** The value of the OTP Field. */
@@ -49,11 +49,11 @@ export type OtpFieldRootSharedElementProps<T extends ValidComponent = 'div'> = {
 }
 
 export type OtpFieldRootElementProps = OtpFieldRootSharedElementProps & {
-  'data-corvu-otp-field-root': '' | null
+  'data-arara-otp-field-root': '' | null
 }
 
 export type OtpFieldRootProps<T extends ValidComponent = 'div'> =
-  OtpFieldRootCorvuProps & Partial<OtpFieldRootSharedElementProps<T>>
+  OtpFieldRootAraraProps & Partial<OtpFieldRootSharedElementProps<T>>
 
 /** Props that are passed to the Root component children callback. */
 export type OtpFieldRootChildrenProps = {
@@ -75,7 +75,7 @@ export type OtpFieldRootChildrenProps = {
 
 /** OTP Field root component. Is the wrapper to position the hidden OTP Field input element and provides the context.
  *
- * @data `data-corvu-otp-field-root` - Present on every OTP Field root element.
+ * @data `data-arara-otp-field-root` - Present on every OTP Field root element.
  */
 const OtpFieldRoot = <T extends ValidComponent = 'div'>(
   props: DynamicProps<T, OtpFieldRootProps<T>>,
@@ -203,7 +203,7 @@ const OtpFieldRoot = <T extends ValidComponent = 'div'>(
               },
               localProps.style,
             )}
-            data-corvu-otp-field-root=""
+            data-arara-otp-field-root=""
             {...otherProps}
           >
             {untrack(() => resolveChildren())}

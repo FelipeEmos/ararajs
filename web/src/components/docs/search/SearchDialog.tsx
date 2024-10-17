@@ -1,7 +1,7 @@
 import { createEffect, createSignal, onCleanup } from 'solid-js'
 import Search, { type SearchResult } from '@components/docs/search/Search'
 import clsx from 'clsx'
-import Dialog from '@corvu/dialog'
+import Dialog from '@arara/dialog'
 
 const SearchDialog = () => {
   const [open, setOpen] = createSignal(false)
@@ -49,7 +49,7 @@ const SearchDialog = () => {
     >
       {(props) => (
         <>
-          <Dialog.Trigger class="group hidden items-center rounded-md border border-corvu-200 bg-corvu-bg px-2 py-1.5 transition-colors hover:bg-corvu-100 md:flex">
+          <Dialog.Trigger class="group hidden items-center rounded-md border border-arara-200 bg-arara-bg px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -59,13 +59,13 @@ const SearchDialog = () => {
               <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
             </svg>
             <span class="ml-1 text-sm">Search</span>
-            <kbd class="ml-1 min-w-6 rounded border border-corvu-200 bg-corvu-100 px-1 pb-px pt-1 text-center font-mono text-xs transition-colors group-hover:border-corvu-300 group-hover:bg-corvu-200 ">
+            <kbd class="ml-1 min-w-6 rounded border border-arara-200 bg-arara-100 px-1 pb-px pt-1 text-center font-mono text-xs transition-colors group-hover:border-arara-300 group-hover:bg-arara-200 ">
               ⌘K
             </kbd>
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay class="fixed inset-0 z-50 bg-black/50" />
-            <Dialog.Content class="fixed bottom-auto left-1/2 top-14 z-50 w-full max-w-[550px] -translate-x-1/2 overflow-hidden rounded-lg border border-corvu-200 bg-corvu-bg pt-4 duration-200 corvu-open:animate-in corvu-open:fade-in-0 corvu-open:zoom-in-[0.99] corvu-open:slide-in-from-left-1/2 corvu-open:slide-in-from-top-[20%] corvu-closed:animate-out corvu-closed:fade-out-0 corvu-closed:zoom-out-[0.99] corvu-closed:slide-out-to-left-1/2 corvu-closed:slide-out-to-top-[20%]">
+            <Dialog.Content class="fixed bottom-auto left-1/2 top-14 z-50 w-full max-w-[550px] -translate-x-1/2 overflow-hidden rounded-lg border border-arara-200 bg-arara-bg pt-4 duration-200 arara-open:animate-in arara-open:fade-in-0 arara-open:zoom-in-[0.99] arara-open:slide-in-from-left-1/2 arara-open:slide-in-from-top-[20%] arara-closed:animate-out arara-closed:fade-out-0 arara-closed:zoom-out-[0.99] arara-closed:slide-out-to-left-1/2 arara-closed:slide-out-to-top-[20%]">
               <Search
                 searchValue={searchValue()}
                 setSearchValue={setSearchValue}
@@ -73,7 +73,7 @@ const SearchDialog = () => {
                 setResult={setResult}
                 closeSearch={() => props.setOpen(false)}
               />
-              <div class="items-center border-t border-corvu-200 bg-corvu-100 px-4 py-2 text-sm ">
+              <div class="items-center border-t border-arara-200 bg-arara-100 px-4 py-2 text-sm ">
                 <KeyboardShortcut key="↩" />
                 <span class="ml-1">select</span>
                 <KeyboardShortcut key="↑/↓" class="ml-3" />
@@ -93,7 +93,7 @@ const KeyboardShortcut = (props: { key: string; class?: string }) => {
   return (
     <kbd
       class={clsx(
-        'min-w-6 rounded border border-corvu-300 bg-corvu-200 px-1 pb-px pt-1 text-center font-mono text-xs',
+        'min-w-6 rounded border border-arara-300 bg-arara-200 px-1 pb-px pt-1 text-center font-mono text-xs',
         props.class,
       )}
     >

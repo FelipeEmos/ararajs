@@ -14,10 +14,10 @@ import {
   createDisclosureContext,
   createInternalDisclosureContext,
 } from '@src/context'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
-import createOnce from '@corvu/utils/create/once'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
+import createOnce from '@arara/utils/create/once'
 import createPresence from 'solid-presence'
-import { isFunction } from '@corvu/utils'
+import { isFunction } from '@arara/utils'
 
 export type DisclosureRootProps = {
   /**

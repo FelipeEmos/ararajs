@@ -1,24 +1,24 @@
 <div align="center">
-  <a href="https://corvu.dev">
-    <img src="https://corvu.dev/readme/corvu.png" width=1000 alt="corvu banner" />
+  <a href="https://arara.dev">
+    <img src="https://arara.dev/readme/arara.png" width=1000 alt="arara banner" />
   </a>
 </div>
 <br />
 <div align="center">
 
-[![NPM Version](https://img.shields.io/npm/v/corvu)](https://www.npmjs.com/package/corvu)
-[![NPM Downloads](https://img.shields.io/npm/dm/corvu)](https://www.npmjs.com/package/corvu)
-[![License](https://img.shields.io/github/license/corvudev/corvu)](https://github.com/corvudev/corvu/blob/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/arara)](https://www.npmjs.com/package/arara)
+[![NPM Downloads](https://img.shields.io/npm/dm/arara)](https://www.npmjs.com/package/arara)
+[![License](https://img.shields.io/github/license/araradev/arara)](https://github.com/araradev/arara/blob/main/LICENSE)
 
-**[Documentation](https://corvu.dev/) • [Discussions](https://github.com/corvudev/corvu/discussions)**
+**[Documentation](https://arara.dev/) • [Discussions](https://github.com/araradev/arara/discussions)**
 </div>
 
 ## About
-This is the [tailwindcss](https://tailwindcss.com/) plugin for [corvu](https://corvu.dev/). It adds modifiers to style primitives based on their state:
+This is the [tailwindcss](https://tailwindcss.com/) plugin for [arara](https://arara.dev/). It adds modifiers to style primitives based on their state:
 
 ```tsx
 <Dialog.Content
-  class="corvu-open:animate-in corvu-closed:animate-out"
+  class="arara-open:animate-in arara-closed:animate-out"
 >
   ...
 </Dialog.Content>
@@ -28,7 +28,7 @@ This is the [tailwindcss](https://tailwindcss.com/) plugin for [corvu](https://c
 Install the plugin with the package manager of your choice:
 
 ```bash
-npm install @corvu/tailwind
+npm install @arara/tailwind
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -37,10 +37,10 @@ Then add the plugin to your `tailwind.config.js` file:
 module.exports = {
   // ...
   plugins: [
-    // Use it with the default prefix 'corvu'
-    require('@corvu/tailwind'),
+    // Use it with the default prefix 'arara'
+    require('@arara/tailwind'),
     // or with a custom prefix
-    require('@corvu/tailwind')({ prefix: 'ui' }),
+    require('@arara/tailwind')({ prefix: 'ui' }),
     // ...
   ],
 }

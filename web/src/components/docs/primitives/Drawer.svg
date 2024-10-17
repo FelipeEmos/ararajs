@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1866 1244">
-  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-corvu-400"/>
+  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-arara-400"/>
   <mask id="drawer-b" width="1866" height="1244" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <path fill="url(#drawer-a)" d="M0 0h1866v1244H0z"/>
   </mask>
   <g mask="url(#drawer-b)">
     <path fill="#7250AE" fill-opacity=".2" d="M0 0h1866v1244H0z"/>
   </g>
-  <path fill="currentColor" d="M316 572c0-27.614 22.386-50 50-50h1134c27.61 0 50 22.386 50 50v672H316V572Z" class="text-corvu-100"/>
-  <rect width="734" height="17" x="376" y="773" fill="currentColor" rx="8.5" class="text-corvu-text"/>
-  <rect width="576" height="18" x="376" y="729" fill="currentColor" rx="9" class="text-corvu-text"/>
-  <rect width="817" height="36" x="376" y="655" fill="currentColor" rx="18" class="text-corvu-400"/>
-  <rect width="163" height="18" x="851" y="550" fill="currentColor" rx="9" class="text-corvu-400"/>
-  <rect width="1114" height="314" x="376" y="872" fill="currentColor" rx="20" class="text-corvu-200"/>
-  <rect width="200" height="20" x="398" y="895" fill="currentColor" rx="10" class="text-corvu-text"/>
+  <path fill="currentColor" d="M316 572c0-27.614 22.386-50 50-50h1134c27.61 0 50 22.386 50 50v672H316V572Z" class="text-arara-100"/>
+  <rect width="734" height="17" x="376" y="773" fill="currentColor" rx="8.5" class="text-arara-text"/>
+  <rect width="576" height="18" x="376" y="729" fill="currentColor" rx="9" class="text-arara-text"/>
+  <rect width="817" height="36" x="376" y="655" fill="currentColor" rx="18" class="text-arara-400"/>
+  <rect width="163" height="18" x="851" y="550" fill="currentColor" rx="9" class="text-arara-400"/>
+  <rect width="1114" height="314" x="376" y="872" fill="currentColor" rx="20" class="text-arara-200"/>
+  <rect width="200" height="20" x="398" y="895" fill="currentColor" rx="10" class="text-arara-text"/>
   <defs>
     <pattern id="drawer-a" width=".056" height=".083" patternContentUnits="objectBoundingBox">
       <use xlink:href="#drawer-c" transform="scale(.00022 .00033)"/>

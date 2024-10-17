@@ -5,10 +5,10 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
 import { useInternalDialogContext } from '@src/context'
 
-export type DialogDescriptionCorvuProps = {
+export type DialogDescriptionAraraProps = {
   /**
    * The `id` of the dialog context to use.
    */
@@ -24,15 +24,15 @@ export type DialogDescriptionSharedElementProps<
 export type DialogDescriptionElementProps =
   DialogDescriptionSharedElementProps & {
     id: string | undefined
-    'data-corvu-dialog-description': '' | null
+    'data-arara-dialog-description': '' | null
   }
 
 export type DialogDescriptionProps<T extends ValidComponent = 'p'> =
-  DialogDescriptionCorvuProps & Partial<DialogDescriptionSharedElementProps<T>>
+  DialogDescriptionAraraProps & Partial<DialogDescriptionSharedElementProps<T>>
 
 /** Description element to announce the dialog to accessibility tools.
  *
- * @data `data-corvu-dialog-description` - Present on every dialog description element.
+ * @data `data-arara-dialog-description` - Present on every dialog description element.
  */
 const DialogDescription = <T extends ValidComponent = 'p'>(
   props: DynamicProps<T, DialogDescriptionProps<T>>,
@@ -56,7 +56,7 @@ const DialogDescription = <T extends ValidComponent = 'p'>(
       as="p"
       // === ElementProps ===
       id={context().descriptionId()}
-      data-corvu-dialog-description=""
+      data-arara-dialog-description=""
       {...otherProps}
     />
   )

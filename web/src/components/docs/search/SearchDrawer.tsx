@@ -1,6 +1,6 @@
 import { createEffect, createSignal } from 'solid-js'
 import Search, { type SearchResult } from '@components/docs/search/Search'
-import Drawer from '@corvu/drawer'
+import Drawer from '@arara/drawer'
 
 const SearchDrawer = () => {
   const [open, setOpen] = createSignal(false)
@@ -47,14 +47,14 @@ const SearchDrawer = () => {
           </Drawer.Trigger>
           <Drawer.Portal>
             <Drawer.Overlay
-              class="fixed inset-0 z-50 corvu-transitioning:transition-colors corvu-transitioning:duration-500 corvu-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]"
+              class="fixed inset-0 z-50 arara-transitioning:transition-colors arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]"
               style={{
                 'background-color': `rgb(0 0 0 / ${
                   0.5 * props.openPercentage
                 })`,
               }}
             />
-            <Drawer.Content class="fixed inset-x-0 bottom-0 z-50 flex h-full max-h-[85%] flex-col rounded-t-lg bg-corvu-bg pt-4 after:absolute after:inset-x-0 after:top-[calc(100%-1px)] after:h-1/2 after:bg-inherit corvu-transitioning:transition-transform corvu-transitioning:duration-500 corvu-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none">
+            <Drawer.Content class="fixed inset-x-0 bottom-0 z-50 flex h-full max-h-[85%] flex-col rounded-t-lg bg-arara-bg pt-4 after:absolute after:inset-x-0 after:top-[calc(100%-1px)] after:h-1/2 after:bg-inherit arara-transitioning:transition-transform arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none">
               <Search
                 searchValue={searchValue()}
                 setSearchValue={setSearchValue}

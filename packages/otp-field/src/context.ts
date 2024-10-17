@@ -2,7 +2,7 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 
 export type OtpFieldContextValue = {
   /** The value of the OTP Field. */
@@ -38,7 +38,7 @@ export const useOtpFieldContext = (contextId?: string) => {
     const context = useContext(OtpFieldContext)
     if (!context) {
       throw new Error(
-        '[corvu]: OTP Field context not found. Make sure to wrap OTP Field components in <OtpField.Root>',
+        '[arara]: OTP Field context not found. Make sure to wrap OTP Field components in <OtpField.Root>',
       )
     }
     return context
@@ -49,7 +49,7 @@ export const useOtpFieldContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: OTP Field context with id "${contextId}" not found. Make sure to wrap OTP Field components in <OtpField.Root contextId="${contextId}">`,
+      `[arara]: OTP Field context with id "${contextId}" not found. Make sure to wrap OTP Field components in <OtpField.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -80,7 +80,7 @@ export const useInternalOtpFieldContext = (contextId?: string) => {
     const context = useContext(InternalOtpFieldContext)
     if (!context) {
       throw new Error(
-        '[corvu]: OTP Field context not found. Make sure to wrap OTP Field components in <OtpField.Root>',
+        '[arara]: OTP Field context not found. Make sure to wrap OTP Field components in <OtpField.Root>',
       )
     }
     return context
@@ -91,7 +91,7 @@ export const useInternalOtpFieldContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: OTP Field context with id "${contextId}" not found. Make sure to wrap OTP Field components in <OtpField.Root contextId="${contextId}">`,
+      `[arara]: OTP Field context with id "${contextId}" not found. Make sure to wrap OTP Field components in <OtpField.Root contextId="${contextId}">`,
     )
   }
   return context

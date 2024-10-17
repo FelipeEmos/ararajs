@@ -5,33 +5,33 @@ import {
   type ValidComponent,
 } from 'solid-js'
 import type {
-  ContentCorvuProps as DialogContentCorvuProps,
+  ContentAraraProps as DialogContentAraraProps,
   ContentElementProps as DialogContentElementProps,
   ContentSharedElementProps as DialogContentSharedElementProps,
-} from '@corvu/dialog'
-import { combineStyle } from '@corvu/utils/dom'
-import Dialog from '@corvu/dialog'
-import type { DynamicProps } from '@corvu/utils/dynamic'
-import { getFloatingStyle } from '@corvu/utils/floating'
+} from '@arara/dialog'
+import { combineStyle } from '@arara/utils/dom'
+import Dialog from '@arara/dialog'
+import type { DynamicProps } from '@arara/utils/dynamic'
+import { getFloatingStyle } from '@arara/utils/floating'
 import type { Placement } from '@floating-ui/dom'
 import { useInternalPopoverContext } from '@src/context'
 
-export type PopoverContentCorvuProps = DialogContentCorvuProps
+export type PopoverContentAraraProps = DialogContentAraraProps
 
 export type PopoverContentSharedElementProps<T extends ValidComponent = 'div'> =
   DialogContentSharedElementProps<T>
 
 export type PopoverContentElementProps = PopoverContentSharedElementProps & {
   'data-placement': Placement
-  'data-corvu-popover-content': ''
+  'data-arara-popover-content': ''
 } & DialogContentElementProps
 
 export type PopoverContentProps<T extends ValidComponent = 'button'> =
-  PopoverContentCorvuProps & Partial<PopoverContentSharedElementProps<T>>
+  PopoverContentAraraProps & Partial<PopoverContentSharedElementProps<T>>
 
 /** Content of the popover. Can be animated.
  *
- * @data `data-corvu-popover-content` - Present on every popover content element.
+ * @data `data-arara-popover-content` - Present on every popover content element.
  * @data `data-open` - Present when the popover is open.
  * @data `data-closed` - Present when the popover is closed.
  * @data `data-placement` - Current placement of the popover.
@@ -68,9 +68,9 @@ const PopoverContent = <T extends ValidComponent = 'div'>(
       )}
       // === ElementProps ===
       data-placement={context().floatingState().placement}
-      data-corvu-popover-content=""
+      data-arara-popover-content=""
       // === Misc ===
-      data-corvu-dialog-content={null}
+      data-arara-dialog-content={null}
       {...otherProps}
     />
   )

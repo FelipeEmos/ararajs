@@ -1,8 +1,8 @@
 ---
 layout: '@layouts/Docs.astro'
 title: Styling SolidJS UI primitives
-description: A look at the different ways to style corvu UI primitives for SolidJS.
-image: https://corvu.dev/banner.jpg
+description: A look at the different ways to style arara UI primitives for SolidJS.
+image: https://arara.dev/banner.jpg
 ---
 import Code from '@components/docs/code/Code.astro'
 import H2 from '@components/docs/headings/H2.astro'
@@ -11,7 +11,7 @@ export const components = { h2: H2, h3: H3 }
 
 # Styling
 
-corvu leaves the styling up to you. You can use TailwindCSS, any CSS-in-JS library or just plain old CSS to style primitives.
+arara leaves the styling up to you. You can use TailwindCSS, any CSS-in-JS library or just plain old CSS to style primitives.
 
 ## Data attributes
 
@@ -34,33 +34,33 @@ Don't forget to add the `dialog_content` class to your Dialog content component:
 <Dialog.Content class="dialog_content">...</Dialog.Content>
 `} lang="tsx" />
 
-Additionally, every corvu component has a data attribute for you to use. A dialog content element would render like this:
+Additionally, every arara component has a data attribute for you to use. A dialog content element would render like this:
 
 <Code code={`
-<div data-corvu-dialog-content data-open>...</div>
+<div data-arara-dialog-content data-open>...</div>
 `} lang="html" />
 
 You can use it to style all components of the same kind at once:
 
 <Code code={`
-[data-corvu-dialog-content] {
+[data-arara-dialog-content] {
   /* styles to apply to the dialog content */
 }
-[data-corvu-dialog-content][data-open] {
+[data-arara-dialog-content][data-open] {
   /* styles to apply when open */
 }
-[data-corvu-dialog-content][data-closed] {
+[data-arara-dialog-content][data-closed] {
   /* styles to apply when closed */
 }
 `} lang="css" />
 
 ## TailwindCSS plugin
 
-corvu has a plugin for TailwindCSS which makes it easy to style components based on their current state using modifiers:
+arara has a plugin for TailwindCSS which makes it easy to style components based on their current state using modifiers:
 
 <Code code={`
 <Dialog.Content
-  class="corvu-open:animate-in corvu-closed:animate-out"
+  class="arara-open:animate-in arara-closed:animate-out"
 >
   ...
 </Dialog.Content>
@@ -68,21 +68,21 @@ corvu has a plugin for TailwindCSS which makes it easy to style components based
 
 **Available modifiers**
 
-Here's a list of all modifiers corvu provides and their corresponding data attributes:
-- `corvu-open` -> `&[data-open]`
-- `corvu-closed` -> `&[data-closed]`
-- `corvu-expanded` -> `&[data-expanded]`
-- `corvu-collapsed` -> `&[data-collapsed]`
-- `corvu-transitioning` -> `&[data-transitioning]`
-- `corvu-opening` -> `&[data-opening]`
-- `corvu-closing` -> `&[data-closing]`
-- `corvu-snapping` -> `&[data-snapping]`
-- `corvu-resizing` -> `&[data-resizing]`
-- `corvu-disabled` -> `&[data-disabled]`
-- `corvu-active` -> `&[data-active]`
-- `corvu-dragging` -> `&[data-dragging]`
+Here's a list of all modifiers arara provides and their corresponding data attributes:
+- `arara-open` -> `&[data-open]`
+- `arara-closed` -> `&[data-closed]`
+- `arara-expanded` -> `&[data-expanded]`
+- `arara-collapsed` -> `&[data-collapsed]`
+- `arara-transitioning` -> `&[data-transitioning]`
+- `arara-opening` -> `&[data-opening]`
+- `arara-closing` -> `&[data-closing]`
+- `arara-snapping` -> `&[data-snapping]`
+- `arara-resizing` -> `&[data-resizing]`
+- `arara-disabled` -> `&[data-disabled]`
+- `arara-active` -> `&[data-active]`
+- `arara-dragging` -> `&[data-dragging]`
 
 Check out the [Installation](/docs/installation/#tailwindcss-plugin) page on how to install and configure the plugin.
 
 ## Animation
-corvu has built-in support for CSS animations and waits for any pending animation to finish before removing an element from the DOM. This means you can use CSS animations to animate the appearance and disappearance of primitives. Every unmountable component also provides a `forceMount` property which forces it to stay mounted in the DOM even when it is not visible. This is useful when using third-party animation libraries.
+arara has built-in support for CSS animations and waits for any pending animation to finish before removing an element from the DOM. This means you can use CSS animations to animate the appearance and disappearance of primitives. Every unmountable component also provides a `forceMount` property which forces it to stay mounted in the DOM even when it is not visible. This is useful when using third-party animation libraries.

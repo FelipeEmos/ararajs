@@ -2,7 +2,7 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 
 export type DialogContextValue = {
   /** The `role` attribute of the dialog element. */
@@ -74,7 +74,7 @@ export const useDialogContext = (contextId?: string) => {
     const context = useContext(DialogContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Dialog context not found. Make sure to wrap Dialog components in <Dialog.Root>',
+        '[arara]: Dialog context not found. Make sure to wrap Dialog components in <Dialog.Root>',
       )
     }
     return context
@@ -83,7 +83,7 @@ export const useDialogContext = (contextId?: string) => {
   const context = useKeyedContext<DialogContextValue>(`dialog-${contextId}`)
   if (!context) {
     throw new Error(
-      `[corvu]: Dialog context with id "${contextId}" not found. Make sure to wrap Dialog components in <Dialog.Root contextId="${contextId}">`,
+      `[arara]: Dialog context with id "${contextId}" not found. Make sure to wrap Dialog components in <Dialog.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -119,7 +119,7 @@ export const useInternalDialogContext = (contextId?: string) => {
     const context = useContext(InternalDialogContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Dialog context not found. Make sure to wrap Dialog components in <Dialog.Root>',
+        '[arara]: Dialog context not found. Make sure to wrap Dialog components in <Dialog.Root>',
       )
     }
     return context
@@ -130,7 +130,7 @@ export const useInternalDialogContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Dialog context with id "${contextId}" not found. Make sure to wrap Dialog components in <Dialog.Root contextId="${contextId}">`,
+      `[arara]: Dialog context with id "${contextId}" not found. Make sure to wrap Dialog components in <Dialog.Root contextId="${contextId}">`,
     )
   }
   return context

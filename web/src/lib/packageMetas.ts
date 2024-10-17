@@ -1,5 +1,5 @@
 import accordion from '../../../packages/accordion/package.json'
-import corvu from '../../../packages/corvu/package.json'
+import arara from '../../../packages/arara/package.json'
 import dialog from '../../../packages/dialog/package.json'
 import disclosure from '../../../packages/disclosure/package.json'
 import dismissible from '../../../packages/solid-dismissible/package.json'
@@ -22,96 +22,96 @@ const packageMetas: {
     sourceHref: string
   }
 } = {
-  corvu: {
-    version: corvu.version,
-    npmHref: 'https://www.npmjs.com/package/corvu',
-    sourceHref: 'https://github.com/corvudev/corvu/tree/main/packages/corvu',
+  arara: {
+    version: arara.version,
+    npmHref: 'https://www.npmjs.com/package/arara',
+    sourceHref: 'https://github.com/araradev/arara/tree/main/packages/arara',
   },
-  '@corvu/accordion': {
+  '@arara/accordion': {
     version: accordion.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/accordion',
+    npmHref: 'https://www.npmjs.com/package/@arara/accordion',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/accordion',
+      'https://github.com/araradev/arara/tree/main/packages/accordion',
   },
-  '@corvu/dialog': {
+  '@arara/dialog': {
     version: dialog.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/dialog',
-    sourceHref: 'https://github.com/corvudev/corvu/tree/main/packages/dialog',
+    npmHref: 'https://www.npmjs.com/package/@arara/dialog',
+    sourceHref: 'https://github.com/araradev/arara/tree/main/packages/dialog',
   },
-  '@corvu/disclosure': {
+  '@arara/disclosure': {
     version: disclosure.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/disclosure',
+    npmHref: 'https://www.npmjs.com/package/@arara/disclosure',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/disclosure',
+      'https://github.com/araradev/arara/tree/main/packages/disclosure',
   },
-  '@corvu/drawer': {
+  '@arara/drawer': {
     version: drawer.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/drawer',
-    sourceHref: 'https://github.com/corvudev/corvu/tree/main/packages/drawer',
+    npmHref: 'https://www.npmjs.com/package/@arara/drawer',
+    sourceHref: 'https://github.com/araradev/arara/tree/main/packages/drawer',
   },
-  '@corvu/otp-field': {
+  '@arara/otp-field': {
     version: otpField.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/otp-field',
+    npmHref: 'https://www.npmjs.com/package/@arara/otp-field',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/otp-field',
+      'https://github.com/araradev/arara/tree/main/packages/otp-field',
   },
-  '@corvu/popover': {
+  '@arara/popover': {
     version: popover.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/popover',
-    sourceHref: 'https://github.com/corvudev/corvu/tree/main/packages/popover',
+    npmHref: 'https://www.npmjs.com/package/@arara/popover',
+    sourceHref: 'https://github.com/araradev/arara/tree/main/packages/popover',
   },
-  '@corvu/resizable': {
+  '@arara/resizable': {
     version: resizable.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/resizable',
+    npmHref: 'https://www.npmjs.com/package/@arara/resizable',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/resizable',
+      'https://github.com/araradev/arara/tree/main/packages/resizable',
   },
-  '@corvu/tooltip': {
+  '@arara/tooltip': {
     version: tooltip.version,
-    npmHref: 'https://www.npmjs.com/package/@corvu/tooltip',
-    sourceHref: 'https://github.com/corvudev/corvu/tree/main/packages/tooltip',
+    npmHref: 'https://www.npmjs.com/package/@arara/tooltip',
+    sourceHref: 'https://github.com/araradev/arara/tree/main/packages/tooltip',
   },
   'solid-dismissible': {
     version: dismissible.version,
     npmHref: 'https://www.npmjs.com/package/solid-dismissible',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-dismissible',
+      'https://github.com/araradev/arara/tree/main/packages/solid-dismissible',
   },
   'solid-focus-trap': {
     version: focusTrap.version,
     npmHref: 'https://www.npmjs.com/package/solid-focus-trap',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-focus-trap',
+      'https://github.com/araradev/arara/tree/main/packages/solid-focus-trap',
   },
   'solid-list': {
     version: list.version,
     npmHref: 'https://www.npmjs.com/package/solid-list',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-list',
+      'https://github.com/araradev/arara/tree/main/packages/solid-list',
   },
   'solid-persistent': {
     version: persistent.version,
     npmHref: 'https://www.npmjs.com/package/solid-persistent',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-persistent',
+      'https://github.com/araradev/arara/tree/main/packages/solid-persistent',
   },
   'solid-presence': {
     version: presence.version,
     npmHref: 'https://www.npmjs.com/package/solid-presence',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-presence',
+      'https://github.com/araradev/arara/tree/main/packages/solid-presence',
   },
   'solid-prevent-scroll': {
     version: preventScroll.version,
     npmHref: 'https://www.npmjs.com/package/solid-prevent-scroll',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-prevent-scroll',
+      'https://github.com/araradev/arara/tree/main/packages/solid-prevent-scroll',
   },
   'solid-transition-size': {
     version: transitionSize.version,
     npmHref: 'https://www.npmjs.com/package/solid-transition-size',
     sourceHref:
-      'https://github.com/corvudev/corvu/tree/main/packages/solid-transition-size',
+      'https://github.com/araradev/arara/tree/main/packages/solid-transition-size',
   },
 }
 

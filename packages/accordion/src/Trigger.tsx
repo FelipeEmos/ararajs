@@ -1,4 +1,4 @@
-import { callEventHandler, type ElementOf } from '@corvu/utils/dom'
+import { callEventHandler, type ElementOf } from '@arara/utils/dom'
 import {
   type Component,
   createEffect,
@@ -10,17 +10,17 @@ import {
   type ValidComponent,
 } from 'solid-js'
 import Disclosure, {
-  type TriggerCorvuProps as DisclosureTriggerCorvuProps,
+  type TriggerAraraProps as DisclosureTriggerAraraProps,
   type TriggerElementProps as DisclosureTriggerElementProps,
   type TriggerSharedElementProps as DisclosureTriggerSharedElementProps,
-} from '@corvu/disclosure'
-import { dataIf } from '@corvu/utils'
-import type { DynamicProps } from '@corvu/utils/dynamic'
-import { mergeRefs } from '@corvu/utils/reactivity'
+} from '@arara/disclosure'
+import { dataIf } from '@arara/utils'
+import type { DynamicProps } from '@arara/utils/dynamic'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalAccordionContext } from '@src/context'
 import { useInternalAccordionItemContext } from '@src/itemContext'
 
-export type AccordionTriggerCorvuProps = DisclosureTriggerCorvuProps
+export type AccordionTriggerAraraProps = DisclosureTriggerAraraProps
 
 export type AccordionTriggerSharedElementProps<
   T extends ValidComponent = 'button',
@@ -35,15 +35,15 @@ export type AccordionTriggerElementProps =
     id: string | undefined
     'aria-disabled': 'true' | undefined
     'data-disabled': '' | undefined
-    'data-corvu-accordion-trigger': ''
+    'data-arara-accordion-trigger': ''
   } & DisclosureTriggerElementProps
 
 export type AccordionTriggerProps<T extends ValidComponent = 'button'> =
-  AccordionTriggerCorvuProps & Partial<AccordionTriggerSharedElementProps<T>>
+  AccordionTriggerAraraProps & Partial<AccordionTriggerSharedElementProps<T>>
 
 /** Button that changes the open state of the accordion item when clicked.
  *
- * @data `data-corvu-accordion-trigger` - Present on every accordion trigger element.
+ * @data `data-arara-accordion-trigger` - Present on every accordion trigger element.
  * @data `data-expanded` - Present when the accordion is expanded.
  * @data `data-collapsed` - Present when the accordion is collapsed.
  * @data `data-disabled` - Present when the accordion trigger is disabled.
@@ -113,9 +113,9 @@ const AccordionTrigger = <T extends ValidComponent = 'button'>(
       contextId={localProps.contextId}
       aria-disabled={context().disabled() ? 'true' : undefined}
       data-disabled={dataIf(context().disabled())}
-      data-corvu-accordion-trigger=""
+      data-arara-accordion-trigger=""
       // === Misc ===
-      data-corvu-disclosure-trigger={null}
+      data-arara-disclosure-trigger={null}
       {...otherProps}
     />
   )

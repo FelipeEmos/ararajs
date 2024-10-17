@@ -1,4 +1,4 @@
-import Resizable from '@corvu/resizable'
+import Resizable from '@arara/resizable'
 import type { VoidComponent } from 'solid-js'
 
 const ResizableNestedExample: VoidComponent = () => {
@@ -8,45 +8,45 @@ const ResizableNestedExample: VoidComponent = () => {
         <Resizable.Panel
           initialSize={0.3}
           minSize={0.2}
-          class="rounded-lg bg-corvu-100"
+          class="rounded-lg bg-arara-100"
         />
         <Resizable.Handle
           aria-label="Resize Handle"
           class="group basis-3 px-[3px]"
         >
-          <div class="size-full rounded transition-colors corvu-group-active:bg-corvu-300 corvu-group-dragging:bg-corvu-100" />
+          <div class="size-full rounded transition-colors arara-group-active:bg-arara-300 arara-group-dragging:bg-arara-100" />
         </Resizable.Handle>
         <Resizable.Panel initialSize={0.4} minSize={0.2}>
           <Resizable orientation="vertical" class="size-full">
             <Resizable.Panel
               initialSize={0.5}
               minSize={0.2}
-              class="rounded-lg bg-corvu-100"
+              class="rounded-lg bg-arara-100"
             />
             <Resizable.Handle
               aria-label="Resize Handle"
               class="group basis-3 py-[3px]"
             >
-              <div class="size-full rounded transition-colors corvu-group-active:bg-corvu-300 corvu-group-dragging:bg-corvu-100" />
+              <div class="size-full rounded transition-colors arara-group-active:bg-arara-300 arara-group-dragging:bg-arara-100" />
             </Resizable.Handle>
             <Resizable.Panel initialSize={0.5} minSize={0.2}>
               <Resizable class="size-full">
                 <Resizable.Panel
                   initialSize={0.5}
                   minSize={0.3}
-                  class="rounded-lg bg-corvu-100"
+                  class="rounded-lg bg-arara-100"
                 />
                 <Resizable.Handle
                   aria-label="Resize Handle"
                   class="group basis-3 px-[3px]"
                 >
-                  <div class="size-full rounded transition-colors corvu-group-active:bg-corvu-300 corvu-group-dragging:bg-corvu-100" />
+                  <div class="size-full rounded transition-colors arara-group-active:bg-arara-300 arara-group-dragging:bg-arara-100" />
                 </Resizable.Handle>
                 <Resizable.Panel
                   aria-label="Resize Handle"
                   initialSize={0.5}
                   minSize={0.2}
-                  class="rounded-lg bg-corvu-100"
+                  class="rounded-lg bg-arara-100"
                 />
               </Resizable>
             </Resizable.Panel>
@@ -56,12 +56,12 @@ const ResizableNestedExample: VoidComponent = () => {
           aria-label="Resize Handle"
           class="group basis-3 px-[3px]"
         >
-          <div class="size-full rounded transition-colors corvu-group-active:bg-corvu-300 corvu-group-dragging:bg-corvu-100" />
+          <div class="size-full rounded transition-colors arara-group-active:bg-arara-300 arara-group-dragging:bg-arara-100" />
         </Resizable.Handle>
         <Resizable.Panel
           initialSize={0.3}
           minSize={0.2}
-          class="rounded-lg bg-corvu-100"
+          class="rounded-lg bg-arara-100"
         />
       </Resizable>
     </div>

@@ -1,12 +1,12 @@
 import type { Component, ValidComponent } from 'solid-js'
 import Dialog, {
-  type DescriptionCorvuProps as DialogDescriptionCorvuProps,
+  type DescriptionAraraProps as DialogDescriptionAraraProps,
   type DescriptionElementProps as DialogDescriptionElementProps,
   type DescriptionSharedElementProps as DialogDescriptionSharedElementProps,
-} from '@corvu/dialog'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+} from '@arara/dialog'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
-export type DrawerDescriptionCorvuProps = DialogDescriptionCorvuProps
+export type DrawerDescriptionAraraProps = DialogDescriptionAraraProps
 
 export type DrawerDescriptionSharedElementProps<
   T extends ValidComponent = 'p',
@@ -14,15 +14,15 @@ export type DrawerDescriptionSharedElementProps<
 
 export type DrawerDescriptionElementProps =
   DrawerDescriptionSharedElementProps & {
-    'data-corvu-drawer-description': ''
+    'data-arara-drawer-description': ''
   } & DialogDescriptionElementProps
 
 export type DrawerDescriptionProps<T extends ValidComponent = 'p'> =
-  DrawerDescriptionCorvuProps & Partial<DrawerDescriptionSharedElementProps<T>>
+  DrawerDescriptionAraraProps & Partial<DrawerDescriptionSharedElementProps<T>>
 
 /** Description element to announce the drawer to accessibility tools.
  *
- * @data `data-corvu-drawer-description` - Present on every drawer description element.
+ * @data `data-arara-drawer-description` - Present on every drawer description element.
  */
 const DrawerDescription = <T extends ValidComponent = 'p'>(
   props: DynamicProps<T, DrawerDescriptionProps<T>>,
@@ -34,9 +34,9 @@ const DrawerDescription = <T extends ValidComponent = 'p'>(
       >
     >
       // === ElementProps ===
-      data-corvu-drawer-description=""
+      data-arara-drawer-description=""
       // === Misc ===
-      data-corvu-dialog-description={null}
+      data-arara-dialog-description={null}
       {...(props as DrawerDescriptionProps)}
     />
   )

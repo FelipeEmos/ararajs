@@ -4,17 +4,17 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import type { ElementOf, Ref } from '@corvu/utils/dom'
+import type { ElementOf, Ref } from '@arara/utils/dom'
 import type {
   FloatingArrowElementProps,
   FloatingArrowSharedElementProps,
-} from '@corvu/utils/components/FloatingArrow'
-import type { DynamicProps } from '@corvu/utils/dynamic'
-import FloatingArrow from '@corvu/utils/components/FloatingArrow'
-import { mergeRefs } from '@corvu/utils/reactivity'
+} from '@arara/utils/components/FloatingArrow'
+import type { DynamicProps } from '@arara/utils/dynamic'
+import FloatingArrow from '@arara/utils/components/FloatingArrow'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalPopoverContext } from '@src/context'
 
-export type PopoverArrowCorvuProps = {
+export type PopoverArrowAraraProps = {
   /**
    * Size of the arrow in px.
    * @defaultValue 16
@@ -31,15 +31,15 @@ export type PopoverArrowSharedElementProps<T extends ValidComponent = 'div'> = {
 } & FloatingArrowSharedElementProps<T>
 
 export type PopoverArrowElementProps = PopoverArrowSharedElementProps & {
-  'data-corvu-popover-arrow': ''
+  'data-arara-popover-arrow': ''
 } & FloatingArrowElementProps
 
 export type PopoverArrowProps<T extends ValidComponent = 'div'> =
-  PopoverArrowCorvuProps & Partial<PopoverArrowSharedElementProps<T>>
+  PopoverArrowAraraProps & Partial<PopoverArrowSharedElementProps<T>>
 
 /** Arrow element that automatically points towards the floating reference. Comes with a default arrow svg, but can be overridden by providing your own as the children.
  *
- * @data `data-corvu-popover-arrow` - Present on every popover arrow element.
+ * @data `data-arara-popover-arrow` - Present on every popover arrow element.
  */
 const PopoverArrow = <T extends ValidComponent = 'div'>(
   props: DynamicProps<T, PopoverArrowProps<T>>,
@@ -58,7 +58,7 @@ const PopoverArrow = <T extends ValidComponent = 'div'>(
       floatingState={context().floatingState()}
       // === SharedElementProps ===
       ref={mergeRefs(context().setArrowRef, localProps.ref)}
-      data-corvu-popover-arrow=""
+      data-arara-popover-arrow=""
       {...otherProps}
     />
   )

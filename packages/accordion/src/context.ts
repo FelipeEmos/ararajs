@@ -2,7 +2,7 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 
 export type AccordionContextValue = {
   /** Whether multiple accordion items can be expanded at the same time. */
@@ -42,7 +42,7 @@ export const useAccordionContext = (contextId?: string) => {
     const context = useContext(AccordionContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Accordion context not found. Make sure to wrap Accordion components in <Accordion.Root>',
+        '[arara]: Accordion context not found. Make sure to wrap Accordion components in <Accordion.Root>',
       )
     }
     return context
@@ -53,7 +53,7 @@ export const useAccordionContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Accordion context with id "${contextId}" not found. Make sure to wrap Accordion components in <Accordion.Root contextId="${contextId}">`,
+      `[arara]: Accordion context with id "${contextId}" not found. Make sure to wrap Accordion components in <Accordion.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -84,7 +84,7 @@ export const useInternalAccordionContext = (contextId?: string) => {
     const context = useContext(InternalAccordionContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Accordion context not found. Make sure to wrap Accordion components in <Accordion.Root>',
+        '[arara]: Accordion context not found. Make sure to wrap Accordion components in <Accordion.Root>',
       )
     }
     return context
@@ -95,7 +95,7 @@ export const useInternalAccordionContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Accordion context with id "${contextId}" not found. Make sure to wrap Accordion components in <Accordion.Root contextId="${contextId}">`,
+      `[arara]: Accordion context with id "${contextId}" not found. Make sure to wrap Accordion components in <Accordion.Root contextId="${contextId}">`,
     )
   }
   return context

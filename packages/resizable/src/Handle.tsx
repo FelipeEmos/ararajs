@@ -3,7 +3,7 @@ import {
   combineStyle,
   type ElementOf,
   type Ref,
-} from '@corvu/utils/dom'
+} from '@arara/utils/dom'
 import {
   createEffect,
   createMemo,
@@ -22,14 +22,14 @@ import type {
   HandleCallbacks,
   HoverState,
 } from '@src/lib/types'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
 import { fixToPrecision, resolveSize, splitPanels } from '@src/lib/utils'
 import { registerHandle, unregisterHandle } from '@src/lib/handleManager'
-import { dataIf } from '@corvu/utils'
-import { mergeRefs } from '@corvu/utils/reactivity'
+import { dataIf } from '@arara/utils'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalResizableContext } from '@src/context'
 
-export type ResizableHandleCorvuProps = {
+export type ResizableHandleAraraProps = {
   /**
    * Whether the handle is allowed to intersect with another handle at its start (Left/Top of the handle)
    * @defaultValue `true`
@@ -89,15 +89,15 @@ export type ResizableHandleElementProps = ResizableHandleSharedElementProps & {
   'data-active': '' | undefined
   'data-dragging': '' | undefined
   'data-orientation': 'horizontal' | 'vertical'
-  'data-corvu-resizable-handle': ''
+  'data-arara-resizable-handle': ''
 }
 
 export type ResizableHandleProps<T extends ValidComponent = 'button'> =
-  ResizableHandleCorvuProps & Partial<ResizableHandleSharedElementProps<T>>
+  ResizableHandleAraraProps & Partial<ResizableHandleSharedElementProps<T>>
 
 /** Resizable handle.
  *
- * @data `data-corvu-resizable-handle` - Present on every resizable handle.
+ * @data `data-arara-resizable-handle` - Present on every resizable handle.
  * @data `data-active` - Present when the handle is active.
  * @data `data-dragging` - Present when the handle is being dragged.
  * @data `data-orientation` - The orientation of the resizable.
@@ -305,13 +305,13 @@ const ResizableHandle = <T extends ValidComponent = 'button'>(
     let target: DragTarget = 'handle'
     if (
       targetElement.hasAttribute(
-        'data-corvu-resizable-handle-start-intersection',
+        'data-arara-resizable-handle-start-intersection',
       )
     ) {
       target = 'startIntersection'
     }
     if (
-      targetElement.hasAttribute('data-corvu-resizable-handle-end-intersection')
+      targetElement.hasAttribute('data-arara-resizable-handle-end-intersection')
     ) {
       target = 'endIntersection'
     }
@@ -350,12 +350,12 @@ const ResizableHandle = <T extends ValidComponent = 'button'>(
       data-active={dataIf(active())}
       data-dragging={dataIf(dragging())}
       data-orientation={context().orientation()}
-      data-corvu-resizable-handle=""
+      data-arara-resizable-handle=""
       {...otherProps}
     >
       <Show when={startIntersection()}>
         <div
-          data-corvu-resizable-handle-start-intersection
+          data-arara-resizable-handle-start-intersection
           onMouseEnter={() => setHovered('startIntersection')}
           onMouseLeave={(e) => {
             if (ref()?.contains(e.relatedTarget as HTMLElement) === true) {
@@ -384,7 +384,7 @@ const ResizableHandle = <T extends ValidComponent = 'button'>(
       {localProps.children}
       <Show when={endIntersection()}>
         <div
-          data-corvu-resizable-handle-end-intersection
+          data-arara-resizable-handle-end-intersection
           onMouseEnter={() => setHovered('endIntersection')}
           onMouseLeave={(e) => {
             if (ref()?.contains(e.relatedTarget as HTMLElement) === true) {

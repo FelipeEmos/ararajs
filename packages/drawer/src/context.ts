@@ -2,8 +2,8 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
-import type { Side, Size } from '@corvu/utils'
+} from '@arara/utils/create/keyedContext'
+import type { Side, Size } from '@arara/utils'
 import type { ResolvedSnapPoint } from '@src/lib'
 
 export type DrawerContextValue = {
@@ -56,7 +56,7 @@ export const useDrawerContext = (contextId?: string) => {
     const context = useContext(DrawerContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Drawer context not found. Make sure to wrap Drawer components in <Drawer.Root>',
+        '[arara]: Drawer context not found. Make sure to wrap Drawer components in <Drawer.Root>',
       )
     }
     return context
@@ -65,7 +65,7 @@ export const useDrawerContext = (contextId?: string) => {
   const context = useKeyedContext<DrawerContextValue>(`drawer-${contextId}`)
   if (!context) {
     throw new Error(
-      `[corvu]: Drawer context with id "${contextId}" not found. Make sure to wrap Drawer components in <Drawer.Root contextId="${contextId}">`,
+      `[arara]: Drawer context with id "${contextId}" not found. Make sure to wrap Drawer components in <Drawer.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -103,7 +103,7 @@ export const useInternalDrawerContext = (contextId?: string) => {
     const context = useContext(InternalDrawerContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Drawer context not found. Make sure to wrap Drawer components in <Drawer.Root>',
+        '[arara]: Drawer context not found. Make sure to wrap Drawer components in <Drawer.Root>',
       )
     }
     return context
@@ -114,7 +114,7 @@ export const useInternalDrawerContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Drawer context with id "${contextId}" not found. Make sure to wrap Drawer components in <Drawer.Root contextId="${contextId}">`,
+      `[arara]: Drawer context with id "${contextId}" not found. Make sure to wrap Drawer components in <Drawer.Root contextId="${contextId}">`,
     )
   }
   return context

@@ -1,17 +1,17 @@
 import Anchor, {
-  type TooltipAnchorCorvuProps as AnchorCorvuProps,
+  type TooltipAnchorAraraProps as AnchorAraraProps,
   type TooltipAnchorElementProps as AnchorElementProps,
   type TooltipAnchorProps as AnchorProps,
   type TooltipAnchorSharedElementProps as AnchorSharedElementProps,
 } from '@src/Anchor'
 import Arrow, {
-  type TooltipArrowCorvuProps as ArrowCorvuProps,
+  type TooltipArrowAraraProps as ArrowAraraProps,
   type TooltipArrowElementProps as ArrowElementProps,
   type TooltipArrowProps as ArrowProps,
   type TooltipArrowSharedElementProps as ArrowSharedElementProps,
 } from '@src/Arrow'
 import Content, {
-  type TooltipContentCorvuProps as ContentCorvuProps,
+  type TooltipContentAraraProps as ContentAraraProps,
   type TooltipContentElementProps as ContentElementProps,
   type TooltipContentProps as ContentProps,
   type TooltipContentSharedElementProps as ContentSharedElementProps,
@@ -23,37 +23,37 @@ import {
 import type {
   FloatingOptions,
   FloatingState,
-} from '@corvu/utils/create/floating'
+} from '@arara/utils/create/floating'
 import Portal, { type TooltipPortalProps as PortalProps } from '@src/Portal'
 import Root, {
   type TooltipRootChildrenProps as RootChildrenProps,
   type TooltipRootProps as RootProps,
 } from '@src/Root'
 import Trigger, {
-  type TooltipTriggerCorvuProps as TriggerCorvuProps,
+  type TooltipTriggerAraraProps as TriggerAraraProps,
   type TooltipTriggerElementProps as TriggerElementProps,
   type TooltipTriggerProps as TriggerProps,
   type TooltipTriggerSharedElementProps as TriggerSharedElementProps,
 } from '@src/Trigger'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
 export type {
   RootProps,
   RootChildrenProps,
-  AnchorCorvuProps,
+  AnchorAraraProps,
   AnchorSharedElementProps,
   AnchorElementProps,
   AnchorProps,
-  TriggerCorvuProps,
+  TriggerAraraProps,
   TriggerSharedElementProps,
   TriggerElementProps,
   TriggerProps,
   PortalProps,
-  ContentCorvuProps,
+  ContentAraraProps,
   ContentSharedElementProps,
   ContentElementProps,
   ContentProps,
-  ArrowCorvuProps,
+  ArrowAraraProps,
   ArrowSharedElementProps,
   ArrowElementProps,
   ArrowProps,

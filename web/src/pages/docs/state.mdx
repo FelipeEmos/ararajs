@@ -1,8 +1,8 @@
 ---
 layout: '@layouts/Docs.astro'
 title: Flexible state management of SolidJS UI primitives
-description: Learn how to manage the state of corvu UI primitives for SolidJS.
-image: https://corvu.dev/banner.jpg
+description: Learn how to manage the state of arara UI primitives for SolidJS.
+image: https://arara.dev/banner.jpg
 ---
 import Code from '@components/docs/code/Code.astro'
 import H2 from '@components/docs/headings/H2.astro'
@@ -11,16 +11,16 @@ export const components = { h2: H2, h3: H3 }
 
 # State
 
-By default, all corvu primitives manage their state internally. This means that they handle their state themselves and you don't need to pass any props/state to them.
+By default, all arara primitives manage their state internally. This means that they handle their state themselves and you don't need to pass any props/state to them.
 
-corvu aims to be very customizable and provides various ways to control a primitive or access internal state. Let's take a look at them. We'll use the [Dialog](/docs/primitives/dialog/) primitive as an example, but the same applies to all other primitives.
+arara aims to be very customizable and provides various ways to control a primitive or access internal state. Let's take a look at them. We'll use the [Dialog](/docs/primitives/dialog/) primitive as an example, but the same applies to all other primitives.
 
 ## Controlled State
 
 The easiest way to control a primitive's state is by passing your own defined state to its `Root` component. Most of the time, this consists of a getter and setter property like in this example, where we control the open state of a dialog:
 
 <Code code={`
-import Dialog from '@corvu/dialog'
+import Dialog from '@arara/dialog'
 import { createSignal } from 'solid-js'
 
 const MyDialog = () => {
@@ -43,7 +43,7 @@ This allows you to use the open state anywhere in your code and alter it freely.
 It's also possible to access the context of every primitive. This allows you to get the internal state of a primitive from anywhere in your code, as long as it's under the `Root` component, where the context gets provided. Accessing the context of a dialog looks like this:
 
 <Code code={`
-import Dialog from '@corvu/dialog'
+import Dialog from '@arara/dialog'
 import { createSignal } from 'solid-js'
 
 const DialogRoot = () => {
@@ -77,7 +77,7 @@ Every primitive provides different properties in its context, have a look at the
 The `Root` component of every primitive (and in a few cases others) also accepts a function as its children. By doing this, we can pass the internal state to the children for you to access. An example of this looks like this:
 
 <Code code={`
-import Dialog from '@corvu/dialog'
+import Dialog from '@arara/dialog'
 import { createSignal } from 'solid-js'
 
 const MyDialog = () => {
@@ -103,7 +103,7 @@ const MyDialog = () => {
 Note that the props passed from the `Root` component include reactive getters. Make sure to access them in a reactive scope, like you would in any other Solid component.
 
 ## Keyed context
-There may be situations where you want to use nested instances of the same primitive. For example, multiple dialogs with multiple trigger buttons that are hard to separate in the template. For this case, corvu allows you to pass a `contextId` to every primitive component to tell which context to use.
+There may be situations where you want to use nested instances of the same primitive. For example, multiple dialogs with multiple trigger buttons that are hard to separate in the template. For this case, arara allows you to pass a `contextId` to every primitive component to tell which context to use.
 
 Here's how two nested dialogs would look like:
 

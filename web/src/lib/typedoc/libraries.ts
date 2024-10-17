@@ -18,15 +18,15 @@ import transitionSizeTypedoc from '../../../../packages/solid-transition-size/ap
 import utilsTypedoc from '../../../../packages/utils/api.json'
 
 export const Typedoc: { [key: string]: ApiDeclaration } = {
-  '@corvu/accordion': accordionTypedoc as ApiDeclaration,
-  '@corvu/dialog': dialogTypedoc as ApiDeclaration,
-  '@corvu/disclosure': disclosureTypedoc as ApiDeclaration,
-  '@corvu/drawer': drawerTypedoc as ApiDeclaration,
-  '@corvu/otp-field': otpFieldTypedoc as ApiDeclaration,
-  '@corvu/popover': popoverTypedoc as ApiDeclaration,
-  '@corvu/resizable': resizableTypedoc as ApiDeclaration,
-  '@corvu/tooltip': tooltipTypedoc as ApiDeclaration,
-  '@corvu/utils': utilsTypedoc as ApiDeclaration,
+  '@arara/accordion': accordionTypedoc as ApiDeclaration,
+  '@arara/dialog': dialogTypedoc as ApiDeclaration,
+  '@arara/disclosure': disclosureTypedoc as ApiDeclaration,
+  '@arara/drawer': drawerTypedoc as ApiDeclaration,
+  '@arara/otp-field': otpFieldTypedoc as ApiDeclaration,
+  '@arara/popover': popoverTypedoc as ApiDeclaration,
+  '@arara/resizable': resizableTypedoc as ApiDeclaration,
+  '@arara/tooltip': tooltipTypedoc as ApiDeclaration,
+  '@arara/utils': utilsTypedoc as ApiDeclaration,
   'solid-dismissible': dismissibleTypedoc as ApiDeclaration,
   'solid-focus-trap': focusTrapTypedoc as ApiDeclaration,
   'solid-list': listTypedoc as ApiDeclaration,
@@ -37,7 +37,7 @@ export const Typedoc: { [key: string]: ApiDeclaration } = {
 }
 
 const Disclosure: Library = {
-  api: Typedoc['@corvu/disclosure'],
+  api: Typedoc['@arara/disclosure'],
   name: 'Disclosure',
   items: {
     Root: {
@@ -86,7 +86,7 @@ const Disclosure: Library = {
   },
 }
 const Accordion: Library = {
-  api: Typedoc['@corvu/accordion'],
+  api: Typedoc['@arara/accordion'],
   name: 'Accordion',
   items: {
     Root: {
@@ -178,7 +178,7 @@ const Accordion: Library = {
 }
 
 const Dialog: Library = {
-  api: Typedoc['@corvu/dialog'],
+  api: Typedoc['@arara/dialog'],
   name: 'Dialog',
   items: {
     Root: {
@@ -309,7 +309,7 @@ const Dialog: Library = {
 }
 
 const Drawer: Library = {
-  api: Typedoc['@corvu/drawer'],
+  api: Typedoc['@arara/drawer'],
   name: 'Drawer',
   items: {
     Root: {
@@ -443,7 +443,7 @@ const Drawer: Library = {
 }
 
 const OtpField: Library = {
-  api: Typedoc['@corvu/otp-field'],
+  api: Typedoc['@arara/otp-field'],
   name: 'OTP Field',
   items: {
     Root: {
@@ -490,7 +490,7 @@ const OtpField: Library = {
 }
 
 const Popover: Library = {
-  api: Typedoc['@corvu/popover'],
+  api: Typedoc['@arara/popover'],
   name: 'Popover',
   items: {
     Root: {
@@ -587,7 +587,7 @@ const Popover: Library = {
 }
 
 const Resizable: Library = {
-  api: Typedoc['@corvu/resizable'],
+  api: Typedoc['@arara/resizable'],
   name: 'Resizable',
   items: {
     Root: {
@@ -698,7 +698,7 @@ const Resizable: Library = {
 }
 
 const Tooltip: Library = {
-  api: Typedoc['@corvu/tooltip'],
+  api: Typedoc['@arara/tooltip'],
   name: 'Tooltip',
   items: {
     Root: {
