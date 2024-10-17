@@ -1,8 +1,8 @@
 {
-  "name": "@corvu/dev",
+  "name": "@arara/dev",
   "private": true,
-  "description": "corvu development environment",
-  "homepage": "https://corvu.dev",
+  "description": "arara development environment",
+  "homepage": "https://arara.dev",
   "license": "MIT",
   "author": {
     "name": "Jasmin Noetzli",
@@ -22,7 +22,7 @@
     "solid-js": "^1.9.2"
   },
   "devDependencies": {
-    "@corvu/tailwind": "workspace:*",
+    "@arara/tailwind": "workspace:*",
     "@typescript-eslint/parser": "^8.9.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",

@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://corvu.dev/sitemap-index.xml
+Sitemap: https://arara.dev/sitemap-index.xml

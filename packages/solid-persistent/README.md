@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://corvu.dev/docs/utilities/persistent">
-    <img src="https://corvu.dev/readme/solid-persistent.png" width=1000 alt="Solid Persistent" />
+  <a href="https://arara.dev/docs/utilities/persistent">
+    <img src="https://arara.dev/readme/solid-persistent.png" width=1000 alt="Solid Persistent" />
   </a>
 </div>
 <br />
@@ -42,4 +42,4 @@ const PersistedDialogContent = () => {
 ```
 
 ## Further Reading
-This utility is from the maintainers of [corvu](https://corvu.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the corvu docs under [Persistent](https://corvu.dev/docs/utilities/persistent).
+This utility is from the maintainers of [arara](https://arara.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the arara docs under [Persistent](https://arara.dev/docs/utilities/persistent).

@@ -55,14 +55,14 @@ const MultiListExample = () => {
               toggleSelected(crow)
             }}
             class={clsx(
-              'flex w-full max-w-80 cursor-pointer items-center space-x-2 rounded-md px-4 py-2 transition-all hover:scale-[1.01] hover:bg-corvu-200 focus:outline-none',
+              'flex w-full max-w-80 cursor-pointer items-center space-x-2 rounded-md px-4 py-2 transition-all hover:scale-[1.01] hover:bg-arara-200 focus:outline-none',
               {
-                'bg-corvu-bg': !active().includes(crow),
-                'bg-corvu-200 scale-[1.01]': active().includes(crow),
+                'bg-arara-bg': !active().includes(crow),
+                'bg-arara-200 scale-[1.01]': active().includes(crow),
               },
             )}
           >
-            <div class="flex size-6 items-center justify-center rounded border-2 border-corvu-300">
+            <div class="flex size-6 items-center justify-center rounded border-2 border-arara-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

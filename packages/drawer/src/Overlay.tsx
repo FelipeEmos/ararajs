@@ -5,15 +5,15 @@ import {
   type ValidComponent,
 } from 'solid-js'
 import Dialog, {
-  type OverlayCorvuProps as DialogOverlayCorvuProps,
+  type OverlayAraraProps as DialogOverlayAraraProps,
   type OverlayElementProps as DialogOverlayElementProps,
   type OverlaySharedElementProps as DialogOverlaySharedElementProps,
-} from '@corvu/dialog'
-import { dataIf } from '@corvu/utils'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+} from '@arara/dialog'
+import { dataIf } from '@arara/utils'
+import type { DynamicProps } from '@arara/utils/dynamic'
 import { useInternalDrawerContext } from '@src/context'
 
-export type DrawerOverlayCorvuProps = DialogOverlayCorvuProps
+export type DrawerOverlayAraraProps = DialogOverlayAraraProps
 
 export type DrawerOverlaySharedElementProps<T extends ValidComponent = 'div'> =
   DialogOverlaySharedElementProps<T>
@@ -24,15 +24,15 @@ export type DrawerOverlayElementProps = DrawerOverlaySharedElementProps & {
   'data-resizing': '' | undefined
   'data-snapping': '' | undefined
   'data-transitioning': '' | undefined
-  'data-corvu-drawer-overlay': ''
+  'data-arara-drawer-overlay': ''
 } & DialogOverlayElementProps
 
 export type DrawerOverlayProps<T extends ValidComponent = 'div'> =
-  DrawerOverlayCorvuProps & Partial<DrawerOverlaySharedElementProps<T>>
+  DrawerOverlayAraraProps & Partial<DrawerOverlaySharedElementProps<T>>
 
 /** Component which can be used to create a faded background. Can be animated.
  *
- * @data `data-corvu-drawer-overlay` - Present on every drawer overlay element.
+ * @data `data-arara-drawer-overlay` - Present on every drawer overlay element.
  * @data `data-open` - Present when the drawer is open.
  * @data `data-closed` - Present when the drawer is closed.
  * @data `data-transitioning` - Present when the drawer is transitioning (opening, closing or snapping).
@@ -65,9 +65,9 @@ const DrawerOverlay = <T extends ValidComponent = 'div'>(
       data-resizing={dataIf(drawerContext().transitionState() === 'resizing')}
       data-snapping={dataIf(drawerContext().transitionState() === 'snapping')}
       data-transitioning={dataIf(drawerContext().isTransitioning())}
-      data-corvu-drawer-overlay=""
+      data-arara-drawer-overlay=""
       // === Misc ===
-      data-corvu-dialog-overlay={null}
+      data-arara-dialog-overlay={null}
       {...otherProps}
     />
   )

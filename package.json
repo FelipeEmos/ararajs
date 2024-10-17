@@ -1,8 +1,8 @@
 {
-  "name": "@corvu/monorepo",
+  "name": "@arara/monorepo",
   "private": true,
   "description": "Unstyled, accessible and customizable UI primitives for SolidJS",
-  "homepage": "https://corvu.dev",
+  "homepage": "https://arara.dev",
   "license": "MIT",
   "author": {
     "name": "Jasmin Noetzli",
@@ -13,10 +13,10 @@
     "build": "turbo run build",
     "ci:publish": "pnpm build && pnpm publish -r --access public",
     "clean": "turbo run clean && rm -rf .turbo node_modules",
-    "dev:corvu": "turbo watch dev --filter=@corvu/dev",
-    "dev:web": "turbo watch dev --filter=@corvu/web",
+    "dev:arara": "turbo watch dev --filter=@arara/dev",
+    "dev:web": "turbo watch dev --filter=@arara/web",
     "lint": "turbo run lint",
-    "preview:web": "turbo run preview --filter=@corvu/web",
+    "preview:web": "turbo run preview --filter=@arara/web",
     "rp": "release-please"
   },
   "devDependencies": {

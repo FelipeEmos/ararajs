@@ -3,7 +3,7 @@ import {
   type ElementOf,
   type Ref,
   sortByDocumentPosition,
-} from '@corvu/utils/dom'
+} from '@arara/utils/dom'
 import {
   createEffect,
   createMemo,
@@ -20,16 +20,16 @@ import {
   createResizableContext,
 } from '@src/context'
 import { deltaResize, resizePanel } from '@src/lib/resize'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import { isFunction, type Size } from '@corvu/utils'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import { isFunction, type Size } from '@arara/utils'
 import type { PanelData, PanelInstance, ResizeStrategy } from '@src/lib/types'
 import { resolveSize, splitPanels } from '@src/lib/utils'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
-import createOnce from '@corvu/utils/create/once'
-import createSize from '@corvu/utils/create/size'
-import { mergeRefs } from '@corvu/utils/reactivity'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
+import createOnce from '@arara/utils/create/once'
+import createSize from '@arara/utils/create/size'
+import { mergeRefs } from '@arara/utils/reactivity'
 
-export type ResizableRootCorvuProps = {
+export type ResizableRootAraraProps = {
   /**
    * The orientation of the resizable.
    * @defaultValue 'horizontal'
@@ -72,11 +72,11 @@ export type ResizableRootSharedElementProps<T extends ValidComponent = 'div'> =
 
 export type ResizableRootElementProps = ResizableRootSharedElementProps & {
   'data-orientation': 'horizontal' | 'vertical'
-  'data-corvu-resizable-root': ''
+  'data-arara-resizable-root': ''
 }
 
 export type ResizableRootProps<T extends ValidComponent = 'div'> =
-  ResizableRootCorvuProps & Partial<ResizableRootSharedElementProps<T>>
+  ResizableRootAraraProps & Partial<ResizableRootSharedElementProps<T>>
 
 export type ResizableRootChildrenProps = {
   /** The orientation of the resizable. */
@@ -99,7 +99,7 @@ export type ResizableRootChildrenProps = {
 
 /** Wrapper for the resizable.
  *
- * @data `data-corvu-resizable-root` - Present on every resizable root element.
+ * @data `data-arara-resizable-root` - Present on every resizable root element.
  * @data `data-orientation` - The orientation of the resizable.
  */
 const ResizableRoot = <T extends ValidComponent = 'div'>(
@@ -510,7 +510,7 @@ const ResizableRoot = <T extends ValidComponent = 'div'>(
             )}
             // === ElementProps ===
             data-orientation={localProps.orientation}
-            data-corvu-resizable-root=""
+            data-arara-resizable-root=""
             {...otherProps}
           >
             {untrack(() => resolveChildren())}

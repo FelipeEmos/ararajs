@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: SolidJS Disclosure
 description: A customizable, unstyled and accessible disclosure/collapsible component for SolidJS
-image: https://corvu.dev/primitives/disclosure.jpg
+image: https://arara.dev/primitives/disclosure.jpg
 ---
 import RawCode from '@components/docs/code/RawCode.astro'
 import ExampleWrapper from '@examples/ExampleWrapper'
@@ -26,7 +26,7 @@ export const components = { h2: H2, h3: H3 }
 
 An interactive component which expands/collapses content.
 
-<PackageInfo packageName="@corvu/disclosure" />
+<PackageInfo packageName="@arara/disclosure" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -70,16 +70,16 @@ An interactive component which expands/collapses content.
 ## Installation
 
 <Code code={`
-npm install @corvu/disclosure
+npm install @arara/disclosure
 `} lang="bash" copyButton />
 
-The disclosure is also included in the main `corvu` package under `corvu/disclosure`.
+The disclosure is also included in the main `arara` package under `arara/disclosure`.
 
 ## Usage
 <Code code={`
-import Disclosure from '@corvu/disclosure' // 'corvu/disclosure'
+import Disclosure from '@arara/disclosure' // 'arara/disclosure'
 // or
-// import { Root, Trigger, Content } from '@corvu/disclosure'
+// import { Root, Trigger, Content } from '@arara/disclosure'
 `} lang="tsx" copyButton />
 
 ### Anatomy
@@ -92,19 +92,19 @@ import Disclosure from '@corvu/disclosure' // 'corvu/disclosure'
 `} lang="tsx" copyButton />
 
 ### Animation
-corvu sets the `--corvu-disclosure-content-height` and `--corvu-disclosure-content-width` CSS properties on the disclosure content that make it possible to animate the height/width.
+arara sets the `--arara-disclosure-content-height` and `--arara-disclosure-content-width` CSS properties on the disclosure content that make it possible to animate the height/width.
 
 <Code code={`
-[data-corvu-disclosure-content][data-collapsed] {
+[data-arara-disclosure-content][data-collapsed] {
   animation: collapse 200ms linear;
 }
-[data-corvu-disclosure-content][data-expanded] {
+[data-arara-disclosure-content][data-expanded] {
   animation: expand 200ms linear;
 }
 
 @keyframes collapse {
   0% {
-    height: var(--corvu-disclosure-content-height);
+    height: var(--arara-disclosure-content-height);
   }
   100% {
     height: 0px;
@@ -116,7 +116,7 @@ corvu sets the `--corvu-disclosure-content-height` and `--corvu-disclosure-conte
     height: 0px;
   }
   100% {
-    height: var(--corvu-disclosure-content-height);
+    height: var(--arara-disclosure-content-height);
   }
 }
 `} lang="css" copyButton />

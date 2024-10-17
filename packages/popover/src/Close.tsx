@@ -1,27 +1,27 @@
 import type { Component, ValidComponent } from 'solid-js'
 import Dialog, {
-  type CloseCorvuProps as DialogCloseCorvuProps,
+  type CloseAraraProps as DialogCloseAraraProps,
   type CloseElementProps as DialogCloseElementProps,
   type CloseSharedElementProps as DialogCloseSharedElementProps,
-} from '@corvu/dialog'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+} from '@arara/dialog'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
-export type PopoverCloseCorvuProps = DialogCloseCorvuProps
+export type PopoverCloseAraraProps = DialogCloseAraraProps
 
 export type PopoverCloseSharedElementProps<
   T extends ValidComponent = 'button',
 > = DialogCloseSharedElementProps<T>
 
 export type PopoverCloseElementProps = PopoverCloseSharedElementProps & {
-  'data-corvu-popover-close': ''
+  'data-arara-popover-close': ''
 } & DialogCloseElementProps
 
 export type PopoverCloseProps<T extends ValidComponent = 'button'> =
-  PopoverCloseCorvuProps & Partial<PopoverCloseSharedElementProps<T>>
+  PopoverCloseAraraProps & Partial<PopoverCloseSharedElementProps<T>>
 
 /** Close button that changes the open state to false when clicked.
  *
- * @data `data-corvu-popover-close` - Present on every popover close element.
+ * @data `data-arara-popover-close` - Present on every popover close element.
  */
 const PopoverClose = <T extends ValidComponent = 'button'>(
   props: DynamicProps<T, PopoverCloseProps<T>>,
@@ -31,9 +31,9 @@ const PopoverClose = <T extends ValidComponent = 'button'>(
       Component<Omit<PopoverCloseElementProps, keyof DialogCloseElementProps>>
     >
       // === ElementProps ===
-      data-corvu-popover-close=""
+      data-arara-popover-close=""
       // === Misc ===
-      data-corvu-dialog-close={null}
+      data-arara-dialog-close={null}
       {...(props as PopoverCloseProps)}
     />
   )

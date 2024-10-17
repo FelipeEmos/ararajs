@@ -1,5 +1,5 @@
-import './index.css'
-import CorvuLab from './CorvuLab'
-import { render } from 'solid-js/web'
+import "./index.css";
+import AraraLab from "./AraraLab";
+import { render } from "solid-js/web";
 
-render(() => <CorvuLab />, document.getElementById('root')!)
+render(() => <AraraLab />, document.getElementById("root")!);

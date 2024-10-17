@@ -2,9 +2,9 @@ import { type Accessor, createContext, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 import type { ResizeStrategy } from '@src/lib/types'
-import type { Size } from '@corvu/utils'
+import type { Size } from '@arara/utils'
 
 export type ResizablePanelContextValue = {
   /** The current size of the panel. */
@@ -48,7 +48,7 @@ export const useResizablePanelContext = (contextId?: string) => {
     const context = useContext(ResizablePanelContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Resizable panel context not found. Make sure to call usePanelContext under <Resizable.Panel>',
+        '[arara]: Resizable panel context not found. Make sure to call usePanelContext under <Resizable.Panel>',
       )
     }
     return context
@@ -59,7 +59,7 @@ export const useResizablePanelContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Resizable context with id "${contextId}" not found. Make sure to call usePanelContext under <Resizable.Panel contextId="${contextId}">`,
+      `[arara]: Resizable context with id "${contextId}" not found. Make sure to call usePanelContext under <Resizable.Panel contextId="${contextId}">`,
     )
   }
   return context

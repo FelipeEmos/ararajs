@@ -1,4 +1,4 @@
-import corvuPlugin from '@corvu/tailwind'
+import araraPlugin from '@arara/tailwind'
 import plugin from 'tailwindcss/plugin'
 
 /** @type {import('tailwindcss').Config} */
@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        corvu: {
+        arara: {
           bg: '#f3f1fe',
           100: '#e6e2fd',
           200: '#d4cbfb',
@@ -27,12 +27,12 @@ module.exports = {
             height: '0px',
           },
           '100%': {
-            height: 'var(--corvu-disclosure-content-height)',
+            height: 'var(--arara-disclosure-content-height)',
           },
         },
         collapse: {
           '0%': {
-            height: 'var(--corvu-disclosure-content-height)',
+            height: 'var(--arara-disclosure-content-height)',
           },
           '100%': {
             height: '0px',
@@ -46,7 +46,7 @@ module.exports = {
     },
   },
   plugins: [
-    corvuPlugin,
+    araraPlugin,
     plugin(
       ({ addUtilities, matchUtilities, theme }) => {
         addUtilities({

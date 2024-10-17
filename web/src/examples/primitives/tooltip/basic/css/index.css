@@ -1,4 +1,4 @@
-[data-corvu-tooltip-trigger] {
+[data-arara-tooltip-trigger] {
   margin-top: auto;
   margin-bottom: auto;
   border-radius: 9999px;
@@ -9,11 +9,11 @@
   transition-duration: 100ms;
 }
 
-[data-corvu-tooltip-trigger]:hover {
+[data-arara-tooltip-trigger]:hover {
   background-color: hsl(251, 86%, 89%);
 }
 
-[data-corvu-tooltip-trigger]:active {
+[data-arara-tooltip-trigger]:active {
   transform: translate(0, 0.125rem);
 }
 
@@ -29,7 +29,7 @@
   border-width: 0;
 }
 
-[data-corvu-tooltip-content] {
+[data-arara-tooltip-content] {
   border-radius: 0.5rem;
   background-color: hsl(249, 87%, 94%);
   padding-left: 0.75rem;
@@ -53,7 +53,7 @@
   }
 }
 
-[data-corvu-tooltip-content][data-open] {
+[data-arara-tooltip-content][data-open] {
   animation-name: enter;
   animation-duration: 150ms;
   --tw-enter-opacity: initial;
@@ -65,7 +65,7 @@
   --tw-enter-translate-y: 0.25rem;
 }
 
-[data-corvu-tooltip-content][data-closed] {
+[data-arara-tooltip-content][data-closed] {
   animation-name: exit;
   animation-duration: 150ms;
   --tw-exit-opacity: initial;
@@ -77,6 +77,6 @@
   --tw-exit-translate-y: 0.25rem;
 }
 
-[data-corvu-tooltip-arrow] {
+[data-arara-tooltip-arrow] {
   color: hsl(249, 87%, 94%);
 }

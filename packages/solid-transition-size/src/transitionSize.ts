@@ -1,4 +1,4 @@
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import {
   type Accessor,
   batch,
@@ -7,7 +7,7 @@ import {
   mergeProps,
   onCleanup,
 } from 'solid-js'
-import { afterPaint } from '@corvu/utils/dom'
+import { afterPaint } from '@arara/utils/dom'
 
 /**
  * Utility that uses a `ResizeObserver` to provide the size of an element before and after resize. Used to transition the width/height of elements that don't have a fixed size applied.

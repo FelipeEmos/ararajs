@@ -1,26 +1,26 @@
 import type { Component, ValidComponent } from 'solid-js'
 import Dialog, {
-  type LabelCorvuProps as DialogLabelCorvuProps,
+  type LabelAraraProps as DialogLabelAraraProps,
   type LabelElementProps as DialogLabelElementProps,
   type LabelSharedElementProps as DialogLabelSharedElementProps,
-} from '@corvu/dialog'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+} from '@arara/dialog'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
-export type DrawerLabelCorvuProps = DialogLabelCorvuProps
+export type DrawerLabelAraraProps = DialogLabelAraraProps
 
 export type DrawerLabelSharedElementProps<T extends ValidComponent = 'h2'> =
   DialogLabelSharedElementProps<T>
 
 export type DrawerLabelElementProps = DrawerLabelSharedElementProps & {
-  'data-corvu-drawer-label': ''
+  'data-arara-drawer-label': ''
 } & DialogLabelElementProps
 
 export type DrawerLabelProps<T extends ValidComponent = 'h2'> =
-  DrawerLabelCorvuProps & Partial<DrawerLabelSharedElementProps<T>>
+  DrawerLabelAraraProps & Partial<DrawerLabelSharedElementProps<T>>
 
 /** Label element to announce the drawer to accessibility tools.
  *
- * @data `data-corvu-drawer-label` - Present on every drawer label element.
+ * @data `data-arara-drawer-label` - Present on every drawer label element.
  */
 const DrawerLabel = <T extends ValidComponent = 'h2'>(
   props: DynamicProps<T, DrawerLabelProps<T>>,
@@ -30,9 +30,9 @@ const DrawerLabel = <T extends ValidComponent = 'h2'>(
       Component<Omit<DrawerLabelElementProps, keyof DialogLabelElementProps>>
     >
       // === ElementProps ===
-      data-corvu-drawer-label=""
+      data-arara-drawer-label=""
       // === Misc ===
-      data-corvu-dialog-label={null}
+      data-arara-dialog-label={null}
       {...(props as DrawerLabelProps)}
     />
   )

@@ -1,4 +1,4 @@
-import { callEventHandler, type EventHandlerEvent } from '@corvu/utils/dom'
+import { callEventHandler, type EventHandlerEvent } from '@arara/utils/dom'
 import {
   type Component,
   createMemo,
@@ -16,14 +16,14 @@ import {
 import type {
   FloatingOptions,
   FloatingState,
-} from '@corvu/utils/create/floating'
+} from '@arara/utils/create/floating'
 import type { Placement, Strategy } from '@floating-ui/dom'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
-import createFloating from '@corvu/utils/create/floating'
-import createOnce from '@corvu/utils/create/once'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
+import createFloating from '@arara/utils/create/floating'
+import createOnce from '@arara/utils/create/once'
 import createPresence from 'solid-presence'
-import createTooltip from '@corvu/utils/create/tooltip'
-import { isFunction } from '@corvu/utils'
+import createTooltip from '@arara/utils/create/tooltip'
+import { isFunction } from '@arara/utils'
 
 export type TooltipRootProps = {
   /**

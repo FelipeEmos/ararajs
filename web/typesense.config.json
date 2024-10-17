@@ -1,10 +1,10 @@
 {
-  "index_name": "corvu",
+  "index_name": "arara",
   "start_urls": [
-    "https://corvu.dev/docs/"
+    "https://arara.dev/docs/"
   ],
   "sitemap_urls": [
-    "https://corvu.dev/sitemap-index.xml"
+    "https://arara.dev/sitemap-index.xml"
   ],
   "selectors": {
     "lvl0": "article h1",

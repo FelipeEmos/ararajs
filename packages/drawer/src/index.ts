@@ -1,17 +1,17 @@
 import Close, {
-  type DrawerCloseCorvuProps as CloseCorvuProps,
+  type DrawerCloseAraraProps as CloseAraraProps,
   type DrawerCloseElementProps as CloseElementProps,
   type DrawerCloseProps as CloseProps,
   type DrawerCloseSharedElementProps as CloseSharedElementProps,
 } from '@src/Close'
 import Content, {
-  type DrawerContentCorvuProps as ContentCorvuProps,
+  type DrawerContentAraraProps as ContentAraraProps,
   type DrawerContentElementProps as ContentElementProps,
   type DrawerContentProps as ContentProps,
   type DrawerContentSharedElementProps as ContentSharedElementProps,
 } from '@src/Content'
 import Description, {
-  type DrawerDescriptionCorvuProps as DescriptionCorvuProps,
+  type DrawerDescriptionAraraProps as DescriptionAraraProps,
   type DrawerDescriptionElementProps as DescriptionElementProps,
   type DrawerDescriptionProps as DescriptionProps,
   type DrawerDescriptionSharedElementProps as DescriptionSharedElementProps,
@@ -21,19 +21,19 @@ import {
   Portal,
   type PortalProps,
   useContext as useDialogContext,
-} from '@corvu/dialog'
+} from '@arara/dialog'
 import {
   type DrawerContextValue,
   useDrawerContext as useContext,
 } from '@src/context'
 import Label, {
-  type DrawerLabelCorvuProps as LabelCorvuProps,
+  type DrawerLabelAraraProps as LabelAraraProps,
   type DrawerLabelElementProps as LabelElementProps,
   type DrawerLabelProps as LabelProps,
   type DrawerLabelSharedElementProps as LabelSharedElementProps,
 } from '@src/Label'
 import Overlay, {
-  type DrawerOverlayCorvuProps as OverlayCorvuProps,
+  type DrawerOverlayAraraProps as OverlayAraraProps,
   type DrawerOverlayElementProps as OverlayElementProps,
   type DrawerOverlayProps as OverlayProps,
   type DrawerOverlaySharedElementProps as OverlaySharedElementProps,
@@ -42,40 +42,40 @@ import Root, {
   type DrawerRootChildrenProps,
   type DrawerRootProps,
 } from '@src/Root'
-import type { Side, Size } from '@corvu/utils'
+import type { Side, Size } from '@arara/utils'
 import Trigger, {
-  type DrawerTriggerCorvuProps as TriggerCorvuProps,
+  type DrawerTriggerAraraProps as TriggerAraraProps,
   type DrawerTriggerElementProps as TriggerElementProps,
   type DrawerTriggerProps as TriggerProps,
   type DrawerTriggerSharedElementProps as TriggerSharedElementProps,
 } from '@src/Trigger'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
 export type {
   DrawerRootProps as RootProps,
   DrawerRootChildrenProps as RootChildrenProps,
-  TriggerCorvuProps,
+  TriggerAraraProps,
   TriggerSharedElementProps,
   TriggerElementProps,
   TriggerProps,
   PortalProps,
-  OverlayCorvuProps,
+  OverlayAraraProps,
   OverlaySharedElementProps,
   OverlayElementProps,
   OverlayProps,
-  ContentCorvuProps,
+  ContentAraraProps,
   ContentSharedElementProps,
   ContentElementProps,
   ContentProps,
-  LabelCorvuProps,
+  LabelAraraProps,
   LabelSharedElementProps,
   LabelElementProps,
   LabelProps,
-  DescriptionCorvuProps,
+  DescriptionAraraProps,
   DescriptionSharedElementProps,
   DescriptionElementProps,
   DescriptionProps,
-  CloseCorvuProps,
+  CloseAraraProps,
   CloseSharedElementProps,
   CloseElementProps,
   CloseProps,

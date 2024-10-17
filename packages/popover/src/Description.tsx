@@ -1,12 +1,12 @@
 import type { Component, ValidComponent } from 'solid-js'
 import Dialog, {
-  type DescriptionCorvuProps as DialogDescriptionCorvuProps,
+  type DescriptionAraraProps as DialogDescriptionAraraProps,
   type DescriptionElementProps as DialogDescriptionElementProps,
   type DescriptionSharedElementProps as DialogDescriptionSharedElementProps,
-} from '@corvu/dialog'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+} from '@arara/dialog'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
-export type PopoverDescriptionCorvuProps = DialogDescriptionCorvuProps
+export type PopoverDescriptionAraraProps = DialogDescriptionAraraProps
 
 export type PopoverDescriptionSharedElementProps<
   T extends ValidComponent = 'p',
@@ -14,16 +14,16 @@ export type PopoverDescriptionSharedElementProps<
 
 export type PopoverDescriptionElementProps =
   PopoverDescriptionSharedElementProps & {
-    'data-corvu-popover-description': ''
+    'data-arara-popover-description': ''
   } & DialogDescriptionElementProps
 
 export type PopoverDescriptionProps<T extends ValidComponent = 'p'> =
-  PopoverDescriptionCorvuProps &
+  PopoverDescriptionAraraProps &
     Partial<PopoverDescriptionSharedElementProps<T>>
 
 /** Description element to announce the popover to accessibility tools.
  *
- * @data `data-corvu-popover-description` - Present on every popover description element.
+ * @data `data-arara-popover-description` - Present on every popover description element.
  */
 const PopoverDescription = <T extends ValidComponent = 'p'>(
   props: DynamicProps<T, PopoverDescriptionProps<T>>,
@@ -38,9 +38,9 @@ const PopoverDescription = <T extends ValidComponent = 'p'>(
       >
     >
       // === ElementProps ===
-      data-corvu-popover-description=""
+      data-arara-popover-description=""
       // === Misc ===
-      data-corvu-dialog-description={null}
+      data-arara-dialog-description={null}
       {...(props as PopoverDescriptionProps)}
     />
   )

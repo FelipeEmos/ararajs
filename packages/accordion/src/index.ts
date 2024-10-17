@@ -1,5 +1,5 @@
 import Content, {
-  type AccordionContentCorvuProps as ContentCorvuProps,
+  type AccordionContentAraraProps as ContentAraraProps,
   type AccordionContentElementProps as ContentElementProps,
   type AccordionContentProps as ContentProps,
   type AccordionContentSharedElementProps as ContentSharedElementProps,
@@ -11,10 +11,10 @@ import {
 import {
   type ContextValue as DisclosureContextValue,
   useContext as useDisclosureContext,
-} from '@corvu/disclosure'
+} from '@arara/disclosure'
 import Item, {
   type AccordionItemChildrenProps as ItemChildrenProps,
-  type AccordionItemCorvuProps as ItemCorvuProps,
+  type AccordionItemAraraProps as ItemAraraProps,
   type AccordionItemElementProps as ItemElementProps,
   type AccordionItemProps as ItemProps,
   type AccordionItemSharedElementProps as ItemSharedElementProps,
@@ -28,26 +28,26 @@ import Root, {
   type AccordionRootProps as RootProps,
 } from '@src/Root'
 import Trigger, {
-  type AccordionTriggerCorvuProps as TriggerCorvuProps,
+  type AccordionTriggerAraraProps as TriggerAraraProps,
   type AccordionTriggerElementProps as TriggerElementProps,
   type AccordionTriggerProps as TriggerProps,
   type AccordionTriggerSharedElementProps as TriggerSharedElementProps,
 } from '@src/Trigger'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
 export type {
   RootProps,
   RootChildrenProps,
-  ItemCorvuProps,
+  ItemAraraProps,
   ItemSharedElementProps,
   ItemElementProps,
   ItemProps,
   ItemChildrenProps,
-  TriggerCorvuProps,
+  TriggerAraraProps,
   TriggerSharedElementProps,
   TriggerElementProps,
   TriggerProps,
-  ContentCorvuProps,
+  ContentAraraProps,
   ContentSharedElementProps,
   ContentElementProps,
   ContentProps,

@@ -8,7 +8,7 @@ import {
 import type { DynamicAttributes } from '@src/dynamic'
 import { Dynamic as SolidDynamic } from 'solid-js/web'
 
-/** corvu's version of Solid's `Dynamic` component. Renders as a div by default and can be overridden with the `as` property. */
+/** arara's version of Solid's `Dynamic` component. Renders as a div by default and can be overridden with the `as` property. */
 const Dynamic = <ElementProps,>(
   props: DynamicAttributes<ValidComponent> & ElementProps,
 ) => {

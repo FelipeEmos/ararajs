@@ -11,11 +11,11 @@ import {
   createAccordionContext,
   createInternalAccordionContext,
 } from '@src/context'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
 import { createList } from 'solid-list'
-import createOnce from '@corvu/utils/create/once'
-import { isFunction } from '@corvu/utils'
-import { sortByDocumentPosition } from '@corvu/utils/dom'
+import createOnce from '@arara/utils/create/once'
+import { isFunction } from '@arara/utils'
+import { sortByDocumentPosition } from '@arara/utils/dom'
 
 export type AccordionRootProps = {
   /**

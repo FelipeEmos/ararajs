@@ -2,11 +2,11 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 import type {
   FloatingOptions,
   FloatingState,
-} from '@corvu/utils/create/floating'
+} from '@arara/utils/create/floating'
 import type { Placement, Strategy } from '@floating-ui/dom'
 
 export type TooltipContextValue = {
@@ -65,7 +65,7 @@ export const useTooltipContext = (contextId?: string) => {
     const context = useContext(TooltipContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Tooltip context not found. Make sure to wrap Tooltip components in <Tooltip.Root>',
+        '[arara]: Tooltip context not found. Make sure to wrap Tooltip components in <Tooltip.Root>',
       )
     }
     return context
@@ -74,7 +74,7 @@ export const useTooltipContext = (contextId?: string) => {
   const context = useKeyedContext<TooltipContextValue>(`tooltip-${contextId}`)
   if (!context) {
     throw new Error(
-      `[corvu]: Tooltip context with id "${contextId}" not found. Make sure to wrap Tooltip components in <Tooltip.Root contextId="${contextId}">`,
+      `[arara]: Tooltip context with id "${contextId}" not found. Make sure to wrap Tooltip components in <Tooltip.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -107,7 +107,7 @@ export const useInternalTooltipContext = (contextId?: string) => {
     const context = useContext(InternalTooltipContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Tooltip context not found. Make sure to wrap Tooltip components in <Tooltip.Root>',
+        '[arara]: Tooltip context not found. Make sure to wrap Tooltip components in <Tooltip.Root>',
       )
     }
     return context
@@ -118,7 +118,7 @@ export const useInternalTooltipContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Tooltip context with id "${contextId}" not found. Make sure to wrap Tooltip components in <Tooltip.Root contextId="${contextId}">`,
+      `[arara]: Tooltip context with id "${contextId}" not found. Make sure to wrap Tooltip components in <Tooltip.Root contextId="${contextId}">`,
     )
   }
   return context

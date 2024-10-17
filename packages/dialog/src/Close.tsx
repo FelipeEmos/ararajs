@@ -1,4 +1,4 @@
-import { callEventHandler, type ElementOf } from '@corvu/utils/dom'
+import { callEventHandler, type ElementOf } from '@arara/utils/dom'
 import {
   type Component,
   createMemo,
@@ -11,10 +11,10 @@ import {
   type DynamicButtonElementProps,
   type DynamicButtonSharedElementProps,
   type DynamicProps,
-} from '@corvu/utils/dynamic'
+} from '@arara/utils/dynamic'
 import { useInternalDialogContext } from '@src/context'
 
-export type DialogCloseCorvuProps = {
+export type DialogCloseAraraProps = {
   /**
    * The `id` of the dialog context to use.
    */
@@ -28,15 +28,15 @@ export type DialogCloseSharedElementProps<T extends ValidComponent = 'button'> =
 
 export type DialogCloseElementProps = DialogCloseSharedElementProps & {
   'aria-label': 'close'
-  'data-corvu-dialog-close': '' | null
+  'data-arara-dialog-close': '' | null
 } & DynamicButtonElementProps
 
 export type DialogCloseProps<T extends ValidComponent = 'button'> =
-  DialogCloseCorvuProps & Partial<DialogCloseSharedElementProps<T>>
+  DialogCloseAraraProps & Partial<DialogCloseSharedElementProps<T>>
 
 /** Close button that changes the open state to false when clicked.
  *
- * @data `data-corvu-dialog-close` - Present on every dialog close element.
+ * @data `data-arara-dialog-close` - Present on every dialog close element.
  */
 const DialogClose = <T extends ValidComponent = 'button'>(
   props: DynamicProps<T, DialogCloseProps<T>>,
@@ -64,7 +64,7 @@ const DialogClose = <T extends ValidComponent = 'button'>(
       onClick={onClick}
       // === ElementProps ===
       aria-label="close"
-      data-corvu-dialog-close=""
+      data-arara-dialog-close=""
       {...otherProps}
     />
   )

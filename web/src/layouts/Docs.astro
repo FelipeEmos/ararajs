@@ -53,12 +53,12 @@ const { frontmatter, headings } = Astro.props
     <ThemeScript />
     <script
       defer
-      data-domain="corvu.dev"
+      data-domain="arara.dev"
       data-api="/plausible/api/event/"
       src="/plausible/js/script.js"
       is:inline></script>
   </head>
-  <body class="flex flex-col bg-corvu-bg text-corvu-text antialiased">
+  <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
     <Background type="docs" client:media="(min-width: 768px)" />
     <Topbar inDocs />
     <main class="mx-auto mt-24 w-full max-w-7xl">
@@ -70,18 +70,18 @@ const { frontmatter, headings } = Astro.props
         </div>
         <div class="-mt-1 mb-6 grow">
           <article
-            class="prose max-w-[800px] @container prose-headings:scroll-mt-20 prose-h1:mb-4 prose-h1:text-4xl prose-h1:font-black prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-extrabold prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-xl prose-h3:font-bold prose-p:mb-2 prose-p:max-w-3xl prose-p:!leading-7 prose-a:text-corvu-link prose-a:underline hover:prose-a:text-corvu-link-hover prose-blockquote:rounded-md prose-blockquote:border-2 prose-blockquote:border-corvu-200 prose-blockquote:bg-corvu-100 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:whitespace-nowrap prose-code:rounded prose-code:border prose-code:border-corvu-200 prose-code:bg-corvu-100 prose-code:px-1.5 prose-code:pb-0.5 prose-code:pt-1 prose-code:text-sm prose-ol:mb-3 prose-ol:ml-[21px] prose-ol:list-outside prose-ol:list-decimal prose-ul:mb-3 prose-ul:ml-[21px] prose-ul:list-outside prose-ul:list-disc prose-li:mb-1 md:ml-60 lg:prose-headings:scroll-mt-2"
+            class="prose max-w-[800px] @container prose-headings:scroll-mt-20 prose-h1:mb-4 prose-h1:text-4xl prose-h1:font-black prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-extrabold prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-xl prose-h3:font-bold prose-p:mb-2 prose-p:max-w-3xl prose-p:!leading-7 prose-a:text-arara-link prose-a:underline hover:prose-a:text-arara-link-hover prose-blockquote:rounded-md prose-blockquote:border-2 prose-blockquote:border-arara-200 prose-blockquote:bg-arara-100 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:whitespace-nowrap prose-code:rounded prose-code:border prose-code:border-arara-200 prose-code:bg-arara-100 prose-code:px-1.5 prose-code:pb-0.5 prose-code:pt-1 prose-code:text-sm prose-ol:mb-3 prose-ol:ml-[21px] prose-ol:list-outside prose-ol:list-decimal prose-ul:mb-3 prose-ul:ml-[21px] prose-ul:list-outside prose-ul:list-disc prose-li:mb-1 md:ml-60 lg:prose-headings:scroll-mt-2"
           >
             <slot />
             <div
-              class="not-prose mb-8 mt-16 flex justify-end space-x-4 border-t-2 border-corvu-200 pt-4 text-sm"
+              class="not-prose mb-8 mt-16 flex justify-end space-x-4 border-t-2 border-arara-200 pt-4 text-sm"
               data-typesense-ignore
             >
               <p class="text-right">
                 Developed and designed by <a
                   href="https://github.com/GiyoMoon/"
                   target="_blank"
-                  class="-m-2 p-2 font-medium text-corvu-link underline hover:text-corvu-link-hover"
+                  class="-m-2 p-2 font-medium text-arara-link underline hover:text-arara-link-hover"
                   >Jasmin</a
                 >
               </p>

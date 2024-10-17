@@ -14,15 +14,15 @@ import type {
   ContextValue as DialogContextValue,
   RootChildrenProps as DialogRootChildrenProps,
   RootProps as DialogRootProps,
-} from '@corvu/dialog'
-import { isFunction, type Side, type Size } from '@corvu/utils'
-import { afterPaint } from '@corvu/utils/dom'
-import createControllableSignal from '@corvu/utils/create/controllableSignal'
-import createOnce from '@corvu/utils/create/once'
-import createSize from '@corvu/utils/create/size'
+} from '@arara/dialog'
+import { isFunction, type Side, type Size } from '@arara/utils'
+import { afterPaint } from '@arara/utils/dom'
+import createControllableSignal from '@arara/utils/create/controllableSignal'
+import createOnce from '@arara/utils/create/once'
+import createSize from '@arara/utils/create/size'
 import createTransitionSize from 'solid-transition-size'
 import { createWritableMemo } from '@solid-primitives/memo'
-import Dialog from '@corvu/dialog'
+import Dialog from '@arara/dialog'
 import { resolveSnapPoint } from '@src/lib'
 
 export type DrawerRootProps = {
@@ -72,7 +72,7 @@ export type DrawerRootProps = {
    */
   allowSkippingSnapPoints?: boolean
   /**
-   * corvu drawers have logic to make dragging and scrolling work together. If you don't want this behavior or if you want to implement something yourself, you can disable it with this property.
+   * arara drawers have logic to make dragging and scrolling work together. If you don't want this behavior or if you want to implement something yourself, you can disable it with this property.
    * @defaultValue `true`
    */
   handleScrollableElements?: boolean

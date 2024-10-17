@@ -24,7 +24,7 @@ importers:
         specifier: ^1.9.2
         version: 1.9.2
     devDependencies:
-      '@corvu/tailwind':
+      '@arara/tailwind':
         specifier: workspace:*
         version: link:../packages/tailwind
       '@typescript-eslint/parser':
@@ -72,10 +72,10 @@ importers:
 
   packages/accordion:
     dependencies:
-      '@corvu/disclosure':
+      '@arara/disclosure':
         specifier: workspace:~
         version: link:../disclosure
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
       solid-list:
@@ -119,30 +119,30 @@ importers:
         specifier: ^8.9.0
         version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
 
-  packages/corvu:
+  packages/arara:
     dependencies:
-      '@corvu/accordion':
+      '@arara/accordion':
         specifier: workspace:~
         version: link:../accordion
-      '@corvu/dialog':
+      '@arara/dialog':
         specifier: workspace:~
         version: link:../dialog
-      '@corvu/disclosure':
+      '@arara/disclosure':
         specifier: workspace:~
         version: link:../disclosure
-      '@corvu/drawer':
+      '@arara/drawer':
         specifier: workspace:~
         version: link:../drawer
-      '@corvu/otp-field':
+      '@arara/otp-field':
         specifier: workspace:~
         version: link:../otp-field
-      '@corvu/popover':
+      '@arara/popover':
         specifier: workspace:~
         version: link:../popover
-      '@corvu/resizable':
+      '@arara/resizable':
         specifier: workspace:~
         version: link:../resizable
-      '@corvu/tooltip':
+      '@arara/tooltip':
         specifier: workspace:~
         version: link:../tooltip
     devDependencies:
@@ -182,7 +182,7 @@ importers:
 
   packages/dialog:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
       solid-dismissible:
@@ -237,7 +237,7 @@ importers:
 
   packages/disclosure:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
       solid-presence:
@@ -283,10 +283,10 @@ importers:
 
   packages/drawer:
     dependencies:
-      '@corvu/dialog':
+      '@arara/dialog':
         specifier: workspace:~
         version: link:../dialog
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
       '@solid-primitives/memo':
@@ -335,7 +335,7 @@ importers:
 
   packages/otp-field:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -378,10 +378,10 @@ importers:
 
   packages/popover:
     dependencies:
-      '@corvu/dialog':
+      '@arara/dialog':
         specifier: workspace:~
         version: link:../dialog
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
       '@floating-ui/dom':
@@ -427,7 +427,7 @@ importers:
 
   packages/resizable:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -470,7 +470,7 @@ importers:
 
   packages/solid-dismissible:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -513,7 +513,7 @@ importers:
 
   packages/solid-focus-trap:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -556,7 +556,7 @@ importers:
 
   packages/solid-list:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -638,7 +638,7 @@ importers:
 
   packages/solid-presence:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -681,7 +681,7 @@ importers:
 
   packages/solid-prevent-scroll:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -724,7 +724,7 @@ importers:
 
   packages/solid-transition-size:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
     devDependencies:
@@ -797,7 +797,7 @@ importers:
 
   packages/tooltip:
     dependencies:
-      '@corvu/utils':
+      '@arara/utils':
         specifier: workspace:~
         version: link:../utils
       '@floating-ui/dom':
@@ -904,31 +904,31 @@ importers:
       '@astrojs/tailwind':
         specifier: 6.0.0-alpha.0
         version: 6.0.0-alpha.0(astro@5.0.0-beta.5(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
-      '@corvu/accordion':
+      '@arara/accordion':
         specifier: workspace:*
         version: link:../packages/accordion
-      '@corvu/dialog':
+      '@arara/dialog':
         specifier: workspace:*
         version: link:../packages/dialog
-      '@corvu/disclosure':
+      '@arara/disclosure':
         specifier: workspace:*
         version: link:../packages/disclosure
-      '@corvu/drawer':
+      '@arara/drawer':
         specifier: workspace:*
         version: link:../packages/drawer
-      '@corvu/otp-field':
+      '@arara/otp-field':
         specifier: workspace:*
         version: link:../packages/otp-field
-      '@corvu/popover':
+      '@arara/popover':
         specifier: workspace:*
         version: link:../packages/popover
-      '@corvu/resizable':
+      '@arara/resizable':
         specifier: workspace:*
         version: link:../packages/resizable
-      '@corvu/tailwind':
+      '@arara/tailwind':
         specifier: workspace:*
         version: link:../packages/tailwind
-      '@corvu/tooltip':
+      '@arara/tooltip':
         specifier: workspace:*
         version: link:../packages/tooltip
       '@fontsource-variable/rubik':

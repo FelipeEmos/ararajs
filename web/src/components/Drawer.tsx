@@ -1,4 +1,4 @@
-import Drawer from '@corvu/drawer'
+import Drawer from '@arara/drawer'
 import type { FlowComponent } from 'solid-js'
 import HeaderLogoDark from '@assets/header_logo_dark.svg'
 import HeaderLogoLight from '@assets/header_logo_light.svg'
@@ -33,29 +33,29 @@ const NavDrawer: FlowComponent = (props) => {
           </Drawer.Trigger>
           <Drawer.Portal>
             <Drawer.Overlay
-              class="fixed inset-0 z-50 corvu-transitioning:transition-colors corvu-transitioning:duration-500 corvu-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]"
+              class="fixed inset-0 z-50 arara-transitioning:transition-colors arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]"
               style={{
                 'background-color': `rgb(0 0 0 / ${
                   0.6 * drawerProps.openPercentage
                 })`,
               }}
             />
-            <Drawer.Content class="fixed inset-y-0 left-0 z-50 flex w-[230px] flex-col items-start bg-corvu-bg after:absolute after:inset-y-0 after:right-[calc(100%-1px)] after:w-1/2 after:bg-inherit corvu-transitioning:transition-transform corvu-transitioning:duration-500 corvu-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]">
+            <Drawer.Content class="fixed inset-y-0 left-0 z-50 flex w-[230px] flex-col items-start bg-arara-bg after:absolute after:inset-y-0 after:right-[calc(100%-1px)] after:w-1/2 after:bg-inherit arara-transitioning:transition-transform arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)]">
               <a
                 href="/"
-                class="flex h-[72px] w-full shrink-0 items-center rounded-bl-xl border-b-4 border-corvu-200 px-3"
+                class="flex h-[72px] w-full shrink-0 items-center rounded-bl-xl border-b-4 border-arara-200 px-3"
               >
-                <span class="sr-only">corvu</span>
+                <span class="sr-only">arara</span>
                 <img
                   src={HeaderLogoDark.src}
-                  alt="corvu logo dark"
+                  alt="arara logo dark"
                   height={42}
                   width={136}
                   class="dark:hidden"
                 />
                 <img
                   src={HeaderLogoLight.src}
-                  alt="corvu logo light"
+                  alt="arara logo light"
                   height={42}
                   width={136}
                   class="hidden dark:block"

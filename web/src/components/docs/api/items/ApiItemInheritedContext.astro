@@ -15,13 +15,13 @@ const { name, inherits } = Astro.props
     >
       {name}
     </h3><p
-      class="rounded-md border-2 border-corvu-200 bg-corvu-100 px-1.5 py-0.5 text-sm font-bold"
+      class="rounded-md border-2 border-arara-200 bg-arara-100 px-1.5 py-0.5 text-sm font-bold"
     >
       Context
     </p>
     <a
       href={`#${encodeURIComponent(name)}`}
-      class="not-prose transition-opacity hover:text-corvu-400 group-hover:opacity-100 md:opacity-0"
+      class="not-prose transition-opacity hover:text-arara-400 group-hover:opacity-100 md:opacity-0"
       data-typesense-ignore
     >
       <svg
@@ -48,7 +48,7 @@ const { name, inherits } = Astro.props
       <span class="sr-only">Section titled {name}</span>
     </a>
   </div>
-  <div class="mb-4 mt-3 border-b border-corvu-100 pb-3">
+  <div class="mb-4 mt-3 border-b border-arara-100 pb-3">
     <p>
       Inherited from <Link
         href={`/docs/primitives/${inherits.library.name.toLowerCase()}/#${inherits.name}`}

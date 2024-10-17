@@ -1,10 +1,10 @@
 import { createMemo, splitProps, type ValidComponent } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import type { ElementOf, Ref } from '@corvu/utils/dom'
-import { mergeRefs } from '@corvu/utils/reactivity'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import type { ElementOf, Ref } from '@arara/utils/dom'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalPopoverContext } from '@src/context'
 
-export type PopoverAnchorCorvuProps = {
+export type PopoverAnchorAraraProps = {
   /**
    * The `id` of the popover context to use.
    */
@@ -17,15 +17,15 @@ export type PopoverAnchorSharedElementProps<T extends ValidComponent = 'div'> =
   }
 
 export type PopoverAnchorElementProps = PopoverAnchorSharedElementProps & {
-  'data-corvu-popover-anchor': ''
+  'data-arara-popover-anchor': ''
 }
 
 export type PopoverAnchorProps<T extends ValidComponent = 'div'> =
-  PopoverAnchorCorvuProps & Partial<PopoverAnchorSharedElementProps<T>>
+  PopoverAnchorAraraProps & Partial<PopoverAnchorSharedElementProps<T>>
 
 /** Anchor element to override the floating reference.
  *
- * @data `data-corvu-popover-anchor` - Present on every popover anchor element.
+ * @data `data-arara-popover-anchor` - Present on every popover anchor element.
  */
 const PopoverAnchor = <T extends ValidComponent = 'div'>(
   props: DynamicProps<T, PopoverAnchorProps<T>>,
@@ -45,7 +45,7 @@ const PopoverAnchor = <T extends ValidComponent = 'div'>(
       // === SharedElementProps ===
       ref={mergeRefs(context().setAnchorRef, localProps.ref)}
       // === ElementProps ===
-      data-corvu-popover-anchor=""
+      data-arara-popover-anchor=""
       {...otherProps}
     />
   )

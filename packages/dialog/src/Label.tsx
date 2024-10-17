@@ -5,10 +5,10 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
 import { useInternalDialogContext } from '@src/context'
 
-export type DialogLabelCorvuProps = {
+export type DialogLabelAraraProps = {
   /**
    * The `id` of the dialog context to use.
    */
@@ -20,15 +20,15 @@ export type DialogLabelSharedElementProps<T extends ValidComponent = 'h2'> = {}
 
 export type DialogLabelElementProps = DialogLabelSharedElementProps & {
   id: string | undefined
-  'data-corvu-dialog-label': string | null
+  'data-arara-dialog-label': string | null
 }
 
 export type DialogLabelProps<T extends ValidComponent = 'h2'> =
-  DialogLabelCorvuProps & Partial<DialogLabelSharedElementProps<T>>
+  DialogLabelAraraProps & Partial<DialogLabelSharedElementProps<T>>
 
 /** Label element to announce the dialog to accessibility tools.
  *
- * @data `data-corvu-dialog-label` - Present on every dialog label element.
+ * @data `data-arara-dialog-label` - Present on every dialog label element.
  */
 const DialogLabel = <T extends ValidComponent = 'h2'>(
   props: DynamicProps<T, DialogLabelProps<T>>,
@@ -52,7 +52,7 @@ const DialogLabel = <T extends ValidComponent = 'h2'>(
       as="h2"
       // === ElementProps ===
       id={context().labelId()}
-      data-corvu-dialog-label=""
+      data-arara-dialog-label=""
       {...otherProps}
     />
   )

@@ -19,7 +19,7 @@
       ],
       "persistent": true
     },
-    "@corvu/web#dev": {
+    "@arara/web#dev": {
       "dependsOn": [
         "^build",
         "^typedoc"

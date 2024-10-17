@@ -1,4 +1,4 @@
-import { combineStyle, type ElementOf, type Ref } from '@corvu/utils/dom'
+import { combineStyle, type ElementOf, type Ref } from '@arara/utils/dom'
 import {
   createMemo,
   type JSX,
@@ -6,13 +6,13 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import { mergeRefs, some } from '@corvu/utils/reactivity'
-import { dataIf } from '@corvu/utils'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import { mergeRefs, some } from '@arara/utils/reactivity'
+import { dataIf } from '@arara/utils'
 import Dismissible from 'solid-dismissible'
 import { useInternalDialogContext } from '@src/context'
 
-export type DialogContentCorvuProps = {
+export type DialogContentAraraProps = {
   /**
    * Whether the dialog content should be forced to render. Useful when using third-party animation libraries.
    * @defaultValue `false`
@@ -39,15 +39,15 @@ export type DialogContentElementProps = DialogContentSharedElementProps & {
   'aria-modal': 'true' | 'false'
   'data-closed': '' | undefined
   'data-open': '' | undefined
-  'data-corvu-dialog-content': '' | null
+  'data-arara-dialog-content': '' | null
 }
 
 export type DialogContentProps<T extends ValidComponent = 'div'> =
-  DialogContentCorvuProps & Partial<DialogContentSharedElementProps<T>>
+  DialogContentAraraProps & Partial<DialogContentSharedElementProps<T>>
 
 /** Content of the dialog. Can be animated.
  *
- * @data `data-corvu-dialog-content` - Present on every dialog content element.
+ * @data `data-arara-dialog-content` - Present on every dialog content element.
  * @data `data-open` - Present when the dialog is open.
  * @data `data-closed` - Present when the dialog is closed.
  */
@@ -109,7 +109,7 @@ const DialogContent = <T extends ValidComponent = 'div'>(
             aria-modal={context().modal() ? 'true' : 'false'}
             data-closed={dataIf(!context().open())}
             data-open={dataIf(context().open())}
-            data-corvu-dialog-content=""
+            data-arara-dialog-content=""
             {...otherProps}
           />
         </Show>

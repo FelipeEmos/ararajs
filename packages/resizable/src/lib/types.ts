@@ -1,5 +1,5 @@
 import type { Accessor, Setter } from 'solid-js'
-import type { Size } from '@corvu/utils'
+import type { Size } from '@arara/utils'
 
 export type PanelData = {
   id: string

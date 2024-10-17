@@ -10,7 +10,7 @@
   }
 }
 
-[data-corvu-resizable-root] {
+[data-arara-resizable-root] {
   width: 100%;
   height: 100%;
 }
@@ -20,16 +20,16 @@
   background-color: hsl(249, 87%, 94%);
 }
 
-[data-corvu-resizable-handle] {
+[data-arara-resizable-handle] {
   flex-basis: 0.75rem;
 }
 
-[data-corvu-resizable-handle][data-orientation="horizontal"] {
+[data-arara-resizable-handle][data-orientation='horizontal'] {
   padding-left: 3px;
   padding-right: 3px;
 }
 
-[data-corvu-resizable-handle][data-orientation="vertical"] {
+[data-arara-resizable-handle][data-orientation='vertical'] {
   padding-top: 3px;
   padding-bottom: 3px;
 }
@@ -43,11 +43,10 @@
   transition-duration: 150ms;
 }
 
-[data-corvu-resizable-handle][data-active] .inner_handle { 
+[data-arara-resizable-handle][data-active] .inner_handle {
   border-color: hsl(253, 80%, 82%);
 }
 
-[data-corvu-resizable-handle][data-dragging] .inner_handle { 
+[data-arara-resizable-handle][data-dragging] .inner_handle {
   background-color: hsl(249, 87%, 94%);
 }
-

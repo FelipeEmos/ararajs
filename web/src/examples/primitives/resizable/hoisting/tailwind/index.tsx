@@ -4,7 +4,7 @@ import {
   SidebarSimpleFill,
 } from '@examples/primitives/resizable/icons'
 import clsx from 'clsx'
-import Resizable from '@corvu/resizable'
+import Resizable from '@arara/resizable'
 
 const ResizableWrapper = (props: object) => {
   const context = Resizable.useContext()
@@ -16,7 +16,7 @@ const ResizableWrapper = (props: object) => {
         onClick={() =>
           isCollapsed() ? context.expand(0) : context.collapse(0)
         }
-        class="rounded-lg bg-corvu-100 p-1 transition-all duration-100 hover:bg-corvu-200 active:translate-y-0.5"
+        class="rounded-lg bg-arara-100 p-1 transition-all duration-100 hover:bg-arara-200 active:translate-y-0.5"
       >
         <Show
           when={isCollapsed()}
@@ -48,7 +48,7 @@ const ResizableHoistingExample: VoidComponent = () => {
               initialSize={0.3}
               minSize={0.2}
               collapsible
-              class="flex justify-center overflow-hidden rounded-lg bg-corvu-200"
+              class="flex justify-center overflow-hidden rounded-lg bg-arara-200"
             >
               <p class="mt-2 font-bold">Sidepanel</p>
             </Resizable.Panel>
@@ -58,12 +58,12 @@ const ResizableHoistingExample: VoidComponent = () => {
                 hidden: props.sizes[0] === 0,
               })}
             >
-              <div class="size-full rounded transition-colors corvu-group-active:bg-corvu-300 corvu-group-dragging:bg-corvu-100" />
+              <div class="size-full rounded transition-colors arara-group-active:bg-arara-300 arara-group-dragging:bg-arara-100" />
             </Resizable.Handle>
             <Resizable.Panel
               initialSize={0.7}
               minSize={0.5}
-              class="rounded-lg bg-corvu-100"
+              class="rounded-lg bg-arara-100"
             />
           </>
         )}

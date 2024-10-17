@@ -10,14 +10,14 @@
     "accessible",
     "list"
   ],
-  "homepage": "https://corvu.dev/docs/utilities/list",
+  "homepage": "https://arara.dev/docs/utilities/list",
   "bugs": {
-    "url": "https://github.com/corvudev/corvu/issues",
+    "url": "https://github.com/araradev/arara/issues",
     "email": "code@jasi.dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/corvudev/corvu.git"
+    "url": "git+https://github.com/araradev/arara.git"
   },
   "license": "MIT",
   "author": {
@@ -53,7 +53,7 @@
     "typedoc": "typedoc --json api.json --entryPoints ./src/index.ts"
   },
   "dependencies": {
-    "@corvu/utils": "workspace:~"
+    "@arara/utils": "workspace:~"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.9.0",

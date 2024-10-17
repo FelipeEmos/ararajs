@@ -9,13 +9,13 @@ import {
   type DynamicButtonElementProps,
   type DynamicButtonSharedElementProps,
   type DynamicProps,
-} from '@corvu/utils/dynamic'
-import { dataIf } from '@corvu/utils'
-import { mergeRefs } from '@corvu/utils/reactivity'
+} from '@arara/utils/dynamic'
+import { dataIf } from '@arara/utils'
+import { mergeRefs } from '@arara/utils/reactivity'
 import type { Placement } from '@floating-ui/dom'
 import { useInternalTooltipContext } from '@src/context'
 
-export type TooltipTriggerCorvuProps = {
+export type TooltipTriggerAraraProps = {
   /**
    * The `id` of the tooltip context to use.
    */
@@ -32,15 +32,15 @@ export type TooltipTriggerElementProps = TooltipTriggerSharedElementProps & {
   'data-closed': '' | undefined
   'data-open': '' | undefined
   'data-placement': Placement | undefined
-  'data-corvu-tooltip-trigger': ''
+  'data-arara-tooltip-trigger': ''
 } & DynamicButtonElementProps
 
 export type TooltipTriggerProps<T extends ValidComponent = 'button'> =
-  TooltipTriggerCorvuProps & Partial<TooltipTriggerSharedElementProps<T>>
+  TooltipTriggerAraraProps & Partial<TooltipTriggerSharedElementProps<T>>
 
 /** Button that opens the tooltip when focused or hovered.
  *
- * @data `data-corvu-tooltip-trigger` - Present on every tooltip trigger element.
+ * @data `data-arara-tooltip-trigger` - Present on every tooltip trigger element.
  * @data `data-open` - Present when the tooltip is open.
  * @data `data-closed` - Present when the tooltip is closed.
  * @data `data-placement` - Current placement of the tooltip. Only present when the tooltip is open.
@@ -73,7 +73,7 @@ const TooltipTrigger = <T extends ValidComponent = 'button'>(
       data-placement={
         context().open() ? context().floatingState().placement : undefined
       }
-      data-corvu-tooltip-trigger=""
+      data-arara-tooltip-trigger=""
       {...otherProps}
     />
   )

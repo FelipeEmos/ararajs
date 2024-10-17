@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: SolidJS Resizable/Splitter
 description: A customizable, unstyled and accessible resizable component for SolidJS
-image: https://corvu.dev/primitives/resizable.jpg
+image: https://arara.dev/primitives/resizable.jpg
 ---
 import RawCode from '@components/docs/code/RawCode.astro'
 import ExampleWrapper from '@examples/ExampleWrapper'
@@ -36,7 +36,7 @@ export const components = { h2: H2, h3: H3 }
 
 SolidJS components for building resizable panels and splitters.
 
-<PackageInfo packageName="@corvu/resizable" />
+<PackageInfo packageName="@arara/resizable" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -82,16 +82,16 @@ SolidJS components for building resizable panels and splitters.
 ## Installation
 
 <Code code={`
-npm install @corvu/resizable
+npm install @arara/resizable
 `} lang="bash" copyButton />
 
-The resizable is also included in the main `corvu` package under `corvu/resizable`.
+The resizable is also included in the main `arara` package under `arara/resizable`.
 
 ## Usage
 <Code code={`
-import Resizable from '@corvu/resizable' // 'corvu/resizable'
+import Resizable from '@arara/resizable' // 'arara/resizable'
 // or
-// import { Root, Panel, Handle } from '@corvu/resizable'
+// import { Root, Panel, Handle } from '@arara/resizable'
 `} lang="tsx" copyButton />
 
 ### Anatomy
@@ -170,12 +170,12 @@ You can nest resizables to create more complex layouts. Resize handles automatic
 
 ### Persistent layout
 
-corvu itself doesn't provide a first party way to persist the layout of resizable panels. However, you can achieve this easily with something like the <Link href="https://primitives.solidjs.community/package/storage" newTab>`makePersisted`</Link> utility from Solid Primitives:
+arara itself doesn't provide a first party way to persist the layout of resizable panels. However, you can achieve this easily with something like the <Link href="https://primitives.solidjs.community/package/storage" newTab>`makePersisted`</Link> utility from Solid Primitives:
 
 <Code code={`
 import { createSignal } from 'solid-js'
 import { makePersisted } from '@solid-primitives/storage'
-import Resizable from '@corvu/resizable'
+import Resizable from '@arara/resizable'
 
 const PersistentResizable = () => {
   const [sizes, setSizes] = makePersisted(createSignal<number[]>([]), {
@@ -320,7 +320,7 @@ To avoid content shift when using server side rendering, we have to define the `
 <Code code={`
 import { createSignal } from 'solid-js'
 import { cookieStorage, makePersisted } from '@solid-primitives/storage'
-import Resizable from '@corvu/resizable'
+import Resizable from '@arara/resizable'
 
 const SSRPersistentResizable = () => {
   const [sizes, setSizes] = makePersisted(createSignal<number[]>([]), {

@@ -1,29 +1,29 @@
 import Anchor, {
-  type PopoverAnchorCorvuProps as AnchorCorvuProps,
+  type PopoverAnchorAraraProps as AnchorAraraProps,
   type PopoverAnchorElementProps as AnchorElementProps,
   type PopoverAnchorProps as AnchorProps,
   type PopoverAnchorSharedElementProps as AnchorSharedElementProps,
 } from '@src/Anchor'
 import Arrow, {
-  type PopoverArrowCorvuProps as ArrowCorvuProps,
+  type PopoverArrowAraraProps as ArrowAraraProps,
   type PopoverArrowElementProps as ArrowElementProps,
   type PopoverArrowProps as ArrowProps,
   type PopoverArrowSharedElementProps as ArrowSharedElementProps,
 } from '@src/Arrow'
 import Close, {
-  type PopoverCloseCorvuProps as CloseCorvuProps,
+  type PopoverCloseAraraProps as CloseAraraProps,
   type PopoverCloseElementProps as CloseElementProps,
   type PopoverCloseProps as CloseProps,
   type PopoverCloseSharedElementProps as CloseSharedElementProps,
 } from '@src/Close'
 import Content, {
-  type PopoverContentCorvuProps as ContentCorvuProps,
+  type PopoverContentAraraProps as ContentAraraProps,
   type PopoverContentElementProps as ContentElementProps,
   type PopoverContentProps as ContentProps,
   type PopoverContentSharedElementProps as ContentSharedElementProps,
 } from '@src/Content'
 import Description, {
-  type PopoverDescriptionCorvuProps as DescriptionCorvuProps,
+  type PopoverDescriptionAraraProps as DescriptionAraraProps,
   type PopoverDescriptionElementProps as DescriptionElementProps,
   type PopoverDescriptionProps as DescriptionProps,
   type PopoverDescriptionSharedElementProps as DescriptionSharedElementProps,
@@ -33,19 +33,19 @@ import {
   Portal,
   type PortalProps,
   useContext as useDialogContext,
-} from '@corvu/dialog'
+} from '@arara/dialog'
 import type {
   FloatingOptions,
   FloatingState,
-} from '@corvu/utils/create/floating'
+} from '@arara/utils/create/floating'
 import Label, {
-  type PopoverLabelCorvuProps as LabelCorvuProps,
+  type PopoverLabelAraraProps as LabelAraraProps,
   type PopoverLabelElementProps as LabelElementProps,
   type PopoverLabelProps as LabelProps,
   type PopoverLabelSharedElementProps as LabelSharedElementProps,
 } from '@src/Label'
 import Overlay, {
-  type PopoverOverlayCorvuProps as OverlayCorvuProps,
+  type PopoverOverlayAraraProps as OverlayAraraProps,
   type PopoverOverlayElementProps as OverlayElementProps,
   type PopoverOverlayProps as OverlayProps,
   type PopoverOverlaySharedElementProps as OverlaySharedElementProps,
@@ -59,46 +59,46 @@ import Root, {
   type PopoverRootProps,
 } from '@src/Root'
 import Trigger, {
-  type PopoverTriggerCorvuProps as TriggerCorvuProps,
+  type PopoverTriggerAraraProps as TriggerAraraProps,
   type PopoverTriggerElementProps as TriggerElementProps,
   type PopoverTriggerProps as TriggerProps,
   type PopoverTriggerSharedElementProps as TriggerSharedElementProps,
 } from '@src/Trigger'
-import type { DynamicProps } from '@corvu/utils/dynamic'
+import type { DynamicProps } from '@arara/utils/dynamic'
 
 export type {
   PopoverRootProps as RootProps,
   PopoverRootChildrenProps as RootChildrenProps,
-  AnchorCorvuProps,
+  AnchorAraraProps,
   AnchorSharedElementProps,
   AnchorElementProps,
   AnchorProps,
-  TriggerCorvuProps,
+  TriggerAraraProps,
   TriggerSharedElementProps,
   TriggerElementProps,
   TriggerProps,
   PortalProps,
-  OverlayCorvuProps,
+  OverlayAraraProps,
   OverlaySharedElementProps,
   OverlayElementProps,
   OverlayProps,
-  ContentCorvuProps,
+  ContentAraraProps,
   ContentSharedElementProps,
   ContentElementProps,
   ContentProps,
-  ArrowCorvuProps,
+  ArrowAraraProps,
   ArrowSharedElementProps,
   ArrowElementProps,
   ArrowProps,
-  LabelCorvuProps,
+  LabelAraraProps,
   LabelSharedElementProps,
   LabelElementProps,
   LabelProps,
-  DescriptionCorvuProps,
+  DescriptionAraraProps,
   DescriptionSharedElementProps,
   DescriptionElementProps,
   DescriptionProps,
-  CloseCorvuProps,
+  CloseAraraProps,
   CloseSharedElementProps,
   CloseElementProps,
   CloseProps,

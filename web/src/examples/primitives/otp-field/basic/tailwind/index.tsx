@@ -1,6 +1,6 @@
 import { Show, type VoidComponent } from 'solid-js'
 import clsx from 'clsx'
-import OtpField from '@corvu/otp-field'
+import OtpField from '@arara/otp-field'
 
 const OtpFieldExample: VoidComponent = () => {
   return (
@@ -12,7 +12,7 @@ const OtpFieldExample: VoidComponent = () => {
           <Slot index={1} />
           <Slot index={2} />
         </div>
-        <div class="flex size-10 items-center justify-center font-bold text-corvu-text-dark">
+        <div class="flex size-10 items-center justify-center font-bold text-arara-text-dark">
           -
         </div>
         <div class="flex items-center space-x-2">
@@ -34,16 +34,16 @@ const Slot = (props: { index: number }) => {
   return (
     <div
       class={clsx(
-        'flex size-10 items-center justify-center rounded-md bg-corvu-100 font-mono text-sm font-bold transition-all',
+        'flex size-10 items-center justify-center rounded-md bg-arara-100 font-mono text-sm font-bold transition-all',
         {
-          'ring-corvu-text ring-2': context.activeSlots().includes(props.index),
+          'ring-arara-text ring-2': context.activeSlots().includes(props.index),
         },
       )}
     >
       {char()}
       <Show when={showFakeCaret()}>
         <div class="pointer-events-none flex items-center justify-center">
-          <div class="h-4 w-px animate-caret-blink bg-corvu-text duration-1000" />
+          <div class="h-4 w-px animate-caret-blink bg-arara-text duration-1000" />
         </div>
       </Show>
     </div>

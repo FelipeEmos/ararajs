@@ -1,4 +1,4 @@
-import corvuPlugin from '@corvu/tailwind'
+import araraPlugin from '@arara/tailwind'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        corvu: {
+        arara: {
           bg: '#f3f1fe',
           100: '#e6e2fd',
           200: '#d4cbfb',
@@ -25,12 +25,12 @@ export default {
             height: '0px',
           },
           '100%': {
-            height: 'var(--corvu-disclosure-content-height)',
+            height: 'var(--arara-disclosure-content-height)',
           },
         },
         collapse: {
           '0%': {
-            height: 'var(--corvu-disclosure-content-height)',
+            height: 'var(--arara-disclosure-content-height)',
           },
           '100%': {
             height: '0px',
@@ -39,5 +39,5 @@ export default {
       },
     },
   },
-  plugins: [corvuPlugin],
+  plugins: [araraPlugin],
 }

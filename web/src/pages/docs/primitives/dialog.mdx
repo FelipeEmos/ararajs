@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: SolidJS Dialog
 description: A customizable, unstyled and accessible dialog component for SolidJS
-image: https://corvu.dev/primitives/dialog.jpg
+image: https://arara.dev/primitives/dialog.jpg
 ---
 import RawCode from '@components/docs/code/RawCode.astro'
 import ExampleWrapper from '@examples/ExampleWrapper'
@@ -29,7 +29,7 @@ export const components = { h2: H2, h3: H3 }
 
 A window overlaid on either the primary window or another dialog window.
 
-<PackageInfo packageName="@corvu/dialog" />
+<PackageInfo packageName="@arara/dialog" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -75,16 +75,16 @@ A window overlaid on either the primary window or another dialog window.
 ## Installation
 
 <Code code={`
-npm install @corvu/dialog
+npm install @arara/dialog
 `} lang="bash" copyButton />
 
-The dialog is also included in the main `corvu` package under `corvu/dialog`.
+The dialog is also included in the main `arara` package under `arara/dialog`.
 
 ## Usage
 <Code code={`
-import Dialog from '@corvu/dialog' // 'corvu/dialog'
+import Dialog from '@arara/dialog' // 'arara/dialog'
 // or
-// import { Root, Trigger, ... } from '@corvu/dialog'
+// import { Root, Trigger, ... } from '@arara/dialog'
 `} lang="tsx" copyButton />
 
 ### Anatomy
@@ -104,7 +104,7 @@ import Dialog from '@corvu/dialog' // 'corvu/dialog'
 `} lang="tsx" copyButton />
 
 ### Scrolling
-By default, corvu prevents scrolling of elements outside of the dialog content while the dialog open. It will also add additional padding to the body to prevent the page from jumping when the scrollbar disappears. There is also a CSS variable called `--scrollbar-width` which is present when the scrollbar is hidden. You can use this to prevent any fixed element from jumping:
+By default, arara prevents scrolling of elements outside of the dialog content while the dialog open. It will also add additional padding to the body to prevent the page from jumping when the scrollbar disappears. There is also a CSS variable called `--scrollbar-width` which is present when the scrollbar is hidden. You can use this to prevent any fixed element from jumping:
 
 <Code code={`
 <header
@@ -118,7 +118,7 @@ By default, corvu prevents scrolling of elements outside of the dialog content w
 `} lang="tsx" copyButton />
 
 ### Nested dialogs
-Feel free to nest dialogs however you want. corvu is aware of nested dialogs and only dismisses the top-most dialog when you press the escape key or click outside the dialog.
+Feel free to nest dialogs however you want. arara is aware of nested dialogs and only dismisses the top-most dialog when you press the escape key or click outside the dialog.
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -139,7 +139,7 @@ Feel free to nest dialogs however you want. corvu is aware of nested dialogs and
 </ExampleWrapper>
 
 ### Persistent content
-To persist the content of the dialog even when it's unmounted, you can use corvu's <Link href="/docs/utilities/persistent/">`createPersistent`</Link> utility. It will cache the content when the dialog is opened for the first time and preserve its state and HTML elements.
+To persist the content of the dialog even when it's unmounted, you can use arara's <Link href="/docs/utilities/persistent/">`createPersistent`</Link> utility. It will cache the content when the dialog is opened for the first time and preserve its state and HTML elements.
 
 <Code code={`
 const PersistedDialogContent = () => {

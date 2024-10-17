@@ -4,7 +4,7 @@ import {
   combineStyle,
   type ElementOf,
   type Ref,
-} from '@corvu/utils/dom'
+} from '@arara/utils/dom'
 import {
   createEffect,
   createMemo,
@@ -16,19 +16,19 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
 import createOtpFieldStyleElement from '@src/lib/style'
 import { isServer } from 'solid-js/web'
-import { mergeRefs } from '@corvu/utils/reactivity'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalOtpFieldContext } from '@src/context'
 
-export type OtpFieldInputCorvuProps = {
+export type OtpFieldInputAraraProps = {
   /**
    * Regex pattern for the input. `null` disables the pattern and allow all chars.
    * @defaultValue `'^\\d*$'`
    */
   pattern?: string | null
-  /** Override the styles to apply when JavaScript is disabled. corvu provides a default for this but you're free to define your own styling. `null` disables the fallback. */
+  /** Override the styles to apply when JavaScript is disabled. arara provides a default for this but you're free to define your own styling. `null` disables the fallback. */
   noScriptCSSFallback?: string | null
   /**
    * The `id` of the OTP Field context. Useful if you have nested OTP Fields and want to create components that belong to an OTP Field higher up in the tree.
@@ -56,15 +56,15 @@ export type OtpFieldInputSharedElementProps<
 
 export type OtpFieldInputElementProps = OtpFieldInputSharedElementProps & {
   pattern: string | undefined
-  'data-corvu-otp-field-input': '' | null
+  'data-arara-otp-field-input': '' | null
 }
 
 export type OtpFieldInputProps<T extends ValidComponent = 'input'> =
-  OtpFieldInputCorvuProps & Partial<OtpFieldInputSharedElementProps<T>>
+  OtpFieldInputAraraProps & Partial<OtpFieldInputSharedElementProps<T>>
 
 /** The hidden input element for the OTP Field.
  *
- * @data `data-corvu-otp-field-input` - Present on every OTP Field input element.
+ * @data `data-arara-otp-field-input` - Present on every OTP Field input element.
  */
 const OtpFieldInput = <T extends ValidComponent = 'input'>(
   props: DynamicProps<T, OtpFieldInputProps<T>>,
@@ -395,7 +395,7 @@ const OtpFieldInput = <T extends ValidComponent = 'input'>(
         )}
         // === ElementProps ===
         pattern={patternRegex()?.source}
-        data-corvu-otp-field-input=""
+        data-arara-otp-field-input=""
         {...otherProps}
       />
     </>
@@ -403,7 +403,7 @@ const OtpFieldInput = <T extends ValidComponent = 'input'>(
 }
 
 const DEFAULT_NOSCRIPT_CSS_FALLBACK = `
-[data-corvu-otp-field-input] {
+[data-arara-otp-field-input] {
   color: black !important;
   background-color: white !important;
   caret-color: black !important;

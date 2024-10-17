@@ -7,7 +7,7 @@ import type {
 } from '@src/lib/types'
 import { resetResizeConstraints, setGlobalCursorStyle } from '@src/lib/cursor'
 import { batch } from 'solid-js'
-import { some } from '@corvu/utils/reactivity'
+import { some } from '@arara/utils/reactivity'
 
 const handles: Handle[] = []
 let dragStartPos: { x: number; y: number } | null = null

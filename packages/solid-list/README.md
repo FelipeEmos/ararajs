@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://corvu.dev/docs/utilities/list">
-    <img src="https://corvu.dev/readme/solid-list.png" width=1000 alt="Solid List" />
+  <a href="https://arara.dev/docs/utilities/list">
+    <img src="https://arara.dev/readme/solid-list.png" width=1000 alt="Solid List" />
   </a>
 </div>
 <br />
@@ -52,4 +52,4 @@ const Search = () => {
 ```
 
 ## Further Reading
-This utility is from the maintainers of [corvu](https://corvu.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the corvu docs under [List](https://corvu.dev/docs/utilities/list).
+This utility is from the maintainers of [arara](https://arara.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the arara docs under [List](https://arara.dev/docs/utilities/list).

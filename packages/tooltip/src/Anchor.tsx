@@ -1,10 +1,10 @@
 import { createMemo, splitProps, type ValidComponent } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import type { ElementOf, Ref } from '@corvu/utils/dom'
-import { mergeRefs } from '@corvu/utils/reactivity'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import type { ElementOf, Ref } from '@arara/utils/dom'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { useInternalTooltipContext } from '@src/context'
 
-export type TooltipAnchorCorvuProps = {
+export type TooltipAnchorAraraProps = {
   /**
    * The `id` of the tooltip context to use.
    */
@@ -17,15 +17,15 @@ export type TooltipAnchorSharedElementProps<T extends ValidComponent = 'div'> =
   }
 
 export type TooltipAnchorElementProps = TooltipAnchorSharedElementProps & {
-  'data-corvu-tooltip-anchor': ''
+  'data-arara-tooltip-anchor': ''
 }
 
 export type TooltipAnchorProps<T extends ValidComponent = 'div'> =
-  TooltipAnchorCorvuProps & Partial<TooltipAnchorSharedElementProps<T>>
+  TooltipAnchorAraraProps & Partial<TooltipAnchorSharedElementProps<T>>
 
 /** Anchor element to override the floating reference.
  *
- * @data `data-corvu-tooltip-anchor` - Present on every tooltip anchor element.
+ * @data `data-arara-tooltip-anchor` - Present on every tooltip anchor element.
  */
 const TooltipAnchor = <T extends ValidComponent = 'div'>(
   props: DynamicProps<T, TooltipAnchorProps<T>>,
@@ -45,7 +45,7 @@ const TooltipAnchor = <T extends ValidComponent = 'div'>(
       // === SharedElementProps ===
       ref={mergeRefs(context().setAnchorRef, localProps.ref)}
       // === ElementProps ===
-      data-corvu-tooltip-anchor=""
+      data-arara-tooltip-anchor=""
       {...otherProps}
     />
   )

@@ -1,6 +1,6 @@
 import './index.css'
 import { CaretUpDown, X } from '@examples/primitives/disclosure/icons'
-import Disclosure from '@corvu/disclosure'
+import Disclosure from '@arara/disclosure'
 import type { VoidComponent } from 'solid-js'
 
 const DisclosureExample: VoidComponent = () => {
@@ -26,7 +26,7 @@ const DisclosureExample: VoidComponent = () => {
                 )}
               </Disclosure.Trigger>
             </div>
-            <div class="repository_card">corvudev/corvu</div>
+            <div class="repository_card">araradev/arara</div>
             <Disclosure.Content>
               <div class="repository_card">solidjs/solid</div>
               <div class="repository_card">nitropage/nitropage</div>

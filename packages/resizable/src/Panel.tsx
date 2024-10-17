@@ -1,4 +1,4 @@
-import { combineStyle, type ElementOf, type Ref } from '@corvu/utils/dom'
+import { combineStyle, type ElementOf, type Ref } from '@arara/utils/dom'
 import {
   createEffect,
   createMemo,
@@ -11,16 +11,16 @@ import {
   untrack,
   type ValidComponent,
 } from 'solid-js'
-import { dataIf, isFunction, type Size } from '@corvu/utils'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
+import { dataIf, isFunction, type Size } from '@arara/utils'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
 import type { PanelInstance, ResizeStrategy } from '@src/lib/types'
-import createOnce from '@corvu/utils/create/once'
+import createOnce from '@arara/utils/create/once'
 import { createResizablePanelContext } from '@src/panelContext'
-import { mergeRefs } from '@corvu/utils/reactivity'
+import { mergeRefs } from '@arara/utils/reactivity'
 import { resolveSize } from '@src/lib/utils'
 import { useInternalResizableContext } from '@src/context'
 
-export type ResizablePanelCorvuProps = {
+export type ResizablePanelAraraProps = {
   /**
    * The initial size of the panel. If the panel is rendered on the server, this should be a percentage to avoid layout shifts.
    */
@@ -90,11 +90,11 @@ export type ResizablePanelElementProps = ResizablePanelSharedElementProps & {
   'data-collapsed': '' | undefined
   'data-expanded': '' | undefined
   'data-orientation': 'horizontal' | 'vertical'
-  'data-corvu-resizable-panel': ''
+  'data-arara-resizable-panel': ''
 }
 
 export type ResizablePanelProps<T extends ValidComponent = 'div'> =
-  ResizablePanelCorvuProps & Partial<ResizablePanelSharedElementProps<T>>
+  ResizablePanelAraraProps & Partial<ResizablePanelSharedElementProps<T>>
 
 export type ResizablePanelChildrenProps = {
   /** The current size of the panel. */
@@ -123,7 +123,7 @@ export type ResizablePanelChildrenProps = {
 
 /** Resizable panel.
  *
- * @data `data-corvu-resizable-panel` - Present on every resizable panel.
+ * @data `data-arara-resizable-panel` - Present on every resizable panel.
  * @data `data-orientation` - The orientation of the resizable.
  * @data `data-collapsed` - Present if the panel is currently collapsed.
  * @data `data-expanded` - Present if the panel is currently expanded. Only present on panels that are collapsible.
@@ -232,7 +232,7 @@ const ResizablePanel = <T extends ValidComponent = 'div'>(
     if (!instance) {
       // eslint-disable-next-line no-console
       console.warn(
-        '[corvu] Cannot resize panel before it is mounted. Make sure to call `resize` after mount.',
+        '[arara] Cannot resize panel before it is mounted. Make sure to call `resize` after mount.',
       )
       return
     }
@@ -244,7 +244,7 @@ const ResizablePanel = <T extends ValidComponent = 'div'>(
     if (!instance) {
       // eslint-disable-next-line no-console
       console.warn(
-        '[corvu] Cannot collapse panel before it is mounted. Make sure to call `collapse` after mount.',
+        '[arara] Cannot collapse panel before it is mounted. Make sure to call `collapse` after mount.',
       )
       return
     }
@@ -256,7 +256,7 @@ const ResizablePanel = <T extends ValidComponent = 'div'>(
     if (!instance) {
       // eslint-disable-next-line no-console
       console.warn(
-        '[corvu] Cannot expand panel before it is mounted. Make sure to call `expand` after mount.',
+        '[arara] Cannot expand panel before it is mounted. Make sure to call `expand` after mount.',
       )
       return
     }
@@ -341,7 +341,7 @@ const ResizablePanel = <T extends ValidComponent = 'div'>(
             localProps.collapsible === true && !collapsed(),
           )}
           data-orientation={context().orientation()}
-          data-corvu-resizable-panel=""
+          data-arara-resizable-panel=""
           {...otherProps}
         >
           {untrack(() => resolveChildren())}

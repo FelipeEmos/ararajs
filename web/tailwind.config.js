@@ -1,6 +1,6 @@
 import aspectRatioPlugin from '@tailwindcss/aspect-ratio'
 import containerQueriesPlugin from '@tailwindcss/container-queries'
-import corvuPlugin from '@corvu/tailwind'
+import araraPlugin from '@arara/tailwind'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import formsPlugin from '@tailwindcss/forms'
 import plugin from 'tailwindcss/plugin'
@@ -26,18 +26,18 @@ export default {
         mono: ['Mona Space', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        corvu: {
-          text: 'hsl(var(--corvu-text) / <alpha-value>)',
-          'text-dark': 'hsl(var(--corvu-text-dark) / <alpha-value>)',
-          bg: 'hsl(var(--corvu-bg) / <alpha-value>)',
-          100: 'hsl(var(--corvu-100) / <alpha-value>)',
-          200: 'hsl(var(--corvu-200) / <alpha-value>)',
-          300: 'hsl(var(--corvu-300) / <alpha-value>)',
-          400: 'hsl(var(--corvu-400) / <alpha-value>)',
-          blue: 'hsl(var(--corvu-blue) / <alpha-value>)',
-          pink: 'hsl(var(--corvu-pink) / <alpha-value>)',
-          link: 'hsl(var(--corvu-link) / <alpha-value>)',
-          'link-hover': 'hsl(var(--corvu-link-hover) / <alpha-value>)',
+        arara: {
+          text: 'hsl(var(--arara-text) / <alpha-value>)',
+          'text-dark': 'hsl(var(--arara-text-dark) / <alpha-value>)',
+          bg: 'hsl(var(--arara-bg) / <alpha-value>)',
+          100: 'hsl(var(--arara-100) / <alpha-value>)',
+          200: 'hsl(var(--arara-200) / <alpha-value>)',
+          300: 'hsl(var(--arara-300) / <alpha-value>)',
+          400: 'hsl(var(--arara-400) / <alpha-value>)',
+          blue: 'hsl(var(--arara-blue) / <alpha-value>)',
+          pink: 'hsl(var(--arara-pink) / <alpha-value>)',
+          link: 'hsl(var(--arara-link) / <alpha-value>)',
+          'link-hover': 'hsl(var(--arara-link-hover) / <alpha-value>)',
         },
       },
       backgroundImage: {
@@ -57,12 +57,12 @@ export default {
             height: '0px',
           },
           '100%': {
-            height: 'var(--corvu-disclosure-content-height)',
+            height: 'var(--arara-disclosure-content-height)',
           },
         },
         collapse: {
           '0%': {
-            height: 'var(--corvu-disclosure-content-height)',
+            height: 'var(--arara-disclosure-content-height)',
           },
           '100%': {
             height: '0px',
@@ -78,7 +78,7 @@ export default {
   plugins: [
     aspectRatioPlugin,
     containerQueriesPlugin,
-    corvuPlugin,
+    araraPlugin,
     formsPlugin,
     typographyPlugin,
     plugin(function ({ addUtilities }) {

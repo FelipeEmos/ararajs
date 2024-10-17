@@ -1,4 +1,4 @@
-import { combineStyle, type ElementOf, type Ref } from '@corvu/utils/dom'
+import { combineStyle, type ElementOf, type Ref } from '@arara/utils/dom'
 import {
   createMemo,
   type JSX,
@@ -6,15 +6,15 @@ import {
   splitProps,
   type ValidComponent,
 } from 'solid-js'
-import { Dynamic, type DynamicProps } from '@corvu/utils/dynamic'
-import { mergeRefs, some } from '@corvu/utils/reactivity'
-import { dataIf } from '@corvu/utils'
+import { Dynamic, type DynamicProps } from '@arara/utils/dynamic'
+import { mergeRefs, some } from '@arara/utils/reactivity'
+import { dataIf } from '@arara/utils'
 import Dismissible from 'solid-dismissible'
-import { getFloatingStyle } from '@corvu/utils/floating'
+import { getFloatingStyle } from '@arara/utils/floating'
 import type { Placement } from '@floating-ui/dom'
 import { useInternalTooltipContext } from '@src/context'
 
-export type TooltipContentCorvuProps = {
+export type TooltipContentAraraProps = {
   /**
    * Whether the tooltip content should be forced to render. Useful when using third-party animation libraries.
    * @defaultValue `false`
@@ -38,15 +38,15 @@ export type TooltipContentElementProps = TooltipContentSharedElementProps & {
   'data-closed': '' | undefined
   'data-open': '' | undefined
   'data-placement': Placement
-  'data-corvu-tooltip-content': ''
+  'data-arara-tooltip-content': ''
 }
 
 export type TooltipContentProps<T extends ValidComponent = 'div'> =
-  TooltipContentCorvuProps & Partial<TooltipContentSharedElementProps<T>>
+  TooltipContentAraraProps & Partial<TooltipContentSharedElementProps<T>>
 
 /** Content of the tooltip. Can be animated.
  *
- * @data `data-corvu-tooltip-content` - Present on every tooltip content element.
+ * @data `data-arara-tooltip-content` - Present on every tooltip content element.
  * @data `data-open` - Present when the tooltip is open.
  * @data `data-closed` - Present when the tooltip is closed.
  * @data `data-placement` - Current placement of the tooltip.
@@ -106,7 +106,7 @@ const TooltipContent = <T extends ValidComponent = 'div'>(
             data-closed={dataIf(!context().open())}
             data-open={dataIf(context().open())}
             data-placement={context().floatingState().placement}
-            data-corvu-tooltip-content=""
+            data-arara-tooltip-content=""
             {...otherProps}
           />
         </Show>

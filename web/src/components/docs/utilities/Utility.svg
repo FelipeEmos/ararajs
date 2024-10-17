@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1866 1244">
-  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-corvu-400" />
+  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-arara-400" />
   <mask id="utility-b" width="1866" height="1244" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <path fill="url(#utility-a)" d="M0 0h1866v1244H0z"/>
   </mask>

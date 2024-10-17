@@ -1,6 +1,6 @@
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import { createEffect, mergeProps, onCleanup } from 'solid-js'
-import { contains } from '@corvu/utils/dom'
+import { contains } from '@arara/utils/dom'
 
 const EVENT_ON_FOCUS = 'dismissible.outsideFocus'
 const EVENT_OPTIONS = { bubbles: false, cancelable: true }

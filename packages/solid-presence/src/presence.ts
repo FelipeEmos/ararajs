@@ -1,4 +1,4 @@
-import { access, type MaybeAccessor } from '@corvu/utils/reactivity'
+import { access, type MaybeAccessor } from '@arara/utils/reactivity'
 import {
   type Accessor,
   createEffect,

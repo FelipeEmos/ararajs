@@ -2,7 +2,7 @@ import { type Accessor, createContext, type Setter, useContext } from 'solid-js'
 import {
   createKeyedContext,
   useKeyedContext,
-} from '@corvu/utils/create/keyedContext'
+} from '@arara/utils/create/keyedContext'
 
 export type DisclosureContextValue = {
   /** Whether the disclosure is expanded. */
@@ -38,7 +38,7 @@ export const useDisclosureContext = (contextId?: string) => {
     const context = useContext(DisclosureContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Disclosure context not found. Make sure to wrap Disclosure components in <Disclosure.Root>',
+        '[arara]: Disclosure context not found. Make sure to wrap Disclosure components in <Disclosure.Root>',
       )
     }
     return context
@@ -49,7 +49,7 @@ export const useDisclosureContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Disclosure context with id "${contextId}" not found. Make sure to wrap Disclosure components in <Disclosure.Root contextId="${contextId}">`,
+      `[arara]: Disclosure context with id "${contextId}" not found. Make sure to wrap Disclosure components in <Disclosure.Root contextId="${contextId}">`,
     )
   }
   return context
@@ -76,7 +76,7 @@ export const useInternalDisclosureContext = (contextId?: string) => {
     const context = useContext(InternalDisclosureContext)
     if (!context) {
       throw new Error(
-        '[corvu]: Disclosure context not found. Make sure to wrap Disclosure components in <Disclosure.Root>',
+        '[arara]: Disclosure context not found. Make sure to wrap Disclosure components in <Disclosure.Root>',
       )
     }
     return context
@@ -87,7 +87,7 @@ export const useInternalDisclosureContext = (contextId?: string) => {
   )
   if (!context) {
     throw new Error(
-      `[corvu]: Disclosure context with id "${contextId}" not found. Make sure to wrap Disclosure components in <Disclosure.Root contextId="${contextId}">`,
+      `[arara]: Disclosure context with id "${contextId}" not found. Make sure to wrap Disclosure components in <Disclosure.Root contextId="${contextId}">`,
     )
   }
   return context

@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: SolidJS Accordion
 description: A customizable, unstyled and accessible accordion component for SolidJS
-image: https://corvu.dev/primitives/accordion.jpg
+image: https://arara.dev/primitives/accordion.jpg
 ---
 import RawCode from '@components/docs/code/RawCode.astro'
 import ExampleWrapper from '@examples/ExampleWrapper'
@@ -26,7 +26,7 @@ export const components = { h2: H2, h3: H3 }
 
 A component that consists of multiple collapsible sections.
 
-<PackageInfo packageName="@corvu/accordion" />
+<PackageInfo packageName="@arara/accordion" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -70,16 +70,16 @@ A component that consists of multiple collapsible sections.
 ## Installation
 
 <Code code={`
-npm install @corvu/accordion
+npm install @arara/accordion
 `} lang="bash" copyButton />
 
-The accordion is also included in the main `corvu` package under `corvu/accordion`.
+The accordion is also included in the main `arara` package under `arara/accordion`.
 
 ## Usage
 <Code code={`
-import Accordion from '@corvu/accordion' // 'corvu/accordion'
+import Accordion from '@arara/accordion' // 'arara/accordion'
 // or
-// import { Root, Trigger, ... } from '@corvu/accordion'
+// import { Root, Trigger, ... } from '@arara/accordion'
 `} lang="tsx" copyButton />
 
 ### Anatomy
@@ -96,19 +96,19 @@ import Accordion from '@corvu/accordion' // 'corvu/accordion'
 The accordion item uses the [Disclosure](/docs/primitives/disclosure/) component under the hood. It forwards the same props in the Item children callback and the disclosure context is re-exported as `Accordion.useDisclosureContext`.
 
 ### Animation
-corvu sets the `--corvu-disclosure-content-height` and `--corvu-disclosure-content-width` css properties on every accordion item content that make it possible to animate the height/width.
+arara sets the `--arara-disclosure-content-height` and `--arara-disclosure-content-width` css properties on every accordion item content that make it possible to animate the height/width.
 
 <Code code={`
-[data-corvu-accordion-content][data-collapsed] {
+[data-arara-accordion-content][data-collapsed] {
   animation: collapse 200ms linear;
 }
-[data-corvu-accordion-content][data-expanded] {
+[data-arara-accordion-content][data-expanded] {
   animation: expand 200ms linear;
 }
 
 @keyframes collapse {
   0% {
-    height: var(--corvu-disclosure-content-height);
+    height: var(--arara-disclosure-content-height);
   }
   100% {
     height: 0px;
@@ -120,7 +120,7 @@ corvu sets the `--corvu-disclosure-content-height` and `--corvu-disclosure-conte
     height: 0px;
   }
   100% {
-    height: var(--corvu-disclosure-content-height);
+    height: var(--arara-disclosure-content-height);
   }
 }
 `} lang="css" copyButton />
@@ -134,7 +134,7 @@ Based on the Accordion WAI-ARIA design pattern, every accordion item trigger sho
 <Code code={`
   <Accordion.Item>
     <h3>
-      <Accordion.Trigger>What is corvu?</Accordion.Trigger>
+      <Accordion.Trigger>What is arara?</Accordion.Trigger>
     </h3>
     <Accordion.Content />
   </Accordion.Item>
@@ -145,7 +145,7 @@ If you don't want to use a heading element for some reason, you can instead use 
 <Code code={`
   <Accordion.Item>
     <span aria-level="3">
-      <Accordion.Trigger>What is corvu?</Accordion.Trigger>
+      <Accordion.Trigger>What is arara?</Accordion.Trigger>
     </span>
     <Accordion.Content />
   </Accordion.Item>

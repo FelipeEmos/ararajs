@@ -1,4 +1,4 @@
-[data-corvu-dialog-trigger] {
+[data-arara-dialog-trigger] {
   margin-top: auto;
   margin-bottom: auto;
   border-radius: 0.5rem;
@@ -17,22 +17,22 @@
   animation-duration: 100ms;
 }
 
-[data-corvu-dialog-trigger]:hover {
+[data-arara-dialog-trigger]:hover {
   background-color: hsl(251, 86%, 89%);
 }
 
-[data-corvu-dialog-trigger]:active {
+[data-arara-dialog-trigger]:active {
   transform: translate(0px, 0.125rem);
 }
 
-[data-corvu-dialog-overlay] {
+[data-arara-dialog-overlay] {
   position: fixed;
   inset: 0px;
   z-index: 50;
   background-color: rgb(0 0 0 / 0.5);
 }
 
-[data-corvu-dialog-content] {
+[data-arara-dialog-content] {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -50,7 +50,7 @@
   animation-duration: 200ms;
 }
 
-[data-corvu-dialog-content][data-open] {
+[data-arara-dialog-content][data-open] {
   animation-name: enter;
   animation-duration: 150ms;
   --tw-enter-opacity: initial;
@@ -64,7 +64,7 @@
   --tw-enter-translate-y: -60%;
 }
 
-[data-corvu-dialog-content][data-closed] {
+[data-arara-dialog-content][data-closed] {
   animation-name: exit;
   animation-duration: 150ms;
   --tw-exit-opacity: initial;
@@ -92,13 +92,13 @@
   }
 }
 
-[data-corvu-dialog-label] {
+[data-arara-dialog-label] {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
 }
 
-[data-corvu-dialog-description] {
+[data-arara-dialog-description] {
   margin-top: 0.5rem;
 }
 
@@ -122,7 +122,7 @@ textarea:focus {
   justify-content: space-between;
 }
 
-[data-corvu-dialog-close] {
+[data-arara-dialog-close] {
   border-radius: 0.375rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;

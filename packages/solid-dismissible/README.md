@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://corvu.dev/docs/utilities/dismissible">
-    <img src="https://corvu.dev/readme/solid-dismissible.png" width=1000 alt="Solid Dismissible" />
+  <a href="https://arara.dev/docs/utilities/dismissible">
+    <img src="https://arara.dev/readme/solid-dismissible.png" width=1000 alt="Solid Dismissible" />
   </a>
 </div>
 <br />
@@ -14,7 +14,7 @@ SolidJS utility for creating dismissible, nestable layers. Offers different stra
 - Is headless, doesn\'t create extra DOM elements
 - Every dismiss strategy can be disabled/customized
 - Events can be cancelled
-- Compatible with corvu primitives as they use this utility
+- Compatible with arara primitives as they use this utility
 
 ## Usage
 
@@ -55,4 +55,4 @@ createEffect(() => {
 ```
 
 ## Further Reading
-This utility is from the maintainers of [corvu](https://corvu.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the corvu docs under [Dismissible](https://corvu.dev/docs/utilities/dismissible).
+This utility is from the maintainers of [arara](https://arara.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the arara docs under [Dismissible](https://arara.dev/docs/utilities/dismissible).

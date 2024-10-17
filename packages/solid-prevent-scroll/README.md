@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://corvu.dev/docs/utilities/prevent-scroll">
-    <img src="https://corvu.dev/readme/solid-prevent-scroll.png" width=1000 alt="Solid Prevent Scroll" />
+  <a href="https://arara.dev/docs/utilities/prevent-scroll">
+    <img src="https://arara.dev/readme/solid-prevent-scroll.png" width=1000 alt="Solid Prevent Scroll" />
   </a>
 </div>
 <br />
@@ -61,4 +61,4 @@ Use the `--scrollbar-width` CSS variable to add padding to fixed elements to pre
 ```
 
 ## Further Reading
-This utility is from the maintainers of [corvu](https://corvu.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the corvu docs under [Prevent Scroll](https://corvu.dev/docs/utilities/prevent-scroll).
+This utility is from the maintainers of [arara](https://arara.dev), a collection of unstyled, accessible and customizable UI primitives for SolidJS. It is also documented in the arara docs under [Prevent Scroll](https://arara.dev/docs/utilities/prevent-scroll).

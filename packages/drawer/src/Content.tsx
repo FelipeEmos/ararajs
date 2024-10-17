@@ -1,4 +1,4 @@
-import { type Axis, dataIf } from '@corvu/utils'
+import { type Axis, dataIf } from '@arara/utils'
 import {
   batch,
   type Component,
@@ -10,22 +10,22 @@ import {
   type ValidComponent,
 } from 'solid-js'
 import type {
-  ContentCorvuProps as DialogContentCorvuProps,
+  ContentAraraProps as DialogContentAraraProps,
   ContentElementProps as DialogContentElementProps,
   ContentSharedElementProps as DialogContentSharedElementProps,
-} from '@corvu/dialog'
+} from '@arara/dialog'
 import {
   findClosestSnapPoint,
   locationIsDraggable,
   resolveSnapPoint,
 } from '@src/lib'
-import { combineStyle } from '@corvu/utils/dom'
-import Dialog from '@corvu/dialog'
-import type { DynamicProps } from '@corvu/utils/dynamic'
-import { getScrollAtLocation } from '@corvu/utils/scroll'
+import { combineStyle } from '@arara/utils/dom'
+import Dialog from '@arara/dialog'
+import type { DynamicProps } from '@arara/utils/dynamic'
+import { getScrollAtLocation } from '@arara/utils/scroll'
 import { useInternalDrawerContext } from '@src/context'
 
-export type DrawerContentCorvuProps = DialogContentCorvuProps
+export type DrawerContentAraraProps = DialogContentAraraProps
 
 export type DrawerContentSharedElementProps<T extends ValidComponent = 'div'> =
   DialogContentSharedElementProps<T>
@@ -39,15 +39,15 @@ export type DrawerContentElementProps = DrawerContentSharedElementProps & {
   'data-resizing': '' | undefined
   'data-snapping': '' | undefined
   'data-transitioning': '' | undefined
-  'data-corvu-drawer-content': ''
+  'data-arara-drawer-content': ''
 } & DialogContentElementProps
 
 export type DrawerContentProps<T extends ValidComponent = 'div'> =
-  DrawerContentCorvuProps & Partial<DrawerContentSharedElementProps<T>>
+  DrawerContentAraraProps & Partial<DrawerContentSharedElementProps<T>>
 
 /** Content of the drawer. Can be animated.
  *
- * @data `data-corvu-drawer-content` - Present on every drawer content element.
+ * @data `data-arara-drawer-content` - Present on every drawer content element.
  * @data `data-open` - Present when the drawer is open.
  * @data `data-closed` - Present when the drawer is closed.
  * @data `data-transitioning` - Present when the drawer is transitioning (opening, closing or snapping).
@@ -362,9 +362,9 @@ const DrawerContent = <T extends ValidComponent = 'div'>(
       data-resizing={dataIf(drawerContext().transitionState() === 'resizing')}
       data-snapping={dataIf(drawerContext().transitionState() === 'snapping')}
       data-transitioning={dataIf(drawerContext().isTransitioning())}
-      data-corvu-drawer-content=""
+      data-arara-drawer-content=""
       // === Misc ===
-      data-corvu-dialog-content={null}
+      data-arara-dialog-content={null}
       {...otherProps}
     />
   )

@@ -8,28 +8,28 @@
   "include-v-in-tag": false,
   "packages": {
     "packages/accordion": {
-      "component": "@corvu/accordion"
+      "component": "@arara/accordion"
     },
-    "packages/corvu": {
-      "component": "corvu"
+    "packages/arara": {
+      "component": "arara"
     },
     "packages/dialog": {
-      "component": "@corvu/dialog"
+      "component": "@arara/dialog"
     },
     "packages/disclosure": {
-      "component": "@corvu/disclosure"
+      "component": "@arara/disclosure"
     },
     "packages/drawer": {
-      "component": "@corvu/drawer"
+      "component": "@arara/drawer"
     },
     "packages/otp-field": {
-      "component": "@corvu/otp-field"
+      "component": "@arara/otp-field"
     },
     "packages/popover": {
-      "component": "@corvu/popover"
+      "component": "@arara/popover"
     },
     "packages/resizable": {
-      "component": "@corvu/resizable"
+      "component": "@arara/resizable"
     },
     "packages/solid-dismissible": {
       "component": "solid-dismissible"
@@ -53,13 +53,13 @@
       "component": "solid-transition-size"
     },
     "packages/tailwind": {
-      "component": "@corvu/tailwind"
+      "component": "@arara/tailwind"
     },
     "packages/tooltip": {
-      "component": "@corvu/tooltip"
+      "component": "@arara/tooltip"
     },
     "packages/utils": {
-      "component": "@corvu/utils"
+      "component": "@arara/utils"
     }
   }
 }

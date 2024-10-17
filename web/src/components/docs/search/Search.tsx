@@ -114,7 +114,7 @@ const Search = (props: {
           role="searchbox"
           spellcheck={false}
           value={props.searchValue}
-          class="w-full rounded border border-corvu-200 bg-corvu-bg px-3 py-2 ring-2 ring-corvu-400 focus-visible:border focus-visible:border-corvu-200 focus-visible:ring-2 focus-visible:ring-corvu-400"
+          class="w-full rounded border border-arara-200 bg-arara-bg px-3 py-2 ring-2 ring-arara-400 focus-visible:border focus-visible:border-arara-200 focus-visible:ring-2 focus-visible:ring-arara-400"
           onInput={(e) =>
             props.setSearchValue((e.target as HTMLInputElement).value)
           }
@@ -163,9 +163,9 @@ const Search = (props: {
           <p class="!mb-2 !mt-5 text-center text-sm">
             Believe this query should return results?{' '}
             <a
-              href={`https://github.com/corvudev/corvu/issues/new?title=[Docs] Missing+results+for+query+%22${props.searchValue}%22`}
+              href={`https://github.com/araradev/arara/issues/new?title=[Docs] Missing+results+for+query+%22${props.searchValue}%22`}
               target="_blank"
-              class="text-corvu-link underline md:hover:text-corvu-link-hover"
+              class="text-arara-link underline md:hover:text-arara-link-hover"
             >
               Let us know
             </a>
@@ -177,7 +177,7 @@ const Search = (props: {
             <For each={Object.entries(result())}>
               {([title, items]) => (
                 <section class="overflow-hidden rounded-md">
-                  <h2 class="bg-corvu-200 p-2 text-sm font-bold">{title}</h2>
+                  <h2 class="bg-arara-200 p-2 text-sm font-bold">{title}</h2>
                   <ul role="listbox">
                     <For each={items}>
                       {(item) => {

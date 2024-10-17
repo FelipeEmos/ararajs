@@ -100,7 +100,7 @@ const TocItem: VoidComponent<{ heading: Heading; headingsInView: string[] }> = (
     <li>
       <a
         href={`#${props.heading.slug}`}
-        class={clsx('block py-0.5 hover:text-corvu-link-hover', {
+        class={clsx('block py-0.5 hover:text-arara-link-hover', {
           'opacity-60 hover:opacity-100': !props.headingsInView.includes(
             props.heading.slug,
           ),

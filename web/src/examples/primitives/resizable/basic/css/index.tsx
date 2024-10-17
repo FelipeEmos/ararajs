@@ -1,4 +1,4 @@
-import Resizable from '@corvu/resizable'
+import Resizable from '@arara/resizable'
 import type { VoidComponent } from 'solid-js'
 
 const ResizableExample: VoidComponent = () => {

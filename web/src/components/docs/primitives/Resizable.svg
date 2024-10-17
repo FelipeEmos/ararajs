@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1866 1244">
-  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-corvu-400"/>
+  <path fill="currentColor" d="M0 0h1866v1244H0z" class="text-arara-400"/>
   <mask id="resizable-b" width="1866" height="1244" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <path fill="url(#resizable-a)" d="M0 0h1866v1244H0z"/>
   </mask>
   <g mask="url(#resizable-b)">
     <path fill="#7250AE" fill-opacity=".2" d="M0 0h1866v1244H0z"/>
   </g>
-  <rect width="827" height="281" x="1559" y="924" fill="currentColor" rx="40" transform="rotate(180 1559 924)" class="text-corvu-100"/>
-  <rect width="827" height="281" x="1559" y="601" fill="currentColor" rx="40" transform="rotate(180 1559 601)" class="text-corvu-100"/>
-  <rect width="384" height="604" x="690" y="924" fill="currentColor" rx="40" transform="rotate(180 690 924)" class="text-corvu-100"/>
+  <rect width="827" height="281" x="1559" y="924" fill="currentColor" rx="40" transform="rotate(180 1559 924)" class="text-arara-100"/>
+  <rect width="827" height="281" x="1559" y="601" fill="currentColor" rx="40" transform="rotate(180 1559 601)" class="text-arara-100"/>
+  <rect width="384" height="604" x="690" y="924" fill="currentColor" rx="40" transform="rotate(180 690 924)" class="text-arara-100"/>
   <defs>
     <pattern id="resizable-a" width=".056" height=".083" patternContentUnits="objectBoundingBox">
       <use xlink:href="#resizable-c" transform="scale(.00022 .00033)"/>
