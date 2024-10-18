@@ -1,6 +1,7 @@
 import { Accessor, createSignal, onCleanup } from "solid-js";
-import { KinematicBody } from "./physics";
 import { createStore } from "solid-js/store";
+import { createAnimationLoop } from "../utils/createAnimationLoop";
+import { KinematicBody } from "../physics/physics";
 
 export type SineWaveOptions = {
   offset: number;
@@ -19,16 +20,13 @@ const defaultOptions: SineWaveOptions = {
 export function createSineWave(
   options: Accessor<Partial<SineWaveOptions>> = () => defaultOptions,
 ) {
-  const [body, setBody] = createStore<KinematicBody<"1d">>({
+  const [body, setBody] = createStore<KinematicBody>({
     position: 0,
     velocity: 0,
     acceleration: 0,
   });
 
-  let animationFrameLoop: number | undefined;
-
-  // TODO: use an animation loop inside the engine
-  const onAnimationFrame = (currentTime: number) => {
+  createAnimationLoop((currentTime) => {
     const { offset, frequency, amplitude, phase } = {
       ...defaultOptions,
       ...options(),
@@ -43,12 +41,7 @@ export function createSineWave(
       velocity: amplitude * omega * cosine,
       acceleration: -amplitude * omega * omega * cosine,
     });
-
-    animationFrameLoop = requestAnimationFrame(onAnimationFrame);
-  };
-
-  animationFrameLoop = requestAnimationFrame(onAnimationFrame);
-  onCleanup(() => cancelAnimationFrame(animationFrameLoop!));
+  });
 
   return body;
 }
