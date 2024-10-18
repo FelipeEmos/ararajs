@@ -1,7 +1,12 @@
 import { Accessor, createSignal, onCleanup } from "solid-js";
+import { Store } from "solid-js/store";
 import { createStore } from "solid-js/store";
-import { createAnimationLoop } from "../utils/createAnimationLoop";
 import { KinematicBody } from "../physics/physics";
+import {
+  AnimationController,
+  AnimationControllerGenerator,
+  createAnimation,
+} from "../utils/createAnimationController";
 
 export type SineWaveOptions = {
   offset: number;
@@ -19,14 +24,18 @@ const defaultOptions: SineWaveOptions = {
 
 export function createSineWave(
   options: Accessor<Partial<SineWaveOptions>> = () => defaultOptions,
-) {
+  animationController?: AnimationControllerGenerator,
+): [
+  body: Store<KinematicBody>,
+  animationController: Accessor<AnimationController>,
+] {
   const [body, setBody] = createStore<KinematicBody>({
     position: 0,
     velocity: 0,
     acceleration: 0,
   });
 
-  createAnimationLoop((currentTime) => {
+  const controller = createAnimation((currentTime) => {
     const { offset, frequency, amplitude, phase } = {
       ...defaultOptions,
       ...options(),
@@ -41,7 +50,7 @@ export function createSineWave(
       velocity: amplitude * omega * cosine,
       acceleration: -amplitude * omega * omega * cosine,
     });
-  });
+  }, animationController);
 
-  return body;
+  return [body, controller];
 }
