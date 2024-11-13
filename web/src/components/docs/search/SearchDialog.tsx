@@ -65,7 +65,7 @@ const SearchDialog = () => {
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay class="fixed inset-0 z-50 bg-black/50" />
-            <Dialog.Content class="fixed bottom-auto left-1/2 top-14 z-50 w-full max-w-[550px] -translate-x-1/2 overflow-hidden rounded-lg border border-arara-200 bg-arara-bg pt-4 duration-200 arara-open:animate-in arara-open:fade-in-0 arara-open:zoom-in-[0.99] arara-open:slide-in-from-left-1/2 arara-open:slide-in-from-top-[20%] arara-closed:animate-out arara-closed:fade-out-0 arara-closed:zoom-out-[0.99] arara-closed:slide-out-to-left-1/2 arara-closed:slide-out-to-top-[20%]">
+            <Dialog.Content class="fixed bottom-auto left-1/2 top-14 z-50 w-full max-w-[550px] -translate-x-1/2 overflow-hidden rounded-lg border border-arara-200 bg-arara-bg pt-4 duration-200 corvu-open:animate-in corvu-open:fade-in-0 corvu-open:zoom-in-[0.99] corvu-open:slide-in-from-left-1/2 corvu-open:slide-in-from-top-[20%] corvu-closed:animate-out corvu-closed:fade-out-0 corvu-closed:zoom-out-[0.99] corvu-closed:slide-out-to-left-1/2 corvu-closed:slide-out-to-top-[20%]">
               <Search
                 searchValue={searchValue()}
                 setSearchValue={setSearchValue}

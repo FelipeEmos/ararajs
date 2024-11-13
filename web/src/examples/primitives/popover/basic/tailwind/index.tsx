@@ -16,7 +16,7 @@ const PopoverExample: VoidComponent = () => {
         <span class="sr-only">Settings</span>
       </Popover.Trigger>
       <Popover.Portal>
-        <Popover.Content class="z-50 rounded-lg bg-arara-100 px-3 py-2 shadow-md arara-open:animate-in arara-open:fade-in-50 arara-open:slide-in-from-top-1 arara-closed:animate-out arara-closed:fade-out-50 arara-closed:slide-out-to-top-1">
+        <Popover.Content class="z-50 rounded-lg bg-arara-100 px-3 py-2 shadow-md corvu-open:animate-in corvu-open:fade-in-50 corvu-open:slide-in-from-top-1 corvu-closed:animate-out corvu-closed:fade-out-50 corvu-closed:slide-out-to-top-1">
           <Popover.Label class="font-bold">Settings</Popover.Label>
           <div class="grid grid-cols-[auto,1fr]">
             <label class="col-span-2 mt-2 grid grid-cols-subgrid">

@@ -12,7 +12,7 @@ const PersistentDialogExample: VoidComponent = () => {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay class="fixed inset-0 z-50 bg-black/50" />
-        <Dialog.Content class="fixed left-1/2 top-1/2 z-50 max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-lg border-2 border-arara-400 bg-arara-100 px-6 py-5 duration-200 arara-open:animate-in arara-open:fade-in-0 arara-open:zoom-in-95 arara-open:slide-in-from-left-1/2 arara-open:slide-in-from-top-[60%] arara-closed:animate-out arara-closed:fade-out-0 arara-closed:zoom-out-95 arara-closed:slide-out-to-left-1/2 arara-closed:slide-out-to-top-[60%]">
+        <Dialog.Content class="fixed left-1/2 top-1/2 z-50 max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-lg border-2 border-arara-400 bg-arara-100 px-6 py-5 duration-200 corvu-open:animate-in corvu-open:fade-in-0 corvu-open:zoom-in-95 corvu-open:slide-in-from-left-1/2 corvu-open:slide-in-from-top-[60%] corvu-closed:animate-out corvu-closed:fade-out-0 corvu-closed:zoom-out-95 corvu-closed:slide-out-to-left-1/2 corvu-closed:slide-out-to-top-[60%]">
           {persistedContent()}
         </Dialog.Content>
       </Dialog.Portal>
