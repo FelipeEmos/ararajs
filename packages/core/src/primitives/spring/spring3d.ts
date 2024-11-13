@@ -2,7 +2,7 @@ import {
   type Body3DAnimationOptions,
   type Body3DAnimationPass,
   createBody3DAnimation,
-} from '../body-3d-animation'
+} from '../../physics/body-3d-animation'
 import { type Accessor } from 'solid-js'
 import { vec3 } from 'gl-matrix'
 
@@ -14,7 +14,7 @@ export type Spring3DOptions = {
   stiffness: number
 }
 
-export const defaultOptions = {
+export const defaultSpring3DOptions = {
   mass: 1,
   target: [1, 1, 1],
   targetThreshold: 0.001,
@@ -33,7 +33,7 @@ export function spring3DPass(
   return ({ body, deltaTime }) => {
     const opts = typeof options === 'function' ? options() : options
     const { target, targetThreshold, damping, stiffness, mass } = {
-      ...defaultOptions,
+      ...defaultSpring3DOptions,
       ...opts,
     }
 

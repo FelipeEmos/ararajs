@@ -2,7 +2,7 @@ import {
   type Body2DAnimationOptions,
   type Body2DAnimationPass,
   createBody2DAnimation,
-} from '../body-2d-animation'
+} from '../../physics/body-2d-animation'
 import { type Accessor } from 'solid-js'
 import { vec2 } from 'gl-matrix'
 
@@ -15,7 +15,7 @@ export type Spring2DOptions = {
   stiffness: number
 }
 
-export const defaultOptions = {
+export const defaultSpring2DOptions = {
   mass: 1,
   target: [1, 1],
   targetThreshold: 0.001,
@@ -35,7 +35,7 @@ export function spring2DPass(
   return ({ body, deltaTime }) => {
     const opts = typeof options === 'function' ? options() : options
     const { target, targetThreshold, damping, stiffness, mass } = {
-      ...defaultOptions,
+      ...default2DOptions,
       ...opts,
     }
 

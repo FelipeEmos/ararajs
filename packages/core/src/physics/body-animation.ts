@@ -4,30 +4,30 @@ import {
   type AnimationControllerGenerator,
   useOrCreateAnimationController,
   VOID_ANIMATION_CONTROLLER,
-} from './animation'
+} from '../animation/animation'
 import { createEffect, createMemo, untrack } from 'solid-js'
 import { createStore, unwrap } from 'solid-js/store'
-import type { Body2D } from './physics'
+import { type Body } from './physics'
 
-export type Body2DAnimationPass = (world: {
-  body: Body2D
+export type BodyAnimationPass = (world: {
+  body: Body
   currentTime: number
   deltaTime: number
-}) => Body2D
+}) => Body
 
-export type Body2DAnimationOptions = {
-  initialConditions?: Body2D
+export type BodyAnimationOptions = {
+  initialConditions?: Body
   animationController?: AnimationControllerGenerator
 }
 
-export function createBody2DAnimation(
-  kinematicAnimationPasses: () => Body2DAnimationPass[],
-  options?: () => Body2DAnimationOptions,
+export function createBodyAnimation(
+  kinematicAnimationPasses: () => BodyAnimationPass[],
+  options?: () => BodyAnimationOptions,
 ) {
-  const [body, setBody2D] = createStore<Body2D>({
-    position: [0, 0],
-    velocity: [0, 0],
-    acceleration: [0, 0],
+  const [body, setBody] = createStore<Body>({
+    position: 0,
+    velocity: 0,
+    acceleration: 0,
     // TODO: subscribe to Stop event and reset the body to intialConditions
     ...options?.().initialConditions,
   })
@@ -39,7 +39,7 @@ export function createBody2DAnimation(
       const callback: AnimationCallback = (world) => {
         const beforePass = unwrap(body)
         const afterPass = pass({ body: beforePass, ...world })
-        setBody2D(afterPass)
+        setBody(afterPass)
       }
       list.push(callback)
     }

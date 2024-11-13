@@ -4,7 +4,7 @@ import {
   type AnimationControllerGenerator,
   useOrCreateAnimationController,
   VOID_ANIMATION_CONTROLLER,
-} from './animation'
+} from '../animation/animation'
 import { createEffect, createMemo, untrack } from 'solid-js'
 import { createStore, unwrap } from 'solid-js/store'
 import { type Body3D } from './physics'

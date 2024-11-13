@@ -2,14 +2,18 @@ import {
   type Body3DAnimationOptions,
   type Body3DAnimationPass,
   createBody3DAnimation,
-} from '../body-3d-animation'
-import { defaultOptions, type SineWaveOptions, sineWavePass } from './sine'
-import { type Dimension, getAxis } from '../physics'
+} from '../../physics/body-3d-animation'
+import {
+  defaultSineWaveOptions,
+  sinePass,
+  type SineWaveOptions,
+} from './sine-wave'
+import { type Dimension, getAxis } from '../../physics/physics'
 import { type Accessor } from 'solid-js'
-import { compose3DPass } from '../composers/dimension-pass'
+import { compose3DPass } from '../../composers/dimension-pass'
 import { vec3 } from 'gl-matrix'
 
-export type Sine3DWaveOptions = {
+export type SineWave3DOptions = {
   offset: vec3
   frequency: vec3
   amplitude: vec3
@@ -18,8 +22,8 @@ export type Sine3DWaveOptions = {
 
 function getOptionsInDimention(
   options:
-    | Partial<Sine3DWaveOptions>
-    | Accessor<Partial<Sine3DWaveOptions>>
+    | Partial<SineWave3DOptions>
+    | Accessor<Partial<SineWave3DOptions>>
     | undefined,
   dimension: Dimension,
 ): Partial<SineWaveOptions> {
@@ -40,31 +44,31 @@ function getOptionsInDimention(
   return result
 }
 
-export function sine3DWavePass(
-  options?: Partial<Sine3DWaveOptions> | Accessor<Partial<Sine3DWaveOptions>>,
+export function sine3DPass(
+  options?: Partial<SineWave3DOptions> | Accessor<Partial<SineWave3DOptions>>,
 ): Body3DAnimationPass {
   return compose3DPass({
-    x: sineWavePass({
-      ...defaultOptions,
+    x: sinePass({
+      ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'x'),
     }),
-    y: sineWavePass({
-      ...defaultOptions,
+    y: sinePass({
+      ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'y'),
     }),
-    z: sineWavePass({
-      ...defaultOptions,
+    z: sinePass({
+      ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'z'),
     }),
   })
 }
 
-export function createSine3DWave(
-  options?: Partial<Sine3DWaveOptions> | Accessor<Partial<Sine3DWaveOptions>>,
+export function createSineWave3D(
+  options?: Partial<SineWave3DOptions> | Accessor<Partial<SineWave3DOptions>>,
   bodyAnimationOptions?: () => Body3DAnimationOptions,
 ) {
   return createBody3DAnimation(
-    () => [sine3DWavePass(options)],
+    () => [sine3DPass(options)],
     bodyAnimationOptions,
   )
 }

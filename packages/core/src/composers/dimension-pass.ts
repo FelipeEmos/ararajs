@@ -1,7 +1,7 @@
-import { type Body, sliceDimension } from '../physics'
-import { type Body2DAnimationPass } from '../body-2d-animation'
-import { type Body3DAnimationPass } from '../body-3d-animation'
-import { type BodyAnimationPass } from '../body-animation'
+import { type Body, sliceDimension } from '../physics/physics'
+import { type Body2DAnimationPass } from '../physics/body-2d-animation'
+import { type Body3DAnimationPass } from '../physics/body-3d-animation'
+import { type BodyAnimationPass } from '../physics/body-animation'
 
 const BLANK_BODY = {
   position: 0,

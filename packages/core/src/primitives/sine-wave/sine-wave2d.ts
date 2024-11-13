@@ -2,11 +2,15 @@ import {
   type Body2DAnimationOptions,
   type Body2DAnimationPass,
   createBody2DAnimation,
-} from '../body-2d-animation'
-import { defaultOptions, type SineWaveOptions, sineWavePass } from './sine'
-import { type Dimension, getAxis } from '../physics'
+} from '../../physics/body-2d-animation'
+import {
+  defaultSineWaveOptions,
+  sinePass,
+  type SineWaveOptions,
+} from './sine-wave'
+import { type Dimension, getAxis } from '../../physics/physics'
 import { type Accessor } from 'solid-js'
-import { compose2DPass } from '../composers/dimension-pass'
+import { compose2DPass } from '../../composers/dimension-pass'
 import { vec2 } from 'gl-matrix'
 
 export type Sine2DWaveOptions = {
@@ -40,27 +44,27 @@ function getOptionsInDimention(
   return result
 }
 
-export function sine2DWavePass(
+export function sine2DPass(
   options?: Partial<Sine2DWaveOptions> | Accessor<Partial<Sine2DWaveOptions>>,
 ): Body2DAnimationPass {
   return compose2DPass({
-    x: sineWavePass({
-      ...defaultOptions,
+    x: sinePass({
+      ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'x'),
     }),
-    y: sineWavePass({
-      ...defaultOptions,
+    y: sinePass({
+      ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'y'),
     }),
   })
 }
 
-export function createSine2DWave(
+export function createSine2D(
   options?: Partial<Sine2DWaveOptions> | Accessor<Partial<Sine2DWaveOptions>>,
   bodyAnimationOptions?: () => Body2DAnimationOptions,
 ) {
   return createBody2DAnimation(
-    () => [sine2DWavePass(options)],
+    () => [sine2DPass(options)],
     bodyAnimationOptions,
   )
 }

@@ -2,7 +2,7 @@ import {
   type BodyAnimationOptions,
   type BodyAnimationPass,
   createBodyAnimation,
-} from '../body-animation'
+} from '../../physics/body-animation'
 import { type Accessor } from 'solid-js'
 
 export type SineWaveOptions = {
@@ -12,20 +12,20 @@ export type SineWaveOptions = {
   phase: number
 }
 
-export const defaultOptions = {
+export const defaultSineWaveOptions = {
   offset: 0,
   frequency: 1,
   amplitude: 1,
   phase: 0,
 } as const satisfies SineWaveOptions
 
-export function sineWavePass(
+export function sinePass(
   options?: Partial<SineWaveOptions> | Accessor<Partial<SineWaveOptions>>,
 ): BodyAnimationPass {
   return ({ currentTime }) => {
     const opts = typeof options === 'function' ? options() : options
     const { offset, frequency, amplitude, phase } = {
-      ...defaultOptions,
+      ...defaultSineWaveOptions,
       ...opts,
     }
 
@@ -45,8 +45,5 @@ export function createSineWave(
   options?: Partial<SineWaveOptions> | Accessor<Partial<SineWaveOptions>>,
   bodyAnimationOptions?: () => BodyAnimationOptions,
 ) {
-  return createBodyAnimation(
-    () => [sineWavePass(options)],
-    bodyAnimationOptions,
-  )
+  return createBodyAnimation(() => [sinePass(options)], bodyAnimationOptions)
 }

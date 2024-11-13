@@ -1,7 +1,7 @@
 import { vec2, vec3 } from 'gl-matrix'
-import { type Body2DAnimationPass } from '../body-2d-animation'
-import { type Body3DAnimationPass } from '../body-3d-animation'
-import { type BodyAnimationPass } from '../body-animation'
+import { type Body2DAnimationPass } from '../physics/body-2d-animation'
+import { type Body3DAnimationPass } from '../physics/body-3d-animation'
+import { type BodyAnimationPass } from '../physics/body-animation'
 
 export function additivePass(rawPass: BodyAnimationPass): BodyAnimationPass {
   return (world) => {

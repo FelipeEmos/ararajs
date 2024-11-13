@@ -23,9 +23,7 @@ export function getAxis(dimension: Dimension): number {
   if (typeof dimension === 'number') return dimension
   if (dimension === 'x') return 0
   if (dimension === 'y') return 1
-  // if (dimension === 'z') return 2
   return 2
-  // throw new Error(`Invalid dimension: ${dimension}`)
 }
 
 export function sliceDimension(dimension: Dimension, body: Body2D): Body

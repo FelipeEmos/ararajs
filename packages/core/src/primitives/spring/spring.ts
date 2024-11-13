@@ -2,7 +2,7 @@ import {
   type BodyAnimationOptions,
   type BodyAnimationPass,
   createBodyAnimation,
-} from '../body-animation'
+} from '../../physics/body-animation'
 import { type Accessor } from 'solid-js'
 
 export type SpringOptions = {
@@ -13,7 +13,7 @@ export type SpringOptions = {
   stiffness: number
 }
 
-export const defaultOptions = {
+export const defaultSpringOptions = {
   mass: 1,
   target: 1,
   targetThreshold: 0.001,
@@ -27,7 +27,7 @@ export function springPass(
   return ({ body, deltaTime }) => {
     const opts = typeof options === 'function' ? options() : options
     const { target, targetThreshold, damping, stiffness, mass } = {
-      ...defaultOptions,
+      ...defaultSpringOptions,
       ...opts,
     }
     const threshold = target - body.position
