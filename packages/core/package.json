@@ -49,9 +49,11 @@
     "build": "tsup",
     "clean": "rm -rf .turbo dist node_modules",
     "dev": "tsup --watch",
-    "lint": "eslint --max-warnings=0 ."
+    "lint": "eslint --max-warnings=0 .",
+    "lint:fix": "eslint --fix 'src/**/*.{js,cjs,mjs,ts,tsx}'"
   },
   "dependencies": {
+    "gl-matrix": "^3.4.3"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.9.0",
