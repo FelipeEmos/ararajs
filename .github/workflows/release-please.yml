@@ -6,8 +6,9 @@ on:
       - main
 
 permissions:
-  contents: write
   packages: write
+  contents: write
+  pull-requests: write
   actions: read
 
 jobs:

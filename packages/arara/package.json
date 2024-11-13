@@ -1,24 +1,24 @@
 {
-  "name": "arara",
+  "name": "@ararajs/core",
   "version": "0.0.1",
   "private": false,
-  "description": "Unstyled, accessible and customizable UI primitives for SolidJS",
+  "description": "Animation primitives for procedural and physics animations on SolidJS",
   "keywords": [
     "solid",
     "solidjs",
-    "headless",
-    "accessible",
-    "customizable",
+    "animation",
+    "procedural",
+    "physics",
     "primitives"
   ],
   "homepage": "https://arara-ten.vercel.app",
   "bugs": {
-    "url": "https://github.com/araradev/arara/issues",
-    "email": "code@jasi.dev"
+    "url": "https://github.com/FelipeEmos/arara/issues",
+    "email": "felipe.emos.computacao@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/araradev/arara.git"
+    "url": "git+https://github.com/FelipeEmos/arara.git"
   },
   "license": "MIT",
   "author": {
