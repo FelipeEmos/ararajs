@@ -1,6 +1,6 @@
 import { createSignal, type VoidComponent } from 'solid-js'
 import { makePersisted } from '@solid-primitives/storage'
-import Resizable from '@arara/resizable'
+import Resizable from '@corvu/resizable'
 
 const ResizablePersistentExample: VoidComponent = () => {
   const [sizes, setSizes] = makePersisted(createSignal([]), {

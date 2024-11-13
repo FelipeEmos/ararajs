@@ -5,9 +5,9 @@
   "homepage": "https://arara.dev",
   "license": "MIT",
   "author": {
-    "name": "Jasmin Noetzli",
-    "email": "code@jasi.dev",
-    "url": "https://github.com/GiyoMoon"
+    "name": "Felipe Emos",
+    "email": "felipe.emos.computacao@gmail.com",
+    "url": "https://github.com/FelipeEmos"
   },
   "type": "module",
   "scripts": {
@@ -22,8 +22,8 @@
     "solid-js": "^1.9.2"
   },
   "devDependencies": {
-    "@arara/tailwind": "workspace:*",
     "@typescript-eslint/parser": "^8.9.0",
+    "@corvu/tailwind": "^0.1.5",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",

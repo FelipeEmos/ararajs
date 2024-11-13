@@ -1,43 +1,43 @@
-import accordionTypedoc from '../../../../packages/accordion/api.json'
 import type { ApiDeclaration } from '@lib/typedoc/types/typedoc'
-import dialogTypedoc from '../../../../packages/dialog/api.json'
-import disclosureTypedoc from '../../../../packages/disclosure/api.json'
-import dismissibleTypedoc from '../../../../packages/solid-dismissible/api.json'
-import drawerTypedoc from '../../../../packages/drawer/api.json'
-import focusTrapTypedoc from '../../../../packages/solid-focus-trap/api.json'
 import type { Library } from '@lib/typedoc/types/specifications'
-import listTypedoc from '../../../../packages/solid-list/api.json'
-import otpFieldTypedoc from '../../../../packages/otp-field/api.json'
-import persistentTypedoc from '../../../../packages/solid-persistent/api.json'
-import popoverTypedoc from '../../../../packages/popover/api.json'
-import presenceTypedoc from '../../../../packages/solid-presence/api.json'
-import preventScrollTypedoc from '../../../../packages/solid-prevent-scroll/api.json'
-import resizableTypedoc from '../../../../packages/resizable/api.json'
-import tooltipTypedoc from '../../../../packages/tooltip/api.json'
-import transitionSizeTypedoc from '../../../../packages/solid-transition-size/api.json'
-import utilsTypedoc from '../../../../packages/utils/api.json'
+// import accordionTypedoc from '../../../../packages/accordion/api.json'
+// import dialogTypedoc from '../../../../packages/dialog/api.json'
+// import disclosureTypedoc from '../../../../packages/disclosure/api.json'
+// import dismissibleTypedoc from '../../../../packages/solid-dismissible/api.json'
+// import drawerTypedoc from '../../../../packages/drawer/api.json'
+// import focusTrapTypedoc from '../../../../packages/solid-focus-trap/api.json'
+// import listTypedoc from '../../../../packages/solid-list/api.json'
+// import otpFieldTypedoc from '../../../../packages/otp-field/api.json'
+// import persistentTypedoc from '../../../../packages/solid-persistent/api.json'
+// import popoverTypedoc from '../../../../packages/popover/api.json'
+// import presenceTypedoc from '../../../../packages/solid-presence/api.json'
+// import preventScrollTypedoc from '../../../../packages/solid-prevent-scroll/api.json'
+// import resizableTypedoc from '../../../../packages/resizable/api.json'
+// import tooltipTypedoc from '../../../../packages/tooltip/api.json'
+// import transitionSizeTypedoc from '../../../../packages/solid-transition-size/api.json'
+// import utilsTypedoc from '../../../../packages/utils/api.json'
 
 export const Typedoc: { [key: string]: ApiDeclaration } = {
-  '@arara/accordion': accordionTypedoc as ApiDeclaration,
-  '@arara/dialog': dialogTypedoc as ApiDeclaration,
-  '@arara/disclosure': disclosureTypedoc as ApiDeclaration,
-  '@arara/drawer': drawerTypedoc as ApiDeclaration,
-  '@arara/otp-field': otpFieldTypedoc as ApiDeclaration,
-  '@arara/popover': popoverTypedoc as ApiDeclaration,
-  '@arara/resizable': resizableTypedoc as ApiDeclaration,
-  '@arara/tooltip': tooltipTypedoc as ApiDeclaration,
-  '@arara/utils': utilsTypedoc as ApiDeclaration,
-  'solid-dismissible': dismissibleTypedoc as ApiDeclaration,
-  'solid-focus-trap': focusTrapTypedoc as ApiDeclaration,
-  'solid-list': listTypedoc as ApiDeclaration,
-  'solid-persistent': persistentTypedoc as ApiDeclaration,
-  'solid-presence': presenceTypedoc as ApiDeclaration,
-  'solid-prevent-scroll': preventScrollTypedoc as ApiDeclaration,
-  'solid-transition-size': transitionSizeTypedoc as ApiDeclaration,
+  // '@corvu/accordion': accordionTypedoc as ApiDeclaration,
+  // '@corvu/dialog': dialogTypedoc as ApiDeclaration,
+  // '@corvu/disclosure': disclosureTypedoc as ApiDeclaration,
+  // '@corvu/drawer': drawerTypedoc as ApiDeclaration,
+  // '@corvu/otp-field': otpFieldTypedoc as ApiDeclaration,
+  // '@corvu/popover': popoverTypedoc as ApiDeclaration,
+  // '@corvu/resizable': resizableTypedoc as ApiDeclaration,
+  // '@corvu/tooltip': tooltipTypedoc as ApiDeclaration,
+  // '@arara/utils': utilsTypedoc as ApiDeclaration,
+  // 'solid-dismissible': dismissibleTypedoc as ApiDeclaration,
+  // 'solid-focus-trap': focusTrapTypedoc as ApiDeclaration,
+  // 'solid-list': listTypedoc as ApiDeclaration,
+  // 'solid-persistent': persistentTypedoc as ApiDeclaration,
+  // 'solid-presence': presenceTypedoc as ApiDeclaration,
+  // 'solid-prevent-scroll': preventScrollTypedoc as ApiDeclaration,
+  // 'solid-transition-size': transitionSizeTypedoc as ApiDeclaration,
 }
 
 const Disclosure: Library = {
-  api: Typedoc['@arara/disclosure'],
+  api: Typedoc['@corvu/disclosure'],
   name: 'Disclosure',
   items: {
     Root: {
@@ -86,7 +86,7 @@ const Disclosure: Library = {
   },
 }
 const Accordion: Library = {
-  api: Typedoc['@arara/accordion'],
+  api: Typedoc['@corvu/accordion'],
   name: 'Accordion',
   items: {
     Root: {
@@ -178,7 +178,7 @@ const Accordion: Library = {
 }
 
 const Dialog: Library = {
-  api: Typedoc['@arara/dialog'],
+  api: Typedoc['@corvu/dialog'],
   name: 'Dialog',
   items: {
     Root: {
@@ -309,7 +309,7 @@ const Dialog: Library = {
 }
 
 const Drawer: Library = {
-  api: Typedoc['@arara/drawer'],
+  api: Typedoc['@corvu/drawer'],
   name: 'Drawer',
   items: {
     Root: {
@@ -443,7 +443,7 @@ const Drawer: Library = {
 }
 
 const OtpField: Library = {
-  api: Typedoc['@arara/otp-field'],
+  api: Typedoc['@corvu/otp-field'],
   name: 'OTP Field',
   items: {
     Root: {
@@ -490,7 +490,7 @@ const OtpField: Library = {
 }
 
 const Popover: Library = {
-  api: Typedoc['@arara/popover'],
+  api: Typedoc['@corvu/popover'],
   name: 'Popover',
   items: {
     Root: {
@@ -587,7 +587,7 @@ const Popover: Library = {
 }
 
 const Resizable: Library = {
-  api: Typedoc['@arara/resizable'],
+  api: Typedoc['@corvu/resizable'],
   name: 'Resizable',
   items: {
     Root: {
@@ -698,7 +698,7 @@ const Resizable: Library = {
 }
 
 const Tooltip: Library = {
-  api: Typedoc['@arara/tooltip'],
+  api: Typedoc['@corvu/tooltip'],
   name: 'Tooltip',
   items: {
     Root: {

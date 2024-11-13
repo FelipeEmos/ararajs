@@ -1,5 +1,5 @@
 import animatePlugin from 'tailwindcss-animate'
-import araraPlugin from '@arara/tailwind'
+import araraPlugin from '@corvu/tailwind'
 import formsPlugin from '@tailwindcss/forms'
 
 /** @type {import('tailwindcss').Config} */

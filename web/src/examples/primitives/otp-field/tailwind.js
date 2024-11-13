@@ -1,4 +1,4 @@
-import araraPlugin from '@arara/tailwind'
+import araraPlugin from '@corvu/tailwind'
 
 /** @type {import('tailwindcss').Config} */
 export default {

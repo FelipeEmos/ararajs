@@ -1,5 +1,5 @@
 import createPersistent from 'solid-persistent'
-import Drawer from '@arara/drawer'
+import Drawer from '@corvu/drawer'
 import type { VoidComponent } from 'solid-js'
 
 const DrawerNoDragExample: VoidComponent = () => {

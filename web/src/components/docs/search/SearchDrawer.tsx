@@ -1,6 +1,6 @@
 import { createEffect, createSignal } from 'solid-js'
 import Search, { type SearchResult } from '@components/docs/search/Search'
-import Drawer from '@arara/drawer'
+import Drawer from '@corvu/drawer'
 
 const SearchDrawer = () => {
   const [open, setOpen] = createSignal(false)

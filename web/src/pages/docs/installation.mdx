@@ -12,9 +12,9 @@ export const components = { h2: H2, h3: H3 }
 # Installation
 arara provides every UI primitive as a separate package. This allows you to only install the primitives you need, to use the semver of every package as a reference for breaking/feature changes and progressively update packages in case of new versions.
 
-For example the drawer component is available as `@arara/drawer`:
+For example the drawer component is available as `@corvu/drawer`:
 <Code code={`
-npm install @arara/drawer
+npm install @corvu/drawer
 `} lang="bash" copyButton />
 
 If you want to install all primitives at once you can install the main package. Unused primitives will get tree-shaken by your bundler, so you don't have to worry about the bundle size.
@@ -29,7 +29,7 @@ You're good to go! Head over to [Usage](/docs/state/) to learn how to use arara.
 If you want make use of the tailwind modifiers like `arara-open:`, install the tailwind plugin:
 
 <Code code={`
-npm install @arara/tailwind
+npm install @corvu/tailwind
 `} lang="bash" copyButton />
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -39,9 +39,9 @@ module.exports = {
   // ...
   plugins: [
     // Use it with the default prefix 'arara'
-    require('@arara/tailwind'),
+    require('@corvu/tailwind'),
     // or with a custom prefix
-    require('@arara/tailwind')({ prefix: 'ui' }),
+    require('@corvu/tailwind')({ prefix: 'ui' }),
     // ...
   ],
 }

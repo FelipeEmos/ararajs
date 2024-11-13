@@ -1,7 +1,7 @@
 import { createEffect, createSignal, onCleanup } from 'solid-js'
 import Search, { type SearchResult } from '@components/docs/search/Search'
 import clsx from 'clsx'
-import Dialog from '@arara/dialog'
+import Dialog from '@corvu/dialog'
 
 const SearchDialog = () => {
   const [open, setOpen] = createSignal(false)

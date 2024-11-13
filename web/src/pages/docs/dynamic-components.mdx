@@ -32,7 +32,7 @@ import {
   ComponentProps,
   splitProps,
 } from 'solid-js'
-import Dialog from '@arara/dialog'
+import Dialog from '@corvu/dialog'
 
 const CustomButton = (
   props: ComponentProps<'button'> & { variant: 'fill' | 'outline' },
@@ -89,7 +89,7 @@ import {
   ComponentProps,
   splitProps,
 } from 'solid-js'
-import Dialog, { type TriggerProps, type DynamicProps } from '@arara/dialog'
+import Dialog, { type TriggerProps, type DynamicProps } from '@corvu/dialog'
 
 // Define your custom props, including \`TriggerProps\` from arara
 export type CustomDisclosureTriggerProps<T extends ValidComponent = 'button'> = TriggerProps<T> & {

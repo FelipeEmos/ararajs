@@ -1,6 +1,6 @@
 import aspectRatioPlugin from '@tailwindcss/aspect-ratio'
 import containerQueriesPlugin from '@tailwindcss/container-queries'
-import araraPlugin from '@arara/tailwind'
+import araraPlugin from '@corvu/tailwind'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import formsPlugin from '@tailwindcss/forms'
 import plugin from 'tailwindcss/plugin'

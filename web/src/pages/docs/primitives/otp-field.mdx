@@ -25,7 +25,7 @@ export const components = { h2: H2, h3: H3 }
 
 An accessible and customizable OTP Input component for SolidJS.
 
-<PackageInfo packageName="@arara/otp-field" />
+<PackageInfo packageName="@corvu/otp-field" />
 
 <ExampleWrapper codeSnippets={[{
   name: 'Tailwind',
@@ -70,16 +70,16 @@ An accessible and customizable OTP Input component for SolidJS.
 ## Installation
 
 <Code code={`
-npm install @arara/otp-field
+npm install @corvu/otp-field
 `} lang="bash" copyButton />
 
 The OTP Field is also included in the main `arara` package under `arara/otp-field`.
 
 ## Usage
 <Code code={`
-import OtpField from '@arara/otp-field' // 'arara/otp-field'
+import OtpField from '@corvu/otp-field' // 'arara/otp-field'
 // or
-// import { Root, Input } from '@arara/otp-field'
+// import { Root, Input } from '@corvu/otp-field'
 `} lang="tsx" copyButton />
 
 The OTP Field primitive renders an invisible input field (`<OtpField.Input />`) on top of the visible slots. This allows you to style the input field as you like while keeping the input field accessible. arara takes care of syncing the selection, focus and hover states between the input and your UI.
@@ -136,7 +136,7 @@ The OTP Field can easily be used with form libraries like <Link href="https://mo
 
 <Code code={`
 import { createForm, submit } from '@modular-forms/solid'
-import OtpField from '@arara/otp-field'
+import OtpField from '@corvu/otp-field'
 
 function OtpForm() {
   const [form, { Form, Field }] = createForm<{

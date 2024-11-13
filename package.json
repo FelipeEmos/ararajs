@@ -5,9 +5,9 @@
   "homepage": "https://arara.dev",
   "license": "MIT",
   "author": {
-    "name": "Jasmin Noetzli",
-    "email": "code@jasi.dev",
-    "url": "https://github.com/GiyoMoon"
+    "name": "Felipe Emos",
+    "email": "felipe.emos.computacao@gmail.com",
+    "url": "https://github.com/FelipeEmos"
   },
   "scripts": {
     "build": "turbo run build",

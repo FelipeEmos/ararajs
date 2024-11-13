@@ -22,9 +22,9 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Jasmin Noetzli",
-    "email": "code@jasi.dev",
-    "url": "https://github.com/GiyoMoon"
+    "name": "Felipe Emos",
+    "email": "felipe.emos.computacao@gmail.com",
+    "url": "https://github.com/FelipeEmos"
   },
   "sideEffects": false,
   "type": "module",
@@ -52,14 +52,6 @@
     "lint": "eslint --max-warnings=0 ."
   },
   "dependencies": {
-    "@arara/accordion": "workspace:~",
-    "@arara/dialog": "workspace:~",
-    "@arara/disclosure": "workspace:~",
-    "@arara/drawer": "workspace:~",
-    "@arara/otp-field": "workspace:~",
-    "@arara/popover": "workspace:~",
-    "@arara/resizable": "workspace:~",
-    "@arara/tooltip": "workspace:~"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.9.0",

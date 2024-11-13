@@ -7,59 +7,8 @@
   "include-component-in-tag": true,
   "include-v-in-tag": false,
   "packages": {
-    "packages/accordion": {
-      "component": "@arara/accordion"
-    },
     "packages/arara": {
       "component": "arara"
-    },
-    "packages/dialog": {
-      "component": "@arara/dialog"
-    },
-    "packages/disclosure": {
-      "component": "@arara/disclosure"
-    },
-    "packages/drawer": {
-      "component": "@arara/drawer"
-    },
-    "packages/otp-field": {
-      "component": "@arara/otp-field"
-    },
-    "packages/popover": {
-      "component": "@arara/popover"
-    },
-    "packages/resizable": {
-      "component": "@arara/resizable"
-    },
-    "packages/solid-dismissible": {
-      "component": "solid-dismissible"
-    },
-    "packages/solid-focus-trap": {
-      "component": "solid-focus-trap"
-    },
-    "packages/solid-list": {
-      "component": "solid-list"
-    },
-    "packages/solid-persistent": {
-      "component": "solid-persistent"
-    },
-    "packages/solid-presence": {
-      "component": "solid-presence"
-    },
-    "packages/solid-prevent-scroll": {
-      "component": "solid-prevent-scroll"
-    },
-    "packages/solid-transition-size": {
-      "component": "solid-transition-size"
-    },
-    "packages/tailwind": {
-      "component": "@arara/tailwind"
-    },
-    "packages/tooltip": {
-      "component": "@arara/tooltip"
-    },
-    "packages/utils": {
-      "component": "@arara/utils"
     }
   }
 }

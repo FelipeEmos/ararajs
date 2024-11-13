@@ -1,19 +1,19 @@
-import accordion from '../../../packages/accordion/package.json'
 import arara from '../../../packages/arara/package.json'
-import dialog from '../../../packages/dialog/package.json'
-import disclosure from '../../../packages/disclosure/package.json'
-import dismissible from '../../../packages/solid-dismissible/package.json'
-import drawer from '../../../packages/drawer/package.json'
-import focusTrap from '../../../packages/solid-focus-trap/package.json'
-import list from '../../../packages/solid-list/package.json'
-import otpField from '../../../packages/otp-field/package.json'
-import persistent from '../../../packages/solid-persistent/package.json'
-import popover from '../../../packages/popover/package.json'
-import presence from '../../../packages/solid-presence/package.json'
-import preventScroll from '../../../packages/solid-prevent-scroll/package.json'
-import resizable from '../../../packages/resizable/package.json'
-import tooltip from '../../../packages/tooltip/package.json'
-import transitionSize from '../../../packages/solid-transition-size/package.json'
+// import accordion from '../../../packages/accordion/package.json'
+// import dialog from '../../../packages/dialog/package.json'
+// import disclosure from '../../../packages/disclosure/package.json'
+// import dismissible from '../../../packages/solid-dismissible/package.json'
+// import drawer from '../../../packages/drawer/package.json'
+// import focusTrap from '../../../packages/solid-focus-trap/package.json'
+// import list from '../../../packages/solid-list/package.json'
+// import otpField from '../../../packages/otp-field/package.json'
+// import persistent from '../../../packages/solid-persistent/package.json'
+// import popover from '../../../packages/popover/package.json'
+// import presence from '../../../packages/solid-presence/package.json'
+// import preventScroll from '../../../packages/solid-prevent-scroll/package.json'
+// import resizable from '../../../packages/resizable/package.json'
+// import tooltip from '../../../packages/tooltip/package.json'
+// import transitionSize from '../../../packages/solid-transition-size/package.json'
 
 const packageMetas: {
   [library: string]: {
@@ -25,90 +25,90 @@ const packageMetas: {
   arara: {
     version: arara.version,
     npmHref: 'https://www.npmjs.com/package/arara',
-    sourceHref: 'https://github.com/araradev/arara/tree/main/packages/arara',
+    sourceHref: 'https://github.com/FelipeEmos/arara/tree/main/packages/arara',
   },
-  '@arara/accordion': {
-    version: accordion.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/accordion',
+  '@corvu/accordion': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/accordion',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/accordion',
   },
-  '@arara/dialog': {
-    version: dialog.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/dialog',
+  '@corvu/dialog': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/dialog',
     sourceHref: 'https://github.com/araradev/arara/tree/main/packages/dialog',
   },
-  '@arara/disclosure': {
-    version: disclosure.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/disclosure',
+  '@corvu/disclosure': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/disclosure',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/disclosure',
   },
-  '@arara/drawer': {
-    version: drawer.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/drawer',
+  '@corvu/drawer': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/drawer',
     sourceHref: 'https://github.com/araradev/arara/tree/main/packages/drawer',
   },
-  '@arara/otp-field': {
-    version: otpField.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/otp-field',
+  '@corvu/otp-field': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/otp-field',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/otp-field',
   },
-  '@arara/popover': {
-    version: popover.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/popover',
+  '@corvu/popover': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/popover',
     sourceHref: 'https://github.com/araradev/arara/tree/main/packages/popover',
   },
-  '@arara/resizable': {
-    version: resizable.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/resizable',
+  '@corvu/resizable': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/resizable',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/resizable',
   },
-  '@arara/tooltip': {
-    version: tooltip.version,
-    npmHref: 'https://www.npmjs.com/package/@arara/tooltip',
+  '@corvu/tooltip': {
+    version: 'TODO: remove',
+    npmHref: 'https://www.npmjs.com/package/@corvu/tooltip',
     sourceHref: 'https://github.com/araradev/arara/tree/main/packages/tooltip',
   },
   'solid-dismissible': {
-    version: dismissible.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-dismissible',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-dismissible',
   },
   'solid-focus-trap': {
-    version: focusTrap.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-focus-trap',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-focus-trap',
   },
   'solid-list': {
-    version: list.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-list',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-list',
   },
   'solid-persistent': {
-    version: persistent.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-persistent',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-persistent',
   },
   'solid-presence': {
-    version: presence.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-presence',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-presence',
   },
   'solid-prevent-scroll': {
-    version: preventScroll.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-prevent-scroll',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-prevent-scroll',
   },
   'solid-transition-size': {
-    version: transitionSize.version,
+    version: 'TODO: remove',
     npmHref: 'https://www.npmjs.com/package/solid-transition-size',
     sourceHref:
       'https://github.com/araradev/arara/tree/main/packages/solid-transition-size',

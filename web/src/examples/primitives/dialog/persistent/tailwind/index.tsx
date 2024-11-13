@@ -1,5 +1,5 @@
 import createPersistent from 'solid-persistent'
-import Dialog from '@arara/dialog'
+import Dialog from '@corvu/dialog'
 import type { VoidComponent } from 'solid-js'
 
 const PersistentDialogExample: VoidComponent = () => {

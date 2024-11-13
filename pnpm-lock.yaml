@@ -24,9 +24,9 @@ importers:
         specifier: ^1.9.2
         version: 1.9.2
     devDependencies:
-      '@arara/tailwind':
-        specifier: workspace:*
-        version: link:../packages/tailwind
+      '@corvu/tailwind':
+        specifier: ^0.1.5
+        version: 0.1.5(tailwindcss@3.4.14)
       '@typescript-eslint/parser':
         specifier: ^8.9.0
         version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
@@ -70,17 +70,7 @@ importers:
         specifier: ^5.0.1
         version: 5.0.1(typescript@5.6.3)(vite@5.4.9)
 
-  packages/accordion:
-    dependencies:
-      '@arara/disclosure':
-        specifier: workspace:~
-        version: link:../disclosure
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-      solid-list:
-        specifier: workspace:~
-        version: link:../solid-list
+  packages/arara:
     devDependencies:
       '@typescript-eslint/parser':
         specifier: ^8.9.0
@@ -109,780 +99,6 @@ importers:
       tsup:
         specifier: ^8.3.0
         version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/arara:
-    dependencies:
-      '@arara/accordion':
-        specifier: workspace:~
-        version: link:../accordion
-      '@arara/dialog':
-        specifier: workspace:~
-        version: link:../dialog
-      '@arara/disclosure':
-        specifier: workspace:~
-        version: link:../disclosure
-      '@arara/drawer':
-        specifier: workspace:~
-        version: link:../drawer
-      '@arara/otp-field':
-        specifier: workspace:~
-        version: link:../otp-field
-      '@arara/popover':
-        specifier: workspace:~
-        version: link:../popover
-      '@arara/resizable':
-        specifier: workspace:~
-        version: link:../resizable
-      '@arara/tooltip':
-        specifier: workspace:~
-        version: link:../tooltip
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/dialog:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-      solid-dismissible:
-        specifier: workspace:~
-        version: link:../solid-dismissible
-      solid-focus-trap:
-        specifier: workspace:~
-        version: link:../solid-focus-trap
-      solid-presence:
-        specifier: workspace:~
-        version: link:../solid-presence
-      solid-prevent-scroll:
-        specifier: workspace:~
-        version: link:../solid-prevent-scroll
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/disclosure:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-      solid-presence:
-        specifier: workspace:~
-        version: link:../solid-presence
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/drawer:
-    dependencies:
-      '@arara/dialog':
-        specifier: workspace:~
-        version: link:../dialog
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-      '@solid-primitives/memo':
-        specifier: ^1.3.9
-        version: 1.3.9(solid-js@1.9.2)
-      solid-transition-size:
-        specifier: workspace:~
-        version: link:../solid-transition-size
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/otp-field:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/popover:
-    dependencies:
-      '@arara/dialog':
-        specifier: workspace:~
-        version: link:../dialog
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-      '@floating-ui/dom':
-        specifier: ^1.6.11
-        version: 1.6.11
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/resizable:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-dismissible:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-focus-trap:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-list:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-persistent:
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-presence:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-prevent-scroll:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/solid-transition-size:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/tailwind:
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      tailwindcss:
-        specifier: ^3.4.14
-        version: 3.4.14
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/tooltip:
-    dependencies:
-      '@arara/utils':
-        specifier: workspace:~
-        version: link:../utils
-      '@floating-ui/dom':
-        specifier: ^1.6.11
-        version: 1.6.11
-      solid-dismissible:
-        specifier: workspace:~
-        version: link:../solid-dismissible
-      solid-presence:
-        specifier: workspace:~
-        version: link:../solid-presence
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-
-  packages/utils:
-    dependencies:
-      '@floating-ui/dom':
-        specifier: ^1.6.11
-        version: 1.6.11
-    devDependencies:
-      '@typescript-eslint/parser':
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      esbuild-plugin-solid:
-        specifier: ^0.6.0
-        version: 0.6.0(esbuild@0.24.0)(solid-js@1.9.2)
-      eslint:
-        specifier: ^9.12.0
-        version: 9.12.0(jiti@1.21.6)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-solid:
-        specifier: ^0.14.3
-        version: 0.14.3(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      solid-js:
-        specifier: ^1.9.2
-        version: 1.9.2
-      tsup:
-        specifier: ^8.3.0
-        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
-      typedoc:
-        specifier: ^0.26.9
-        version: 0.26.9(typescript@5.6.3)
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -904,33 +120,33 @@ importers:
       '@astrojs/tailwind':
         specifier: 6.0.0-alpha.0
         version: 6.0.0-alpha.0(astro@5.0.0-beta.5(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
-      '@arara/accordion':
-        specifier: workspace:*
-        version: link:../packages/accordion
-      '@arara/dialog':
-        specifier: workspace:*
-        version: link:../packages/dialog
-      '@arara/disclosure':
-        specifier: workspace:*
-        version: link:../packages/disclosure
-      '@arara/drawer':
-        specifier: workspace:*
-        version: link:../packages/drawer
-      '@arara/otp-field':
-        specifier: workspace:*
-        version: link:../packages/otp-field
-      '@arara/popover':
-        specifier: workspace:*
-        version: link:../packages/popover
-      '@arara/resizable':
-        specifier: workspace:*
-        version: link:../packages/resizable
-      '@arara/tailwind':
-        specifier: workspace:*
-        version: link:../packages/tailwind
-      '@arara/tooltip':
-        specifier: workspace:*
-        version: link:../packages/tooltip
+      '@corvu/accordion':
+        specifier: ^0.2.3
+        version: 0.2.3(solid-js@1.9.2)
+      '@corvu/dialog':
+        specifier: ^0.2.3
+        version: 0.2.3(solid-js@1.9.2)
+      '@corvu/disclosure':
+        specifier: ^0.2.0
+        version: 0.2.0(solid-js@1.9.2)
+      '@corvu/drawer':
+        specifier: ^0.2.2
+        version: 0.2.2(solid-js@1.9.2)
+      '@corvu/otp-field':
+        specifier: ^0.1.3
+        version: 0.1.3(solid-js@1.9.2)
+      '@corvu/popover':
+        specifier: ^0.2.0
+        version: 0.2.0(solid-js@1.9.2)
+      '@corvu/resizable':
+        specifier: ^0.2.3
+        version: 0.2.3(solid-js@1.9.2)
+      '@corvu/tailwind':
+        specifier: ^0.1.5
+        version: 0.1.5(tailwindcss@3.4.14)
+      '@corvu/tooltip':
+        specifier: ^0.2.1
+        version: 0.2.1(solid-js@1.9.2)
       '@fontsource-variable/rubik':
         specifier: ^5.1.0
         version: 5.1.0
@@ -995,11 +211,11 @@ importers:
         specifier: ^1.9.2
         version: 1.9.2
       solid-list:
-        specifier: workspace:*
-        version: link:../packages/solid-list
+        specifier: ^0.3.0
+        version: 0.3.0(solid-js@1.9.2)
       solid-persistent:
-        specifier: workspace:*
-        version: link:../packages/solid-persistent
+        specifier: ^0.1.0
+        version: 0.1.0(solid-js@1.9.2)
       tailwindcss:
         specifier: ^3.4.14
         version: 3.4.14
@@ -1201,6 +417,61 @@ packages:
 
   '@conventional-commits/parser@0.4.1':
     resolution: {integrity: sha512-H2ZmUVt6q+KBccXfMBhbBF14NlANeqHTXL4qCL6QGbMzrc4HDXyzWuxPxPNbz71f/5UkR5DrycP5VO9u7crahg==}
+
+  '@corvu/accordion@0.2.3':
+    resolution: {integrity: sha512-M+qDysE1bKXeCmVsaHVs4FbrIWzQfffOrQ2H2yYYuGQfZINi5783rBcLTn7eNhUknOfdwVcjs2rnODeIomVC3A==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/dialog@0.2.3':
+    resolution: {integrity: sha512-1p1lG2Pdu7CtDYw0FP+gdU0Db4zsB2ljOP7UxszZIQpvVvnrAYhNPfu/8IpscB38c0hZCodEnv5hR0NaEEA/Ag==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/disclosure@0.2.0':
+    resolution: {integrity: sha512-+SkGXXcah8CiXQeM1qrYgikEEX6CFGZ8AOAEDHHkxFkQHC8ll0wAdGAkqT11quPvE9O6/f1ulfWNWdrX4Lqmnw==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/drawer@0.2.2':
+    resolution: {integrity: sha512-gj0dGnAc5fxoOe1E55uo8LPrHFxR+MaStn3UB8I1ZbtlJeeLDTK40uCc/Ee9xVxYpYNpUDX6ICGr3i23bsZyOA==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/otp-field@0.1.3':
+    resolution: {integrity: sha512-LtofaVV6BX2AmNhi+vfk0ZEG30xRcrlS2/KSZE5/x7rkk1NOZ2LpwAB1yBKquYYiMBJJ9uiH56A2t/AMmuQOMQ==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/popover@0.2.0':
+    resolution: {integrity: sha512-zynRWyRV7mk2uX7t/COQL4OEa6H6FBgOxxlXLQJ1BV8hTiBJwmfAN/yB/9jy+zlp0G9vp64E8VdsNn6gxUEUEQ==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/resizable@0.2.3':
+    resolution: {integrity: sha512-UwpObxqKlx1mc3G496Daz9NjK25Gx1V5fB8zIGazbq5tJs7aU8RjPW4png5OoNpMyxV7GQWjQtVc59zaAEVAJg==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/tailwind@0.1.5':
+    resolution: {integrity: sha512-+rTTveZVTfUM6z6w83A2IWCSob33EFxAuazn1bzd8/T1t1FhpzV1Jt/Sn3awH4muDAuDaZujzebueB/t3u03hw==}
+    peerDependencies:
+      tailwindcss: ^3
+
+  '@corvu/tooltip@0.2.1':
+    resolution: {integrity: sha512-y2CQ2/6DH/gJJZPo1fV3O7l4Jfgu5ZW58bpqPmKS+l8Pa6gIKV6zkrMoyBg8Hsn6z9RmdZFqkGFs/9C5fvwKpg==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/utils@0.3.2':
+    resolution: {integrity: sha512-ZWlyWEE8qV9+CB9OAyo2bTrZGXQN9ZeM+JfYv89zoR+lRACKTDuoOZEdiyL8Uc7U5dUSH1uTqKhTTnaHWb+wZA==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  '@corvu/utils@0.4.2':
+    resolution: {integrity: sha512-Ox2kYyxy7NoXdKWdHeDEjZxClwzO4SKM8plAaVwmAJPxHMqA0rLOoAsa+hBDwRLpctf+ZRnAd/ykguuJidnaTA==}
+    peerDependencies:
+      solid-js: ^1.8
 
   '@emnapi/runtime@1.3.1':
     resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
@@ -3284,9 +2555,6 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  linkify-it@5.0.0:
-    resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
-
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3331,9 +2599,6 @@ packages:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
 
-  lunr@2.3.9:
-    resolution: {integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==}
-
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
@@ -3351,10 +2616,6 @@ packages:
   markdown-extensions@2.0.0:
     resolution: {integrity: sha512-o5vL7aDWatOTX8LzaS1WMoaoxIiLRQJuIKKe2wAw6IeULDHaqbiqiggmx+pKvZDb1Sj+pE46Sn1T7lCqfFtg1Q==}
     engines: {node: '>=16'}
-
-  markdown-it@14.1.0:
-    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
-    hasBin: true
 
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
@@ -3409,9 +2670,6 @@ packages:
 
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
-
-  mdurl@2.0.0:
-    resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
 
   meow@8.1.2:
     resolution: {integrity: sha512-r85E3NdZ+mpYk1C6RjPFEMSE+s1iZMuHtsHAqY0DT3jZczl0diWUZ8g6oU7h0M9cD2EL+PzaYghhCLzR0ZNn5Q==}
@@ -3872,10 +3130,6 @@ packages:
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
 
-  punycode.js@2.3.1:
-    resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
-    engines: {node: '>=6'}
-
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -4061,13 +3315,48 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
+  solid-dismissible@0.1.1:
+    resolution: {integrity: sha512-9kcKBJIMdS+586cA1g63HYWxKh3h89leeNHbPZ1csYjuni+NvPBtNr11l0iEX2AKKEt6FHk6qNhc/gjoYAW1pA==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  solid-focus-trap@0.1.7:
+    resolution: {integrity: sha512-NSJiIkL+WTWGgca+OKQA9rV3bD51lT23iLn1Z+Ap1Qk3rJBxQ8SoEAQ0FvXoQThtyXFKAK1ibcVBBMMEcu6YMw==}
+    peerDependencies:
+      solid-js: ^1.8
+
   solid-js@1.9.2:
     resolution: {integrity: sha512-fe/K03nV+kMFJYhAOE8AIQHcGxB4rMIEoEyrulbtmf217NffbbwBqJnJI4ovt16e+kaIt0czE2WA7mP/pYN9yg==}
+
+  solid-list@0.3.0:
+    resolution: {integrity: sha512-t4hx/F/l8Vmq+ib9HtZYl7Z9F1eKxq3eKJTXlvcm7P7yI4Z8O7QSOOEVHb/K6DD7M0RxzVRobK/BS5aSfLRwKg==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  solid-persistent@0.1.0:
+    resolution: {integrity: sha512-cg81SZQVthP1PvMrBxzf422ao0VXhMEJ8K9p/SzkQfr70/pku5IfSjRTLxJQlHWCm+C0R3g7cbeZAPPNoBzTHQ==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  solid-presence@0.1.8:
+    resolution: {integrity: sha512-pWGtXUFWYYUZNbg5YpG5vkQJyOtzn2KXhxYaMx/4I+lylTLYkITOLevaCwMRN+liCVk0pqB6EayLWojNqBFECA==}
+    peerDependencies:
+      solid-js: ^1.8
+
+  solid-prevent-scroll@0.1.10:
+    resolution: {integrity: sha512-KplGPX2GHiWJLZ6AXYRql4M127PdYzfwvLJJXMkO+CMb8Np4VxqDAg5S8jLdwlEuBis/ia9DKw2M8dFx5u8Mhw==}
+    peerDependencies:
+      solid-js: ^1.8
 
   solid-refresh@0.6.3:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
     peerDependencies:
       solid-js: ^1.3
+
+  solid-transition-size@0.1.4:
+    resolution: {integrity: sha512-ocHVnbfy23CgfaH4cEUR/AFg0Y3CEL8Oh3n9Qv8OHFJgPh+zkmERKZQfi/xH5XvxDCizg8VjPrVUhiHB1Gza8g==}
+    peerDependencies:
+      solid-js: ^1.8
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -4330,13 +3619,6 @@ packages:
     resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
     engines: {node: '>=16'}
 
-  typedoc@0.26.9:
-    resolution: {integrity: sha512-Rc7QpWL7EtmrT8yxV0GmhOR6xHgFnnhphbD9Suti3fz3um7ZOrou6q/g9d6+zC5PssTLZmjaW4Upmzv8T1rCcQ==}
-    engines: {node: '>= 18'}
-    hasBin: true
-    peerDependencies:
-      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x
-
   typescript-eslint@8.9.0:
     resolution: {integrity: sha512-AuD/FXGYRQyqyOBCpNLldMlsCGvmDNxptQ3Dp58/NXeB+FqyvTfXmMyba3PYa0Vi9ybnj7G8S/yd/4Cw8y47eA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -4355,9 +3637,6 @@ packages:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
     hasBin: true
-
-  uc.micro@2.1.0:
-    resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
   uglify-js@3.19.3:
     resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
@@ -4961,6 +4240,75 @@ snapshots:
     dependencies:
       unist-util-visit: 2.0.3
       unist-util-visit-parents: 3.1.1
+
+  '@corvu/accordion@0.2.3(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/disclosure': 0.2.0(solid-js@1.9.2)
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+      solid-list: 0.3.0(solid-js@1.9.2)
+
+  '@corvu/dialog@0.2.3(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-dismissible: 0.1.1(solid-js@1.9.2)
+      solid-focus-trap: 0.1.7(solid-js@1.9.2)
+      solid-js: 1.9.2
+      solid-presence: 0.1.8(solid-js@1.9.2)
+      solid-prevent-scroll: 0.1.10(solid-js@1.9.2)
+
+  '@corvu/disclosure@0.2.0(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/utils': 0.3.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+      solid-presence: 0.1.8(solid-js@1.9.2)
+
+  '@corvu/drawer@0.2.2(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/dialog': 0.2.3(solid-js@1.9.2)
+      '@corvu/utils': 0.3.2(solid-js@1.9.2)
+      '@solid-primitives/memo': 1.3.9(solid-js@1.9.2)
+      solid-js: 1.9.2
+      solid-transition-size: 0.1.4(solid-js@1.9.2)
+
+  '@corvu/otp-field@0.1.3(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+
+  '@corvu/popover@0.2.0(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/dialog': 0.2.3(solid-js@1.9.2)
+      '@corvu/utils': 0.3.2(solid-js@1.9.2)
+      '@floating-ui/dom': 1.6.11
+      solid-js: 1.9.2
+
+  '@corvu/resizable@0.2.3(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+
+  '@corvu/tailwind@0.1.5(tailwindcss@3.4.14)':
+    dependencies:
+      tailwindcss: 3.4.14
+
+  '@corvu/tooltip@0.2.1(solid-js@1.9.2)':
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      '@floating-ui/dom': 1.6.11
+      solid-dismissible: 0.1.1(solid-js@1.9.2)
+      solid-js: 1.9.2
+      solid-presence: 0.1.8(solid-js@1.9.2)
+
+  '@corvu/utils@0.3.2(solid-js@1.9.2)':
+    dependencies:
+      '@floating-ui/dom': 1.6.11
+      solid-js: 1.9.2
+
+  '@corvu/utils@0.4.2(solid-js@1.9.2)':
+    dependencies:
+      '@floating-ui/dom': 1.6.11
+      solid-js: 1.9.2
 
   '@emnapi/runtime@1.3.1':
     dependencies:
@@ -6293,16 +5641,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  esbuild-plugin-solid@0.6.0(esbuild@0.24.0)(solid-js@1.9.2):
-    dependencies:
-      '@babel/core': 7.25.8
-      '@babel/preset-typescript': 7.25.7(@babel/core@7.25.8)
-      babel-preset-solid: 1.9.2(@babel/core@7.25.8)
-      esbuild: 0.24.0
-      solid-js: 1.9.2
-    transitivePeerDependencies:
-      - supports-color
-
   esbuild@0.21.5:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.21.5
@@ -7040,10 +6378,6 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  linkify-it@5.0.0:
-    dependencies:
-      uc.micro: 2.1.0
-
   load-tsconfig@0.2.5: {}
 
   load-yaml-file@0.2.0:
@@ -7083,8 +6417,6 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
-  lunr@2.3.9: {}
-
   magic-string@0.30.12:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -7100,15 +6432,6 @@ snapshots:
   map-obj@4.3.0: {}
 
   markdown-extensions@2.0.0: {}
-
-  markdown-it@14.1.0:
-    dependencies:
-      argparse: 2.0.1
-      entities: 4.5.0
-      linkify-it: 5.0.0
-      mdurl: 2.0.0
-      punycode.js: 2.3.1
-      uc.micro: 2.1.0
 
   markdown-table@3.0.3: {}
 
@@ -7279,8 +6602,6 @@ snapshots:
   mdast-util-to-string@4.0.0:
     dependencies:
       '@types/mdast': 4.0.4
-
-  mdurl@2.0.0: {}
 
   meow@8.1.2:
     dependencies:
@@ -7881,8 +7202,6 @@ snapshots:
 
   property-information@6.5.0: {}
 
-  punycode.js@2.3.1: {}
-
   punycode@2.3.1: {}
 
   queue-microtask@1.2.3: {}
@@ -8176,11 +7495,40 @@ snapshots:
 
   slash@3.0.0: {}
 
+  solid-dismissible@0.1.1(solid-js@1.9.2):
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+
+  solid-focus-trap@0.1.7(solid-js@1.9.2):
+    dependencies:
+      '@corvu/utils': 0.3.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+
   solid-js@1.9.2:
     dependencies:
       csstype: 3.1.3
       seroval: 1.1.1
       seroval-plugins: 1.1.1(seroval@1.1.1)
+
+  solid-list@0.3.0(solid-js@1.9.2):
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+
+  solid-persistent@0.1.0(solid-js@1.9.2):
+    dependencies:
+      solid-js: 1.9.2
+
+  solid-presence@0.1.8(solid-js@1.9.2):
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
+
+  solid-prevent-scroll@0.1.10(solid-js@1.9.2):
+    dependencies:
+      '@corvu/utils': 0.4.2(solid-js@1.9.2)
+      solid-js: 1.9.2
 
   solid-refresh@0.6.3(solid-js@1.9.2):
     dependencies:
@@ -8190,6 +7538,11 @@ snapshots:
       solid-js: 1.9.2
     transitivePeerDependencies:
       - supports-color
+
+  solid-transition-size@0.1.4(solid-js@1.9.2):
+    dependencies:
+      '@corvu/utils': 0.3.2(solid-js@1.9.2)
+      solid-js: 1.9.2
 
   source-map-js@1.2.1: {}
 
@@ -8449,15 +7802,6 @@ snapshots:
 
   type-fest@4.26.1: {}
 
-  typedoc@0.26.9(typescript@5.6.3):
-    dependencies:
-      lunr: 2.3.9
-      markdown-it: 14.1.0
-      minimatch: 9.0.5
-      shiki: 1.22.0
-      typescript: 5.6.3
-      yaml: 2.6.0
-
   typescript-eslint@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3):
     dependencies:
       '@typescript-eslint/eslint-plugin': 8.9.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
@@ -8472,8 +7816,6 @@ snapshots:
   typescript@4.9.5: {}
 
   typescript@5.6.3: {}
-
-  uc.micro@2.1.0: {}
 
   uglify-js@3.19.3:
     optional: true

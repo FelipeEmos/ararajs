@@ -12,9 +12,9 @@ body:
 
         Before submitting a new bug/issue, please make sure to search for existing issues to avoid submitting duplicates:
 
-        - [open issues](https://github.com/araradev/arara/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated)
-        - [closed issues](https://github.com/araradev/arara/issues?q=is%3Aissue+is%3Aclosed+sort%3Aupdated+)
-        - [arara discussions](https://github.com/araradev/arara/discussions)
+        - [open issues](https://github.com/FelipeEmos/arara/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated)
+        - [closed issues](https://github.com/FelipeEmos/arara/issues?q=is%3Aissue+is%3Aclosed+sort%3Aupdated+)
+        - [arara discussions](https://github.com/FelipeEmos/arara/discussions)
   - type: textarea
     id: description
     attributes:
@@ -26,10 +26,14 @@ body:
     id: link
     attributes:
       label: Reproduction Link
-      description: |
-        Provide a link to a live example, or a repository that can reproduce the bug. We can analyze and fix the bug much faster if you provide a clear and minimal example. Please read these tips for providing a minimal example: https://stackoverflow.com/help/mcve.
 
-        You can use [Stackblitz](https://stackblitz.com/) to create a sharable reproduction. [Here](https://stackblitz.com/edit/arara?file=src%2FApp.tsx) is a template with `solid` and `arara` already set up which you can use. A public GitHub repository also works.
+      description: |
+          Provide a link to a live example, or a repository that can reproduce the bug. We can analyze and fix the bug much faster if you provide a clear and minimal example.
+      # CORVU description
+      # description: |
+      #   Provide a link to a live example, or a repository that can reproduce the bug. We can analyze and fix the bug much faster if you provide a clear and minimal example. Please read these tips for providing a minimal example: https://stackoverflow.com/help/mcve.
+
+      #   You can use [Stackblitz](https://stackblitz.com/) to create a sharable reproduction. [Here](https://stackblitz.com/edit/arara?file=src%2FApp.tsx) is a template with `solid` and `arara` already set up which you can use. A public GitHub repository also works.
       placeholder: |
         https://stackblitz.com/edit/... or a public GitHub repository
     validations:

@@ -1,6 +1,6 @@
 import { Show, type VoidComponent } from 'solid-js'
 import clsx from 'clsx'
-import OtpField from '@arara/otp-field'
+import OtpField from '@corvu/otp-field'
 
 const OtpFieldExample: VoidComponent = () => {
   return (
