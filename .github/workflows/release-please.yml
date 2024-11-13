@@ -16,7 +16,8 @@ jobs:
     steps:
       - name: release-please
         id: release-please
-        uses: google-github-actions/release-please-action@v4
+        # uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
 
       - name: Check out
         if: ${{ steps.release-please.outputs.releases_created == 'true' }}
