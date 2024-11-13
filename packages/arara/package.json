@@ -1,6 +1,6 @@
 {
   "name": "@ararajs/core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "Animation primitives for procedural and physics animations on SolidJS",
   "keywords": [
@@ -51,8 +51,7 @@
     "dev": "tsup --watch",
     "lint": "eslint --max-warnings=0 ."
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/parser": "^8.9.0",
     "esbuild-plugin-solid": "^0.6.0",

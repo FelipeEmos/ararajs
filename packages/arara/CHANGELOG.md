@@ -1,5 +1,26 @@
 # arara
 
+## [0.1.0](https://github.com/FelipeEmos/arara/compare/arara-v0.0.1...arara@0.1.0) (2024-11-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename "corvu" to "arara"
+
+### Features
+
+* port corvu packages to arara ([f1e4e7d](https://github.com/FelipeEmos/arara/commit/f1e4e7ddcbd6a932acbe1367c66417ff7c4a35d6))
+
+
+### Bug Fixes
+
+* homepage and package version ([1e758b9](https://github.com/FelipeEmos/arara/commit/1e758b938b1e7c77f0902d8610d7678ac5d0a37a))
+
+
+### Miscellaneous Chores
+
+* rename "corvu" to arara ([7ab0638](https://github.com/FelipeEmos/arara/commit/7ab0638e252109e39486763c16b6643f60fbdcba))
+
 ## [0.7.1](https://github.com/araradev/arara/compare/arara@0.7.0...arara@0.7.1) (2024-05-27)
 
 
