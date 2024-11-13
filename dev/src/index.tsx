@@ -1,5 +1,5 @@
-import "./index.css";
-import AraraLab from "./AraraLab";
-import { render } from "solid-js/web";
+import './index.css'
+import AraraLab from './AraraLab'
+import { render } from 'solid-js/web'
 
-render(() => <AraraLab />, document.getElementById("root")!);
+render(() => <AraraLab />, document.getElementById('root')!)
