@@ -2,7 +2,7 @@
   "name": "@arara/monorepo",
   "private": true,
   "description": "Unstyled, accessible and customizable UI primitives for SolidJS",
-  "homepage": "https://arara.dev",
+  "homepage": "https://arara-ten.vercel.app",
   "license": "MIT",
   "author": {
     "name": "Felipe Emos",
