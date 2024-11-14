@@ -2,7 +2,7 @@
   "name": "@arara/web",
   "private": true,
   "description": "arara.dev website",
-  "homepage": "https://arara-ten.vercel.app",
+  "homepage": "https://ararajs.vercel.app/",
   "license": "MIT",
   "author": {
     "name": "Felipe Emos",
