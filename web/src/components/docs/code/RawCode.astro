@@ -12,16 +12,17 @@ const { code, lang, copyButton } = Astro.props
 
 const trimmedCode = code.trim()
 
-const theme = createCssVariablesTheme({
-  name: 'css-variables',
-  variablePrefix: '--shiki-',
-  variableDefaults: {},
-  fontStyle: true,
-})
+// const theme = createCssVariablesTheme({
+//   name: 'css-variables',
+//   variablePrefix: '--shiki-',
+//   variableDefaults: {},
+//   fontStyle: true,
+// })
 
 const codeHtml = await codeToHtml(trimmedCode, {
   lang,
-  theme: theme,
+  // theme: theme,
+  theme: 'nord',
 })
 ---
 

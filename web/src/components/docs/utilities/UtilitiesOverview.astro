@@ -1,55 +1,56 @@
 ---
-import UtilitySvg from '@components/docs/utilities/Utility.svg?raw'
+// import UtilitySvg from '@components/docs/utilities/Utility.svg?raw'
 
 const utilities = [
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'dismissible',
     href: '/docs/utilities/dismissible/',
   },
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'focusTrap',
     href: '/docs/utilities/focus-trap/',
   },
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'list',
     href: '/docs/utilities/list/',
   },
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'persistent',
     href: '/docs/utilities/persistent/',
   },
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'presence',
     href: '/docs/utilities/presence/',
   },
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'preventScroll',
     href: '/docs/utilities/prevent-scroll/',
   },
   {
-    illustration: UtilitySvg,
+    emoji: '🛠️',
     name: 'transitionSize',
     href: '/docs/utilities/transition-size/',
   },
 ]
 ---
 
-<div class="not-prose mt-5 @container">
-  <div class="grid gap-4 @md:grid-cols-2 @3xl:grid-cols-3">
+<div class="not-prose @container mt-5">
+  <div class="@md:grid-cols-2 @3xl:grid-cols-3 grid gap-4">
     {
       utilities.map((utility) => (
         <a
           href={utility.href}
-          class="overflow-hidden rounded-xl border-[5px] border-arara-400 bg-arara-400 transition-transform active:translate-y-0.5 md:hover:scale-[1.02]"
+          class="border-arara-400 bg-arara-400 overflow-hidden rounded-xl border-[5px] transition-transform active:translate-y-0.5 md:hover:scale-[1.02]"
         >
-          <Fragment set:html={utility.illustration} />
-          <span class="block bg-arara-100 px-2 py-1 text-lg font-bold">
+          {/* <Fragment set:html={utility.illustration} /> */}
+          <span class="text-4xl">{utility.emoji}</span>
+          <span class="bg-arara-100 block px-2 py-1 text-lg font-bold">
             {utility.name}
           </span>
         </a>

@@ -1,31 +1,31 @@
 html {
-  --arara-text-dark: 267 40% 10%;
-  --arara-text: 267 40% 10%;
-  --arara-bg: 249 88% 97%;
-  --arara-100: 249 87% 94%;
-  --arara-200: 251 86% 89%;
-  --arara-300: 253 80% 82%;
-  --arara-400: 258 79% 74%;
+  --arara-text-dark: 207 43% 4%;
+  --arara-text: 207 43% 4%;
+  --arara-bg: 202 52% 96%;
+  --arara-100: 206 94% 94%;
+  --arara-200: 205 78% 85%;
+  --arara-300: 202 72% 80%;
+  --arara-400: 202 62% 70%;
   --arara-blue: 203 80% 82%;
   --arara-pink: 303 80% 82%;
-  --arara-link: 258 49% 54%;
-  --arara-link-hover: 258 59% 44%;
+  --arara-link: 205 91% 35%;
+  --arara-link-hover: 205 95% 50%;
 
   scrollbar-color: hsl(var(--arara-300)) hsl(var(--arara-100));
 }
 
 html.dark {
   color-scheme: dark;
-  --arara-text: 266 41% 90%;
-  --arara-bg: 262 22% 10%;
-  --arara-100: 253 26% 17%;
-  --arara-200: 263 39% 30%;
-  --arara-300: 260 44% 40%;
-  --arara-400: 258 39% 64%;
+  --arara-text: 203 29% 95%;
+  --arara-bg: 209 32% 13%;
+  --arara-100: 205 94% 15%;
+  --arara-200: 205 84% 20%;
+  --arara-300: 210 32% 55%;
+  --arara-400: 210 32% 55%;
   --arara-blue: 210 54% 30%;
   --arara-pink: 310 44% 40%;
-  --arara-link: 258 55% 69%;
-  --arara-link-hover: 258 45% 76%;
+  --arara-link: 205 85% 65%;
+  --arara-link-hover: 205 85% 95%;
 }
 
 .changing-theme,
