@@ -1,4 +1,4 @@
-import arara from '../../../packages/arara/package.json'
+import core from '../../../packages/core/package.json'
 // import accordion from '../../../packages/accordion/package.json'
 // import dialog from '../../../packages/dialog/package.json'
 // import disclosure from '../../../packages/disclosure/package.json'
@@ -22,8 +22,8 @@ const packageMetas: {
     sourceHref: string
   }
 } = {
-  arara: {
-    version: arara.version,
+  core: {
+    version: core.version,
     npmHref: 'https://www.npmjs.com/package/arara',
     sourceHref: 'https://github.com/FelipeEmos/arara/tree/main/packages/arara',
   },
