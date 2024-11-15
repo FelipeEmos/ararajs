@@ -1,5 +1,6 @@
 import type { ApiDeclaration } from '@lib/typedoc/types/typedoc'
 import type { Library } from '@lib/typedoc/types/specifications'
+import type coreTypedoc from '../../../../packages/core/api.json'
 // import accordionTypedoc from '../../../../packages/accordion/api.json'
 // import dialogTypedoc from '../../../../packages/dialog/api.json'
 // import disclosureTypedoc from '../../../../packages/disclosure/api.json'

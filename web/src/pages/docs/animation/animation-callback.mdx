@@ -1,0 +1,65 @@
+---
+layout: '@layouts/Docs.astro'
+title: Flexible state management of SolidJS UI primitives
+description: Learn how to manage the state of arara UI primitives for SolidJS.
+image: https://arara.dev/banner.jpg
+---
+
+import Code from '@components/docs/code/Code.astro'
+import H2 from '@components/docs/headings/H2.astro'
+import H3 from '@components/docs/headings/H3.astro'
+import Features from '@components/docs/Features.astro'
+export const components = { h2: H2, h3: H3 }
+
+# Animation Callback
+
+The primitive `createAnimation` asks you to pass an `AnimationCallback` as an argument. This primitive will start a `RAF` loop and run the callback you passed onto it on every frame. A manual first approach to this API could be to set your own signals inside the loop.
+
+<Code code={`
+import { createSignal } from 'solid-js'
+import { createAnimation } from 'ararajs'
+
+const [x, setX] = createSignal(0)
+
+createAnimation(({ deltaTime }) => {
+    setX(prev => prev + 100 * deltaTime)
+})
+
+function MovingBox() {
+    return (
+      <div style={{
+        translte: \`translateX(\${x()}px)\`,
+        width: '50px',
+        height: '50px',
+        background: 'blue'
+      }}/>
+    )
+}
+`} lang='tsx' />
+
+That is close to how other primitives are made:
+<Code code={`
+import { createSignal } from 'solid-js'
+import { createAnimation } from 'ararajs'
+
+function createLinearMovement(velocity?: () => number) {
+    const [pos, setPos] = createSignal(0)
+    createAnimation(({ deltaTime }) => {
+        setPos(prev => prev + (velocity?.() ?? 100) * deltaTime)
+    })
+    return pos
+}
+
+function MovingBox() {
+    const x = createLinearMovement()
+
+    return (
+      <div style={{
+        translte: \`translateX(\${x()}px)\`,
+        width: '50px',
+        height: '50px',
+        background: 'blue'
+      }}/>
+    )
+}
+`} lang='tsx' />

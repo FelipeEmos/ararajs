@@ -55,7 +55,8 @@
     "clean": "rm -rf .turbo dist node_modules",
     "dev": "tsup --watch",
     "lint": "eslint --max-warnings=0 .",
-    "lint:fix": "eslint --fix 'src/**/*.{js,cjs,mjs,ts,tsx}'"
+    "lint:fix": "eslint --fix 'src/**/*.{js,cjs,mjs,ts,tsx}'",
+    "typedoc": "typedoc --json api.json --entryPoints ./src/index.ts"
   },
   "dependencies": {
     "gl-matrix": "^3.4.3"
@@ -70,6 +71,7 @@
     "prettier": "^3.3.3",
     "solid-js": "^1.9.2",
     "tsup": "^8.3.0",
+    "typedoc": "^0.26.10",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.9.0"
   },

@@ -1,0 +1,55 @@
+---
+layout: '@layouts/Docs.astro'
+title: AraraJS Animation Execution Model Overview
+description: Animation Overview
+image: https://arara.dev/banner.jpg
+---
+
+import Code from '@components/docs/code/Code.astro'
+import H2 from '@components/docs/headings/H2.astro'
+import H3 from '@components/docs/headings/H3.astro'
+import Features from '@components/docs/Features.astro'
+export const components = { h2: H2, h3: H3 }
+
+# Animation <span class="text-arara-text/50">Overview</span>
+
+AraraJS's execution model is supposed to be minimal, powerful and flexible.
+Some of it's features include:
+
+<Features
+  features={[
+    'Frame-based animation loop with precise timing control',
+    'Composable animation callbacks for complex behaviors',
+    'Smart state management with automatic cleanup',
+    'Server-side rendering compatible',
+  ]}
+/>
+
+## Bare Metal API
+
+The animation system is built around some basic building blocks:
+
+- Animation Callbacks - Just a function that is called on each frame.
+- Animation Controller - Manages the animation loop and timing.
+
+These basic building blocks don't output a signal for you, they just manage timing and possibly orchestration of your animations.
+
+## Body Animations
+
+To get an output signal in a more convenient way, you may want to create a `Body` animation. Maybe you are not interested in how your signal change, which is the concept of `velocity`, but keep in mind that both `velocity` and `acceleration` are present in the `Body` object returned by the signal in case you need them in some point.
+
+Maybe you won't use them all, but the primitives come with them.
+
+## Composition and Other Primitives
+
+Some common body animation primitives, like `spring` and `sine wave`, are available to you by the library. They come both in the form of just a callback, a `BodyAnimationPass`, which is a callback that apply changes to the body on every frame, and they also come in more convenient `createSpring`, `createSine`, ... variants.
+
+<Code code={`
+const [sine] = createSineWave()
+// is equivalent to
+const [sine] = createBodyAnimation(() => [
+    sineWavePass()
+])
+`} lang='tsx' />
+
+Using the `BodyAnimationPass` will give you more flexibility because you can input multiple passes in a `createBodyAnimation` and these passes are applied in order. It's easy to combine multiple Sines and Springs with that, which gives you easings and periodic behaviours.

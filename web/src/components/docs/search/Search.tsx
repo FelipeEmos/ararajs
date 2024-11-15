@@ -163,7 +163,7 @@ const Search = (props: {
           <p class="!mb-2 !mt-5 text-center text-sm">
             Believe this query should return results?{' '}
             <a
-              href={`https://github.com/araradev/arara/issues/new?title=[Docs] Missing+results+for+query+%22${props.searchValue}%22`}
+              href={`https://github.com/FelipeEmos/ararajs/issues/new?title=[Docs] Missing+results+for+query+%22${props.searchValue}%22`}
               target="_blank"
               class="text-arara-link underline md:hover:text-arara-link-hover"
             >
