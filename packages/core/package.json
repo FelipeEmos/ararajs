@@ -1,5 +1,5 @@
 {
-  "name": "@ararajs/core",
+  "name": "ararajs",
   "version": "0.0.1",
   "private": false,
   "description": "Animation primitives for procedural and physics animations on SolidJS",

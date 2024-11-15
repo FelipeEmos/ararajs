@@ -5,13 +5,13 @@ import {
   lerp,
   sineWavePass,
   vec2,
-} from '@ararajs/core'
+} from 'ararajs'
 
+import { cn } from '@lib/cn'
 import { createElementSize } from '@solid-primitives/resize-observer'
 import { createMousePosition } from '@solid-primitives/mouse'
 
 import { createSignal } from 'solid-js'
-import { cn } from '@lib/cn'
 
 function getRootPosition(element: HTMLElement | null | undefined): {
   top: number
