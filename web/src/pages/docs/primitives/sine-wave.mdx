@@ -1,0 +1,156 @@
+---
+layout: '@layouts/Docs.astro'
+title: Flexible state management of SolidJS UI primitives
+description: Learn how to manage the state of arara UI primitives for SolidJS.
+image: https://arara.dev/banner.jpg
+---
+
+import Link from '@components/docs/Link.astro'
+import Code from '@components/docs/code/Code.astro'
+import H2 from '@components/docs/headings/H2.astro'
+import H3 from '@components/docs/headings/H3.astro'
+import Features from '@components/docs/Features.astro'
+import RawCode from '@components/docs/code/RawCode.astro'
+import ExampleWrapper from '@examples/ExampleWrapper'
+import { SineWaveDemo } from '@examples/sine-wave/SineWaveDemo'
+import RawSineWaveDemo from '@examples/sine-wave/SineWaveDemo?raw'
+import { SineWave2DDemo } from '@examples/sine-wave/SineWave2DDemo'
+import RawSineWave2DDemo from '@examples/sine-wave/SineWave2DDemo?raw'
+export const components = { h2: H2, h3: H3 }
+
+# Sine Wave <span class="text-arara-text/50">Animations</span>
+
+Sine wave animations create smooth, periodic motion perfect for creating oscillating, rhythmic, and cyclical animation behavior.
+
+<Features
+  features={[
+    'Smooth oscillating motion',
+    'Precise frequency control',
+    'Perfect for looping animations',
+    'Real-time parameter updates',
+  ]}
+/>
+
+Basic Usage
+Create a simple oscillating animation using createSineWave:
+
+<Code code={`
+import { createSineWave } from '@your-lib/animation'
+function OscillatingBox() {
+    const [motion] = createSineWave({
+      amplitude: 50,    // Oscillates 50px in each direction
+      frequency: 0.5,   // Complete cycle every 2 seconds
+      offset: 100      // Center of oscillation at 100px
+    })
+
+    return (
+      <div style={{
+          transform: \`translateX(\${motion.position}px)\`
+        }}>
+        🔵
+      </div>
+    )
+
+}
+`} lang="tsx" />
+
+Configuration Options
+Sine waves can be customized through several parameters:
+
+<Code
+  code={`
+  type SineWaveOptions = {
+    offset: number    // Center position of the oscillation (default: 0)
+    frequency: number // Oscillations per second (default: 1)
+    amplitude: number // Size of the oscillation (default: 1)
+    phase: number     // Starting point in the cycle in radians (default: 0) (2 * Math.PI is 1 turn)
+  }`}
+  lang="tsx"
+/>
+Understanding Parameters
+
+Offset - The center point around which the oscillation occurs
+Frequency - How many complete cycles occur per second
+Amplitude - How far the motion deviates from the offset
+Phase - Where in the cycle the animation starts (in radians)
+
+Visual Parameter Guide
+Here's how different parameters affect the motion:
+
+<Code code={`
+  // Center oscillation
+  const centered = {
+    offset: 0,
+    amplitude: 50,
+    frequency: 1
+  }
+  // Shifted right
+  const shifted = {
+    offset: 100,  // Moves entire oscillation right
+    amplitude: 50,
+    frequency: 1
+  }
+  // Fast, small oscillation
+  const fast = {
+    offset: 0,
+    amplitude: 10,  // Smaller movement
+    frequency: 4    // 4 cycles per second
+  }
+  // Slow, wide oscillation
+  const wide = {
+    offset: 0,
+    amplitude: 200, // Large movement
+    frequency: 0.2  // One cycle every 5 seconds
+  }
+`} lang="tsx" />
+
+## Example: Sine Wave 2D
+
+<ExampleWrapper
+  codeSnippets={[
+    {
+      name: 'code',
+      files: [
+        {
+          fileName: 'sine-wave-2d-demo.tsx',
+          slotName: 'sine-wave-2d-demo',
+        },
+      ],
+    },
+  ]}
+  height="dynamic"
+  client:idle
+>
+  <SineWave2DDemo client:load />
+  <RawCode slot="sine-wave-2d-demo" code={RawSineWave2DDemo} lang="tsx" />
+</ExampleWrapper>
+
+Reactive Parameters
+Sine waves can respond to changing parameters in real-time:
+<Code code={`
+  function ReactiveOscillation() {
+      const [frequency, setFrequency] = createSignal(1)
+      const [motion] = createSineWave(() => ({
+          frequency: frequency(),
+          amplitude: 50
+      }))
+
+      return (
+        <>
+          <input
+            type="range"
+            min="0.1"
+            max="5"
+            step="0.1"
+            value={frequency()}
+            onInput={(e) => setFrequency(Number(e.target.value))}
+          />
+            <div style={{
+              transform: \`translateX(\${motion.position}px)\`
+            }}>
+            🔵
+            </div>
+        </>
+      )
+  }
+`} lang="tsx" />
