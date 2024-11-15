@@ -9,6 +9,12 @@ import Code from '@components/docs/code/Code.astro'
 import H2 from '@components/docs/headings/H2.astro'
 import H3 from '@components/docs/headings/H3.astro'
 import Features from '@components/docs/Features.astro'
+
+import RawCode from '@components/docs/code/RawCode.astro'
+import ExampleWrapper from '@examples/ExampleWrapper'
+import { SineWaveDemo } from '@examples/sine-wave/SineWaveDemo'
+import RawSineWaveDemo from '@examples/sine-wave/SineWaveDemo?raw'
+
 export const components = { h2: H2, h3: H3 }
 
 # Animation <span class="text-arara-text/50">Overview</span>
@@ -42,7 +48,7 @@ Maybe you won't use them all, but the primitives come with them.
 
 ## Composition and Other Primitives
 
-Some common body animation primitives, like `spring` and `sine wave`, are available to you by the library. They come both in the form of just a callback, a `BodyAnimationPass`, which is a callback that apply changes to the body on every frame, and they also come in more convenient `createSpring`, `createSine`, ... variants.
+Some common body animation primitives, like `spring` and `sine wave`, are available to you by the library. They come both in the form of just a callback, a `BodyAnimationPass`, which is a callback that applies changes to the body on every frame, and they also come in more convenient `createSpring`, `createSine`, ... variants.
 
 <Code code={`
 const [sine] = createSineWave()
@@ -51,5 +57,24 @@ const [sine] = createBodyAnimation(() => [
     sineWavePass()
 ])
 `} lang='tsx' />
+
+<ExampleWrapper
+  codeSnippets={[
+    {
+      name: 'code',
+      files: [
+        {
+          fileName: 'sine-wave-demo.tsx',
+          slotName: 'sine-wave-demo',
+        },
+      ],
+    },
+  ]}
+  height="dynamic"
+  client:idle
+>
+  <SineWaveDemo client:load />
+  <RawCode slot="sine-wave-demo" code={RawSineWaveDemo} lang="tsx" />
+</ExampleWrapper>
 
 Using the `BodyAnimationPass` will give you more flexibility because you can input multiple passes in a `createBodyAnimation` and these passes are applied in order. It's easy to combine multiple Sines and Springs with that, which gives you easings and periodic behaviours.

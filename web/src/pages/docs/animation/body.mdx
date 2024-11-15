@@ -1,0 +1,89 @@
+---
+layout: '@layouts/Docs.astro'
+title: Flexible state management of SolidJS UI primitives
+description: Learn how to manage the state of arara UI primitives for SolidJS.
+image: https://arara.dev/banner.jpg
+---
+
+import Link from '@components/docs/Link.astro'
+import Code from '@components/docs/code/Code.astro'
+import H2 from '@components/docs/headings/H2.astro'
+import H3 from '@components/docs/headings/H3.astro'
+import Features from '@components/docs/Features.astro'
+import RawCode from '@components/docs/code/RawCode.astro'
+import ExampleWrapper from '@examples/ExampleWrapper'
+import { SineWave2DDemo } from '@examples/sine-wave/SineWave2DDemo'
+import RawSineWave2DDemo from '@examples/sine-wave/SineWave2DDemo?raw'
+export const components = { h2: H2, h3: H3 }
+
+# Body
+
+Bodies are very simple. They are just the AraraJS way of outputting animated signals. In case you are interested in the speed in which your signal is changing, for example, you can access the `velocity` and `acceleration` properties of the `Body` object.
+
+<Code
+  code={`
+type Body = {
+    position: number
+    velocity: number
+    acceleration: number
+}
+`}
+  lang="tsx"
+/>
+
+## 2D and 3D variants
+
+For your convenience, AraraJS provides primitives for 2D and 3D animations as well. For example `createSpring2D` will return an accessor for a `Body2D`
+
+<Code
+  code={`
+  const [body2d] = createSineWave2D({
+    phase: [Math.PI / 2, 0],
+  })
+`}
+  lang="tsx"
+/>
+
+<ExampleWrapper
+  codeSnippets={[
+    {
+      name: 'code',
+      files: [
+        {
+          fileName: 'sine-wave-2d-demo.tsx',
+          slotName: 'sine-wave-2d-demo',
+        },
+      ],
+    },
+  ]}
+  height="dynamic"
+  client:idle
+>
+  <SineWave2DDemo client:load />
+  <RawCode slot="sine-wave-2d-demo" code={RawSineWave2DDemo} lang="tsx" />
+</ExampleWrapper>
+
+The 2D and 3D variants use vectors from the <Link href="https://glmatrix.net/" newTab>gl-matrix</Link> library.
+> These types `vec2` and `vec3` are exposed to you by directly importing from AraraJS.
+
+<Code
+  code={`
+import { vec2, vec3 } from 'ararajs'
+// Equilalent to
+import { vec2, vec3 } from 'gl-matrix'
+
+
+type Body2D = {
+    position: vec2
+    velocity: vec2
+    acceleration: vec2
+}
+
+type Body3D = {
+    position: vec3
+    velocity: vec3
+    acceleration: vec3
+}
+`}
+  lang="tsx"
+/>
