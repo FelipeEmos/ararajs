@@ -20,7 +20,7 @@ import { HoverCard } from '@examples/hover-card/HoverCard'
 import RawHoverCard from '@examples/hover-card/HoverCard?raw'
 import RawCreateMouseDistanceFromCenter from '@examples/hover-card/createMouseDistanceFromCenter?raw'
 import RawGetDOMRootPosition from '@examples/hover-card/getDOMRootPosition?raw'
-import araraImage from '@assets/examples/arara_red.jpg'
+import araraImage from '@assets/examples/arara_red_2.jpg'
 
 export const components = { h2: H2, h3: H3 }
 
@@ -51,7 +51,7 @@ A fancy hover card showcasing what can be done by combining sine wave and spring
   height="dynamic"
   client:idle
 >
-  <HoverCard client:load imgSrc={araraImage.src} class="max-w-64" />
+  <HoverCard client:idle imgSrc={araraImage.src} class="max-w-64" />
   <RawCode slot="hover-card" code={RawHoverCard} lang="tsx" />
   <RawCode slot="getDOMRootPosition" code={RawGetDOMRootPosition} lang="tsx" />
   <RawCode
