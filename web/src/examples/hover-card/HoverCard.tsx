@@ -4,7 +4,6 @@ import {
   createSpring2D,
   lerp,
   sineWavePass,
-  vec2,
 } from 'ararajs'
 
 import { cn } from '@lib/cn'
