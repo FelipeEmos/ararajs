@@ -1,0 +1,178 @@
+---
+layout: '@layouts/Docs.astro'
+title: Hover Card Example
+description: Example of Hover Card
+image: https://arara.dev/banner.jpg
+---
+
+import Link from '@components/docs/Link.astro'
+import Features from '@components/docs/Features.astro'
+import Code from '@components/docs/code/Code.astro'
+import ApiReference from '@components/docs/api/ApiReference.astro'
+import { Dismissible } from '@lib/typedoc/libraries'
+import PackageInfo from '@components/docs/PackageInfo.astro'
+import H2 from '@components/docs/headings/H2.astro'
+import H3 from '@components/docs/headings/H3.astro'
+
+import RawCode from '@components/docs/code/RawCode.astro'
+import ExampleWrapper from '@examples/ExampleWrapper'
+import { HoverCard } from '@examples/hover-card/HoverCard'
+import RawHoverCard from '@examples/hover-card/HoverCard?raw'
+import RawCreateMouseDistanceFromCenter from '@examples/hover-card/createMouseDistanceFromCenter?raw'
+import RawGetDOMRootPosition from '@examples/hover-card/getDOMRootPosition?raw'
+import araraBlueImage from '@assets/examples/arara_blue.jpg'
+
+export const components = { h2: H2, h3: H3 }
+
+# Hover Card <span class="text-arara-text/50">Example</span>
+
+A fancy hover card showcasing what can be done by combining sine wave and spring primitives.
+
+<ExampleWrapper
+  codeSnippets={[
+    {
+      name: 'code',
+      files: [
+        {
+          fileName: 'hover-card.tsx',
+          slotName: 'hover-card',
+        },
+        {
+          fileName: 'createMouseDistanceFromCenter.ts',
+          slotName: 'createMouseDistanceFromCenter',
+        },
+        {
+          fileName: 'getDOMRootPosition.ts',
+          slotName: 'getDOMRootPosition',
+        },
+      ],
+    },
+  ]}
+  height="dynamic"
+  client:idle
+>
+  <HoverCard client:load imgSrc={araraBlueImage.src} class="max-w-64" />
+  <RawCode slot="hover-card" code={RawHoverCard} lang="tsx" />
+  <RawCode slot="getDOMRootPosition" code={RawGetDOMRootPosition} lang="tsx" />
+  <RawCode
+    slot="createMouseDistanceFromCenter"
+    code={RawCreateMouseDistanceFromCenter}
+    lang="tsx"
+  />
+</ExampleWrapper>
+
+## Features
+
+<Features
+  features={[
+  '3D rotation based on mouse position',
+  'Scale animation on hover',
+  'Shining effect animation',
+  'Image scaling and rotation',
+  'Physics-based spring animations',
+]}
+/>
+
+## Example Breakdown
+
+### Hover State Management
+<Code code={`
+const [isHovering, setIsHovering] = createSignal(false)
+const [effectPercentage] = createSpring(() => ({
+  target: isHovering() ? 1 : 0,
+  stiffness: 150,
+  damping: 16,
+}))
+`} lang="tsx" />
+The component uses a spring-based animation to smoothly transition between hover states. The spring configuration uses:
+- `stiffness: 150` - Controls how "rigid" the spring is
+- `damping: 16` - Controls how quickly the spring settles
+
+### Mouse Position Tracking
+<Code code={`
+const mouseDistanceFromCenter = createMouseDistanceFromCenter(cardContainer)
+const [rotationPoint] = createSpring2D(() => ({
+  target: mouseDistanceFromCenter(),
+  stiffness: 150,
+  damping: 16,
+}))
+`} lang="tsx" />
+The rotation effect tracks the mouse position relative to the card's center, creating a natural-feeling 3D effect. The `createSpring2D` adds smooth interpolation to the mouse movement.
+
+### Scale Animations
+<Code code={`
+const raiseAmount = () => 1 + 0.1 * effectPercentage.position
+const heroRaiseAmount = () => 1.2 - 0.1 * effectPercentage.position
+`} lang="tsx" />
+Two scaling effects occur simultaneously:
+- The container scales up slightly on hover (`raiseAmount`)
+- The image scales down slightly (`heroRaiseAmount`)
+
+### Rotation Effects
+<Code code={`
+const CARD_ROTATION = 0.05
+const roll = () => CARD_ROTATION * effectPercentage.position * rotationPoint.position[1]
+const tilt = () => CARD_ROTATION * effectPercentage.position * rotationPoint.position[0]
+`} lang="tsx" />
+The card rotates based on:
+- Mouse position (through `rotationPoint`)
+- Hover state (through `effectPercentage`)
+- A constant factor (`CARD_ROTATION`) to control the maximum rotation
+
+### Shining Effect
+
+<Code code={`
+const [shiningEffectAnimation] = createBodyAnimation(() => [
+  sineWavePass({
+    amplitude: 0.5,
+    frequency: 0.2,
+    phase: Math.PI / 2,
+  }),
+  /*
+  CUSTOM PASS
+  Manually filter only the upper movement of the wave
+  */
+  ({ body }) => {
+    if (body.velocity < 0) {
+      return {
+        position: 0,
+        velocity: 0,
+        acceleration: 0,
+      }
+    }
+    return {
+      ...body,
+      position: body.position + 0.5,
+    }
+  },
+])
+`} lang="tsx" />
+The shining effect combines:
+1. A sine wave for periodic movement
+2. A custom filter that only allows upward movement
+3. Linear interpolation for positioning
+
+The interpolation needs to take into account the size of the card and the size of the effect. The bottom of the effect should start right above the card and end when it's top passed the whole card's height.
+<Code code={`
+const [shiningEffectContainer, setShineEffectContainer] = createSignal<HTMLDivElement>()
+const shiningEffectContainerSize = createElementSize(shiningEffectContainer)
+
+const cardContainerSize = createElementSize(cardContainer)
+const shiningEffectTranslation = () => {
+  const min = -(shiningEffectContainerSize.height ?? 0) - 30
+  const max =
+    (cardContainerSize.height ?? 0) + (shiningEffectContainerSize.height ?? 0)
+  return lerp(shiningEffectAnimation.position, min, max)
+}
+`} lang="tsx" />
+
+## Styling
+
+The Image rotation and scaling is slightly different than the card's. That effect is intentional and is called <Link href="https://en.wikipedia.org/wiki/Parallax" newTab>parallax</Link>.
+
+Here are some of the TailwindCSS techniques used for styling:
+- Rounded corners (`rounded-lg`)
+- Dark background (`bg-gray-800`)
+- Shadow effects (`shadow-lg`)
+- Inset shadows for image depth
+- Ring effects for border highlighting

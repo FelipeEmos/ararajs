@@ -14,35 +14,3 @@ To install the library
 <Code code={`
 npm install ararajs
 `} lang="bash" copyButton />
-
-If you want to install all primitives at once you can install the main package. Unused primitives will get tree-shaken by your bundler, so you don't have to worry about the bundle size.
-
-<Code code={`
-npm install arara
-`} lang="bash" copyButton />
-
-You're good to go! Head over to [Usage](/docs/state/) to learn how to use arara.
-
-## TailwindCSS plugin
-If you want make use of the tailwind modifiers like `corvu-open:`, install the tailwind plugin:
-
-<Code code={`
-npm install @corvu/tailwind
-`} lang="bash" copyButton />
-
-Then add the plugin to your `tailwind.config.js` file:
-
-<Code code={`
-module.exports = {
-  // ...
-  plugins: [
-    // Use it with the default prefix 'arara'
-    require('@corvu/tailwind'),
-    // or with a custom prefix
-    require('@corvu/tailwind')({ prefix: 'ui' }),
-    // ...
-  ],
-}
-`} lang="js" />
-
-Check out the [TailwindCSS](/docs/styling/#tailwindcss-plugin) section in the styling guide to learn more about the tailwind plugin.

@@ -1,7 +1,7 @@
 {
   "name": "@arara/monorepo",
   "private": true,
-  "description": "Unstyled, accessible and customizable UI primitives for SolidJS",
+  "description": "SolidJS animation primitives using signals, useful for procedural and highly reactive animations",
   "homepage": "https://ararajs.vercel.app/",
   "license": "MIT",
   "author": {

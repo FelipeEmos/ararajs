@@ -10,7 +10,6 @@ import H3 from '@components/docs/headings/H3.astro'
 export const components = { h2: H2, h3: H3 }
 
 import araraRedImage from '@assets/examples/arara_red.jpg'
-import araraBlueImage from '@assets/examples/arara_blue.jpg'
 
 import { HoverCard } from '@examples/hover-card/HoverCard'
 
@@ -39,10 +38,10 @@ Some applications that may benefit grom this approach include:
 
 Combining signals into derived signals is a remarkable DX from SolidJS, it's simple, it's powerful, it scales.
 
-AraraJS's signals can also be derived and combined in cleaver ways. A simple combination can emerge new exciting behavior which you'll have full control of. Look at what is possible with only <Link href="">spring</Link> and <Link href="">sine wave</Link> primitives combined together with the mouse position.
+AraraJS's signals can also be derived and combined in cleaver ways. A simple combination can emerge new exciting behavior which you'll have full control of. Look at what is possible with only <Link href="">spring</Link> and <Link href="">sine wave</Link> primitives combined together (with mouse position) in this <Link href="/docs/examples/hover-card/" newTab>Hover Card</Link>.
 
-<div class="w-full flex justify-center">
-<HoverCard client:load imgSrc={araraRedImage.src} class="max-w-64" />
+<div class="w-full flex justify-center py-6">
+  <HoverCard client:load imgSrc={araraRedImage.src} class="max-w-64" />
 </div>
 
 
