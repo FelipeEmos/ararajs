@@ -1,0 +1,190 @@
+---
+layout: '@layouts/Docs.astro'
+title: Flexible state management of SolidJS UI primitives
+description: Learn how to manage the state of arara UI primitives for SolidJS.
+image: https://arara.dev/banner.jpg
+---
+
+import Link from '@components/docs/Link.astro'
+import Code from '@components/docs/code/Code.astro'
+import H2 from '@components/docs/headings/H2.astro'
+import H3 from '@components/docs/headings/H3.astro'
+import Features from '@components/docs/Features.astro'
+import RawCode from '@components/docs/code/RawCode.astro'
+import ExampleWrapper from '@examples/ExampleWrapper'
+import { SpringDemo } from '@examples/spring/SpringDemo'
+import RawSpringDemo from '@examples/spring/SpringDemo?raw'
+
+import { Spring2DDemo } from '@examples/spring/Spring2DDemo'
+import RawSpring2DDemo from '@examples/spring/Spring2DDemo?raw'
+export const components = { h2: H2, h3: H3 }
+
+# Spring <span class="text-arara-text/50">Animations</span>
+
+Spring animations provide a natural, physics-based way to animate values. They're perfect for creating smooth, organic motion that responds to changing targets.
+
+<Features 
+  features={[
+    'Physics-based spring motion',
+    'Configurable stiffness and damping',
+    'Automatic settling detection',
+    'Real-time target updates'
+  ]} 
+/>
+
+## Basic Usage
+
+The simplest way to create a spring animation is using `createSpring`:
+
+<Code code={`
+import { createSpring } from 'ararajs'
+
+function SpringExample() {
+  const [spring, controller] = createSpring({
+    target: 100,    // The value we're animating towards
+    stiffness: 0.5, // How "rigid" the spring is
+    damping: 0.5    // How quickly oscillations settle
+  })
+  
+  return (
+    <div style={{
+      transform: \`translateX(\${spring.position}px)\`
+    }}>
+      🔵
+    </div>
+  )
+}
+`} lang="tsx" />
+
+<ExampleWrapper
+  codeSnippets={[
+    {
+      name: 'code',
+      files: [
+        {
+          fileName: 'spring-demo.tsx',
+          slotName: 'spring-demo',
+        },
+      ],
+    },
+  ]}
+  height="dynamic"
+  client:idle
+>
+  <SpringDemo client:load />
+  <RawCode slot="spring-demo" code={RawSpringDemo} lang="tsx" />
+</ExampleWrapper>
+
+## Spring Configuration
+
+Springs can be customized through several parameters:
+
+<Code code={`
+type SpringOptions = {
+    mass: number         // Mass of the object (default: 1)
+    target: number       // Target value to animate to
+    damping: number      // Damping force (default: 0.5)
+    stiffness: number   // Spring stiffness (default: 0.5)
+    targetThreshold?: number  // Distance to target to consider "settled" (default: 0.001)
+}
+`} lang="tsx" />
+
+### Understanding Spring Parameters
+
+1. **Mass** - Higher mass means more inertia and slower response to forces
+2. **Damping** - Higher damping means less oscillation but slower settling
+3. **Stiffness** - Higher stiffness means faster motion but more oscillation
+4. **Target Threshold** - How close to the target we need to be to stop the animation
+
+### Example: Spring 2D with Mouse
+
+<ExampleWrapper
+  codeSnippets={[
+    {
+      name: 'code',
+      files: [
+        {
+          fileName: 'spring-2d-demo.tsx',
+          slotName: 'spring-2d-demo',
+        },
+      ],
+    },
+  ]}
+  height="dynamic"
+  client:idle
+>
+  <Spring2DDemo client:load />
+  <RawCode slot="spring-2d-demo" code={RawSpring2DDemo} lang="tsx" />
+</ExampleWrapper>
+
+## Advanced: Using Spring Pass
+
+For more complex animations, you can use the spring pass directly with `createBodyAnimation`:
+
+<Code code={`
+import { springPass, type SpringOptions } from '@your-lib/animation'
+
+function ComplexSpringAnimation() {
+  // Create a spring with multiple passes
+  const [spring] = createBodyAnimation(
+    () => [
+      // Spring physics
+      springPass({ 
+        target: 100,
+        stiffness: 0.5 
+      }),
+      // Additional passes (e.g., constraints)
+      ({ body }) => ({
+        ...body,
+        position: Math.max(0, Math.min(100, body.position)) // Clamp position
+      })
+    ]
+  )
+  
+  return (
+    <div style={{
+      transform: \`translateX(\${spring.position}px)\`
+    }}>
+      🔵
+    </div>
+  )
+}
+`} lang="tsx" />
+
+
+
+{/*
+NOTE: Interesting suggestion from AI
+TODO: Look into using springs with bounds and chained springs
+
+### Chained Springs
+
+<Code code={`
+function ChainedSprings() {
+  const [spring1] = createSpring({ target: 100 })
+  const [spring2] = createSpring(() => ({ 
+    target: spring1.position 
+  }))
+  
+  return (
+    <>
+      <div style={{ transform: \`translateX(\${spring1.position}px)\` }}>🔵</div>
+      <div style={{ transform: \`translateX(\${spring2.position}px)\` }}>🟣</div>
+    </>
+  )
+}
+`} lang="tsx" />
+
+
+### Spring with Bounds
+
+<Code code={`
+const [spring] = createBodyAnimation(() => [
+  springPass({ target: 100 }),
+  // Constraint pass
+  ({ body }) => ({
+    ...body,
+    position: Math.max(0, Math.min(100, body.position))
+  })
+])
+`} lang="tsx" /> */}
