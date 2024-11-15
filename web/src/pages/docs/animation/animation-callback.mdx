@@ -63,3 +63,12 @@ function MovingBox() {
     )
 }
 `} lang='tsx' />
+
+
+Here's the AnimationCallback reference API:
+<Code code={`
+export type AnimationCallback = (world: {
+    currentTime: number
+    deltaTime: number
+}) => void
+`} lang='tsx' />

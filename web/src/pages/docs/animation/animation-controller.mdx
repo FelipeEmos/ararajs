@@ -11,74 +11,14 @@ import H3 from '@components/docs/headings/H3.astro'
 import Features from '@components/docs/Features.astro'
 export const components = { h2: H2, h3: H3 }
 
-# Animation Callback
-
-The primitive `createAnimation` asks you to pass an `AnimationCallback` as an argument. This primitive will start a `RAF` loop and run the callback you passed onto it on every frame. A manual first approach to this API could be to set your own signals inside the loop.
-
-<Code code={`
-import { createSignal } from 'solid-js'
-import { createAnimation } from 'ararajs'
-
-const [x, setX] = createSignal(0)
-
-createAnimation(({ deltaTime }) => {
-    setX(prev => prev + 100 * deltaTime)
-})
-
-function MovingBox() {
-    return (
-      <div style={{
-        translte: \`translateX(\${x()}px)\`,
-        width: '50px',
-        height: '50px',
-        background: 'blue'
-      }}/>
-    )
-}
-`} lang='tsx' />
-
-That is close to how other primitives are made:
-<Code code={`
-import { createSignal } from 'solid-js'
-import { createAnimation } from 'ararajs'
-
-function createLinearMovement(velocity?: () => number) {
-    const [pos, setPos] = createSignal(0)
-    createAnimation(({ deltaTime }) => {
-        setPos(prev => prev + (velocity?.() ?? 100) * deltaTime)
-    })
-    return pos
-}
-
-function MovingBox() {
-    const x = createLinearMovement()
-
-    return (
-      <div style={{
-        translte: \`translateX(\${x()}px)\`,
-        width: '50px',
-        height: '50px',
-        background: 'blue'
-      }}/>
-    )
-}
-`} lang='tsx' />
-
-
-Core Concepts The animation system is built around three main concepts:
-
-- Animation Controller - Manages the animation loop and timing
-- Animation Callbacks - Define what happens on each frame
-- Animation Passes - Composable units of animation logic
-
-## Animation Controller
+# Animation Controller
 
 The animation controller is the heart of the system. It manages the animation loop using requestAnimationFrame and provides precise timing information to your animations.
 
 <Code
   code={`
 const controller = createAnimationController({
-autoplay: true // or 'on-mount' or false
+    autoplay: true // or 'on-mount' or false
 })
 // Basic control methods
 controller.start()
@@ -87,65 +27,50 @@ controller.stop()
 `}
   lang="tsx"
 />
+
+
+The `createAnimation` primitive also returns an `AnimationController` that can be used to control the animation loop.
+
+<Code
+  code={`
+  const controller = createAnimation(({ currentTime }) => {
+      console.log(currentTime)
+  })
+
+  <button onClick={controller().start}>Start</button>
+  <button onClick={controller().pause}>Pause</button>
+  <button onClick={controller().stop}>Stop</button>
+`}
+  lang="tsx"
+/>
+
+Say you want to have two animations running at the same time. You can pass a `controller` as the **second** argument of the `createAnimation` primitive, it will use that instead of creating a new controller.
+
+<Code
+  code={`
+  const controller = createAnimationController()
+  
+  createAnimation(({ currentTime }) => {
+      console.log("FIRST ANIMATION", currentTime)
+  }, () => controller)
+  createAnimation(({ currentTime }) => {
+      console.log("SECOND ANIMATION: ", currentTime)
+  }, () => controller)
+  createAnimation(({ currentTime }) => {
+      console.log("THIRD ANIMATION: ", currentTime)
+  }, () => controller)
+
+  // These controls will affect all three animations
+  controller.start()
+  controller.pause()
+  controller.stop()
+`}
+  lang="tsx"
+/>
+
 Each controller provides:
 
-Current time since animation start
-Delta time between frames
-Running state management
-Automatic cleanup on component unmount
-
-## Animation Callbacks
-
-Animation callbacks are functions that run on each frame. They receive timing information and can modify state:
-
-<Code
-  code={`
-// Simple animation callback
-const callback = ({ currentTime, deltaTime }) => {
-// Update animation state based on timing
-position.x += velocity * deltaTime
-}
-// Add to controller
-controller.add(callback)
-`}
-  lang="tsx"
-/>
-Composing Animations One of the most powerful features is the ability to compose
-multiple animation passes:
-
-<Code
-  code={`const [animation] = createAnimation([   // First pass - update position   ({ deltaTime }) => updatePosition(deltaTime),   // Second pass - apply constraints   ({ currentTime }) => applyConstraints(),   // Third pass - handle collisions   () => handleCollisions() ])`}
-  lang="tsx"
-/>
-Smart Defaults and Server Compatibility The system includes several features to
-make development easier:
-
-Automatic pause/resume when all callbacks are removed
-Safe server-side rendering with a void controller
-Automatic cleanup of animation resources
-Smart delta time handling after pauses
-
-<Code
-  code={`
-// Creates a controller that's safe for SSR
-const controller = createAnimationController()
-// Automatically manages resources
-onCleanup(() => {
-// Animation system handles cleanup automatically
-})
-`}
-  lang="tsx"
-/>
-Best Practices When working with the animation system:
-
-Use Composition: Break complex animations into multiple passes for better organization
-Mind the Timeline: The currentTime value is useful for creating time-based animations
-Control Resource Usage: Pause or stop animations when they're not visible
-Handle Cleanup: While the system handles most cleanup automatically, be mindful of any manual subscriptions
-
-Next Steps
-Learn how to use the animation system with:
-
-Physical Body Animations
-2D Transform Animations
-3D Transform Animations
+- `currentTime` since animation start
+- `deltaTime` between frames
+- Running state management
+- Automatic cleanup on component unmount
