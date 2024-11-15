@@ -29,6 +29,11 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "solid": "./dist/index.jsx",
+      "default": "./dist/index.js"
+    },
     "./*": {
       "types": "./dist/*.d.ts",
       "solid": "./dist/*.jsx",

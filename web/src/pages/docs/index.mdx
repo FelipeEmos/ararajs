@@ -9,41 +9,55 @@ import H2 from '@components/docs/headings/H2.astro'
 import H3 from '@components/docs/headings/H3.astro'
 export const components = { h2: H2, h3: H3 }
 
+import araraRedImage from '@assets/examples/arara_red.jpg'
+import araraBlueImage from '@assets/examples/arara_blue.jpg'
+
+import { HoverCard } from '@examples/hover-card/HoverCard'
+
 # Introduction
 
-arara is a collection of open source UI primitives for <Link href="https://solidjs.com/" newTab>SolidJS</Link> that are unstyled, accessible and aim to be highly customizable while providing a delightful developer experience.
+AraraJS is a unique take on animation for <Link href="https://solidjs.com/" newTab>SolidJS</Link> that is basically asking the question:
 
-> 🚧 arara is still under heavy development and in its very early stages🐣. Please be aware of that while using it. New primitives will be available soon. Stay tuned!
+- What if I want to animate the <b>signal</b> value?
 
-## Features
-### Unstyled
-Primitives do not provide any styling, allowing you to bring your own and style them according to your preferences or style guidelines. You can use TailwindCSS, any CSS-in-JS library or plain old CSS to style it. We provide a small [TailwindCSS plugin](/docs/styling/#tailwindcss-plugin) which makes it easy to style components based on their current state. Read more in [Styling](/docs/styling/).
+Since SolidJS rendering and reactivity are very efficient, this is an exciting uncharted territory.
 
-### Unopinionated
-arara allows you to customize almost every aspect of all primitives while providing great defaults. There is an API section for every primitive describing all the available props and their default values. Read more in [State](/docs/state/).
+> 🚧 AraraJS is still in its very early stages🐣. Please be aware of that. Suggestions are very welcome and appreciated, please reach out in SolidJS' <Link href="https://discord.com/invite/solidjs" newTab>Discord Channel</Link> or write an <Link href="https://github.com/FelipeEmos/ararajs/issues" newTab>Issue</Link> if you think its' more suited.
 
-arara also provides a set of [utilities](/docs/overview/#utilities) like `createFocusTrap`, `createPreventScroll` and `createPresence` that can be used to build your own accessible primitives.
+## Is it for you?
 
-### Accessible
+Animation libraries are either very high level <i>(which is great when you're following a common use case)</i> or they are low level enough that it forces the programmer to leave the "reactive / declarative" mental model to deal with the animation's "imperative / sequential" nature.
 
-All primitives have been developed with accessibility in mind. They strictly adhere to the <Link href="https://www.w3.org/WAI/standards-guidelines/aria/" newTab>WAI-ARIA</Link> guidelines and take care of all the complex stuff like aria attributes, focus management and keyboard interactions. The documentation describes the accessibility features implemented for each primitive and how to change them according to your needs.
+You can think of AraraJS as a middle ground between the two. It's potentially more flexible than a high level solution but you won't leave the "reactive / declarative" mental model because you are still in signals land.
 
-### SSR
-arara provides a `solid` export for SSR and works out of the box with <Link href="https://start.solidjs.com/" newTab>SolidStart</Link>.
+Some applications that may benefit grom this approach include:
+- 🏃 Highly Reactive animations ( like reacting to mouse position )
+- 🧪 Mocking signal values
+- 🍎 Physics based & procedural animations
 
-## Community
-If you have any questions, feature requests or just want to write a kind message, feel free to join the <Link href="https://discord.com/invite/solidjs" newTab>SolidJS Discord server</Link> and head to our `#arara` channel. We are always happy to help and love to hear from you. Alternatively, you can leave your feedback in the <Link href="https://github.com/araradev/arara/discussions/" newTab>discussions tab</Link> on the GitHub repository.
+### Emergent Behavior
 
-## Inspiration & Credits
-While developing arara, we were inspired by many other open source projects and authors and we thank them for their work.
+Combining signals into derived signals is a remarkable DX from SolidJS, it's simple, it's powerful, it scales.
 
-Some of the projects that have inspired arara, in no particular order:
+AraraJS's signals can also be derived and combined in cleaver ways. A simple combination can emerge new exciting behavior which you'll have full control of. Look at what is possible with only <Link href="">spring</Link> and <Link href="">sine wave</Link> primitives combined together with the mouse position.
 
-- Melt UI - <Link href="https://melt-ui.com/" newTab>melt-ui.com/</Link>
-- Kobalte - <Link href="https://kobalte.dev/" newTab>kobalte.dev/</Link>
-- Radix - <Link href="https://radix-ui.com/" newTab>radix-ui.com/</Link>
+<div class="w-full flex justify-center">
+<HoverCard client:load imgSrc={araraRedImage.src} class="max-w-64" />
+</div>
+
+
+### Alternatives
+- Motion - <Link href="https://motion.dev/" newTab>motion.dev</Link>
+- Solid MotionOne - <Link href="https://github.com/solidjs-community/solid-motionone">SolidJS Motion wrapper</Link>
+- AnimeJS - <Link href="https://animejs.com/" newTab>animejs.com</Link>
+- GSAP - <Link href="https://gsap.com/" newTab>gsap.com</Link>
+- Popmotion - <Link href="https://popmotion.io/" newTab>popmotion.io</Link>
+
+> <b> 📖 Recommended reading</b>: This <Link href="https://motion.dev/docs/feature-comparison" newTab>article from Motion</Link> is a feature comparison of some animation libraries. It also explores their different Web API strategies and how it affect's the user.  In case you are wondering, AraraJS is using the api `requestAnimationFrame` under the hood because it operates only on `signals / javascript` land.
+
 
 ### Additional thanks
-- <Link href="https://x.com/fabiospampinato/" newTab>Fabio Spampinato</Link> for helping me understand the nitty-gritty parts of SolidJS
+- <Link href="https://github.com/GiyoMoon" newTab>Jasmin GiyoMoon</Link> for the awesome <Link href="https://corvu.dev/">Corvu UI</Link> project, which was used as a template for this project.
 - <Link href="https://github.com/solidjs-community/solid-primitives/" newTab>Solid Primitives</Link> for awesome, high-quality reactivity primitives which make working with SolidJS a breeze
-- <Link href="https://x.com/RyanCarniato/" newTab>Ryan Carniato</Link> for his highly educational Friday streams
+- <Link href="https://x.com/RyanCarniato/" newTab>Ryan Carniato</Link> for his highly educational Friday streams!
+- <Link href="https://discord.com/invite/solidjs/" newTab>The Solid Community</Link> for being so welcoming and inspiring!

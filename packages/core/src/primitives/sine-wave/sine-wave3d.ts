@@ -5,8 +5,8 @@ import {
 } from '../../physics/body-3d-animation'
 import {
   defaultSineWaveOptions,
-  sinePass,
   type SineWaveOptions,
+  sineWavePass,
 } from './sine-wave'
 import { type Dimension, getAxis } from '../../physics/physics'
 import { type Accessor } from 'solid-js'
@@ -44,19 +44,19 @@ function getOptionsInDimention(
   return result
 }
 
-export function sine3DPass(
+export function sineWave3DPass(
   options?: Partial<SineWave3DOptions> | Accessor<Partial<SineWave3DOptions>>,
 ): Body3DAnimationPass {
   return compose3DPass({
-    x: sinePass({
+    x: sineWavePass({
       ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'x'),
     }),
-    y: sinePass({
+    y: sineWavePass({
       ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'y'),
     }),
-    z: sinePass({
+    z: sineWavePass({
       ...defaultSineWaveOptions,
       ...getOptionsInDimention(options, 'z'),
     }),
@@ -68,7 +68,7 @@ export function createSineWave3D(
   bodyAnimationOptions?: () => Body3DAnimationOptions,
 ) {
   return createBody3DAnimation(
-    () => [sine3DPass(options)],
+    () => [sineWave3DPass(options)],
     bodyAnimationOptions,
   )
 }

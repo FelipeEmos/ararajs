@@ -35,7 +35,7 @@ export function spring2DPass(
   return ({ body, deltaTime }) => {
     const opts = typeof options === 'function' ? options() : options
     const { target, targetThreshold, damping, stiffness, mass } = {
-      ...default2DOptions,
+      ...defaultSpring2DOptions,
       ...opts,
     }
 
