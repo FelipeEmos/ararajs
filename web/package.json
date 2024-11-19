@@ -1,7 +1,7 @@
 {
   "name": "@ararajs/web",
   "private": true,
-  "description": "arara.dev website",
+  "description": "ararajs.vercel.app website",
   "homepage": "https://ararajs.vercel.app/",
   "license": "MIT",
   "author": {

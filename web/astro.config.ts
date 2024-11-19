@@ -10,7 +10,7 @@ export default defineConfig({
     mdx(),
     sitemap({
       serialize(item) {
-        if (item.url === 'https://arara.dev/') {
+        if (item.url === 'https://ararajs.vercel.app/') {
           item.priority = 1
         } else {
           item.priority = 0.9
@@ -51,6 +51,6 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: false,
   },
-  site: 'https://arara.dev',
+  site: 'https://ararajs.vercel.app',
   trailingSlash: 'always',
 })

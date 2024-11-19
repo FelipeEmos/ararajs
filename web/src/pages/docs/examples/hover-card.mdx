@@ -2,7 +2,7 @@
 layout: '@layouts/Docs.astro'
 title: Hover Card Example
 description: Example of Hover Card
-image: https://arara.dev/banner.jpg
+image: https://ararajs.vercel.app/banner.jpg
 ---
 
 import Link from '@components/docs/Link.astro'
@@ -20,7 +20,7 @@ import { HoverCard } from '@examples/hover-card/HoverCard'
 import RawHoverCard from '@examples/hover-card/HoverCard?raw'
 import RawCreateMouseDistanceFromCenter from '@examples/hover-card/createMouseDistanceFromCenter?raw'
 import RawGetDOMRootPosition from '@examples/hover-card/getDOMRootPosition?raw'
-import araraImage from '@assets/examples/arara_red_2.jpg'
+import araraImage from '@assets/examples/arara_red_2.jpg?url'
 
 export const components = { h2: H2, h3: H3 }
 
@@ -49,9 +49,10 @@ A fancy hover card showcasing what can be done by combining sine wave and spring
     },
   ]}
   height="dynamic"
-  client:idle
+  client:load
 >
-  <HoverCard client:idle imgSrc={araraImage.src} class="max-w-64" />
+{/* FIXME: Importing the asset is not working 100% of the time. The image doesn't appear randomly sometimes */}
+  <HoverCard client:load imgSrc="https://cdn.pixabay.com/photo/2016/03/22/14/54/macaw-1273003_1280.jpg" class="max-w-64" />
   <RawCode slot="hover-card" code={RawHoverCard} lang="tsx" />
   <RawCode slot="getDOMRootPosition" code={RawGetDOMRootPosition} lang="tsx" />
   <RawCode

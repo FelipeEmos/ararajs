@@ -28,26 +28,26 @@ AraraJs is a highly reactive signals-based Animation Library for SolidJS
   - Uses `gl-matrix` for vector math
   - Uses the best performant web api for this animation use case: RAF (_request animation frame_)
 
-Read more at [ararajs.vercel.com](https://ararajs.vercel.com).
+Read more at [ararajs.vercel.app](https://ararajs.vercel.app).
 
 <!-- ## Primitives
 
 <table>
   <tr>
     <td align="center" width=33%>
-      <a href="https://arara.dev/docs/primitives/accordion/">
-        <img src="https://arara.dev/primitives/accordion.jpg" alt="SolidJS Accordion">
+      <a href="https://ararajs.vercel.app/docs/primitives/accordion/">
+        <img src="https://ararajs.vercel.app/primitives/accordion.jpg" alt="SolidJS Accordion">
         <p>Sine Wave</p>
       </a>
     </td>
     <td align="center" width=33%>
-      <a href="https://arara.dev/docs/primitives/dialog/">
-        <img src="https://arara.dev/primitives/dialog.jpg" alt="SolidJS Dialog">
+      <a href="https://ararajs.vercel.app/docs/primitives/dialog/">
+        <img src="https://ararajs.vercel.app/primitives/dialog.jpg" alt="SolidJS Dialog">
         <p>Spring</p>
       </a>
     </td>
     <td align="center" width=33%>
-        <img src="https://arara.dev/primitives/disclosure.jpg" alt="SolidJS Disclosure">
+        <img src="https://ararajs.vercel.app/primitives/disclosure.jpg" alt="SolidJS Disclosure">
         <p>More to come...</p>
     </td>
   </tr>

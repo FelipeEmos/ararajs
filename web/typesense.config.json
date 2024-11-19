@@ -1,10 +1,10 @@
 {
   "index_name": "arara",
   "start_urls": [
-    "https://arara.dev/docs/"
+    "https://ararajs.vercel.app/docs/"
   ],
   "sitemap_urls": [
-    "https://arara.dev/sitemap-index.xml"
+    "https://ararajs.vercel.app/sitemap-index.xml"
   ],
   "selectors": {
     "lvl0": "article h1",
