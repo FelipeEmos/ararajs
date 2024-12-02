@@ -1,5 +1,5 @@
 {
-  "name": "@arara/monorepo",
+  "name": "@ararajs/monorepo",
   "private": true,
   "description": "SolidJS animation primitives using signals, useful for procedural and highly reactive animations",
   "homepage": "https://ararajs.vercel.app/",
@@ -13,10 +13,10 @@
     "build": "turbo run build",
     "ci:publish": "pnpm build && pnpm publish -r --access public",
     "clean": "turbo run clean && rm -rf .turbo node_modules",
-    "dev:arara": "turbo watch dev --filter=@arara/dev",
-    "dev:web": "turbo watch dev --filter=@arara/web",
+    "dev:arara": "turbo watch dev --filter=@ararajs/dev",
+    "dev:web": "turbo watch dev --filter=@ararajs/web",
     "lint": "turbo run lint",
-    "preview:web": "turbo run preview --filter=@arara/web",
+    "preview:web": "turbo run preview --filter=@ararajs/web",
     "rp": "release-please"
   },
   "devDependencies": {
