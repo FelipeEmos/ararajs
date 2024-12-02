@@ -1,7 +1,6 @@
 ---
 import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
-import Background from '@components/Background'
 import LogoDark from '@assets/logo_dark.svg'
 import LogoLight from '@assets/logo_light.svg'
 import rubikWoff2 from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
@@ -34,7 +33,6 @@ import Topbar from '@components/Topbar.astro'
     <ThemeScript />
   </head>
   <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
-    <Background type="home" client:media="(min-width: 768px)" />
     <Topbar />
     <main class="mx-auto w-full max-w-7xl px-4">
       <div class="flex grow flex-col items-center pt-40">

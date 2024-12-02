@@ -2,7 +2,6 @@
 import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
 import '@assets/shiki.css'
-import Background from '@components/Background'
 import getApiReferenceHeadings from '@lib/typedoc/headings'
 import Head from '@components/Head.astro'
 import Navigation from '@components/docs/nav/Navigation.astro'
@@ -59,7 +58,6 @@ const { frontmatter, headings } = Astro.props
       is:inline></script>
   </head>
   <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
-    <Background type="docs" client:media="(min-width: 768px)" />
     <Topbar inDocs />
     <main class="mx-auto mt-24 w-full max-w-7xl">
       <div class="flex px-4 md:pl-0">
