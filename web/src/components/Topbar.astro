@@ -48,9 +48,14 @@ const { inDocs } = Astro.props
         inDocs !== true && (
           <a
             href="/docs/"
-            class="mr-2 rounded-lg bg-arara-300 px-4 py-2 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
+            class="group mr-2 flex flex-row gap-4 border-b-4 border-l-4 border-arara-200 bg-arara-100 px-6 py-4 text-lg transition-all duration-100 active:translate-y-0.5"
           >
-            View Docs
+            <div class="w-fit -scale-x-100 transition-all duration-300 group-hover:-translate-x-1 group-hover:translate-y-1 group-hover:-rotate-12 group-hover:-scale-x-125 group-hover:scale-y-125">
+              👀
+            </div>
+            <div class="inline-block flex-1 text-nowrap transition-all duration-300 group-hover:-translate-y-1">
+              View Docs
+            </div>
           </a>
         )
       }

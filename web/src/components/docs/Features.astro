@@ -10,7 +10,8 @@ const { features } = Astro.props
   {
     features.map((feature) => (
       <li class="flex min-h-[26px] space-x-2">
-        <svg
+        🐦️
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 36 36"
@@ -35,8 +36,8 @@ const { features } = Astro.props
               </clipPath>
             </defs>
           </>
-        </svg>
-        <span class="mt-0.5">{feature}</span>
+        </svg> */}
+        <span class="ml-2 mt-0.5">{feature}</span>
       </li>
     ))
   }
