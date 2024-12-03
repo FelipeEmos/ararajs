@@ -2,27 +2,39 @@
 import NavLink from '@components/docs/nav/NavLink.astro'
 ---
 
-<nav>
-  <p class="mb-1 ml-4 text-sm font-medium opacity-60">Overview</p>
+<nav class="space-y-8">
   <div>
+    <p
+      class="mb-1 pl-2 text-sm font-medium opacity-60 border-l-8 border-b-4 border-arara-blue"
+      >Overview</p
+    >
     <NavLink name="Introduction" href="/docs/" />
     <NavLink name="Getting Started" href="/docs/getting-started/" />
     <!-- <NavLink name="Overview" href="/docs/overview/" /> -->
   </div>
-  <p class="mb-1 ml-4 mt-6 text-sm font-medium opacity-60">Animation</p>
   <div>
+    <p
+      class="mb-1 pl-2 text-sm font-medium opacity-60 border-l-8 border-b-4 border-arara-blue"
+      >Animation</p
+    >
     <NavLink name="Animation" href="/docs/animation/overview/" />
     <NavLink name="Callback" href="/docs/animation/animation-callback/" />
     <NavLink name="Controller" href="/docs/animation/animation-controller/" />
     <NavLink name="Body" href="/docs/animation/body/" />
   </div>
-  <p class="mb-1 ml-4 mt-6 text-sm font-medium opacity-60">Primitives</p>
   <div>
+    <p
+      class="mb-1 pl-2 text-sm font-medium opacity-60 border-l-8 border-b-4 border-arara-blue"
+      >Primitives</p
+    >
     <NavLink name="Spring" href="/docs/primitives/spring/" />
     <NavLink name="Sine Wave" href="/docs/primitives/sine-wave/" />
   </div>
-  <p class="mb-1 ml-4 mt-6 text-sm font-medium opacity-60">Examples</p>
   <div>
+    <p
+      class="mb-1 pl-2 text-sm font-medium opacity-60 border-l-8 border-b-4 border-arara-blue"
+      >Examples</p
+    >
     <NavLink name="Hover Card" href="/docs/examples/hover-card/" />
   </div>
 </nav>

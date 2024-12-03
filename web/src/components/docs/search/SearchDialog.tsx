@@ -49,7 +49,7 @@ const SearchDialog = () => {
     >
       {(props) => (
         <>
-          <Dialog.Trigger class="group hidden w-52 items-center border border-arara-200 bg-arara-bg px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
+          <Dialog.Trigger class="group hidden w-52 items-center border border-arara-200 bg-arara-100/40 px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
