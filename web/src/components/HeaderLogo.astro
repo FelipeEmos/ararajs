@@ -1,0 +1,32 @@
+---
+import HeaderLogoDark from '@assets/header_logo_dark.svg'
+import HeaderLogoLight from '@assets/header_logo_light.svg'
+import LogoDark from '@assets/logo_dark.svg'
+import LogoLight from '@assets/logo_light.svg'
+
+interface Props {
+  tiny?: boolean;
+}
+
+const { tiny = false } = Astro.props;
+---
+
+<div class="w-fit lg:pointer-events-auto">
+  <a href="/" class="block">
+    <span class="sr-only">arara</span>
+    <img
+      src={tiny ? LogoDark.src : HeaderLogoDark.src}
+      alt="arara logo"
+      height={tiny ? 32 : 42}
+      width={tiny ? 32 : 136}
+      class="dark:hidden"
+    />
+    <img
+      src={tiny ? LogoLight.src : HeaderLogoLight.src}
+      alt="arara logo"
+      height={tiny ? 32 : 42}
+      width={tiny ? 32 : 136}
+      class="hidden dark:block"
+    />
+  </a>
+</div> 

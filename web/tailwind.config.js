@@ -1,6 +1,5 @@
 import aspectRatioPlugin from '@tailwindcss/aspect-ratio'
 import containerQueriesPlugin from '@tailwindcss/container-queries'
-import araraPlugin from '@corvu/tailwind'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import formsPlugin from '@tailwindcss/forms'
 import plugin from 'tailwindcss/plugin'
@@ -24,12 +23,14 @@ export default {
       fontFamily: {
         sans: ['Rubik Variable', ...defaultTheme.fontFamily.sans],
         mono: ['Mona Space', ...defaultTheme.fontFamily.sans],
+        'finger-paint': ['Finger Paint', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         arara: {
           text: 'hsl(var(--arara-text) / <alpha-value>)',
           'text-dark': 'hsl(var(--arara-text-dark) / <alpha-value>)',
           bg: 'hsl(var(--arara-bg) / <alpha-value>)',
+          'article-bg': 'hsl(var(--arara-article-bg) / <alpha-value>)',
           100: 'hsl(var(--arara-100) / <alpha-value>)',
           200: 'hsl(var(--arara-200) / <alpha-value>)',
           300: 'hsl(var(--arara-300) / <alpha-value>)',
@@ -73,12 +74,14 @@ export default {
           '20%,50%': { opacity: '0' },
         },
       },
+      boxShadow: {
+        'custom-inset': 'inset 0 0 10px 8px rgb(0 0 0)',
+      },
     },
   },
   plugins: [
     aspectRatioPlugin,
     containerQueriesPlugin,
-    araraPlugin,
     formsPlugin,
     typographyPlugin,
     plugin(function ({ addUtilities }) {

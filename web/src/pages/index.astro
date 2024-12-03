@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
+import Fonts from '@components/Fonts.astro'
 import Head from '@components/Head.astro'
 import LogoDark from '@assets/logo_dark.svg'
 import LogoLight from '@assets/logo_light.svg'
@@ -37,6 +38,7 @@ import Topbar from '@components/Topbar.astro'
       crossorigin="anonymous"
     />
     <ThemeScript />
+    <Fonts />
     <script
       defer
       data-domain="ararajs.vercel.app"
@@ -60,7 +62,9 @@ import Topbar from '@components/Topbar.astro'
             class="hidden h-40 dark:block md:h-52"
           />
           <h1 class="mt-5 text-center text-2xl font-medium md:text-3xl">
-            <span class="text-3xl font-bold md:text-4xl">AraraJS</span>
+            <span class="font-finger-paint text-3xl font-bold md:text-4xl"
+              >Arara<span class="text-gray-600">JS</span></span
+            >
             - animation primitives for SolidJS
           </h1>
           <p class="mt-6 max-w-2xl text-center text-lg font-normal">

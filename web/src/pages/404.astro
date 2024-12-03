@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
+import Fonts from '@components/Fonts.astro'
 import LogoDark from '@assets/logo_dark.svg'
 import LogoLight from '@assets/logo_light.svg'
 import rubikWoff2 from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
@@ -31,6 +32,7 @@ import Topbar from '@components/Topbar.astro'
       crossorigin="anonymous"
     />
     <ThemeScript />
+    <Fonts />
   </head>
   <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
     <Topbar />

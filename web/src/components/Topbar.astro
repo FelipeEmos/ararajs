@@ -1,7 +1,6 @@
 ---
 import Drawer from '@components/Drawer'
-import HeaderLogoDark from '@assets/header_logo_dark.svg'
-import HeaderLogoLight from '@assets/header_logo_light.svg'
+import HeaderLogo from '@components/HeaderLogo.astro'
 import Navigation from '@components/docs/nav/Navigation.astro'
 import SearchDialog from './docs/search/SearchDialog'
 import SearchDrawer from './docs/search/SearchDrawer'
@@ -22,38 +21,44 @@ const { inDocs } = Astro.props
 >
   <div
     class:list={[
-      'mx-auto flex h-[72px] max-w-7xl items-center justify-between rounded-b-xl border-b-4 px-3',
+      'mx-auto flex h-[68px] max-w-7xl items-center px-3 lg:bg-transparent',
       {
-        'border-arara-200 bg-arara-bg lg:border-transparent lg:bg-transparent':
-          inDocs,
-        'border-transparent': inDocs !== true,
+        'bg-arara-bg/95': inDocs,
       },
     ]}
   >
-    <a href="/" class="lg:pointer-events-auto">
-      <span class="sr-only">arara</span>
-      <img
-        src={HeaderLogoDark.src}
-        alt="arara logo"
-        height={42}
-        width={136}
-        class="dark:hidden"
-      />
-      <img
-        src={HeaderLogoLight.src}
-        alt="arara logo"
-        height={42}
-        width={136}
-        class="hidden dark:block"
-      />
-    </a>
-    <div class="flex items-center lg:pointer-events-auto">
+    <div class="flex flex-1 items-center lg:pointer-events-auto">
+      <Drawer client:media="(max-width: 767px)">
+        <Navigation />
+      </Drawer>
+      {inDocs === true && <SearchDrawer client:media="(max-width: 767px)" />}
+      <div class="hidden md:block md:flex-1">
+        <SearchDialog client:media="(min-width: 768px)" />
+      </div>
+    </div>
+    {
+      inDocs === true && (
+        <div class="lg:hidden">
+          <HeaderLogo />
+        </div>
+      )
+    }
+    <div class="flex flex-1 items-center justify-end lg:pointer-events-auto">
+      {
+        inDocs !== true && (
+          <a
+            href="/docs/"
+            class="mr-2 rounded-lg bg-arara-300 px-4 py-2 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
+          >
+            View Docs
+          </a>
+        )
+      }
       {
         inDocs === true && (
-          <>
-            <SearchDialog client:media="(min-width: 768px)" />
-            <SearchDrawer client:media="(max-width: 767px)" />
-          </>
+          <div class="mr-4 hidden lg:block">
+            <HeaderLogo tiny />
+          </div>
         )
       }
       <ThemeSelect client:idle />
@@ -77,9 +82,9 @@ const { inDocs } = Astro.props
             clip-rule="evenodd"></path>
         </svg>
       </a>
-      <Drawer client:media="(max-width: 767px)">
-        <Navigation />
-      </Drawer>
     </div>
   </div>
+  <div
+    class="h-4 w-full bg-gradient-to-b from-arara-bg/95 to-transparent lg:hidden"
+  ></div>
 </header>

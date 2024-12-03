@@ -49,7 +49,7 @@ const SearchDialog = () => {
     >
       {(props) => (
         <>
-          <Dialog.Trigger class="group hidden items-center rounded-md border border-arara-200 bg-arara-bg px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
+          <Dialog.Trigger class="group hidden w-52 items-center rounded-md border border-arara-200 bg-arara-bg px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -58,7 +58,7 @@ const SearchDialog = () => {
             >
               <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
             </svg>
-            <span class="ml-1 text-sm">Search</span>
+            <span class="ml-3 self-end flex-1 text-start text-sm ">Search</span>
             <kbd class="ml-1 min-w-6 rounded border border-arara-200 bg-arara-100 px-1 pb-px pt-1 text-center font-mono text-xs transition-colors group-hover:border-arara-300 group-hover:bg-arara-200 ">
               ⌘K
             </kbd>
