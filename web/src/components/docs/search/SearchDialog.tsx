@@ -49,7 +49,7 @@ const SearchDialog = () => {
     >
       {(props) => (
         <>
-          <Dialog.Trigger class="group hidden w-52 items-center rounded-md border border-arara-200 bg-arara-bg px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
+          <Dialog.Trigger class="group hidden w-52 items-center border border-arara-200 bg-arara-bg px-2 py-1.5 transition-colors hover:bg-arara-100 md:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -65,7 +65,7 @@ const SearchDialog = () => {
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay class="fixed inset-0 z-50 bg-black/50" />
-            <Dialog.Content class="fixed bottom-auto left-1/2 top-14 z-50 w-full max-w-[550px] -translate-x-1/2 overflow-hidden rounded-lg border border-arara-200 bg-arara-bg pt-4 duration-200 corvu-open:animate-in corvu-open:fade-in-0 corvu-open:zoom-in-[0.99] corvu-open:slide-in-from-left-1/2 corvu-open:slide-in-from-top-[20%] corvu-closed:animate-out corvu-closed:fade-out-0 corvu-closed:zoom-out-[0.99] corvu-closed:slide-out-to-left-1/2 corvu-closed:slide-out-to-top-[20%]">
+            <Dialog.Content class="corvu-open:animate-in corvu-open:fade-in-0 corvu-open:zoom-in-[0.99] corvu-open:slide-in-from-left-1/2 corvu-open:slide-in-from-top-[20%] corvu-closed:animate-out corvu-closed:fade-out-0 corvu-closed:zoom-out-[0.99] corvu-closed:slide-out-to-left-1/2 corvu-closed:slide-out-to-top-[20%] fixed bottom-auto left-1/2 top-14 z-50 w-full max-w-[550px] -translate-x-1/2 overflow-hidden border border-arara-200 bg-arara-bg pt-4 duration-200">
               <Search
                 searchValue={searchValue()}
                 setSearchValue={setSearchValue}

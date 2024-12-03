@@ -38,7 +38,7 @@ const NavDrawer: FlowComponent = (props) => {
                 })`,
               }}
             />
-            <Drawer.Content class="arara-transitioning:transition-transform arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] fixed inset-y-0 left-0 z-50 flex w-[230px] flex-col items-start bg-arara-bg after:absolute after:inset-y-0 after:right-[calc(100%-1px)] after:w-1/2 after:bg-inherit">
+            <Drawer.Content class="arara-transitioning:transition-transform arara-transitioning:duration-500 arara-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] fixed inset-y-0 left-0 z-50 flex w-64 flex-col items-start bg-arara-bg after:absolute after:inset-y-0 after:right-[calc(100%-1px)] after:w-1/2 after:bg-inherit">
               <div class="w-full overflow-y-auto pb-10 pl-3 pr-8 pt-8 scrollbar-thin">
                 {props.children}
               </div>

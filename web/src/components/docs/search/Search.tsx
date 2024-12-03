@@ -114,7 +114,7 @@ const Search = (props: {
           role="searchbox"
           spellcheck={false}
           value={props.searchValue}
-          class="w-full rounded border border-arara-200 bg-arara-bg px-3 py-2 ring-2 ring-arara-400 focus-visible:border focus-visible:border-arara-200 focus-visible:ring-2 focus-visible:ring-arara-400"
+          class="w-full border border-arara-200 bg-arara-bg px-3 py-2 ring-2 ring-arara-400 focus-visible:border focus-visible:border-arara-200 focus-visible:ring-2 focus-visible:ring-arara-400"
           onInput={(e) =>
             props.setSearchValue((e.target as HTMLInputElement).value)
           }
@@ -133,6 +133,7 @@ const Search = (props: {
             onKeyDown(e)
           }}
         />
+
         <Show when={props.searchValue}>
           <button
             class="absolute inset-y-0 right-0 p-2"
@@ -176,7 +177,7 @@ const Search = (props: {
           {(result) => (
             <For each={Object.entries(result())}>
               {([title, items]) => (
-                <section class="overflow-hidden rounded-md">
+                <section class="overflow-hidden">
                   <h2 class="bg-arara-200 p-2 text-sm font-bold">{title}</h2>
                   <ul role="listbox">
                     <For each={items}>

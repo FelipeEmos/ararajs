@@ -12,14 +12,24 @@ const isActive = href === Astro.url.pathname
 <a
   href={href}
   class:list={[
-    'block px-4 py-2 group transition-colors duration-75',
+    'relative group block px-4 py-2 transition-all duration-150',
     {
-      'hover:bg-arara-300': !isActive,
-      'bg-arara-100 ring-2 ring-arara-300/60': isActive,
+      // 'hover:bg-arara-200': !isActive,
+      'bg-arara-200': isActive,
     },
   ]}
 >
-  <span class="transition-transform duration-150 group-hover:translate-x-16">
-    {name}
-  </span>
+  <div class="relative transition-all duration-200 group-hover:translate-x-7">
+    <div class="opacity-100 group-hover:opacity-0">{name}</div>
+    <div
+      class="absolute left-0 top-1/2 -translate-y-1/2 font-finger-paint opacity-0 group-hover:opacity-100"
+    >
+      {name}
+    </div>
+  </div>
+  <div
+    class="rotate-y-180 absolute left-0 top-1/2 scale-x-[-1] -translate-y-1/2 opacity-0 transition-all duration-300 group-hover:scale-x-[-1.3] group-hover:scale-y-[1.3] group-hover:opacity-100 -rotate-45 group-hover:translate-x-2 group-hover:rotate-0"
+  >
+    🐦️
+  </div>
 </a>
