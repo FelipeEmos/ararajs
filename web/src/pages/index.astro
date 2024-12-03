@@ -3,11 +3,15 @@ import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
 import Fonts from '@components/Fonts.astro'
 import Head from '@components/Head.astro'
-import LogoDark from '@assets/logo_dark.svg'
-import LogoLight from '@assets/logo_light.svg'
+import LogoDark from '@assets/title_with_logo_dark.svg'
+import LogoLight from '@assets/title_with_logo_light.svg'
 import rubikWoff2 from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
 import ThemeScript from '@components/ThemeScript.astro'
 import Topbar from '@components/Topbar.astro'
+import { HoverCard } from '@examples/hover-card/HoverCard'
+import { Spring2DDemo } from '@examples/spring/Spring2DDemo'
+import { SineWave2DDemo } from '@examples/sine-wave/SineWave2DDemo'
+import araraImage from '@assets/examples/arara_blue.jpg'
 ---
 
 <!doctype html>
@@ -49,7 +53,8 @@ import Topbar from '@components/Topbar.astro'
   <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
     <Topbar />
     <main class="mx-auto w-full max-w-7xl px-4 pb-20">
-      <div class="flex grow flex-col items-center pt-40">
+      <!-- Hero Section -->
+      <div class="flex grow flex-col items-center pt-20 md:pt-40">
         <div class="flex flex-col items-center">
           <img
             src={LogoDark.src}
@@ -61,21 +66,72 @@ import Topbar from '@components/Topbar.astro'
             alt="arara logo light"
             class="hidden h-40 dark:block md:h-52"
           />
-          <h1 class="mt-5 text-center text-2xl font-medium md:text-3xl">
-            <span class="font-finger-paint text-3xl font-bold md:text-4xl"
-              >Arara<span class="text-gray-600">JS</span></span
-            >
-            - animation primitives for SolidJS
+          <h1 class="mt-5 text-center text-2xl md:text-3xl">
+            SolidJS Animations <u class="text-nowrap">with signals</u>
           </h1>
-          <p class="mt-6 max-w-2xl text-center text-lg font-normal">
-            Animate your signal values, useful for highly reactive animations
-          </p>
-          <a
-            href="/docs/"
-            class="mt-6 rounded-lg bg-arara-300 px-4 py-3 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
-            >Get started</a
-          >
+          <div class="mt-8 flex gap-4">
+            <a
+              href="/docs/"
+              class="rounded-lg bg-arara-300 px-6 py-3 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
+            >
+              Get started
+            </a>
+            <a
+              href="/docs/primitives/spring/"
+              class="rounded-lg border-2 border-arara-300 px-6 py-3 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
+            >
+              View Docs
+            </a>
+          </div>
         </div>
+      </div>
+
+      <!-- Demo Sections -->
+      <div class="mt-20 grid gap-20">
+        <!-- Interactive Card Demo -->
+        <section class="grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Interactive Animations</h2>
+            <p class="text-lg text-arara-text/80">
+              Create rich, physics-based interactions by combining springs and
+              sine waves. Perfect for hover effects, micro-interactions, and
+              complex UI animations.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <HoverCard client:load imgSrc={araraImage.src} class="max-w-80" />
+          </div>
+        </section>
+
+        <!-- Spring Physics Demo -->
+        <section class="grid gap-8 md:grid-cols-2 items-center">
+          <div class="md:order-2">
+            <h2 class="text-3xl font-bold mb-4">Spring Physics</h2>
+            <p class="text-lg text-arara-text/80">
+              Natural-feeling animations powered by spring physics. Customize
+              stiffness and damping for the perfect feel. Ideal for drag
+              interactions and responsive UI elements.
+            </p>
+          </div>
+          <div class="md:order-1">
+            <Spring2DDemo client:load />
+          </div>
+        </section>
+
+        <!-- Sine Wave Demo -->
+        <section class="grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Periodic Motion</h2>
+            <p class="text-lg text-arara-text/80">
+              Create smooth, cyclical animations with sine waves. Perfect for
+              looping animations, loading indicators, and continuous motion
+              effects.
+            </p>
+          </div>
+          <div>
+            <SineWave2DDemo client:load />
+          </div>
+        </section>
       </div>
     </main>
   </body></html
