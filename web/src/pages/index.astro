@@ -3,6 +3,10 @@ import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
 import Fonts from '@components/Fonts.astro'
 import Head from '@components/Head.astro'
+import SolidJSLogo from '@assets/res/solidjs_logo.svg'
+import ThreeJSLogo from '@assets/res/threejs_logo.svg'
+import ThreeJSLogoDark from '@assets/res/threejs_logo_dark.svg'
+import HtmlLogo from '@assets/res/html_logo.png'
 import LogoDark from '@assets/title_with_logo_dark.svg'
 import LogoLight from '@assets/title_with_logo_light.svg'
 import rubikWoff2 from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
@@ -99,7 +103,7 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
             class="h-20 bg-arara-200/70 [clip-path:ellipse(100%_300px_at_center_380%)] md:h-32 md:[clip-path:ellipse(100%_300px_at_center_280%)]"
           ></div>
           <div
-            class="flex flex-col items-center bg-arara-200/70 pb-28 pt-4 md:pt-12"
+            class="flex flex-col items-center bg-arara-200/70 py-12 pt-4 md:pb-28 md:pt-12"
           >
             <div class="grid max-w-7xl items-center gap-8 md:grid-cols-2">
               <div class="px-8 md:px-12">
@@ -129,7 +133,7 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
         </section>
 
         <!-- Spring Physics Demo -->
-        <section class="flex w-full justify-center">
+        <section class="flex w-full justify-center md:py-12">
           <div
             class="grid w-full max-w-7xl items-center gap-8 px-8 md:grid-cols-2 md:px-12"
           >
@@ -146,7 +150,7 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
               </p>
             </div>
             <div class="md:order-1">
-              <Spring2DDemo client:load />
+              <Spring2DDemo class="bg-arara-text/90" client:load />
             </div>
           </div>
         </section>
@@ -182,6 +186,94 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
             <div class="flex flex-col gap-8 md:order-2">
               <SliderSineWaveDemo client:load class="bg-arara-text/90" />
               <SineWave2DDemo client:load class="bg-arara-text/90" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Render Agnostic Section -->
+        <section class="flex w-full justify-center py-12">
+          <div class="w-full max-w-7xl px-8 md:px-12">
+            <h2 class="mb-8 text-left text-3xl font-bold">Render Agnostic</h2>
+            <p class="mb-12 text-left text-lg">
+              Use AraraJS animations with any renderer that SolidJS can control
+            </p>
+
+            <div class="grid gap-8 md:grid-cols-3">
+              <!-- DOM Card -->
+              <a
+                href="https://wikipedia.org/wiki/Document_Object_Model"
+                class="flex flex-col border-l-8 border-arara-400 bg-arara-200/70 p-8 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src={HtmlLogo.src}
+                  alt="HTML5 Logo"
+                  class="mb-4 size-24 py-1"
+                />
+                <h3 class="mb-4 text-2xl font-semibold">DOM</h3>
+                <p class="text-left"> Animate HTML elements directly </p>
+                <p class="pt-3 text-left">
+                  Manipulate attributes like <i>transform</i>, <i>opacity</i>,
+                  <i>color</i>...
+                </p>
+              </a>
+
+              <!-- Three.js Card -->
+              <a
+                href="https://threejs.org/"
+                class="flex flex-col border-l-8 border-arara-400 bg-arara-200/70 p-8 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src={ThreeJSLogo.src}
+                  alt="Three.js Logo"
+                  class="mb-4 size-24 py-1 dark:hidden"
+                />
+                <img
+                  src={ThreeJSLogoDark.src}
+                  alt="Three.js Logo"
+                  class="mb-4 hidden size-24 py-1 dark:block"
+                />
+                <h3 class="mb-4 text-2xl font-semibold">Three.js</h3>
+                <p class="text-left">
+                  Create stunning 3D animations by plugging it into Three.js
+                </p>
+              </a>
+
+              <!-- Custom Renderer Card -->
+              <a
+                href="https://docs.solidjs.com/"
+                class="group flex flex-col border-l-8 border-arara-400 bg-arara-200/70 p-8 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div class="relative mb-4 size-24">
+                  <span
+                    class="absolute flex size-24 items-center justify-center text-[72px] transition-opacity duration-500 group-hover:opacity-0"
+                    >🎨</span
+                  >
+                  <img
+                    src={SolidJSLogo.src}
+                    alt="SolidJS Logo"
+                    class="absolute size-24 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  />
+                </div>
+                <h3
+                  class="mb-4 flex flex-row flex-wrap gap-1 text-2xl font-semibold"
+                >
+                  Custom
+                  <div class="relative">
+                    <span
+                      class="transition-opacity duration-500 group-hover:opacity-0"
+                      >Renderers</span
+                    >
+                    <span
+                      class="absolute left-0 rounded-sm bg-arara-text px-1 text-arara-article-bg opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                      >SolidJS</span
+                    >
+                  </div>
+                </h3>
+                <p class="text-left">
+                  Works with any custom renderer or visualization library that
+                  <span class="group-hover:font-bold">SolidJS</span> can control
+                </p>
+              </a>
             </div>
           </div>
         </section>

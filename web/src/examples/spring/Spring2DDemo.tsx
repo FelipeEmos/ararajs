@@ -1,6 +1,7 @@
 import { createElementSize } from '@solid-primitives/resize-observer'
 import { createSignal } from 'solid-js'
-import { createSpring, createSpring2D, vec2 } from 'ararajs'
+import { createSpring2D, vec2 } from 'ararajs'
+import { cn } from '@lib/cn'
 import { createMousePosition } from '@solid-primitives/mouse'
 import { getDOMRootPosition } from './getDOMRootPosition'
 
@@ -41,12 +42,16 @@ export function Spring2DDemo() {
 
   return (
     <div
-      class="relative min-h-64 w-full overflow-hidden rounded-lg bg-arara-100 p-8 shadow-inner"
+      class="group relative min-h-64 w-full overflow-hidden rounded-lg bg-arara-text/90 p-8 shadow-inner"
       ref={setContainer}
     >
-      <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-        Move Mouse
+      <div class="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 text-arara-article-bg transition-opacity duration-500 group-hover:opacity-0">
+        <PointerSVG class="ml-auto size-12 animate-bounce pb-0 text-arara-article-bg" />
+        <div class="text-center text-xl transition-opacity">
+          Move <span class="bg-arara-bg p-1 text-arara-text">Mouse</span>
+        </div>
       </div>
+
       <div
         class="z-10 size-8 rounded-full bg-emerald-500 shadow-xl"
         style={{
@@ -62,5 +67,23 @@ export function Spring2DDemo() {
         }}
       />
     </div>
+  )
+}
+
+function PointerSVG(props: { class?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class={cn('size-32', props.class)}
+      viewBox="0 0 36 36"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12.586 12.586 19 19" />
+      <path d="M3.688 3.037a.497.497 0 0 0-.651.651l6.5 15.999a.501.501 0 0 0 .947-.062l1.569-6.083a2 2 0 0 1 1.448-1.479l6.124-1.579a.5.5 0 0 0 .063-.947z" />
+    </svg>
   )
 }
