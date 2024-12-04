@@ -96,7 +96,7 @@ export function HoverCard(props: { imgSrc: string; class: string }) {
   return (
     <div
       class={cn(
-        'relative flex min-h-32 w-full flex-col overflow-hidden rounded-lg bg-gray-800 p-4 text-white shadow-lg',
+        'relative flex min-h-32 border-2 border-gray-700 w-full flex-col overflow-hidden rounded-lg bg-gray-800 p-4 text-white shadow-lg',
         props.class,
       )}
       onMouseEnter={() => setIsHovering(true)}
@@ -132,7 +132,7 @@ export function HoverCard(props: { imgSrc: string; class: string }) {
         />
         <div class="pointer-events-none absolute -inset-2 shadow-[inset_4px_4px_20px_20px_rgba(0,0,0,0.3)] ring-[16px] ring-inset ring-black/10" />
       </div>
-      <h3 class="font-thin">Hover Me</h3>
+      <div class="py-4 text-2xl font-thin">Hover Me</div>
     </div>
   )
 }
