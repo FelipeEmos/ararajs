@@ -134,7 +134,7 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
               </p>
             </div>
             <div class="md:order-1">
-              <Spring2DDemo class="bg-arara-text/90" client:load />
+              <Spring2DDemo client:load />
             </div>
           </div>
         </section>
@@ -168,8 +168,16 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
               />
             </div>
             <div class="flex flex-col gap-8 md:order-2">
-              <SliderSineWaveDemo client:load class="bg-arara-text/90" />
-              <SineWave2DDemo client:load class="bg-arara-text/90" />
+              <SliderSineWaveDemo
+                client:load
+                class="bg-arara-text/90"
+                ballClass="bg-arara-article-bg/90"
+              />
+              <SineWave2DDemo
+                client:load
+                class="bg-arara-text/90"
+                ballClass="bg-arara-article-bg/90"
+              />
             </div>
           </div>
         </section>
