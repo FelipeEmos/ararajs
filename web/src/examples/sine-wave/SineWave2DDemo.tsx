@@ -48,7 +48,7 @@ export function SineWave2DDemo(props: { class?: string; ballClass?: string }) {
     >
       <div
         class={cn(
-          'size-10 rounded-full bg-arara-bg shadow-xl',
+          'size-10 rounded-full bg-arara-text/70 shadow-xl',
           props.ballClass,
         )}
         style={{

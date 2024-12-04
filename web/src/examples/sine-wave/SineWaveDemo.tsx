@@ -35,7 +35,10 @@ export function SineWaveDemo(props: {
       ref={setContainer}
     >
       <div
-        class={cn('size-8 rounded-full bg-arara-bg shadow-xl', props.ballClass)}
+        class={cn(
+          'size-8 rounded-full bg-arara-text/70 shadow-xl',
+          props.ballClass,
+        )}
         style={{
           transform: `translate(${xOffset()}px`,
         }}

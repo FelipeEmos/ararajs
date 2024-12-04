@@ -45,12 +45,7 @@ export function Spring2DDemo() {
       class="group relative min-h-64 w-full overflow-hidden rounded-lg bg-arara-text/90 p-8 shadow-inner"
       ref={setContainer}
     >
-      <div class="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 text-arara-article-bg transition-opacity duration-500 group-hover:opacity-0">
-        <PointerSVG class="ml-auto size-12 animate-bounce pb-0 text-arara-article-bg" />
-        <div class="text-center text-xl transition-opacity">
-          Move <span class="bg-arara-bg p-1 text-arara-text">Mouse</span>
-        </div>
-      </div>
+      <MoveMouseOverlay />
 
       <div
         class="z-10 size-8 rounded-full bg-emerald-500 shadow-xl"
@@ -66,6 +61,17 @@ export function Spring2DDemo() {
           top: `${target()[1] + padding}px`,
         }}
       />
+    </div>
+  )
+}
+
+function MoveMouseOverlay() {
+  return (
+    <div class="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 text-arara-article-bg transition-opacity duration-500 group-hover:opacity-0">
+      <PointerSVG class="ml-auto size-12 animate-bounce pb-0 text-arara-article-bg" />
+      <div class="text-center text-xl transition-opacity">
+        Move <span class="bg-arara-bg p-1 text-arara-text">Mouse</span>
+      </div>
     </div>
   )
 }

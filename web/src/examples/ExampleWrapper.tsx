@@ -1,5 +1,5 @@
-import { createSignal, type FlowComponent, For, type JSX, Show } from 'solid-js'
-import clsx from 'clsx'
+import { createSignal, type FlowComponent, For, type JSX } from 'solid-js'
+import { cn } from '@lib/cn'
 
 type CodeSnippets = {
   name: string
@@ -9,120 +9,145 @@ type CodeSnippets = {
   }[]
 }[]
 
-const ExampleWrapper: FlowComponent<{
+type ExampleWrapperProps = {
   children: JSX.Element
   codeSnippets: CodeSnippets
   height?: 'heading' | 'dynamic'
+  contentClass?: string
   [key: string]: JSX.Element | CodeSnippets
-}> = (props) => {
-  const [viewCode, setViewCode] = createSignal(false)
-  const [activeExample, setActiveExample] = createSignal(0)
+}
+
+export default function ExampleWrapper(props: ExampleWrapperProps) {
   const [activeTab, setActiveTab] = createSignal(0)
 
   return (
-    <div class="not-prose my-3">
-      <div
-        class={clsx(
-          'flex h-14 items-center justify-between rounded-t-xl border-x-4 border-t-4 border-arara-400 p-2',
-          {
-            'bg-arara-bg': viewCode(),
-            'bg-arara-100': !viewCode(),
-          },
-        )}
-      >
-        <Show
-          when={viewCode() && props.codeSnippets.length > 1}
-          fallback={<div />}
+    <div class="not-prose mb-12 border-2 border-arara-400/30 shadow-md">
+      {/* Tabs */}
+      <div class="flex overflow-x-auto border-b border-arara-400/30 bg-arara-bg">
+        <Tab
+          isActive={activeTab() === 0}
+          onClick={() => setActiveTab(0)}
+          isShowIcon
         >
-          <div class="flex items-center space-x-2">
-            <select
-              value={activeExample()}
-              onInput={(e) => {
-                setActiveExample(parseInt(e.currentTarget.value, 10))
-                setActiveTab(0)
-              }}
-              class="cursor-pointer rounded-lg border-2 border-arara-400 bg-arara-bg !bg-caret-dark bg-[length:16px_16px] pb-1 pl-3 pr-10 pt-[7px] text-sm dark:!bg-caret-light"
-              aria-label="Select template"
+          Preview
+        </Tab>
+        <For each={props.codeSnippets[0].files}>
+          {(file, index) => (
+            <Tab
+              isActive={activeTab() === index() + 1}
+              onClick={() => setActiveTab(index() + 1)}
             >
-              <For each={props.codeSnippets}>
-                {(snippet, index) => (
-                  <option value={index()}>{snippet.name}</option>
-                )}
-              </For>
-            </select>
-          </div>
-        </Show>
-        <button
-          class={clsx('rounded p-2 hover:bg-arara-400', {
-            'bg-arara-400 text-arara-dark': viewCode(),
-          })}
-          onClick={() => setViewCode((viewCode) => !viewCode)}
-        >
-          <span class="sr-only">View code</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="size-5"
-          >
-            <g>
-              <g>
-                <rect
-                  width="24"
-                  height="24"
-                  transform="rotate(90 12 12)"
-                  opacity="0"
-                />
-                <path d="M8.64 5.23a1 1 0 0 0-1.41.13l-5 6a1 1 0 0 0 0 1.27l4.83 6a1 1 0 0 0 .78.37 1 1 0 0 0 .78-1.63L4.29 12l4.48-5.36a1 1 0 0 0-.13-1.41z" />
-                <path d="M21.78 11.37l-4.78-6a1 1 0 0 0-1.41-.15 1 1 0 0 0-.15 1.41L19.71 12l-4.48 5.37a1 1 0 0 0 .13 1.41A1 1 0 0 0 16 19a1 1 0 0 0 .77-.36l5-6a1 1 0 0 0 .01-1.27z" />
-              </g>
-            </g>
-          </svg>
-        </button>
+              {file.fileName}
+            </Tab>
+          )}
+        </For>
       </div>
-      <Show when={!viewCode()}>
+
+      {/* Content */}
+      <div>
+        {/* Preview Panel */}
         <div
-          class={clsx(
-            'relative rounded-b-xl bg-arara-400 after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_center,_#7250AE20_2px,_transparent_0)] after:bg-[length:24px_24px]',
+          class={cn(
+            'w-full bg-arara-200/10',
             {
+              hidden: activeTab() !== 0,
               'h-[300px] @xl:h-[400px]': props.height === 'heading',
               'h-[200px]': !props.height,
             },
+            props.contentClass,
           )}
         >
-          <div class="relative z-10 flex size-full flex-col items-center">
+          <div class="flex size-full items-center justify-center">
             {props.children}
           </div>
         </div>
-      </Show>
-      <Show when={viewCode()}>
-        <div class="space-x-2 border-x-4 border-arara-400 bg-arara-bg px-2">
-          <For each={props.codeSnippets[activeExample()].files}>
-            {(file, index) => (
-              <button
-                class={clsx(
-                  'rounded-t-md p-2 font-mono text-xs hover:bg-arara-400',
-                  {
-                    'bg-arara-400': activeTab() === index(),
-                  },
-                )}
-                onClick={() => setActiveTab(index())}
-              >
-                {file.fileName}
-              </button>
-            )}
-          </For>
-        </div>
-        <div class="overflow-hidden rounded-b-xl border-4 border-arara-400 text-sm [&>astro-slot>div>pre]:max-h-[655px] [&>astro-slot]:grid">
-          {
-            props[
-              props.codeSnippets[activeExample()].files[activeTab()].slotName
-            ] as JSX.Element
-          }
-        </div>
-      </Show>
+
+        {/* Code Panels */}
+        <For each={props.codeSnippets[0].files}>
+          {(file, index) => (
+            <div
+              class={cn('w-full', {
+                hidden: activeTab() !== index() + 1,
+              })}
+            >
+              {props[file.slotName] as JSX.Element}
+            </div>
+          )}
+        </For>
+      </div>
     </div>
   )
 }
 
-export default ExampleWrapper
+type TabProps = {
+  isActive: boolean
+  onClick: () => void
+  children: JSX.Element
+  isShowIcon?: boolean
+}
+
+const Tab: FlowComponent<TabProps> = (props) => {
+  const iconClass = 'size-4'
+
+  return (
+    <button
+      class={cn(
+        'border-b-4 px-4 py-2 text-sm font-medium text-nowrap flex flex-col gap-2',
+        props.isActive
+          ? 'border-arara-400 bg-arara-200/40 text-arara-text font-bold'
+          : 'border-transparent text-arara-text/40 hover:text-arara-text',
+      )}
+      onClick={props.onClick}
+    >
+      {props.isShowIcon === true ? (
+        <ShowIcon class={iconClass} />
+      ) : (
+        <CodeIcon class={iconClass} />
+      )}
+      {props.children}
+    </button>
+  )
+}
+
+function ShowIcon(props: { class?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class={props.class}
+    >
+      <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" />
+      <path d="m6.2 5.3 3.1 3.9" />
+      <path d="m12.4 3.4 3.1 4" />
+      <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+    </svg>
+  )
+}
+
+function CodeIcon(props: { class?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class={props.class}
+    >
+      <path d="m18 16 4-4-4-4" />
+      <path d="m6 8-4 4 4 4" />
+      <path d="m14.5 4-5 16" />
+    </svg>
+  )
+}

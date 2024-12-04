@@ -20,29 +20,31 @@ export function SpringDemo() {
   }))
 
   return (
-    <div
-      class="relative w-full flex justify-center overflow-hidden bg-arara-100 p-8 border-4 border-arara-400 shadow-inner"
-      ref={setContainer}
-    >
+    <div class="flex w-full flex-col items-center">
+      <div
+        class="relative flex h-24 w-full justify-center overflow-hidden p-8"
+        ref={setContainer}
+      >
+        <div
+          class="absolute left-8 top-8 z-10 size-8 rounded-full bg-emerald-500 shadow-xl"
+          style={{
+            transform: `translate(${body.position}px`,
+          }}
+          ref={setBall}
+        />
+        <div
+          class="absolute left-8 top-8 size-8 rounded-full bg-rose-400 shadow-xl"
+          style={{
+            transform: `translate(${target()}px`,
+          }}
+        />
+      </div>
       <button
         onClick={() => setTargetState(!targetState())}
-        class="mt-6 rounded-lg bg-arara-300 px-4 py-3 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
+        class="flex w-fit flex-row items-center gap-4 rounded-lg bg-arara-300 px-4 py-3 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
       >
-        Toggle Target
+        <div class="size-4 rounded-full bg-rose-400" /> Change Target
       </button>
-      <div
-        class="absolute z-10 left-8 top-8 size-8 rounded-full bg-emerald-500 shadow-xl"
-        style={{
-          transform: `translate(${body.position}px`,
-        }}
-        ref={setBall}
-      />
-      <div
-        class="absolute left-8 top-8 size-8 rounded-full bg-rose-400 shadow-xl"
-        style={{
-          transform: `translate(${target()}px`,
-        }}
-      />
     </div>
   )
 }
