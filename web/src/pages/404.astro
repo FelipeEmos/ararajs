@@ -14,37 +14,49 @@ import Topbar from '@components/Topbar.astro'
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>arara</title>
+    <title>404 - arara</title>
     <ThemeScript />
     <Fonts />
   </head>
-  <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
+  <body
+    class="flex min-h-screen flex-col bg-arara-bg text-arara-text antialiased"
+  >
     <Topbar />
-    <main class="mx-auto w-full max-w-7xl px-4">
-      <div class="flex grow flex-col items-center pt-40">
-        <div class="flex flex-col items-center">
+
+    <main class="flex grow flex-col items-center">
+      <div class="flex max-w-7xl flex-col items-center px-8 pt-32">
+        <div class="flex flex-col items-center md:flex-row md:gap-8">
           <img
             src={LogoDark.src}
             alt="arara logo dark"
-            class="h-40 dark:hidden"
+            class="h-40 dark:hidden md:h-52"
           />
           <img
             src={LogoLight.src}
             alt="arara logo light"
-            class="hidden h-40 dark:block"
+            class="hidden h-40 dark:block md:h-52"
           />
-          <h1
-            class="mt-5 flex items-center space-x-2 text-center text-2xl font-medium md:text-3xl"
-          >
-            <span class="text-4xl font-bold md:text-4xl">404</span>
-            <span>- page not found</span>
+
+          <h1 class="mt-8 flex flex-col items-center gap-4 text-center md:mt-0">
+            <span class="font-finger-paint text-6xl font-bold md:text-8xl"
+              >404</span
+            >
+            <span class="text-2xl md:text-3xl">Page not found</span>
           </h1>
-          <a
-            href="/"
-            class="mt-6 rounded-lg bg-arara-300 px-4 py-3 text-lg font-medium transition-all duration-100 hover:translate-y-0.5"
-            >Go back</a
-          >
         </div>
+      </div>
+
+      <div class="relative -mt-4 flex w-full flex-1 flex-col">
+        <div
+          class="h-32 w-full bg-arara-200/70 [clip-path:ellipse(100%_300px_at_center_280%)]"
+        ></div>
+        <div class="w-full flex-1 bg-arara-200/70 py-4"></div>
+        <a
+          href="/"
+          class="absolute -top-4 left-1/2 mt-12 -translate-x-1/2 rounded-lg border-2 border-arara-400 bg-arara-bg px-6 py-3 text-lg font-medium shadow-xl transition-all duration-100 hover:-translate-y-1 hover:bg-arara-400 active:translate-y-0.5"
+        >
+          Go back home
+        </a>
       </div>
     </main>
   </body></html
