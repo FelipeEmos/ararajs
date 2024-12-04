@@ -154,9 +154,6 @@ importers:
       '@corvu/tooltip':
         specifier: ^0.2.1
         version: 0.2.1(solid-js@1.9.2)
-      '@fontsource-variable/rubik':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@kobalte/core':
         specifier: ^0.13.7
         version: 0.13.7(solid-js@1.9.2)
@@ -966,9 +963,6 @@ packages:
 
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
-
-  '@fontsource-variable/rubik@5.1.0':
-    resolution: {integrity: sha512-gmh3xts3ARd0ktWW/VX+MVxhJr6TxHVeGLsQEaQXDVxvuNjn5WRucfKfXK3EVN2BcgRxUe1Fctv/v9zgEd0DUg==}
 
   '@google-automations/git-file-utils@2.0.0':
     resolution: {integrity: sha512-F6h8npq7rt60fr3W+cil/zXbIiF9Hj8JzaN3LNh7uBIJpsWnjL9ObV84qW/345boMheDdo/n+cItmvCfsn0lLA==}
@@ -4706,8 +4700,6 @@ snapshots:
       '@floating-ui/utils': 0.2.8
 
   '@floating-ui/utils@0.2.8': {}
-
-  '@fontsource-variable/rubik@5.1.0': {}
 
   '@google-automations/git-file-utils@2.0.0':
     dependencies:

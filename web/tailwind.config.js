@@ -21,8 +21,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Rubik Variable', ...defaultTheme.fontFamily.sans],
-        mono: ['Mona Space', ...defaultTheme.fontFamily.sans],
+        sans: ['Nunito Sans', ...defaultTheme.fontFamily.sans],
+        mono: ['Source Code Pro', ...defaultTheme.fontFamily.sans],
         'finger-paint': ['Finger Paint', ...defaultTheme.fontFamily.sans],
       },
       colors: {

@@ -1,11 +1,9 @@
 ---
-import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
 import '@assets/shiki.css'
 import getApiReferenceHeadings from '@lib/typedoc/headings'
 import Head from '@components/Head.astro'
 import Navigation from '@components/docs/nav/Navigation.astro'
-import rubikWoff2 from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
 import TableOfContents from '@components/docs/TableOfContents'
 import ThemeScript from '@components/ThemeScript.astro'
 import Topbar from '@components/Topbar.astro'
@@ -35,20 +33,6 @@ const { frontmatter, headings } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <Head {...frontmatter} />
     <link rel="canonical" href={Astro.url} />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href={rubikWoff2}
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/MonaspaceNeon-Regular-v1.101.woff2"
-      crossorigin="anonymous"
-    />
     <ThemeScript />
     <script
       defer
@@ -68,7 +52,7 @@ const { frontmatter, headings } = Astro.props
         </div>
         <div class="-mt-6 grow lg:-mt-20">
           <article
-            class="prose max-w-[800px] bg-arara-article-bg px-8 pt-8 shadow-custom-inset shadow-arara-bg @container prose-headings:scroll-mt-32 prose-h1:mb-4 prose-h1:font-finger-paint prose-h1:text-4xl prose-h1:font-black prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-extrabold prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-xl prose-h3:font-bold prose-p:mb-2 prose-p:max-w-3xl prose-p:!leading-7 prose-a:text-arara-link prose-a:underline hover:prose-a:text-arara-link-hover prose-blockquote:my-4 prose-blockquote:border-l-8 prose-blockquote:border-arara-400 prose-blockquote:bg-arara-100 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:whitespace-nowrap prose-code:rounded prose-code:border prose-code:border-arara-200 prose-code:bg-arara-100 prose-code:px-1.5 prose-code:pb-0.5 prose-code:pt-1 prose-code:text-sm prose-ol:mb-3 prose-ol:ml-[21px] prose-ol:list-outside prose-ol:list-decimal prose-ul:mb-3 prose-ul:ml-[21px] prose-ul:list-outside prose-ul:list-disc prose-li:mb-1 md:ml-60 md:px-12 md:pt-12 lg:prose-headings:scroll-mt-2"
+            class="prose max-w-[800px] bg-arara-article-bg px-8 pt-8 @container prose-headings:scroll-mt-32 prose-h1:mb-4 prose-h1:font-finger-paint prose-h1:text-4xl prose-h1:font-black prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-extrabold prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-xl prose-h3:font-bold prose-p:mb-2 prose-p:max-w-3xl prose-p:!leading-7 prose-a:text-arara-link prose-a:underline hover:prose-a:text-arara-link-hover prose-blockquote:my-4 prose-blockquote:border-l-8 prose-blockquote:border-arara-400 prose-blockquote:bg-arara-100 prose-blockquote:px-4 prose-blockquote:py-2 prose-code:whitespace-nowrap prose-code:rounded prose-code:border prose-code:border-arara-200 prose-code:bg-arara-100 prose-code:px-1.5 prose-code:pb-0.5 prose-code:pt-1 prose-code:text-sm prose-ol:mb-3 prose-ol:ml-[21px] prose-ol:list-outside prose-ol:list-decimal prose-ul:mb-3 prose-ul:ml-[21px] prose-ul:list-outside prose-ul:list-disc prose-li:mb-1 md:ml-60 md:px-12 md:pt-12 md:shadow-custom-inset md:shadow-arara-bg lg:prose-headings:scroll-mt-2"
           >
             <slot />
             <div

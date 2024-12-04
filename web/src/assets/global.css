@@ -35,14 +35,6 @@ html.dark {
   transition: none !important;
 }
 
-@font-face {
-  font-family: 'Mona Space';
-  font-style: normal;
-  font-display: swap;
-  font-weight: normal;
-  src: url('/fonts/MonaspaceNeon-Regular-v1.101.woff2') format('woff2');
-}
-
 :root {
   --shadow-color: var(--arara-article-bg);
 }

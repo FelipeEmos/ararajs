@@ -1,5 +1,4 @@
 ---
-import '@fontsource-variable/rubik/wght.css'
 import '@assets/global.css'
 import Fonts from '@components/Fonts.astro'
 import Head from '@components/Head.astro'
@@ -9,7 +8,6 @@ import ThreeJSLogoDark from '@assets/res/threejs_logo_dark.svg'
 import HtmlLogo from '@assets/res/html_logo.png'
 import LogoDark from '@assets/title_with_logo_dark.svg'
 import LogoLight from '@assets/title_with_logo_light.svg'
-import rubikWoff2 from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
 import ThemeScript from '@components/ThemeScript.astro'
 import Topbar from '@components/Topbar.astro'
 import { HoverCard } from '@examples/hover-card/HoverCard'
@@ -33,20 +31,6 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
       image="https://ararajs.vercel.app/banner.jpg"
     />
     <link rel="canonical" href={Astro.url} />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href={rubikWoff2}
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/MonaspaceNeon-Regular-v1.101.woff2"
-      crossorigin="anonymous"
-    />
     <ThemeScript />
     <Fonts />
     <script
@@ -85,7 +69,7 @@ import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
               Get started
             </a>
             <a
-              href="/docs/primitives/spring/"
+              href="/docs/"
               class="rounded-lg border-2 border-arara-300 px-6 py-3 text-lg font-medium transition-all duration-100 active:translate-y-0.5"
             >
               View Docs

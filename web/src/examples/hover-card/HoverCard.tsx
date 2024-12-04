@@ -132,7 +132,7 @@ export function HoverCard(props: { imgSrc: string; class: string }) {
         />
         <div class="pointer-events-none absolute -inset-2 shadow-[inset_4px_4px_20px_20px_rgba(0,0,0,0.3)] ring-[16px] ring-inset ring-black/10" />
       </div>
-      <div class="py-4 text-2xl font-thin">Hover Me</div>
+      <div class="py-4 text-2xl font-bold">Hover Me</div>
     </div>
   )
 }
