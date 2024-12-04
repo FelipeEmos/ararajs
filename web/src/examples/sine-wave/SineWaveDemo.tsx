@@ -1,11 +1,17 @@
+import { cn } from '@lib/cn'
 import { createElementSize } from '@solid-primitives/resize-observer'
 import { createSignal } from 'solid-js'
 import { createSineWave } from 'ararajs'
 
-export function SineWaveDemo() {
-  const [body] = createSineWave({
+export function SineWaveDemo(props: {
+  class?: string
+  ballClass?: string
+  frequency?: () => number
+}) {
+  const [body] = createSineWave(() => ({
     amplitude: 90,
-  })
+    frequency: props.frequency?.() ?? 1,
+  }))
 
   const [container, setContainer] = createSignal<HTMLDivElement>()
   const containerSize = createElementSize(container)
@@ -22,11 +28,14 @@ export function SineWaveDemo() {
 
   return (
     <div
-      class="w-full overflow-hidden rounded-lg p-8 shadow-inner"
+      class={cn(
+        'w-full overflow-hidden rounded-lg p-8 shadow-inner',
+        props.class,
+      )}
       ref={setContainer}
     >
       <div
-        class="size-8 rounded-full bg-arara-bg shadow-xl"
+        class={cn('size-8 rounded-full bg-arara-bg shadow-xl', props.ballClass)}
         style={{
           transform: `translate(${xOffset()}px`,
         }}

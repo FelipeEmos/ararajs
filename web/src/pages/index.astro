@@ -12,6 +12,8 @@ import { HoverCard } from '@examples/hover-card/HoverCard'
 import { Spring2DDemo } from '@examples/spring/Spring2DDemo'
 import { SineWave2DDemo } from '@examples/sine-wave/SineWave2DDemo'
 import araraImage from '@assets/examples/arara_blue.jpg'
+import Code from '@components/docs/code/Code.astro'
+import { SliderSineWaveDemo } from '@examples/sine-wave/SliderSineWaveDemo'
 ---
 
 <!doctype html>
@@ -52,10 +54,10 @@ import araraImage from '@assets/examples/arara_blue.jpg'
   </head>
   <body class="flex flex-col bg-arara-bg text-arara-text antialiased">
     <Topbar />
-    <main class="mx-auto w-full max-w-7xl pb-20">
+    <main class="flex w-full flex-col items-center pb-20">
       <!-- Hero Section -->
       <div
-        class="relative flex grow flex-col items-center px-8 py-20 md:pb-20 md:pt-40"
+        class="relative flex max-w-7xl grow flex-col items-center px-8 py-20 md:pb-20 md:pt-40"
       >
         <div class="flex flex-col items-center">
           <img
@@ -89,58 +91,98 @@ import araraImage from '@assets/examples/arara_blue.jpg'
       </div>
 
       <!-- Demo Sections -->
-      <div class="relative grid gap-20 pb-20">
+      <div class="grid w-full gap-20 pb-20">
         <!-- Interactive Card Demo Section -->
-        <section>
+        <section class="w-full">
           <!-- Background with curved top -->
           <div
-            class="h-20 w-full bg-arara-200/70 [clip-path:ellipse(100%_300px_at_center_380%)] md:h-32 md:[clip-path:ellipse(100%_300px_at_center_280%)]"
+            class="h-20 bg-arara-200/70 [clip-path:ellipse(100%_300px_at_center_380%)] md:h-32 md:[clip-path:ellipse(100%_300px_at_center_280%)]"
           ></div>
-          <!-- Interactive Card Demo -->
           <div
-            class="grid items-center gap-8 bg-arara-200/70 pb-28 pt-4 md:pt-12 md:grid-cols-2"
+            class="flex flex-col items-center bg-arara-200/70 pb-28 pt-4 md:pt-12"
           >
-            <div class="px-8 md:px-12">
-              <h2 class="mb-4 text-3xl font-bold">Interactive Animations</h2>
-              <p class="text-lg text-arara-text/80">
-                Create rich, physics-based interactions by combining springs and
-                sine waves. Perfect for hover effects, micro-interactions, and
-                complex UI animations.
-              </p>
-            </div>
-            <div class="flex justify-center">
-              <HoverCard client:idle imgSrc={araraImage.src} class="max-w-80" />
+            <div class="grid max-w-7xl items-center gap-8 md:grid-cols-2">
+              <div class="px-8 md:px-12">
+                <h2 class="mb-4 text-3xl font-bold">Interactive Animations</h2>
+                <p class="text-lg">
+                  Create rich, physics-based interactions by combining springs
+                  and sine waves <i class="bg-arara-400 p-1">for now 👀</i>
+                </p>
+                <p class="pt-4 text-lg">
+                  Stay inside the reactive paradigm of <u>SolidJS</u>
+                </p>
+                <p class="pt-4 text-lg">
+                  No need to move out of reactivity to deal with the imperative
+                  / sequential nature of animations.
+                </p>
+              </div>
+              <div class="flex justify-center">
+                <HoverCard
+                  client:idle
+                  imgSrc={araraImage.src}
+                  class="max-w-80"
+                />
+              </div>
             </div>
           </div>
+          <!-- Interactive Card Demo -->
         </section>
 
         <!-- Spring Physics Demo -->
-        <section class="grid items-center gap-8 px-8 md:grid-cols-2 md:px-12">
-          <div class="md:order-2">
-            <h2 class="mb-4 text-3xl font-bold">Spring Physics</h2>
-            <p class="text-lg text-arara-text/80">
-              Natural-feeling animations powered by spring physics. Customize
-              stiffness and damping for the perfect feel. Ideal for drag
-              interactions and responsive UI elements.
-            </p>
-          </div>
-          <div class="md:order-1">
-            <Spring2DDemo client:load />
+        <section class="flex w-full justify-center">
+          <div
+            class="grid w-full max-w-7xl items-center gap-8 px-8 md:grid-cols-2 md:px-12"
+          >
+            <div class="md:order-2">
+              <h2 class="mb-4 text-3xl font-bold">Emergent Behavior</h2>
+              <p class="text-lg">
+                Create complex animations by combining simple signal primitives.
+              </p>
+              <p class="pt-4 text-lg">
+                Like building blocks, use <span
+                  class="bg-arara-200 p-1 font-finger-paint">Spring</span
+                >
+                for your transitions and respond smoothly to dynamic changes.
+              </p>
+            </div>
+            <div class="md:order-1">
+              <Spring2DDemo client:load />
+            </div>
           </div>
         </section>
 
         <!-- Sine Wave Demo -->
-        <section class="grid items-center gap-8 px-8 md:grid-cols-2 md:px-12">
-          <div>
-            <h2 class="mb-4 text-3xl font-bold">Periodic Motion</h2>
-            <p class="text-lg text-arara-text/80">
-              Create smooth, cyclical animations with sine waves. Perfect for
-              looping animations, loading indicators, and continuous motion
-              effects.
-            </p>
-          </div>
-          <div>
-            <SineWave2DDemo client:load />
+        <section class="flex w-full justify-center bg-arara-200/70 py-32">
+          <div
+            class="grid w-full max-w-7xl items-center gap-8 px-8 md:grid-cols-2 md:px-12"
+          >
+            <div class="md:order-1">
+              <h2 class="mb-4 text-3xl font-bold">Animated Signals</h2>
+              <p class="pb-6 text-lg">
+                Create highly reactive and composable animations through signal
+                primitives.
+              </p>
+              <h3 class="text-xl">1D</h3>
+              <Code
+                code={`const [body] = createSine(() => ({
+   frequency: freq(),
+}))`}
+                lang="tsx"
+              />
+              <h3 class="text-xl">2D</h3>
+              <Code
+                code={`const [body2D] = createSineWave2D({
+  amplitude: [90, 90],
+  frequency: [1, 1],
+  phase: [Math.PI/2, 0]
+})`}
+                lang="tsx"
+              />
+            </div>
+            <div class="flex flex-col gap-8 md:order-2">
+              <SliderSineWaveDemo client:load class="bg-arara-text/90" />
+              <SineWave2DDemo client:load class="bg-arara-text/90" />
+            </div>
           </div>
         </section>
       </div>

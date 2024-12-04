@@ -32,6 +32,7 @@
     "@corvu/tailwind": "^0.1.5",
     "@corvu/tooltip": "^0.2.1",
     "@fontsource-variable/rubik": "^5.1.0",
+    "@kobalte/core": "^0.13.7",
     "@solid-primitives/mouse": "^2.0.20",
     "@solid-primitives/resize-observer": "^2.0.26",
     "@solid-primitives/storage": "^4.2.1",
