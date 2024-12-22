@@ -34,18 +34,9 @@ const { inDocs } = Astro.props
         <Drawer client:media="(max-width: 767px)">
           <Navigation />
         </Drawer>
-        {inDocs === true && <SearchDrawer client:media="(max-width: 767px)" />}
-        <div class="hidden md:block md:flex-1">
-          <SearchDialog client:media="(min-width: 768px)" />
-        </div>
+        <HeaderLogo className="hidden md:block ml-4" />
+        <HeaderLogo className="block md:hidden ml-4" tiny />
       </div>
-      {
-        inDocs === true && (
-          <div class="lg:hidden">
-            <HeaderLogo />
-          </div>
-        )
-      }
       <div class="flex flex-1 items-center justify-end lg:pointer-events-auto">
         {
           inDocs !== true && (
@@ -65,13 +56,6 @@ const { inDocs } = Astro.props
                 </div>
               </div>
             </a>
-          )
-        }
-        {
-          inDocs === true && (
-            <div class="mr-4 hidden lg:block">
-              <HeaderLogo tiny />
-            </div>
           )
         }
         <ThemeSelect client:idle />

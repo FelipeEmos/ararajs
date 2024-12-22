@@ -3,15 +3,17 @@ import HeaderLogoDark from '@assets/title_with_logo_dark.svg'
 import HeaderLogoLight from '@assets/title_with_logo_light.svg'
 import LogoDark from '@assets/logo_dark.svg'
 import LogoLight from '@assets/logo_light.svg'
+import { cn } from '@lib/cn'
 
 interface Props {
-  tiny?: boolean;
+  tiny?: boolean
+  className?: string
 }
 
-const { tiny = false } = Astro.props;
+const { tiny = false, className } = Astro.props
 ---
 
-<div class="w-fit lg:pointer-events-auto">
+<div class={cn('w-fit lg:pointer-events-auto', className)}>
   <a href="/" class="block">
     <span class="sr-only">arara</span>
     <img
@@ -29,4 +31,4 @@ const { tiny = false } = Astro.props;
       class="hidden dark:block"
     />
   </a>
-</div> 
+</div>
