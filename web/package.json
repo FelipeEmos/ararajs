@@ -41,7 +41,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@typescript-eslint/parser": "^8.9.0",
     "ararajs": "workspace:*",
-    "astro": "5.0.0-beta.5",
+    "astro": "5.0.8",
     "astro-eslint-parser": "^1.0.3",
     "clsx": "^2.1.1",
     "eslint": "^9.12.0",
